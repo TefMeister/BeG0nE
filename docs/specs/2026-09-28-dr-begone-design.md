@@ -60,6 +60,8 @@ dr-begone/
   download must be **stock REFramework plus the grip change only**, so a player without our scope mod gets exactly
   this feature. The grip code's home moves to `dr-begone/games/re-village/`; the scope repo points there instead of
   keeping its own copy (one source, no drift between copies).
+- **What the Village download contains (Tefa, 2026-09-28):** the controller height adjustment only, i.e. the
+  stacked grip. None of the scope mod.
 - **Nice to have, not required:** live sliders in REFramework's in-game menu to move the zone while playing.
 
 ## 5. The release gate: what must pass before anything goes public
@@ -83,14 +85,20 @@ holds the guide and code only, with no download.
   missing can email and will be added.
 - No game files, ever. Only our own code and our own builds of open-source tools, with their licences kept.
 
-## 7. How it grows
+## 7. On the front page
+
+Dr.BeGonE gets **its own category** on the `TefMeister/TefMeister` profile README, separate from the video games
+and the plugins (Tefa, 2026-09-28): one row per game it supports, with its status (in testing / approved and
+downloadable). It also gets an entry in `INDEX.json` and a dated line in `ACTIVITY.md` whenever it moves.
+
+## 8. How it grows
 
 Each new game adds a folder under `games/`, a row in `GAMES.md`, and anything it taught to `WHERE-TO-LOOK.md`.
 When a second game's code turns out to match Village's, that part moves into `shared/`, and not before.
 The next likely candidate is the RE2 mod (Visceral), which carries the same socket rule in REFramework's
 `FirstPerson.cpp` `[inferred-static 2026-09-22]`.
 
-## 8. Not in scope
+## 9. Not in scope
 
 - A VR mod of its own, or any camera change.
 - Guessing shared code before a second game exists.
