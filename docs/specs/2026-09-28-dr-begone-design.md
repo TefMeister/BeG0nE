@@ -2,8 +2,11 @@
 
 **Full name:** VR Super Infinite OCCLUSION DRIFT BeGonE 3000XXL Turbo
 **Short name:** Dr.BeGonE (Drift Be Gone: a cure for occlusion drift)
-**Repo:** `TefMeister/dr-begone` (public; name checked free on 2026-09-28)
-**Status:** design, awaiting Tefa's review. Nothing built or published yet.
+**Repo:** `TefMeister/VR-Super-Infinite-OCCLUSION-DRIFT-BeGonE-3000XXL-Turbo` (public). ⭐ Tefa, 2026-09-28: the repo
+name is spelled **exactly** like that, capitals and all, and never shortened. Inside the repo, all writing may use
+**Dr.BeGonE**. Tefa's reason: a name people remember; a plain "Occlusion Drift Remover" would be porridge with no
+strawberry jam.
+**Status:** design approved by Tefa 2026-09-28. Nothing built yet.
 
 ## 1. The problem it cures
 
