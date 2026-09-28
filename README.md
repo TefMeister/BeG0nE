@@ -1,6 +1,8 @@
 # VR Super Infinite OCCLUSION DRIFT BeGonE 3000XXL Turbo
 
-**Dr.BeGonE for short: the doctor for occlusion drift.**
+**A VR Weapon Mod Kit.** An occlusion drift removal kit for two-handed weapon aiming in virtual reality, or
+Dr.BeGonE for short. A toolkit for modders and separate game-specific mods for gamers: 🩺 Dr.BeGonE has a cure for
+everyone!
 
 ## The problem
 
