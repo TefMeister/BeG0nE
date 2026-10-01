@@ -11,6 +11,22 @@ then aims with the right hand alone, and the drawn left hand stays on the forest
 
 It is VR only. On a flat screen it loads and does nothing.
 
+Since the evening of 2026-10-01 it also carries two fixes for praydog's own two-handed grip, so they no longer
+need a patched loader:
+
+- **No left grip button, no grip.** Praydog docks the left hand the moment it comes within 10 cm of the weapon's
+  grip spot. This file undoes any dock made without the left grip button held, so the button is the switch.
+- **No jump on the first shot.** Praydog steers the weapon against the grip spot the game's animation gives him
+  each frame, and the firing pose moves that spot by about five degrees, so the first shot after taking the grip
+  jerked the rifle left. The grip spot is now frozen at the moment the grip is taken; the animation may move its
+  own hand, the weapon does not follow.
+
+Both run right after praydog's hand update, using only REFramework's public Lua API, and check themselves: the
+file recomputes the controller poses the way praydog's C++ does and compares its right hand with his on every
+pass. The log says `pose check: … the recompute is right` once that has agreed 300 times, or `POSE CHECK FAILED`
+if it ever does not. Harness words: `grip button 0|1`, `grip freeze 0|1` (either fix off or on, live, for an
+A/B), `grip check` (the figures), `grip` (the state line).
+
 ## Where it came from
 
 On 2026-10-01 it was split out of the RE Village VR Scope mod (`re8_vrz_scope_left_grip.lua`, shipped in its
@@ -24,9 +40,12 @@ left-menu-button fix in its own file.
   from the game while it runs.
 - **It still uses the scope's settings file** for the captured hand spot (`reframework/data/re_scope_left_grip.txt`),
   so a spot captured before the split keeps working.
-- **The split has not been worn in a headset yet.**
+- **Neither the split nor the two fixes have been worn in a headset yet.** Installed on the home PC on
+  2026-10-01; the first wear reads the pose check and judges the first shot and the button-only dock.
+- **Praydog has not been sent the grip rules upstream yet.**
 
 ## Test
 
 `re-village-scope-vr` staging: `scripts/tests/grip_split_test.lua` loads this file and the scope's half
-separately and checks that each one starts on its own and answers its words.
+separately and checks that each one starts on its own and answers its words; `scripts/tests/begone_grip_fixes_test.lua`
+checks the two fixes are on by default, answer their words, and that the steering maths turns the right way.
