@@ -1,47 +1,38 @@
-# VR Super Infinite OCCLUSION DRIFT BeGonE 3000XXL Turbo
+# BeG0nE
 
-**A VR Weapon Mod Kit.** An occlusion drift removal kit for two-handed weapon aiming in virtual reality, or
-Dr.BeGonE for short. A toolkit for modders and separate game-specific mods for gamers: 🩺 Dr.BeGonE has a cure for
-everyone!
+**Tools and mods that remove unwanted features and faults from video games.** Each cure comes in two shapes: a
+toolkit for modders, human or AI, that says where to look in a new game and shows the exact code that worked in
+each earlier one, and a drop-in fix for gamers, per game, that just needs copying into the game folder.
 
-## The problem
+| Cure | What it removes | Where it stands |
+| --- | --- | --- |
+| [**Occlusion Drift BeG0nE**](occlusion-drift/) | In VR, a two-handed weapon's aim drifting because the front hand hides the back controller from the headset. The cure: hold the weapon with the left controller just above the right, and the game accepts that as a proper grip. | In testing on Resident Evil Village. No download yet. |
+| [**Camera Jitter/Shake BeG0nE**](camera-jitter/) | The stepped, jittery camera that VR mods written with AI code so often have. First job: find out why. Then a tool for modders, and a jitter-free camera for specific games. | Started 2026-10-01. Nothing built yet. |
 
-In VR, most people hold a rifle or shotgun with the left hand stretched out in front of the right one. Seen from
-the headset, the front hand hides the back one. The headset's cameras lose the hidden controller, and the weapon's
-aim starts drifting by itself. That is **occlusion drift**.
+## How this repo is organised
 
-## The cure
-
-Hold the weapon with the **left controller sitting just above the right one**. The headset can see both
-controllers all the time, so tracking never drops. Dr.BeGonE makes the game accept that hold as a proper
-two-handed grip and keeps the weapon pointing exactly where your right hand points.
-
-## What Dr.BeGonE is, and what it is not
-
-- **It is** a small add-on for games that already have a VR mod. It changes where your left hand can hold a
-  two-handed weapon, and nothing else.
-- **It is not** a VR mod by itself. Every download says which game and which VR mod it needs.
-- **It does not** touch the camera or the picture.
-- **It contains** no game files, only our own code.
+One folder per cure. Inside each: a `README.md` that explains the fault and the cure in plain words, a
+`guide/` for modders, and `games/<game>/` with the code and install notes for each game it has been done in.
+`docs/specs/` holds the design notes, `ideas/` the ideas filed for this repo.
 
 ## Downloads
 
-None yet. A game gets a download only after every long weapon in it has been tested in a headset and passes
-one test: **the left controller sits visibly above the right one, and the aim does not drift when aiming down
-the scope or the sights.**
+A game gets a download only after the cure has been tested in that game and passes its own test, written in
+the cure's README. Every download says which game and, where it applies, which VR mod it needs.
 
-| Game | Needs | Status |
-| --- | --- | --- |
-| Resident Evil Village | REFramework (its built-in VR mode) | In testing |
+## What this is, and what it is not
 
-## For modders, human or AI
-
-Everything we have is here: the idea, the checklist of where to look in a new game, and the exact code that
-made it work in each game. It is written in plain words and does not depend on any particular AI tool. Each
-new game makes the guide better.
-
-The full design is in [`docs/specs/`](docs/specs/).
+- **It is** a set of small add-ons for games, and for games that already have a VR mod. Each one changes one
+  thing and nothing else.
+- **It is not** a VR mod by itself. Nothing here makes a flat game run in VR.
+- **It contains** no game files, only our own code. Every add-on needs a legitimately owned copy of the game.
+- Non-commercial fan work. Rights holders can ask for a correction or removal at any time and it will be done.
 
 ## Credits
 
 See [CREDITS.md](CREDITS.md).
+
+## History
+
+Started on 2026-09-28 as *VR Super Infinite OCCLUSION DRIFT BeGonE 3000XXL Turbo*, a kit for one fault only.
+Renamed BeG0nE on 2026-10-01 when the second cure was added and the repo became the home for all of them.
