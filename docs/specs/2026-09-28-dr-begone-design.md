@@ -1,3 +1,6 @@
+> **Superseded in part, 2026-10-01 (Tefa):** the repo is now **`BeG0nE`**, a home for several cures, and this one is
+> **Occlusion Drift BeG0nE** in `occlusion-drift/`. The exact-name rule below no longer applies; the design itself still does.
+
 # Dr.BeGonE: design
 
 **Full name:** VR Super Infinite OCCLUSION DRIFT BeGonE 3000XXL Turbo
