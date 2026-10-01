@@ -11,21 +11,28 @@ then aims with the right hand alone, and the drawn left hand stays on the forest
 
 It is VR only. On a flat screen it loads and does nothing.
 
-Since the evening of 2026-10-01 it also carries two fixes for praydog's own two-handed grip, so they no longer
-need a patched loader:
+Since 2026-10-01/02 it also takes over praydog's two-handed grip, worn and proven on 2026-10-02:
 
-- **No left grip button, no grip.** Praydog docks the left hand the moment it comes within 10 cm of the weapon's
-  grip spot. This file undoes any dock made without the left grip button held, so the button is the switch.
-- **No jump on the first shot.** Praydog steers the weapon against the grip spot the game's animation gives him
-  each frame, and the firing pose moves that spot by about five degrees, so the first shot after taking the grip
-  jerked the rifle left. The grip spot is now frozen at the moment the grip is taken; the animation may move its
-  own hand, the weapon does not follow.
+- **The grip spot is frozen when the grip is taken.** Praydog steers the weapon against the grip spot the game's
+  animation gives him each frame, and the firing pose moves that spot by about five degrees, so the first shot after
+  taking the grip jerked the rifle. The animation may move its own hand now; the weapon does not follow.
+- **The grip is the script's own decision.** It takes when praydog docks (hand within 10 cm of the spot) and keeps
+  holding while your real hand stays on the rifle, through the bolt action and the reload animation. Praydog's own
+  dock drops the moment the animation swings his hand spot away, which snapped the rifle to one-handed aim at every
+  shot; that no longer happens.
+- **Auto-dock stays on.** The hand near the rifle grabs it, no button needed (Tefa's choice). `grip button 1` makes
+  the left grip button the only way to grip, live.
+- **The shot itself is covered.** Praydog re-runs his hand update inside the gun's shoot function; this file hooks
+  the same function after him and puts its steering back before the bullet.
 
-Both run right after praydog's hand update, using only REFramework's public Lua API, and check themselves: the
+What remains is the game's own move: it turns the rifle toward its aim point in the frames before the bullet, one-handed
+too; the scope mod's picture looks back a few frames to cover it.
+
+It runs right after each of praydog's hand updates, using only REFramework's public Lua API, and checks itself: the
 file recomputes the controller poses the way praydog's C++ does and compares its right hand with his on every
-pass. The log says `pose check: … the recompute is right` once that has agreed 300 times, or `POSE CHECK FAILED`
-if it ever does not. Harness words: `grip button 0|1`, `grip freeze 0|1` (either fix off or on, live, for an
-A/B), `grip check` (the figures), `grip` (the state line).
+pass (`pose check: … the recompute is right` after 300 agreeing passes, `POSE CHECK FAILED` otherwise; 0.0 mm on
+the first wear). Harness words: `grip button 0|1`, `grip freeze 0|1`, `grip check`, `grip` (the state line, with
+how far the hand sits from the frozen spot).
 
 ## Where it came from
 
@@ -40,8 +47,9 @@ left-menu-button fix in its own file.
   from the game while it runs.
 - **It still uses the scope's settings file** for the captured hand spot (`reframework/data/re_scope_left_grip.txt`),
   so a spot captured before the split keeps working.
-- **Neither the split nor the two fixes have been worn in a headset yet.** Installed on the home PC on
-  2026-10-01; the first wear reads the pose check and judges the first shot and the button-only dock.
+- **Worn 2026-10-02 (home PC, Tefa):** the grip holds through shots, the button-only mode works when switched on,
+  the pose check agrees to 0.0 mm. **It is not in any download yet**: the scope mod's v1.0.2 still ships the old grip
+  file; this one has to be shipped either here or in the scope mod's next version.
 - **Praydog has not been sent the grip rules upstream yet.**
 
 ## Test
