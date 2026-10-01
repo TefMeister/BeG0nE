@@ -48,8 +48,10 @@ left-menu-button fix in its own file.
 - **It still uses the scope's settings file** for the captured hand spot (`reframework/data/re_scope_left_grip.txt`),
   so a spot captured before the split keeps working.
 - **Worn 2026-10-02 (home PC, Tefa):** the grip holds through shots, the button-only mode works when switched on,
-  the pose check agrees to 0.0 mm. **It is not in any download yet**: the scope mod's v1.0.2 still ships the old grip
-  file; this one has to be shipped either here or in the scope mod's next version.
+  the pose check agrees to 0.0 mm. **But after a relaunch the rifle pointed far right**: the first dock froze the grip
+  spot while another weapon / the draw animation was in the hand, and every grip after that kept it. **Not ready.**
+  Still to do: forget the frozen spot when the weapon changes and after a while without a grip, and never freeze it
+  from a first dock mid-animation. Taken out of the game folder; the scope mod's v1.0.2 stays the shipped build.
 - **Praydog has not been sent the grip rules upstream yet.**
 
 ## Test
