@@ -45,18 +45,23 @@ On 2026-10-01 it was split out of the RE Village VR Scope mod (`re8_vrz_scope_le
 v1.0.0 and v1.0.1). The grip code itself was not changed. The scope mod keeps its weapon-click silencing and
 left-menu-button fix in its own file.
 
+## Shipped
+
+**In the RE Village VR Scope mod v1.1.1 (2026-10-02), worn and confirmed by Tefa in the headset.** Since the split:
+
+- The reference spot is frozen only once it can be trusted (held still 0.3 s, or within 10 cm of the captured rifle
+  spot), and forgotten on a weapon change or after 5 s without a grip, so the rifle no longer points far right after a
+  relaunch.
+- The left hand docks by itself on any two-handed gun and lets go when it moves about 10 cm, or about 25 degrees
+  sideways, from where it took the grip. Firing and the bolt do not drop it. Live word: `grip letgo <cm> <deg>`.
+- The weapon in hand is read by name (as `re8_vr.lua` finds it), so the rifle's captured spot applies to the sniper
+  rifle only, and every other gun keeps the game's own grip spot.
+- A left hand on the pistol (grip spot under 15 cm from the right hand) rests on it but does not steer it.
+
 ## Not done yet
 
-- **It still needs the scope mod.** It only acts while the scope's rifle camera exists, so today it works with
-  the sniper rifle only. Standing alone for every long weapon needs a way to tell which weapon is held, read
-  from the game while it runs.
 - **It still uses the scope's settings file** for the captured hand spot (`reframework/data/re_scope_left_grip.txt`),
   so a spot captured before the split keeps working.
-- **Worn 2026-10-02 (home PC, Tefa):** the grip holds through shots, the button-only mode works when switched on,
-  the pose check agrees to 0.0 mm. **But after a relaunch the rifle pointed far right**: the first dock froze the grip
-  spot while another weapon / the draw animation was in the hand, and every grip after that kept it. **Not ready.**
-  Still to do: forget the frozen spot when the weapon changes and after a while without a grip, and never freeze it
-  from a first dock mid-animation. Taken out of the game folder; the scope mod's v1.0.2 stays the shipped build.
 - **Praydog has not been sent the grip rules upstream yet.**
 
 ## Test

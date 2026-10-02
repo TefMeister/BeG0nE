@@ -171,8 +171,19 @@ local POSE_CHECK_EVERY_S  = 5.0    -- seconds between warnings
 local POSE_CHECK_PASSES   = 300    -- agreeing passes before the recompute is called right
 local DRIFT_LOG_STEP_DEG  = 1.0    -- log the animation moving the socket each time it grows by this much
 local GRIP_DOCK_M         = 0.10   -- metres: the hand this close to the FROZEN socket takes the grip (praydog's 10 cm)
-local GRIP_RELEASE_M      = 0.18   -- metres: the hand this far from the frozen socket lets go (hysteresis, as the stacked zone)
-local GRIP_RELEASE_DEG    = 70     -- degrees: the hand swung this far off the rifle line lets go too
+local GRIP_RELEASE_M      = 0.18   -- (stacked zone only now) metres
+local GRIP_RELEASE_DEG    = 70     -- (unused since 2026-10-02 afternoon, kept for the state line)
+-- 2026-10-02 afternoon (Tefa: "i had to separate my hands a lot more to get the left hand to come off the gun"):
+-- the keep-test only measured the hand's DISTANCE from the right hand against an 18 cm band, plus a 70 deg angle,
+-- and praydog's own dock kept the grip too. Pulling the hand sideways barely counted. Now the grip lets go when the
+-- hand moves this far from WHERE IT WAS when the grip was taken, in distance OR in angle, whichever comes first.
+-- praydog's dock no longer keeps a grip we hold; it only starts one.
+local GRIP_LETGO_M        = 0.10   -- metres: the left hand closer/further than this from its distance at the take
+local GRIP_STEER_MIN_M    = 0.15   -- metres: a grip socket closer than this to the right hand (the pistol's is ~6 cm) is a
+                                   -- support hand on a one-handed gun: the left hand is drawn on it but does NOT steer it
+                                   -- (Tefa, 2026-10-02 13:58: "with left hand on the pistol, i can steer it with left
+                                   -- motion controller"). Two-handed guns (shotgun, rifle) sit at 39-46 cm.
+local GRIP_LETGO_DEG      = 25     -- degrees: the left hand swung this far around the right hand from its line at the take
 local SHOT_TRACE_PASSES   = 0      -- passes logged after each shot (3 per frame): the shot-jump instrument
 local REDOCK_KEEP_S       = 3.0    -- a grip re-taken within this many seconds of letting go keeps the socket frozen
                                    -- earlier (2026-10-02 00:45: after a shot the bolt animation swings the socket ~50 deg,
@@ -235,13 +246,33 @@ local function shortest_arc(a, b)
     return Quaternion.new(1 + d, cx, cy, cz):normalized()
 end
 -- may this live socket be frozen? `known` is the captured rifle spot (or nil), `steady_s` how long it has held still
+-- keep the grip? r/a = the hand's distance from the right hand and its angle off the frozen socket line now;
+-- r0/a0 = the same at the take. Pure, so the test file can check it.
+local function keep_grip(r, r0, a, a0, lim_m, lim_deg)
+    local dr, da = math.abs(r - r0), math.abs(a - a0)
+    return dr <= lim_m and da <= lim_deg, dr, da
+end
+
+local RIFLE_PREFIX = "ri3042"   -- the sniper rifle's GameObject name (as the plugin's scoped-weapon filter)
+-- the name of praydog's weapon object (a GameObject, or a component on one); nil if it cannot be read
+local function weapon_name(w)
+    if w == nil then return nil end
+    -- the same two ways re8_vr.lua finds the weapon's GameObject (get_GameObject, else the <owner> field); a GameObject
+    -- answers get_Name itself (2026-10-02 13:55: the first version tried only get_GameObject and read nil every time)
+    local go = safe(function() return w:call("get_GameObject") end)
+    if go == nil then go = safe(function() return w:get_field("<owner>k__BackingField") end) end
+    local nm = go and safe(function() return go:call("get_Name") end)
+    if nm == nil then nm = safe(function() return w:call("get_Name") end) end
+    return nm ~= nil and tostring(nm) or nil
+end
+
 local function socket_trusted(socket, known, steady_s)
     if known ~= nil and len(sub(socket, known)) <= SOCKET_KNOWN_M then return true, "near the captured rifle spot" end
     if steady_s >= SOCKET_STEADY_S then return true, string.format("held still %.2f s", steady_s) end
     return false, nil
 end
 _G.re8_begone_grip_maths = { shortest_arc = shortest_arc, quat_deg = quat_deg, angle_between_deg = angle_between_deg,
-    socket_trusted = socket_trusted }
+    socket_trusted = socket_trusted, keep_grip = keep_grip, weapon_name = weapon_name, RIFLE_PREFIX = RIFLE_PREFIX }
 
 -- the controller poses the way RE8VR::update_hand_ik computes them: world position and rotation of each hand target
 -- BEFORE any grip steering. Same inputs (camera world matrix + HMD transform, the controllers' tracking-space transforms,
@@ -302,7 +333,7 @@ local function set_ik(v, ik, tf, pos, rot)
     safe(function() ik:call("calc") end)
 end
 
-local function grip(a, b)
+local function grip(a, b, c)
     if a == "capture" and tonumber(b) then
         g.capture_at = os.clock() + tonumber(b)
         g.on = false   -- the game's own spot while the wearer settles, so the capture reads it, not ours
@@ -326,6 +357,11 @@ local function grip(a, b)
     elseif a == "check" then
         L(string.format("pose check: %d passes agree, %d disagree, worst %.1f mm / %.2f deg, %s", chk.ok, chk.bad,
             chk.worst_m * 1000, chk.worst_deg, chk.verified and "VERIFIED" or "not yet verified"))
+    elseif a == "letgo" then
+        local cm, deg = tonumber(b), tonumber(c)
+        if cm then GRIP_LETGO_M = cm / 100 end
+        if deg then GRIP_LETGO_DEG = deg end
+        L(string.format("letgo: the grip lets go when the left hand moves %.0f cm or %.0f deg from where it took the grip", GRIP_LETGO_M * 100, GRIP_LETGO_DEG))
     elseif a == "forget" then
         forget_frozen("the 'grip forget' word")
         L("forget: the next dock freezes a fresh socket once it can be trusted")
@@ -334,7 +370,7 @@ local function grip(a, b)
             g.on and "ON" or "off", g.pos and string.format("(%.3f, %.3f, %.3f)", g.pos.x, g.pos.y, g.pos.z) or "none",
             tostring(g.probe), g.applied, tostring(GRIP_NEEDS_BUTTON), tostring(GRIP_FREEZE_SOCKET), S.takes, S.undone,
             S.steer_deg, S.drift_deg, S.drift_max, chk.verified and "ok" or (chk.bad > 0 and "FAILING" or "pending")))
-        L(string.format("hand radius %.1f cm off the frozen socket length, %.0f deg off the rifle line (let go beyond %.0f cm or %.0f deg)", (S.hand_from_frozen_m or -1) * 100, S.hand_angle_deg or -1, GRIP_RELEASE_M * 100, GRIP_RELEASE_DEG))
+        L(string.format("let go: the left hand has moved %.1f cm and %.0f deg from where it took the grip (lets go beyond %.0f cm or %.0f deg; `grip letgo <cm> <deg>`)", (S.letgo_dr or 0) * 100, S.letgo_da or 0, GRIP_LETGO_M * 100, GRIP_LETGO_DEG))
         L(string.format("frozen socket %s%s, forgotten %.0f s after a release or on a weapon change; a first freeze needs the socket still for %.1f s or within %.0f cm of the captured spot",
             S.frozen and string.format("(%.3f, %.3f, %.3f)", S.frozen.socket.x, S.frozen.socket.y, S.frozen.socket.z) or "none",
             S.take and " (gripped)" or (S.frozen and string.format(" (released %.1f s ago)", os.clock() - S.last_release) or ""),
@@ -411,12 +447,23 @@ local function grip_pass(final)
     if wid ~= S.weapon then
         if S.weapon ~= nil then forget_frozen("the weapon changed") end
         S.weapon = wid
+        -- 2026-10-02 13:47 (Tefa's screenshots: the left hand floating open beside the pistol and the shotgun): the rifle
+        -- camera (st.clone_go) is made once and never cleared, so "the rifle camera exists" stayed true for EVERY weapon
+        -- and every weapon's left hand was put on the rifle's captured forestock spot, 37 cm ahead of the right hand.
+        -- The captured spot and finger pose now apply only when the weapon in hand IS the sniper rifle, by its name.
+        S.weapon_name = weapon_name(v.weapon)
+        S.is_rifle = S.weapon_name ~= nil and S.weapon_name:find(RIFLE_PREFIX, 1, true) == 1
+        if S.weapon_name == nil and v.weapon ~= nil then
+            L("weapon in hand: name not readable, object type " .. tostring(safe(function() return v.weapon:get_type_definition():get_full_name() end)))
+        end
+        L(string.format("weapon in hand: %s (%s)", tostring(S.weapon_name),
+            S.is_rifle and "the sniper rifle: its captured grip spot applies" or "not the rifle: the game's own grip spot"))
     end
     if S.take == nil and S.frozen ~= nil and now - S.last_release > FROZEN_FORGET_S then
         forget_frozen(string.format("%.1f s without a grip", now - S.last_release))
     end
     local s = st()
-    local rifle_scope = s ~= nil and s.clone_go ~= nil   -- the scope's rifle camera exists: the captured spot applies
+    local rifle_scope = S.is_rifle == true and s ~= nil and s.clone_go ~= nil   -- the rifle in hand AND its camera up
     local stacked = stacked_zone(v)
     local cpp_grip = v.was_gripping_weapon
     local holding = v.is_holding_left_grip
@@ -466,18 +513,31 @@ local function grip_pass(final)
     -- how far the hand is from the right hand, against how long the socket is. That is the keep-test now (plus a wide
     -- angle sanity limit). The TAKE still uses the plain 10 cm distance to the un-steered socket, as praydog does.
     local d_take, d_keep, ang_keep = nil, nil, nil
+    local r_now, a_now, keep_ok, dr, da = nil, nil, true, 0, 0
     if S.frozen ~= nil then
         d_take = len(sub(lp, rp + rr * S.frozen.socket))
         d_keep = math.abs(len(sub(lp, rp)) - len(S.frozen.socket))
         local sd, hd = unit(rr * S.frozen.socket), unit(sub(lp, rp))
         ang_keep = (sd ~= nil and hd ~= nil) and angle_between_deg(sd, hd) or 180
     end
+    if S.take ~= nil then
+        local sd, hd = unit(rr * S.take.socket), unit(sub(lp, rp))
+        r_now = len(sub(lp, rp))
+        a_now = (sd ~= nil and hd ~= nil) and angle_between_deg(sd, hd) or 180
+        if S.take.r0 == nil then S.take.r0, S.take.a0 = r_now, a_now end   -- where the hand was at the take
+        keep_ok, dr, da = keep_grip(r_now, S.take.r0, a_now, S.take.a0, GRIP_LETGO_M, GRIP_LETGO_DEG)
+    end
+    S.letgo_dr, S.letgo_da = dr, da
     local allowed = (not GRIP_NEEDS_BUTTON) or holding
     local our_grip
     if S.take ~= nil then
-        our_grip = allowed and (holding or cpp_grip or (d_keep ~= nil and d_keep <= GRIP_RELEASE_M and ang_keep <= GRIP_RELEASE_DEG))
+        our_grip = allowed and (holding or keep_ok)
     else
-        our_grip = allowed and (cpp_grip or (d_take ~= nil and d_take <= GRIP_DOCK_M))
+        local near = cpp_grip or (d_take ~= nil and d_take <= GRIP_DOCK_M)
+        -- after the hand pulled away, it must leave the dock zone once before the auto-dock may take it again
+        -- (otherwise praydog's dock re-grabs a hand that is still close, and the let-go never seems to happen)
+        if S.need_clear and not near then S.need_clear = false end
+        our_grip = allowed and (holding or (near and not S.need_clear))
     end
     S.hand_from_frozen_m = d_keep or -1
     S.hand_angle_deg = ang_keep or -1
@@ -498,8 +558,9 @@ local function grip_pass(final)
             return
         end
         if S.take ~= nil then
-            L(string.format("grip let go: hand radius %.1f cm off, %.0f deg off the rifle line, praydog docked=%s, button=%s",
-                (d_keep or -1) * 100, ang_keep or -1, tostring(cpp_grip), tostring(holding)))
+            S.need_clear = not holding
+            L(string.format("grip let go: the left hand moved %.1f cm (limit %.0f) and %.0f deg (limit %.0f) from where it took the grip, praydog docked=%s, button=%s",
+                dr * 100, GRIP_LETGO_M * 100, da, GRIP_LETGO_DEG, tostring(cpp_grip), tostring(holding)))
         end
         release_take()
         -- stacked only: the rifle already follows the right hand alone; draw the left hand at the captured spot
@@ -564,7 +625,7 @@ local function grip_pass(final)
     end
     S.stage = "steer"
     local steer = Quaternion.new(1, 0, 0, 0)
-    if not stacked then
+    if not stacked and len(socket_ref) >= GRIP_STEER_MIN_M then
         local frozen_dir = unit(rr * socket_ref)
         local hand_dir = unit(sub(lp, rp))
         if frozen_dir ~= nil and hand_dir ~= nil then steer = shortest_arc(frozen_dir, hand_dir) end
