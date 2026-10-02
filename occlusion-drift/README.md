@@ -1,7 +1,7 @@
 # Occlusion Drift BeG0nE
 
-A cure for occlusion drift when aiming two-handed weapons in virtual reality. Dr.BeGonE for short: 🩺 a cure
-for everyone, modders and gamers alike.
+A cure for occlusion drift when aiming two-handed weapons in virtual reality, part of BeG0nE: 🩺 tools that remove unwanted
+things from video games, for modders and gamers alike.
 
 ## The problem
 

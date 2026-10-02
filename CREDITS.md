@@ -1,10 +1,10 @@
 # Credits
 
-Dr.BeGonE is built on other people's work. Everyone who helped or inspired it is listed here, however small the
+BeG0nE is built on other people's work. Everyone who helped or inspired it is listed here, however small the
 part.
 
 - **[praydog](https://github.com/praydog)**: [REFramework](https://github.com/praydog/REFramework), the mod
-  framework and its built-in VR mode for Resident Evil Village. The Village version of Dr.BeGonE is a change to
+  framework and its built-in VR mode for Resident Evil Village. The Village version of BeG0nE is a change to
   REFramework's own two-handed grip code (MIT licence).
 - **Capcom**: Resident Evil Village and the RE Engine. This is a non-commercial fan project. It needs a
   legitimately owned copy of the game and shares no original game files or assets.
