@@ -6,6 +6,9 @@
 -- mod installed. Making it stand alone for every long weapon is the next step (Dr.BeGonE design spec, section 4).
 --
 -- 2026-10-01 (evening, home PC): THE TWO FIXES FROM THE PATCHED LOADER NOW LIVE HERE -- see "THE TWO FIXES" below.
+-- 2026-10-02 (home PC): THE FROZEN SOCKET IS ONLY EVER TAKEN FROM A SOCKET THAT CAN BE TRUSTED -- see "A TRUSTWORTHY
+-- SOCKET" below. After a relaunch the rifle pointed far right: the first auto-dock froze the socket while the draw
+-- animation was still moving the hand, and every re-take for the rest of the session kept that wrong spot.
 --
 -- re8_vrz_scope_left_grip.lua -- ONE left-hand grip spot on the rifle (2026-09-27, Tefa in the headset).
 --
@@ -28,6 +31,7 @@
 --   grip button 1|0  the left grip button is the only way to take the grip (1) / praydog's 10 cm dock too (0, default)
 --   grip freeze 1|0  steer against the socket frozen at the take (1, default) / the live animation socket (0)
 --   grip check       print the pose check (our recomputed right hand against REFramework's own)
+--   grip forget      drop the frozen socket now (the next dock freezes a fresh one, once it can be trusted)
 --   grip             print the state
 -- File: reframework/data/re_scope_left_grip.txt  ("on px py pz qw qx qy qz"). No file = off.
 -- Only while the rifle camera exists (st.clone_go), i.e. only with the sniper rifle out.
@@ -174,6 +178,18 @@ local REDOCK_KEEP_S       = 3.0    -- a grip re-taken within this many seconds o
                                    -- earlier (2026-10-02 00:45: after a shot the bolt animation swings the socket ~50 deg,
                                    -- the auto-dock drops and re-takes mid-animation, and a fresh freeze there snapped
                                    -- the rifle sideways -- Tefa: "it over corrected")
+-- ---- A TRUSTWORTHY SOCKET (2026-10-02 01:10, Tefa after a relaunch: the rifle pointed far right at strange angles).
+-- The log: the first auto-dock after the relaunch froze the socket at (0.100, -0.437, 0.176) -- 48 cm from the right hand
+-- and still moving 1.9 deg per pass, the draw animation's hand, not the rifle's grip at (-0.367, -0.142, -0.001) -- and
+-- the re-take rule above kept that spot for every grip after it, 82 deg off the real socket. So a socket is FROZEN only
+-- when it can be trusted: it has held still for SOCKET_STEADY_S, or it sits within SOCKET_KNOWN_M of the captured rifle
+-- spot. Until then praydog's own live-socket steering stays. The frozen spot is also forgotten when the weapon changes
+-- and after FROZEN_FORGET_S without any grip, so a stale spot can never outlive the thing it was measured on.
+local FROZEN_FORGET_S     = 5.0    -- seconds without any grip after which the frozen socket is forgotten
+local SOCKET_STEADY_S     = 0.3    -- seconds the live socket must hold still before a first freeze trusts it
+local SOCKET_STEADY_M     = 0.01   -- metres: the live socket straying further than this from where the wait began restarts it
+local SOCKET_KNOWN_M      = 0.10   -- metres: a live socket this close to the captured rifle spot is trusted at once
+local WAIT_LOG_EVERY_S    = 1.0    -- seconds between "not trusted yet" lines while praydog steers
 
 local S = { take = nil, takes = 0, undone = 0, undone_logged = false, steer_deg = 0, drift_deg = 0, drift_max = 0 }
 S.frozen = nil          -- the last frozen socket, kept across a quick release/re-take
@@ -181,6 +197,14 @@ S.last_release = -1e9
 local function release_take()
     if S.take ~= nil then S.last_release = os.clock() end
     S.take = nil
+end
+S.weapon = nil          -- the weapon the frozen socket was measured on (its address); a change forgets the socket
+S.cand = nil            -- the live socket being watched for steadiness: { socket, t0 }
+local function forget_frozen(why)
+    if S.frozen ~= nil or S.take ~= nil then L("frozen socket forgotten: " .. why) end
+    S.frozen = nil
+    S.cand = nil
+    release_take()
 end
 local chk = { ok = 0, bad = 0, worst_m = 0, worst_deg = 0, last_t = 0, verified = false }
 
@@ -210,7 +234,14 @@ local function shortest_arc(a, b)
     local cz = a.x * b.y - a.y * b.x
     return Quaternion.new(1 + d, cx, cy, cz):normalized()
 end
-_G.re8_begone_grip_maths = { shortest_arc = shortest_arc, quat_deg = quat_deg, angle_between_deg = angle_between_deg }
+-- may this live socket be frozen? `known` is the captured rifle spot (or nil), `steady_s` how long it has held still
+local function socket_trusted(socket, known, steady_s)
+    if known ~= nil and len(sub(socket, known)) <= SOCKET_KNOWN_M then return true, "near the captured rifle spot" end
+    if steady_s >= SOCKET_STEADY_S then return true, string.format("held still %.2f s", steady_s) end
+    return false, nil
+end
+_G.re8_begone_grip_maths = { shortest_arc = shortest_arc, quat_deg = quat_deg, angle_between_deg = angle_between_deg,
+    socket_trusted = socket_trusted }
 
 -- the controller poses the way RE8VR::update_hand_ik computes them: world position and rotation of each hand target
 -- BEFORE any grip steering. Same inputs (camera world matrix + HMD transform, the controllers' tracking-space transforms,
@@ -295,12 +326,19 @@ local function grip(a, b)
     elseif a == "check" then
         L(string.format("pose check: %d passes agree, %d disagree, worst %.1f mm / %.2f deg, %s", chk.ok, chk.bad,
             chk.worst_m * 1000, chk.worst_deg, chk.verified and "VERIFIED" or "not yet verified"))
+    elseif a == "forget" then
+        forget_frozen("the 'grip forget' word")
+        L("forget: the next dock freezes a fresh socket once it can be trusted")
     else
         L(string.format("state: %s, spot %s, probe %s, applied %d frames | button-only %s, frozen socket %s | takes %d, docks undone %d, steering %.2f deg, socket drift %.2f deg (max %.2f) | pose check %s",
             g.on and "ON" or "off", g.pos and string.format("(%.3f, %.3f, %.3f)", g.pos.x, g.pos.y, g.pos.z) or "none",
             tostring(g.probe), g.applied, tostring(GRIP_NEEDS_BUTTON), tostring(GRIP_FREEZE_SOCKET), S.takes, S.undone,
             S.steer_deg, S.drift_deg, S.drift_max, chk.verified and "ok" or (chk.bad > 0 and "FAILING" or "pending")))
         L(string.format("hand radius %.1f cm off the frozen socket length, %.0f deg off the rifle line (let go beyond %.0f cm or %.0f deg)", (S.hand_from_frozen_m or -1) * 100, S.hand_angle_deg or -1, GRIP_RELEASE_M * 100, GRIP_RELEASE_DEG))
+        L(string.format("frozen socket %s%s, forgotten %.0f s after a release or on a weapon change; a first freeze needs the socket still for %.1f s or within %.0f cm of the captured spot",
+            S.frozen and string.format("(%.3f, %.3f, %.3f)", S.frozen.socket.x, S.frozen.socket.y, S.frozen.socket.z) or "none",
+            S.take and " (gripped)" or (S.frozen and string.format(" (released %.1f s ago)", os.clock() - S.last_release) or ""),
+            FROZEN_FORGET_S, SOCKET_STEADY_S, SOCKET_KNOWN_M * 100))
     end
 end
 
@@ -367,6 +405,16 @@ local function grip_pass(final)
     -- pass keeps the grip and the right hand's steering through a reload; only the LEFT hand is left to praydog there,
     -- so the bolt animation still looks right. A grip is never first TAKEN mid-reload (the socket is mid-animation).
     local reloading = v.is_reloading
+    local now = os.clock()
+    -- a different weapon (or none) means the frozen socket was measured on something else: forget it
+    local wid = safe(function() return v.weapon ~= nil and v.weapon:get_address() or nil end) or "none"
+    if wid ~= S.weapon then
+        if S.weapon ~= nil then forget_frozen("the weapon changed") end
+        S.weapon = wid
+    end
+    if S.take == nil and S.frozen ~= nil and now - S.last_release > FROZEN_FORGET_S then
+        forget_frozen(string.format("%.1f s without a grip", now - S.last_release))
+    end
     local s = st()
     local rifle_scope = s ~= nil and s.clone_go ~= nil   -- the scope's rifle camera exists: the captured spot applies
     local stacked = stacked_zone(v)
@@ -406,6 +454,10 @@ local function grip_pass(final)
         local inv = rr_ik:inverse()
         socket_live = inv * sub(lp_ik, rp_ik)
         lrot_live = (inv * lr_ik):normalized()
+        -- how long has the live socket held still? (the wait restarts when it strays from where it began)
+        if S.cand == nil or len(sub(socket_live, S.cand.socket)) > SOCKET_STEADY_M then S.cand = { socket = socket_live, t0 = now } end
+    else
+        S.cand = nil
     end
     -- 2026-10-02 00:50 (third wear): the grip still let go at every shot. The keep-test measured the hand against the
     -- frozen socket in the UN-steered right-hand frame, but the rifle is steered 30-36 deg so that the forestock meets
@@ -472,12 +524,24 @@ local function grip_pass(final)
                 S.takes, cpp_grip and "praydog docked" or "our own dock on the frozen socket", since,
                 S.frozen.socket.x, S.frozen.socket.y, S.frozen.socket.z))
         elseif socket_live ~= nil then
+            local steady_s = S.cand ~= nil and (now - S.cand.t0) or 0
+            local trusted, why = socket_trusted(socket_live, g.pos, steady_s)
+            if not trusted then
+                -- praydog's own live-socket steering stays until the socket can be trusted
+                if now - (S.wait_logged_t or -1e9) >= WAIT_LOG_EVERY_S then
+                    S.wait_logged_t = now
+                    L(string.format("praydog docked, but the socket (%.3f, %.3f, %.3f) is not trusted yet: still for %.2f s (needs %.1f)%s -- praydog steers until it settles",
+                        socket_live.x, socket_live.y, socket_live.z, steady_s, SOCKET_STEADY_S,
+                        g.pos and string.format(", %.1f cm from the captured rifle spot (needs %.0f)", len(sub(socket_live, g.pos)) * 100, SOCKET_KNOWN_M * 100) or ""))
+                end
+                return
+            end
             S.takes = S.takes + 1
             S.drift_max = 0
             S.take = { socket = socket_live, lrot = lrot_live, drift_max = 0 }
             S.frozen = { socket = socket_live, lrot = lrot_live }
-            L(string.format("grip taken #%d%s: socket frozen at (%.3f, %.3f, %.3f) in the right hand's frame%s",
-                S.takes, holding and " with the button" or " by itself (auto-dock)", socket_live.x, socket_live.y, socket_live.z,
+            L(string.format("grip taken #%d%s: socket frozen at (%.3f, %.3f, %.3f) in the right hand's frame (%s)%s",
+                S.takes, holding and " with the button" or " by itself (auto-dock)", socket_live.x, socket_live.y, socket_live.z, why,
                 stacked and " (stacked: the right hand aims alone)" or ""))
         else
             return   -- nothing to freeze yet (cannot happen: our own dock needs a frozen socket)
@@ -577,4 +641,4 @@ pcall(hook_shoot)
 
 load()
 _G.re8_scope_left_grip = grip
-L("loaded -- words: grip probe | grip capture | grip on | grip off | grip button | grip freeze | grip check | grip")
+L("loaded -- words: grip probe | grip capture | grip on | grip off | grip button | grip freeze | grip check | grip forget | grip")

@@ -24,6 +24,11 @@ Since 2026-10-01/02 it also takes over praydog's two-handed grip, worn and prove
   the left grip button the only way to grip, live.
 - **The shot itself is covered.** Praydog re-runs his hand update inside the gun's shoot function; this file hooks
   the same function after him and puts its steering back before the bullet.
+- **The frozen spot is only taken from a hand that can be trusted** (2026-10-02, not yet worn). After a relaunch
+  the first dock froze the spot while the draw animation was still moving the hand, and the rifle pointed far right
+  for the rest of the session. Now the spot is frozen only once the animation's hand has held still for 0.3 s, or
+  sits within 10 cm of the captured rifle grip; until then praydog's own steering stays. A weapon change, or five
+  seconds without a grip, forgets it. `grip forget` drops it live.
 
 What remains is the game's own move: it turns the rifle toward its aim point in the frames before the bullet, one-handed
 too; the scope mod's picture looks back a few frames to cover it.
@@ -31,8 +36,8 @@ too; the scope mod's picture looks back a few frames to cover it.
 It runs right after each of praydog's hand updates, using only REFramework's public Lua API, and checks itself: the
 file recomputes the controller poses the way praydog's C++ does and compares its right hand with his on every
 pass (`pose check: … the recompute is right` after 300 agreeing passes, `POSE CHECK FAILED` otherwise; 0.0 mm on
-the first wear). Harness words: `grip button 0|1`, `grip freeze 0|1`, `grip check`, `grip` (the state line, with
-how far the hand sits from the frozen spot).
+the first wear). Harness words: `grip button 0|1`, `grip freeze 0|1`, `grip check`, `grip forget`, `grip` (the state line, with
+how far the hand sits from the frozen spot and when it is forgotten).
 
 ## Where it came from
 
