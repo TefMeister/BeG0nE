@@ -1,9 +1,9 @@
--- re8_vrz_begone_grip.lua -- Dr.BeGonE for Resident Evil Village: the stacked two-handed grip and the drawn left
+-- re8_vrz_begone_grip.lua -- BeG0nE for Resident Evil Village: the stacked two-handed grip and the drawn left
 -- hand. VR only. Split out of the scope mod's re8_vrz_scope_left_grip.lua on 2026-10-01 (Tefa: "the Dr.BeGonE part
 -- extracted only for VR"); the code below is unchanged except: the 'grip sound' / 'grip anim' words moved with the
 -- probes to the scope's re8_vrz_scope_sounds_menu.lua, and the state line no longer counts silenced clicks.
 -- Still gated on the scope's rifle camera (st.clone_go), so today it only acts with the sniper rifle and the scope
--- mod installed. Making it stand alone for every long weapon is the next step (Dr.BeGonE design spec, section 4).
+-- mod installed. Making it stand alone for every long weapon is the next step (BeG0nE design spec, section 4).
 --
 -- 2026-10-01 (evening, home PC): THE TWO FIXES FROM THE PATCHED LOADER NOW LIVE HERE -- see "THE TWO FIXES" below.
 -- 2026-10-02 (home PC): THE FROZEN SOCKET IS ONLY EVER TAKEN FROM A SOCKET THAT CAN BE TRUSTED -- see "A TRUSTWORTHY
