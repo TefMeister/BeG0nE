@@ -1,4 +1,4 @@
-# Dr.BeGonE for Resident Evil Village
+# BeG0nE for Resident Evil Village
 
 **Status: in testing. No download yet.** A download comes only after every long weapon passes the test in
 the main README.
