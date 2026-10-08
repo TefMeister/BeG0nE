@@ -1,11 +1,11 @@
-# Checked recordings
+# Checked VR sessions
 
-One folder per recording, under the game's name: `<date>_<time>_<label>/` with `summary.json`, `report.md` and
-`chart.png`. `INDEX.csv` has one line per view (game window, headset view) of every run.
+One folder per VR session a mod logged, under the game's name: `<date>_<time>_<runtime>/` with `summary.json`
+(all the numbers, per second), `report.md` (the plain verdict and WHY) and `chart.png` (coloured bands only).
+`INDEX.csv` has one line per session.
 
-- Nothing in here is a picture from a game. The recordings themselves stay on the PC that made them.
-- Nothing in here is deleted. A run that cannot be trusted is marked `discarded` in `INDEX.csv` and in its
-  `summary.json`, with the reason.
-- `quality` says how much a run is worth: `good`, `no-movement` (the view hardly moved, so no jitter verdict),
-  `faulty` (too short, or frozen for most of its length), `discarded`.
-- Every verdict is `[measured]`: one recording, one scene, judged by the tool version in the `tool` column.
+- The rider (`ride-along/ride.py`) files these by itself the moment a VR session ends. The log it read is
+  kept on the PC that made it (`%LOCALAPPDATA%\BeG0nE\jitter\done\`), never in the repo.
+- Nothing in here is a picture from a game, and nothing in here is deleted.
+- `quality`: `good`, `no-movement` (the head hardly turned, so no jitter verdict), `faulty`.
+- Every verdict is `[measured]`: one VR session of one mod build. Say which build beside it when it is quoted.
