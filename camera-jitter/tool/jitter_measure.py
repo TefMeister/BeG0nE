@@ -21,6 +21,7 @@ TWO_EYES_MATCH = 0.2        # the left half found inside the right half with thi
                             # the motion reading lock onto half-width jumps. Shape alone cannot tell: a 1280x720 game
                             # window held two eyes in a Hard Reset recording (2026-10-07; match 0.26-0.55 there,
                             # 0.01-0.14 on five one-picture recordings, measured 2026-10-08)
+EYE_CHECK_SIZE = (512, 144) # the frame is shrunk to this to compare its halves
 TWO_EYES_MAX_DY = 2         # pixels (at 144 high) the two eyes may sit apart vertically
 EYE_CHECK_FRAMES = 9        # how many frames, spread over the recording, vote on "two eyes or one picture"
 CENTRE_FRACTION = 0.70      # measure only the middle 70% of the picture: HUD, borders and black bars stay out
@@ -51,7 +52,7 @@ def _centre(img):
 
 
 def _halves_alike(frame):
-    g = cv2.cvtColor(cv2.resize(frame, (512, 144), interpolation=cv2.INTER_AREA), cv2.COLOR_BGR2GRAY).astype(np.float32)
+    g = cv2.cvtColor(cv2.resize(frame, EYE_CHECK_SIZE, interpolation=cv2.INTER_AREA), cv2.COLOR_BGR2GRAY).astype(np.float32)
     if g.std() < 2:
         return False          # a black or flat picture says nothing
     (_dx, dy), resp = cv2.phaseCorrelate(g[:, :256], g[:, 256:])
