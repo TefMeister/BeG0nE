@@ -176,11 +176,22 @@ def _label_of(pat):
     return "unlabelled"
 
 
+def _group_of(pat):
+    """The group a pattern is compared in: the wearer's label when there is one, else the checker's own verdict
+    (so the base learns without anybody being asked; a label, when given, outranks the checker)."""
+    lab = _label_of(pat)
+    if lab in ("jittery", "smooth"):
+        return lab
+    if lab == "unlabelled":
+        return "jittery" if pat["values"].get("verdict") == "JITTER" else "smooth"
+    return lab
+
+
 def _separations(pats):
     """Per measure: the range across jittery patterns, across smooth ones, and whether they overlap."""
     out = []
-    jit = [p for p in pats if _label_of(p) == "jittery"]
-    smo = [p for p in pats if _label_of(p) == "smooth"]
+    jit = [p for p in pats if _group_of(p) == "jittery"]
+    smo = [p for p in pats if _group_of(p) == "smooth"]
     if not jit or not smo:
         return out, len(jit), len(smo)
     for key, _, words in MEASURES:
@@ -202,8 +213,8 @@ def report(base=None):
     lines = ["# What the numbers say about jittery and smooth VR cameras", "",
              f"Rebuilt {time.strftime('%Y-%m-%d %H:%M')} from {len(base['sessions'])} sessions boiled down to "
              f"{len(pats)} patterns. A pattern is one way a mod behaved; sessions that behaved the same way count "
-             f"as one. Labels come from the person wearing the headset; a pattern nobody has labelled carries only "
-             f"the checker's own verdict. Every line is `[measured]` on our own mods.", ""]
+             f"as one. A pattern is grouped as jittery or smooth by the checker's own verdict, unless the person wearing the "
+             f"headset said otherwise with `ride.py label`, which outranks it. Every line is `[measured]` on our own mods.", ""]
     games = sorted({g for p in pats for g in p["games"]})
     sections = [("Across every game", pats)] + [(g, [p for p in pats if g in p["games"]]) for g in games]
     for title, group in sections:

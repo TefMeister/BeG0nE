@@ -43,6 +43,11 @@ void jl_pose_q(float qx, float qy, float qz, float qw, float x, float y, float z
 void jl_camera_ypr(float yaw_deg, float pitch_deg, float roll_deg, float x, float y, float z);
 void jl_camera_q(float qx, float qy, float qz, float qw, float x, float y, float z);
 void jl_present(void);
+/* Occlusion Drift BeG0nE rides on the same log: one line per controller read. side 'L' or 'R'; tracked = the
+ * runtime said the pose is valid/tracked (0 when the headset lost the controller, which is the fault that cure
+ * removes). Angles and position as for the head. */
+void jl_hand_ypr(char side, int tracked, float yaw_deg, float pitch_deg, float roll_deg, float x, float y, float z);
+void jl_hand_q(char side, int tracked, float qx, float qy, float qz, float qw, float x, float y, float z);
 void jl_mark(const char* text);                        /* a free-text line, e.g. "session FOCUSED" */
 
 #ifdef __cplusplus
@@ -91,18 +96,26 @@ static void jl_flush_locked(void) {
     jl_s.last_flush = jl_now_us();
 }
 
-static void jl_write(char kind, float yaw, float pitch, float roll, float x, float y, float z) {
+static void jl_write_x(char kind, float yaw, float pitch, float roll, float x, float y, float z, int extra) {
     char line[160];
     int n;
     if (!jl_s.on) return;
-    n = _snprintf(line, sizeof line, "%lld %c %.3f %.3f %.3f %.4f %.4f %.4f\n",
-                  jl_now_us() - jl_s.t0, kind, yaw, pitch, roll, x, y, z);
+    if (extra < 0)
+        n = _snprintf(line, sizeof line, "%lld %c %.3f %.3f %.3f %.4f %.4f %.4f\n",
+                      jl_now_us() - jl_s.t0, kind, yaw, pitch, roll, x, y, z);
+    else
+        n = _snprintf(line, sizeof line, "%lld %c %.3f %.3f %.3f %.4f %.4f %.4f %d\n",
+                      jl_now_us() - jl_s.t0, kind, yaw, pitch, roll, x, y, z, extra);
     if (n <= 0) return;
     EnterCriticalSection(&jl_s.cs);
     if (jl_s.len + n >= JL_BUFFER_BYTES) jl_flush_locked();
     memcpy(jl_s.buf + jl_s.len, line, (size_t)n);
     jl_s.len += n;
     LeaveCriticalSection(&jl_s.cs);
+}
+
+static void jl_write(char kind, float yaw, float pitch, float roll, float x, float y, float z) {
+    jl_write_x(kind, yaw, pitch, roll, x, y, z, -1);
 }
 
 static void jl_q_to_ypr(float qx, float qy, float qz, float qw, float* yaw, float* pitch, float* roll) {
@@ -182,6 +195,17 @@ void jl_camera_q(float qx, float qy, float qz, float qw, float x, float y, float
     if (!jl_s.on) return;
     jl_q_to_ypr(qx, qy, qz, qw, &yaw, &pitch, &roll);
     jl_write('C', yaw, pitch, roll, x, y, z);
+}
+
+void jl_hand_ypr(char side, int tracked, float yaw, float pitch, float roll, float x, float y, float z) {
+    jl_write_x(side == 'L' ? 'L' : 'R', yaw, pitch, roll, x, y, z, tracked ? 1 : 0);
+}
+
+void jl_hand_q(char side, int tracked, float qx, float qy, float qz, float qw, float x, float y, float z) {
+    float yaw, pitch, roll;
+    if (!jl_s.on) return;
+    jl_q_to_ypr(qx, qy, qz, qw, &yaw, &pitch, &roll);
+    jl_write_x(side == 'L' ? 'L' : 'R', yaw, pitch, roll, x, y, z, tracked ? 1 : 0);
 }
 
 void jl_present(void) {
