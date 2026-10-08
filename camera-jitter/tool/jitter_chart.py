@@ -9,6 +9,7 @@ import numpy as np
 CHART_W, ROW_H, MARGIN = 1400, 220, 60
 BAND_TOP, BAND_BOTTOM = 28, 20      # space above the band for its title line, below it for the time marks
 LINE_FLOOR_PCT, LINE_CLIP_PERCENTILE = 0.2, 98   # the line's scale: at least 0.2% of the width, clipped at the 98th percentile
+TITLE_Y, TICK_Y, LEGEND_H, LEGEND_Y = 20, 4, 30, 20   # text baselines: title below the row top, time marks above the row bottom; legend strip
 TITLE_CHARS, TICK_EVERY_S, TICK_LEFT = 150, 5, 8   # verdict text length on the chart; a time mark every 5 s, 8 px left of it
 KIND_COLOUR = {            # BGR
     "smooth": (120, 200, 120), "JITTER": (60, 60, 230), "SHAKE": (40, 160, 250),
@@ -39,19 +40,18 @@ def _row(canvas, top, title, info, rows, summary):
         cv2.line(canvas, (MARGIN, mid), (CHART_W - MARGIN, mid), (255, 255, 255), 1)
         poly = np.array([[x_of(t), y_of(v)] for t, v in pts], np.int32)
         cv2.polylines(canvas, [poly], False, LINE_COLOUR, 1, cv2.LINE_AA)
-    cv2.putText(canvas, f"{title}: {summary['verdict'][:TITLE_CHARS]}", (MARGIN, top + 20), cv2.FONT_HERSHEY_SIMPLEX, 0.45,
+    cv2.putText(canvas, f"{title}: {summary['verdict'][:TITLE_CHARS]}", (MARGIN, top + TITLE_Y), cv2.FONT_HERSHEY_SIMPLEX, 0.45,
                 TEXT_COLOUR, 1, cv2.LINE_AA)
     for s in range(0, int(secs) + 1, TICK_EVERY_S):
-        cv2.putText(canvas, f"{s}s", (x_of(s) - TICK_LEFT, top + ROW_H - 4), cv2.FONT_HERSHEY_SIMPLEX, 0.35, TEXT_COLOUR, 1)
+        cv2.putText(canvas, f"{s}s", (x_of(s) - TICK_LEFT, top + ROW_H - TICK_Y), cv2.FONT_HERSHEY_SIMPLEX, 0.35, TEXT_COLOUR, 1)
 
 
 def draw(path, parts):
     """parts: list of (title, info, rows, summary). Writes a PNG at path."""
-    legend_h = 30
-    canvas = np.full((ROW_H * len(parts) + legend_h, CHART_W, 3), 245, np.uint8)
+    canvas = np.full((ROW_H * len(parts) + LEGEND_H, CHART_W, 3), 245, np.uint8)
     for k, (title, info, rows, summary) in enumerate(parts):
         _row(canvas, k * ROW_H, title, info, rows, summary)
-    x, y = MARGIN, ROW_H * len(parts) + 20
+    x, y = MARGIN, ROW_H * len(parts) + LEGEND_Y
     for name, col in list(KIND_COLOUR.items())[:5] + [("freeze", FREEZE_COLOUR), ("hitch", HITCH_COLOUR)]:
         cv2.rectangle(canvas, (x, y - 10), (x + 14, y), col, -1)
         cv2.putText(canvas, name, (x + 18, y), cv2.FONT_HERSHEY_SIMPLEX, 0.45, TEXT_COLOUR, 1)

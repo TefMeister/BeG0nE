@@ -46,6 +46,8 @@ REC_ROOTS = {"RTX": r"D:\MEGA transfer\Videos"}      # same choice as claude-mem
 REC_ROOT = REC_ROOTS.get(os.environ.get("COMPUTERNAME", ""), r"E:\OBS gameplay videos")
 FOLLOW_STATE = os.path.join(os.path.expandvars("%LOCALAPPDATA%"), "begone-jitter-follow.json")
 FOLLOW_POLL_S = 15            # how often follow looks for new recordings
+SETTLE_TIMEOUT_S = 120        # how long scan waits for a file to stop growing before giving up on waiting
+HEADSET_TWIN_TRIES = 30       # how many 2 s looks for the headset-view file after the game recording stopped
 SETTLE_S = 20                 # a recording counts as finished when it has not grown for this long
 NAME_RE = re.compile(r"^(?P<label>.+?)(?P<second>_second)?_(?P<date>\d{4}-\d{2}-\d{2})_(?P<time>\d{2}-\d{2}-\d{2})\.(mp4|mkv|mov)$")
 PATH_CHARS = 520              # room for a long exe path (2x MAX_PATH), as in obs-rec.py
@@ -166,7 +168,7 @@ def _report(run, game, label, note, parts, comparison):
     return "\n".join(lines)
 
 
-def _wait_settled(path, timeout_s=120):
+def _wait_settled(path, timeout_s=SETTLE_TIMEOUT_S):
     """Wait until a file has stopped growing (the recorder may still be closing it)."""
     last, t0 = -1, time.time()
     while time.time() - t0 < timeout_s:
@@ -185,7 +187,7 @@ def cmd_scan(path, game=None, headset=None, note="", wait_headset=False):
         sys.exit(f"no such recording: {path}")
     _wait_settled(path)
     if wait_headset and headset is None:
-        for _ in range(30):                      # the second file is closed a moment after the first
+        for _ in range(HEADSET_TWIN_TRIES):      # the second file is closed a moment after the first
             headset = _find_headset_twin(path)
             if headset:
                 _wait_settled(headset); break
