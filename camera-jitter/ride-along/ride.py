@@ -52,6 +52,7 @@ STARTUP_CMD = os.path.join(os.path.expandvars("%APPDATA%"), r"Microsoft\Windows\
 STEAMVR_EXES = ("vrserver.exe", "vrcompositor.exe", "vrmonitor.exe")
 VR_DLLS = ("openxr_loader.dll", "openvr_api.dll")
 MIN_LOG_BYTES = 200             # a .jl smaller than this never got past its header
+DETACHED_PROCESS = 0x00000008   # Windows: the rider gets its own console-less session so closing the terminal does not end it
 
 
 def say(msg):
@@ -223,7 +224,7 @@ def start():
         print("already running"); return
     os.makedirs(LOCAL, exist_ok=True)
     subprocess.Popen([sys.executable, os.path.abspath(__file__), "run"], stdout=subprocess.DEVNULL,
-                     stderr=subprocess.DEVNULL, creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0) | 0x00000008)
+                     stderr=subprocess.DEVNULL, creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0) | DETACHED_PROCESS)
     time.sleep(1)
     print("rider started" if running_pid() else "rider did not start; see " + RIDE_LOG)
 
