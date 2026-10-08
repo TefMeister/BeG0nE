@@ -25,13 +25,17 @@ went out**. Those three streams, timed to the microsecond, are the whole log.
 | `jitterlog.h` | one header a C or C++ mod includes; six calls (`jl_init`, `jl_vr_on/off`, `jl_pose_*`, `jl_camera_*`, `jl_present`) |
 | `jitterlog.lua` | the same for REFramework scripts |
 | `jitter_log_check.py` | reads a log and says, per second of head turning, whether the view stepped and **why** |
-| `ride.py` | the rider: starts with Windows, idles, notices a VR session, files its log the moment it ends |
+| `ride.py` | the rider: idles in the background, notices a VR session, files its log the moment it ends. Started by the Lanes plugin at every session (`begone = <this clone>` in lanes.conf, Lanes 0.52.0+), or by `ride.py install` to start with Windows |
 
 **It only activates when the game is really in VR.** The mod writes its log only between `jl_vr_on()` and
 `jl_vr_off()`, which it calls when the VR session starts and stops (OpenXR READY/STOPPING, SteamVR init and
 shutdown). A flat run writes nothing, so there is no switch to remember. The rider also watches two outside
 signs (SteamVR's own processes; a windowed program with the OpenXR or OpenVR library loaded) so a session can
 tell "VR is up but no mod is logging" from "nothing is running".
+
+**Controllers ride the same log** (`jl_hand_*`, one line per controller read with a tracked flag), so Occlusion
+Drift BeG0nE collects at the same time: per controller, how often tracking dropped, for how long, and how often
+the other controller was within 30 cm when it did.
 
 **What the checker can say that a recording cannot.** While the head turns:
 
@@ -63,8 +67,9 @@ log is only as honest as the placing: put `jl_pose_*` at the actual read of the 
 
 `ride-along/knowledge.py` boils every filed session down to a **fingerprint** (the typical value of each
 measure, rounded into buckets). Sessions with the same fingerprint are **one pattern** with a tally, so the base
-never holds copies; only a genuinely new behaviour makes a new entry. The person wearing the headset says how a
-session **felt** — `ride.py label <run> jittery|smooth` — and that label sticks to the pattern. `FINDINGS.md`
+never holds copies; only a genuinely new behaviour makes a new entry. Nobody is asked anything: a pattern is grouped as
+jittery or smooth by the checker's own verdict. If the person wearing the headset does say how a session **felt**
+(`ride.py label <run> jittery|smooth`) that label sticks to the pattern and outranks the checker. `FINDINGS.md`
 is rebuilt from the whole base after every session: per game and across games, the range of each measure over
 the jittery patterns beside the range over the smooth ones, and **which measures separate the two**. That
 difference is the why. A pattern called jittery once and smooth another time is listed as a contradiction to
