@@ -4,6 +4,7 @@
     python jitter_log_check.py selftest                        made-up logs with known faults, every verdict checked
 
 Three streams per frame: P = the mod read the headset pose, C = the mod wrote the camera, F = a picture went out.
+Two more for Occlusion Drift BeG0nE: L and R = a controller read, with a ninth field saying whether it was tracked.
 Per second of log, while the head is turning, it measures:
   camera held      share of pictures that went out with a camera identical to the picture before   -> JITTER
   camera rate      camera writes per picture                                                        -> the rate fault
@@ -24,6 +25,7 @@ import numpy as np
 WINDOW_S = 1.0                # verdicts per one-second piece
 MOVING_DEG_S = 4.0            # the head counts as turning when yaw changes at least this fast (slow smooth turn ~20-40)
 HELD_DEG = 0.02               # a camera that moved less than this between two pictures counts as HELD
+HANDS_CLOSE_M = 0.30          # controllers nearer than this are 'stacked': one can hide the other from the headset
 JITTER_HELD_SHARE = 0.20      # a turning second with 20%+ held pictures is JITTER
 LOW_CAMERA_RATE = 0.85        # camera writes per picture below this: the camera is renewed less often than pictures
 LOW_POSE_RATE = 0.85          # pose reads per picture below this: the pose is read less often than pictures
@@ -58,7 +60,7 @@ def read_log(path):
                 rows.append((t, "M", " ".join(p[2:])))
             elif len(p) >= 8:
                 try:
-                    rows.append((t, p[1]) + tuple(float(v) for v in p[2:8]))
+                    rows.append((t, p[1]) + tuple(float(v) for v in p[2:8]) + ((int(p[8]),) if len(p) > 8 else ()))
                 except ValueError:
                     pass
     return head, rows
@@ -143,10 +145,46 @@ def analyse(rows):
         else:
             w["kind"] = "smooth"
         windows.append(w)
-    return {"seconds": round(end, 2), "pictures_per_s": round(len(frames) / max(end, 1e-6), 1),
+    hands = analyse_hands(rows, end)
+    return {"hands": hands, "seconds": round(end, 2), "pictures_per_s": round(len(frames) / max(end, 1e-6), 1),
             "pose_reads_per_s": round(len(poses) / max(end, 1e-6), 1),
             "camera_writes_per_s": round(len(cams) / max(end, 1e-6), 1), "windows": windows,
             "marks": [(round(r[0], 2), r[2]) for r in rows if r[1] == "M"][:40]}
+
+
+def analyse_hands(rows, end):
+    """Per controller: reads a second, share of reads the runtime called untracked, the longest untracked run,
+    and how much of the untracked time the other controller was close (the occlusion shape)."""
+    out = {}
+    hands = {k: [r for r in rows if r[1] == k and len(r) > 8] for k in ("L", "R")}
+    if not hands["L"] and not hands["R"]:
+        return out
+    for side, other in (("L", "R"), ("R", "L")):
+        hs, os_ = hands[side], hands[other]
+        if not hs:
+            continue
+        untracked = [r for r in hs if r[8] == 0]
+        longest, run_start = 0.0, None
+        for r in hs:
+            if r[8] == 0 and run_start is None:
+                run_start = r[0]
+            elif r[8] == 1 and run_start is not None:
+                longest = max(longest, r[0] - run_start); run_start = None
+        if run_start is not None:
+            longest = max(longest, hs[-1][0] - run_start)
+        close = 0
+        if os_ and untracked:
+            ot = np.array([r[0] for r in os_])
+            for r in untracked:
+                j = min(len(os_) - 1, max(0, int(np.searchsorted(ot, r[0]))))
+                o = os_[j]
+                if math.sqrt((r[5] - o[5]) ** 2 + (r[6] - o[6]) ** 2 + (r[7] - o[7]) ** 2) < HANDS_CLOSE_M:
+                    close += 1
+        out[side] = {"reads_per_s": round(len(hs) / max(end, 1e-6), 1),
+                     "untracked_share": round(len(untracked) / len(hs), 3),
+                     "longest_untracked_s": round(longest, 2),
+                     "untracked_while_hands_close_share": round(close / len(untracked), 2) if untracked else 0.0}
+    return out
 
 
 def judge(a):
@@ -223,6 +261,13 @@ def report(head, s, src):
                   f"- turning {s.get('seconds_turning', 0)} s, jitter {s.get('seconds_jitter', 0)} s"]
     if s.get("causes"):
         lines += ["", "## Why", ""] + [f"- {c}" for c in s["causes"]]
+    if s.get("hands"):
+        lines += ["", "## Controllers (Occlusion Drift BeG0nE)", ""]
+        for side, h in s["hands"].items():
+            lines.append(f"- {'left' if side == 'L' else 'right'}: {h['reads_per_s']} reads a second; untracked "
+                         f"{h['untracked_share']:.1%} of the time, longest {h['longest_untracked_s']} s; "
+                         f"{h['untracked_while_hands_close_share']:.0%} of the untracked reads came while the other "
+                         f"controller was within {HANDS_CLOSE_M} m")
     if s.get("marks"):
         lines += ["", "## Marks the mod left", ""] + [f"- {t} s: {m}" for t, m in s["marks"]]
     lines += ["", "![chart](chart.png)", ""]
