@@ -6,6 +6,7 @@ the mod's jitter log the moment the VR session ends. Idle, it costs one process 
     python ride.py start | stop | status
     python ride.py run            the loop itself, in the foreground (what the task runs)
     python ride.py check <file.jl> [--game <project>]     file one log by hand
+    python ride.py label <run> jittery|smooth [note]      say how that session FELT; the knowledge base learns from it
 
 HOW IT KNOWS THE GAME IS IN VR, three ways, because one is never enough (claude-memory PREFERENCES.md, "input
 automation" -- the same reasoning):
@@ -158,6 +159,13 @@ def file_log(path, game=None):
         w = csv.DictWriter(f, fieldnames=INDEX_FIELDS)
         w.writeheader(); w.writerows(rows)
     say(f"FILED {game}/{run}: {s['verdict']}")
+    try:
+        import knowledge
+        fid, status = knowledge.ingest(out)
+        knowledge.report()
+        say(f"KNOWLEDGE: pattern {fid} {status}")
+    except Exception as e:  # the base must never stop a filing
+        say(f"knowledge base not updated: {e}")
     return out
 
 
@@ -286,6 +294,9 @@ if __name__ == "__main__":
     elif cmd == "status": status()
     elif cmd == "install": install()
     elif cmd == "uninstall": uninstall()
+    elif cmd == "label" and len(a) >= 3:
+        import knowledge
+        knowledge.label(a[1], a[2], " ".join(a[3:]))
     elif cmd == "check" and len(a) >= 2:
         game = a[a.index("--game") + 1] if "--game" in a else None
         print(file_log(a[1], game))

@@ -59,6 +59,17 @@ and cost about 10 KB a second at 90 Hz.
 the pose is read, one `jl_camera_*` where the camera is written, `jl_present` where the frame goes out. The
 log is only as honest as the placing: put `jl_pose_*` at the actual read of the runtime, not at a copy of it.
 
+### `knowledge/` — what jittery looks like, what smooth looks like, and what separates them
+
+`ride-along/knowledge.py` boils every filed session down to a **fingerprint** (the typical value of each
+measure, rounded into buckets). Sessions with the same fingerprint are **one pattern** with a tally, so the base
+never holds copies; only a genuinely new behaviour makes a new entry. The person wearing the headset says how a
+session **felt** — `ride.py label <run> jittery|smooth` — and that label sticks to the pattern. `FINDINGS.md`
+is rebuilt from the whole base after every session: per game and across games, the range of each measure over
+the jittery patterns beside the range over the smooth ones, and **which measures separate the two**. That
+difference is the why. A pattern called jittery once and smooth another time is listed as a contradiction to
+look at, not averaged away. Self-test: `python ride-along/tests/test_knowledge.py`.
+
 ### `data/` — every VR session, kept
 
 One folder per session the rider filed: `summary.json`, `report.md` (the verdict and the why) and `chart.png`.
