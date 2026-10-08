@@ -16,6 +16,11 @@ KIND_COLOUR = {            # BGR
     "still": (200, 200, 200), "jump": (230, 200, 120), "too few pictures": (90, 90, 90),
 }
 FREEZE_COLOUR, HITCH_COLOUR, LINE_COLOUR, TEXT_COLOUR = (30, 30, 30), (200, 0, 200), (255, 255, 255), (20, 20, 20)
+UNKNOWN_COLOUR, PAGE_GREY = (90, 90, 90), 245             # a kind the legend does not know; the page background
+FONT, FONT_TEXT, FONT_TICK, THIN = cv2.FONT_HERSHEY_SIMPLEX, 0.45, 0.35, 1   # text sizes and the line/text thickness
+HITCH_MARK_H, HITCH_MARK_W = 8, 2                          # the hitch tick under the band
+SWATCH_W, SWATCH_H, SWATCH_GAP, LEGEND_STEP = 14, 10, 18, 105   # legend layout
+KINDS_IN_LEGEND = 5                                        # the first five kinds of KIND_COLOUR get a swatch
 
 
 def _row(canvas, top, title, info, rows, summary):
@@ -24,11 +29,11 @@ def _row(canvas, top, title, info, rows, summary):
     band_top, band_bot = top + BAND_TOP, top + ROW_H - BAND_BOTTOM
     for w in summary["windows"]:
         cv2.rectangle(canvas, (x_of(w["at_s"]), band_top), (x_of(w["at_s"] + 1.0), band_bot),
-                      KIND_COLOUR.get(w.get("kind"), (90, 90, 90)), -1)
+                      KIND_COLOUR.get(w.get("kind"), UNKNOWN_COLOUR), -1)
     for f in summary["freezes"]:
         cv2.rectangle(canvas, (x_of(f["at_s"]), band_top), (x_of(f["at_s"] + f["for_s"]), band_bot), FREEZE_COLOUR, -1)
     for t in summary["hitch_times_s"]:
-        cv2.line(canvas, (x_of(t), band_bot), (x_of(t), band_bot + 8), HITCH_COLOUR, 2)
+        cv2.line(canvas, (x_of(t), band_bot), (x_of(t), band_bot + HITCH_MARK_H), HITCH_COLOUR, HITCH_MARK_W)
     # the sideways step of every new picture, % of the width, scaled to the band
     fps, width = info["fps"], info["width"]
     pts = [(r["t"], r["dx"] * 100.0 / width / r["gap"]) for r in rows if r["new"] and not np.isnan(r["dx"])]
@@ -37,25 +42,25 @@ def _row(canvas, top, title, info, rows, summary):
         lim = max(LINE_FLOOR_PCT, float(np.percentile(np.abs(steps), LINE_CLIP_PERCENTILE)))
         mid = (band_top + band_bot) // 2
         y_of = lambda v: int(mid - (band_bot - band_top) / 2 * max(-1.0, min(1.0, v / lim)))
-        cv2.line(canvas, (MARGIN, mid), (CHART_W - MARGIN, mid), (255, 255, 255), 1)
+        cv2.line(canvas, (MARGIN, mid), (CHART_W - MARGIN, mid), LINE_COLOUR, THIN)
         poly = np.array([[x_of(t), y_of(v)] for t, v in pts], np.int32)
-        cv2.polylines(canvas, [poly], False, LINE_COLOUR, 1, cv2.LINE_AA)
-    cv2.putText(canvas, f"{title}: {summary['verdict'][:TITLE_CHARS]}", (MARGIN, top + TITLE_Y), cv2.FONT_HERSHEY_SIMPLEX, 0.45,
-                TEXT_COLOUR, 1, cv2.LINE_AA)
+        cv2.polylines(canvas, [poly], False, LINE_COLOUR, THIN, cv2.LINE_AA)
+    cv2.putText(canvas, f"{title}: {summary['verdict'][:TITLE_CHARS]}", (MARGIN, top + TITLE_Y), FONT, FONT_TEXT,
+                TEXT_COLOUR, THIN, cv2.LINE_AA)
     for s in range(0, int(secs) + 1, TICK_EVERY_S):
-        cv2.putText(canvas, f"{s}s", (x_of(s) - TICK_LEFT, top + ROW_H - TICK_Y), cv2.FONT_HERSHEY_SIMPLEX, 0.35, TEXT_COLOUR, 1)
+        cv2.putText(canvas, f"{s}s", (x_of(s) - TICK_LEFT, top + ROW_H - TICK_Y), FONT, FONT_TICK, TEXT_COLOUR, THIN)
 
 
 def draw(path, parts):
     """parts: list of (title, info, rows, summary). Writes a PNG at path."""
-    canvas = np.full((ROW_H * len(parts) + LEGEND_H, CHART_W, 3), 245, np.uint8)
+    canvas = np.full((ROW_H * len(parts) + LEGEND_H, CHART_W, 3), PAGE_GREY, np.uint8)
     for k, (title, info, rows, summary) in enumerate(parts):
         _row(canvas, k * ROW_H, title, info, rows, summary)
     x, y = MARGIN, ROW_H * len(parts) + LEGEND_Y
-    for name, col in list(KIND_COLOUR.items())[:5] + [("freeze", FREEZE_COLOUR), ("hitch", HITCH_COLOUR)]:
-        cv2.rectangle(canvas, (x, y - 10), (x + 14, y), col, -1)
-        cv2.putText(canvas, name, (x + 18, y), cv2.FONT_HERSHEY_SIMPLEX, 0.45, TEXT_COLOUR, 1)
-        x += 105
-    cv2.putText(canvas, "white line = sideways step of each new picture", (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.45,
-                TEXT_COLOUR, 1)
+    for name, col in list(KIND_COLOUR.items())[:KINDS_IN_LEGEND] + [("freeze", FREEZE_COLOUR), ("hitch", HITCH_COLOUR)]:
+        cv2.rectangle(canvas, (x, y - SWATCH_H), (x + SWATCH_W, y), col, -1)
+        cv2.putText(canvas, name, (x + SWATCH_GAP, y), FONT, FONT_TEXT, TEXT_COLOUR, THIN)
+        x += LEGEND_STEP
+    cv2.putText(canvas, "white line = sideways step of each new picture", (x, y), FONT, FONT_TEXT,
+                TEXT_COLOUR, THIN)
     cv2.imwrite(path, canvas)
