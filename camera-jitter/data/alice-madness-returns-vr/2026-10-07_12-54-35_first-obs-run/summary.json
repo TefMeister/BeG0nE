@@ -1,0 +1,926 @@
+{
+ "tool": "0.1.0",
+ "run": "2026-10-07_12-54-35_first-obs-run",
+ "game": "alice-madness-returns-vr",
+ "label": "first-obs-run",
+ "note": "",
+ "checked": "2026-10-08 16:05",
+ "comparison": "",
+ "views": {
+  "game window": {
+   "seconds": 115.3,
+   "video_fps": 60.0,
+   "size": "1280x720",
+   "new_pictures_per_s": 21.6,
+   "usual_gap_frames": 2.0,
+   "cuts": 0,
+   "hitches": 83,
+   "hitch_times_s": [
+    1.65,
+    3.35,
+    8.38,
+    49.63,
+    49.77,
+    50.85,
+    51.12,
+    52.13,
+    52.23,
+    53.27,
+    54.28,
+    55.27,
+    56.28,
+    57.27,
+    58.27,
+    59.28,
+    60.32,
+    60.87,
+    61.32,
+    62.22,
+    62.53,
+    63.05,
+    63.35,
+    63.73,
+    64.7,
+    65.02,
+    65.12,
+    65.85,
+    66.7,
+    67.53,
+    68.27,
+    69.18,
+    69.4,
+    70.02,
+    70.12,
+    70.43,
+    71.27,
+    71.7,
+    71.78,
+    72.53,
+    72.78,
+    73.37,
+    73.77,
+    74.18,
+    74.98,
+    75.67,
+    75.82,
+    76.68,
+    77.33,
+    78.3
+   ],
+   "freezes": [
+    {
+     "at_s": 6.05,
+     "for_s": 1.15
+    },
+    {
+     "at_s": 8.78,
+     "for_s": 2.42
+    },
+    {
+     "at_s": 12.5,
+     "for_s": 4.03
+    },
+    {
+     "at_s": 16.58,
+     "for_s": 10.5
+    },
+    {
+     "at_s": 27.73,
+     "for_s": 10.32
+    },
+    {
+     "at_s": 108.07,
+     "for_s": 7.22,
+     "until_end": true
+    }
+   ],
+   "seconds_travelling": 20,
+   "seconds_smooth": 10,
+   "seconds_jitter": 4,
+   "seconds_shake": 6,
+   "seconds_still": 63,
+   "seconds_jump": 0,
+   "jitter_times_s": [
+    94.0,
+    95.0,
+    99.0,
+    102.0
+   ],
+   "shake_times_s": [
+    3.0,
+    55.0,
+    57.0,
+    97.0,
+    98.0,
+    101.0
+   ],
+   "windows": [
+    {
+     "pictures": 28,
+     "travel_pct_s": 0.22,
+     "wobble_pct": 0.011,
+     "kind": "still",
+     "at_s": 0.0
+    },
+    {
+     "pictures": 21,
+     "travel_pct_s": 0.02,
+     "wobble_pct": 0.007,
+     "kind": "still",
+     "at_s": 1.0
+    },
+    {
+     "pictures": 15,
+     "travel_pct_s": 0.06,
+     "wobble_pct": 0.012,
+     "kind": "still",
+     "at_s": 2.0
+    },
+    {
+     "pictures": 19,
+     "travel_pct_s": 8.83,
+     "held": 0.13,
+     "backwards": 0.4,
+     "uneven": 2.19,
+     "alternation": 0.59,
+     "kind": "SHAKE",
+     "at_s": 3.0
+    },
+    {
+     "pictures": 27,
+     "travel_pct_s": 23.98,
+     "held": 0.15,
+     "backwards": 0.0,
+     "uneven": 0.83,
+     "alternation": 0.3,
+     "kind": "smooth",
+     "at_s": 4.0
+    },
+    {
+     "pictures": 27,
+     "travel_pct_s": 0.22,
+     "wobble_pct": 0.035,
+     "kind": "still",
+     "at_s": 5.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 2,
+     "at_s": 6.0
+    },
+    {
+     "pictures": 23,
+     "travel_pct_s": 0.14,
+     "wobble_pct": 0.069,
+     "kind": "still",
+     "at_s": 7.0
+    },
+    {
+     "pictures": 16,
+     "travel_pct_s": 0.12,
+     "wobble_pct": 0.009,
+     "kind": "still",
+     "at_s": 8.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 9.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 10.0
+    },
+    {
+     "pictures": 24,
+     "travel_pct_s": 0.08,
+     "wobble_pct": 0.012,
+     "kind": "still",
+     "at_s": 11.0
+    },
+    {
+     "pictures": 15,
+     "travel_pct_s": 0.01,
+     "wobble_pct": 0.007,
+     "kind": "still",
+     "at_s": 12.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 13.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 14.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 15.0
+    },
+    {
+     "pictures": 3,
+     "travel_pct_s": 0.01,
+     "wobble_pct": 0.002,
+     "kind": "still",
+     "at_s": 16.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 17.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 18.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 19.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 20.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 21.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 22.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 23.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 24.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 25.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 26.0
+    },
+    {
+     "pictures": 19,
+     "travel_pct_s": 0.05,
+     "wobble_pct": 0.016,
+     "kind": "still",
+     "at_s": 27.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 28.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 29.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 30.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 31.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 32.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 33.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 34.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 35.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 36.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 37.0
+    },
+    {
+     "pictures": 29,
+     "travel_pct_s": 0.07,
+     "wobble_pct": 0.016,
+     "kind": "still",
+     "at_s": 38.0
+    },
+    {
+     "pictures": 32,
+     "travel_pct_s": 0.08,
+     "wobble_pct": 0.009,
+     "kind": "still",
+     "at_s": 39.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 0.01,
+     "wobble_pct": 0.009,
+     "kind": "still",
+     "at_s": 40.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 0.05,
+     "wobble_pct": 0.01,
+     "kind": "still",
+     "at_s": 41.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 0.05,
+     "wobble_pct": 0.007,
+     "kind": "still",
+     "at_s": 42.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 0.01,
+     "wobble_pct": 0.007,
+     "kind": "still",
+     "at_s": 43.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 0.04,
+     "wobble_pct": 0.008,
+     "kind": "still",
+     "at_s": 44.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 0.04,
+     "wobble_pct": 0.009,
+     "kind": "still",
+     "at_s": 45.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 0.04,
+     "wobble_pct": 0.007,
+     "kind": "still",
+     "at_s": 46.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 0.03,
+     "wobble_pct": 0.007,
+     "kind": "still",
+     "at_s": 47.0
+    },
+    {
+     "pictures": 30,
+     "travel_pct_s": 0.09,
+     "wobble_pct": 0.01,
+     "kind": "still",
+     "at_s": 48.0
+    },
+    {
+     "pictures": 26,
+     "travel_pct_s": 1.16,
+     "wobble_pct": 0.087,
+     "kind": "still",
+     "at_s": 49.0
+    },
+    {
+     "pictures": 21,
+     "travel_pct_s": 9.01,
+     "held": 0.1,
+     "backwards": 0.0,
+     "uneven": 0.52,
+     "alternation": 0.71,
+     "kind": "smooth",
+     "at_s": 50.0
+    },
+    {
+     "pictures": 25,
+     "travel_pct_s": 8.09,
+     "held": 0.08,
+     "backwards": 0.0,
+     "uneven": 0.6,
+     "alternation": 0.32,
+     "kind": "smooth",
+     "at_s": 51.0
+    },
+    {
+     "pictures": 23,
+     "travel_pct_s": 8.98,
+     "held": 0.09,
+     "backwards": 0.0,
+     "uneven": 0.64,
+     "alternation": 0.42,
+     "kind": "smooth",
+     "at_s": 52.0
+    },
+    {
+     "pictures": 25,
+     "travel_pct_s": 7.51,
+     "held": 0.04,
+     "backwards": 0.12,
+     "uneven": 0.75,
+     "alternation": 0.8,
+     "kind": "smooth",
+     "at_s": 53.0
+    },
+    {
+     "pictures": 27,
+     "travel_pct_s": 7.05,
+     "held": 0.11,
+     "backwards": 0.11,
+     "uneven": 0.95,
+     "alternation": 0.78,
+     "kind": "smooth",
+     "at_s": 54.0
+    },
+    {
+     "pictures": 26,
+     "travel_pct_s": 7.19,
+     "held": 0.04,
+     "backwards": 0.15,
+     "uneven": 0.92,
+     "alternation": 0.79,
+     "kind": "SHAKE",
+     "at_s": 55.0
+    },
+    {
+     "pictures": 28,
+     "travel_pct_s": 6.66,
+     "held": 0.11,
+     "backwards": 0.14,
+     "uneven": 1.05,
+     "alternation": 0.74,
+     "kind": "smooth",
+     "at_s": 56.0
+    },
+    {
+     "pictures": 26,
+     "travel_pct_s": 7.19,
+     "held": 0.08,
+     "backwards": 0.15,
+     "uneven": 0.86,
+     "alternation": 0.79,
+     "kind": "SHAKE",
+     "at_s": 57.0
+    },
+    {
+     "pictures": 27,
+     "travel_pct_s": 7.12,
+     "held": 0.07,
+     "backwards": 0.15,
+     "uneven": 1.05,
+     "alternation": 0.57,
+     "kind": "smooth",
+     "at_s": 58.0
+    },
+    {
+     "pictures": 26,
+     "travel_pct_s": 8.48,
+     "held": 0.12,
+     "backwards": 0.12,
+     "uneven": 1.06,
+     "alternation": 0.42,
+     "kind": "smooth",
+     "at_s": 59.0
+    },
+    {
+     "pictures": 16,
+     "travel_pct_s": 0.73,
+     "wobble_pct": 0.061,
+     "kind": "still",
+     "at_s": 60.0
+    },
+    {
+     "pictures": 20,
+     "travel_pct_s": 0.18,
+     "wobble_pct": 0.012,
+     "kind": "still",
+     "at_s": 61.0
+    },
+    {
+     "pictures": 9,
+     "travel_pct_s": 0.01,
+     "wobble_pct": 0.005,
+     "kind": "still",
+     "at_s": 62.0
+    },
+    {
+     "pictures": 13,
+     "travel_pct_s": 0.11,
+     "wobble_pct": 0.02,
+     "kind": "still",
+     "at_s": 63.0
+    },
+    {
+     "pictures": 11,
+     "travel_pct_s": 0.09,
+     "wobble_pct": 0.012,
+     "kind": "still",
+     "at_s": 64.0
+    },
+    {
+     "pictures": 6,
+     "travel_pct_s": 0.01,
+     "wobble_pct": 0.017,
+     "kind": "still",
+     "at_s": 65.0
+    },
+    {
+     "pictures": 26,
+     "travel_pct_s": 0.11,
+     "wobble_pct": 0.008,
+     "kind": "still",
+     "at_s": 66.0
+    },
+    {
+     "pictures": 3,
+     "travel_pct_s": 0.02,
+     "wobble_pct": 0.022,
+     "kind": "still",
+     "at_s": 67.0
+    },
+    {
+     "pictures": 16,
+     "travel_pct_s": 0.14,
+     "wobble_pct": 0.02,
+     "kind": "still",
+     "at_s": 68.0
+    },
+    {
+     "pictures": 5,
+     "travel_pct_s": 0.05,
+     "wobble_pct": 0.012,
+     "kind": "still",
+     "at_s": 69.0
+    },
+    {
+     "pictures": 20,
+     "travel_pct_s": 0.1,
+     "wobble_pct": 0.008,
+     "kind": "still",
+     "at_s": 70.0
+    },
+    {
+     "pictures": 11,
+     "travel_pct_s": 0.17,
+     "wobble_pct": 0.016,
+     "kind": "still",
+     "at_s": 71.0
+    },
+    {
+     "pictures": 9,
+     "travel_pct_s": 0.06,
+     "wobble_pct": 0.015,
+     "kind": "still",
+     "at_s": 72.0
+    },
+    {
+     "pictures": 15,
+     "travel_pct_s": 0.16,
+     "wobble_pct": 0.009,
+     "kind": "still",
+     "at_s": 73.0
+    },
+    {
+     "pictures": 4,
+     "travel_pct_s": 0.04,
+     "wobble_pct": 0.015,
+     "kind": "still",
+     "at_s": 74.0
+    },
+    {
+     "pictures": 26,
+     "travel_pct_s": 0.08,
+     "wobble_pct": 0.008,
+     "kind": "still",
+     "at_s": 75.0
+    },
+    {
+     "pictures": 4,
+     "travel_pct_s": 0.08,
+     "wobble_pct": 0.036,
+     "kind": "still",
+     "at_s": 76.0
+    },
+    {
+     "pictures": 15,
+     "travel_pct_s": 0.08,
+     "wobble_pct": 0.011,
+     "kind": "still",
+     "at_s": 77.0
+    },
+    {
+     "pictures": 5,
+     "travel_pct_s": 0.14,
+     "wobble_pct": 0.012,
+     "kind": "still",
+     "at_s": 78.0
+    },
+    {
+     "pictures": 19,
+     "travel_pct_s": 0.02,
+     "wobble_pct": 0.016,
+     "kind": "still",
+     "at_s": 79.0
+    },
+    {
+     "pictures": 13,
+     "travel_pct_s": 0.05,
+     "wobble_pct": 0.008,
+     "kind": "still",
+     "at_s": 80.0
+    },
+    {
+     "pictures": 9,
+     "travel_pct_s": 0.04,
+     "wobble_pct": 0.022,
+     "kind": "still",
+     "at_s": 81.0
+    },
+    {
+     "pictures": 16,
+     "travel_pct_s": 0.06,
+     "wobble_pct": 0.007,
+     "kind": "still",
+     "at_s": 82.0
+    },
+    {
+     "pictures": 3,
+     "travel_pct_s": 0.08,
+     "wobble_pct": 0.023,
+     "kind": "still",
+     "at_s": 83.0
+    },
+    {
+     "pictures": 25,
+     "travel_pct_s": 0.05,
+     "wobble_pct": 0.017,
+     "kind": "still",
+     "at_s": 84.0
+    },
+    {
+     "pictures": 6,
+     "travel_pct_s": 0.02,
+     "wobble_pct": 0.007,
+     "kind": "still",
+     "at_s": 85.0
+    },
+    {
+     "pictures": 15,
+     "travel_pct_s": 0.11,
+     "wobble_pct": 0.009,
+     "kind": "still",
+     "at_s": 86.0
+    },
+    {
+     "pictures": 7,
+     "travel_pct_s": 0.04,
+     "wobble_pct": 0.007,
+     "kind": "still",
+     "at_s": 87.0
+    },
+    {
+     "pictures": 15,
+     "travel_pct_s": 0.07,
+     "wobble_pct": 0.02,
+     "kind": "still",
+     "at_s": 88.0
+    },
+    {
+     "pictures": 16,
+     "travel_pct_s": 0.07,
+     "wobble_pct": 0.007,
+     "kind": "still",
+     "at_s": 89.0
+    },
+    {
+     "pictures": 9,
+     "travel_pct_s": 0.03,
+     "wobble_pct": 0.008,
+     "kind": "still",
+     "at_s": 90.0
+    },
+    {
+     "pictures": 20,
+     "travel_pct_s": 0.09,
+     "wobble_pct": 0.012,
+     "kind": "still",
+     "at_s": 91.0
+    },
+    {
+     "pictures": 17,
+     "travel_pct_s": 0.45,
+     "wobble_pct": 0.019,
+     "kind": "still",
+     "at_s": 92.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 0.54,
+     "wobble_pct": 0.021,
+     "kind": "still",
+     "at_s": 93.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 31.9,
+     "held": 0.55,
+     "backwards": 0.14,
+     "uneven": 2.59,
+     "alternation": 0.54,
+     "kind": "JITTER",
+     "at_s": 94.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 39.82,
+     "held": 0.74,
+     "backwards": 0.0,
+     "uneven": 2.07,
+     "alternation": 0.75,
+     "kind": "JITTER",
+     "at_s": 95.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 0.46,
+     "wobble_pct": 0.03,
+     "kind": "still",
+     "at_s": 96.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 45.36,
+     "held": 0.34,
+     "backwards": 0.31,
+     "uneven": 2.01,
+     "alternation": 0.78,
+     "kind": "SHAKE",
+     "at_s": 97.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 72.42,
+     "held": 0.48,
+     "backwards": 0.3,
+     "uneven": 2.36,
+     "alternation": 0.36,
+     "kind": "SHAKE",
+     "at_s": 98.0
+    },
+    {
+     "pictures": 20,
+     "travel_pct_s": 25.9,
+     "held": 0.6,
+     "backwards": 0.0,
+     "uneven": 1.7,
+     "alternation": 0.68,
+     "kind": "JITTER",
+     "at_s": 99.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 0.26,
+     "wobble_pct": 0.013,
+     "kind": "still",
+     "at_s": 100.0
+    },
+    {
+     "pictures": 30,
+     "travel_pct_s": 55.12,
+     "held": 0.5,
+     "backwards": 0.17,
+     "uneven": 2.07,
+     "alternation": 0.59,
+     "kind": "SHAKE",
+     "at_s": 101.0
+    },
+    {
+     "pictures": 24,
+     "travel_pct_s": 10.86,
+     "held": 0.62,
+     "backwards": 0.04,
+     "uneven": 2.16,
+     "alternation": 0.52,
+     "kind": "JITTER",
+     "at_s": 102.0
+    },
+    {
+     "pictures": 26,
+     "travel_pct_s": 1.45,
+     "wobble_pct": 0.072,
+     "kind": "still",
+     "at_s": 103.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 3.43,
+     "held": 0.1,
+     "backwards": 0.0,
+     "uneven": 0.5,
+     "alternation": 0.45,
+     "kind": "smooth",
+     "at_s": 104.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 1.16,
+     "wobble_pct": 0.163,
+     "kind": "still",
+     "at_s": 105.0
+    },
+    {
+     "pictures": 31,
+     "travel_pct_s": 2.41,
+     "wobble_pct": 0.155,
+     "kind": "still",
+     "at_s": 106.0
+    },
+    {
+     "pictures": 26,
+     "travel_pct_s": 0.15,
+     "wobble_pct": 0.016,
+     "kind": "still",
+     "at_s": 107.0
+    },
+    {
+     "pictures": 3,
+     "travel_pct_s": 0.19,
+     "wobble_pct": 0.006,
+     "kind": "still",
+     "at_s": 108.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 109.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 110.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 111.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 112.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 113.0
+    },
+    {
+     "kind": "too few pictures",
+     "pictures": 0,
+     "at_s": 114.0
+    }
+   ],
+   "quality": "good",
+   "quality_reason": "",
+   "verdict": "JITTER in 4 of 20 moving seconds: new pictures arrived but the view held still in some of them, so the camera is renewed less often than the picture (a rate fault). SHAKE in 6 seconds: the view moved back against itself or wobbled. 6 freeze(s) of a second or more. 83 short hitches (frame rate, not the camera). Only 21.6 new pictures a second reached the recording, so small unevenness may come from the capture, not the game.",
+   "file": "first-obs-run_2026-10-07_12-54-35.mp4"
+  }
+ }
+}
