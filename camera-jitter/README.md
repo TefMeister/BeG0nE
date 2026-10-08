@@ -1,6 +1,6 @@
 # Camera Jitter/Shake BeG0nE
 
-**Started 2026-10-01. The measuring tool exists since 2026-10-08; nothing cures anything yet.** A cure for the
+**Started 2026-10-01. The ride-along exists since 2026-10-08; nothing cures anything yet.** A cure for the
 jittery camera that VR mods written with AI code so often have. First find out why. Then a tool for modders. Then a
 jitter-free camera for specific games.
 
@@ -14,65 +14,69 @@ not in any one game.
 
 ## What is here
 
-### `tool/` — reads a recording and says what the view did
+### `ride-along/` — the mod writes three timestamps a frame; a rider in the background reads them
 
-It rides along a modding session. Every recording the session makes (the game window, and the headset's own view
-beside it when there is one) is checked the moment it is saved, and the verdict is kept in `data/`.
+A recording of the screen can show *that* the view steps. It cannot show *why*. The mod itself can: it knows
+the moment it **read the headset pose**, the moment it **wrote the game's camera**, and the moment a **picture
+went out**. Those three streams, timed to the microsecond, are the whole log.
 
-Four words, in the vocabulary of the person who wears the headset:
+| File | What it is |
+| --- | --- |
+| `jitterlog.h` | one header a C or C++ mod includes; six calls (`jl_init`, `jl_vr_on/off`, `jl_pose_*`, `jl_camera_*`, `jl_present`) |
+| `jitterlog.lua` | the same for REFramework scripts |
+| `jitter_log_check.py` | reads a log and says, per second of head turning, whether the view stepped and **why** |
+| `ride.py` | the rider: starts with Windows, idles, notices a VR session, files its log the moment it ends |
 
-| Word | What the tool saw | What it points at |
-| --- | --- | --- |
-| **JITTER** | new pictures kept arriving, but during a slow smooth movement some of them did not move at all; the view stepped | the camera is renewed **less often** than the picture is drawn: a rate fault in the mod |
-| **SHAKE** | the view moved back against its own direction, or wobbled while the head was still | a pose or geometry fault: something attached to the wrong thing |
-| **hitch** | no new picture for a few frames | frame rate, not the camera |
-| **freeze** | no new picture for a second or more | the game stopped, or a still screen (menu, loading); the second view tells which |
+**It only activates when the game is really in VR.** The mod writes its log only between `jl_vr_on()` and
+`jl_vr_off()`, which it calls when the VR session starts and stops (OpenXR READY/STOPPING, SteamVR init and
+shutdown). A flat run writes nothing, so there is no switch to remember. The rider also watches two outside
+signs (SteamVR's own processes; a windowed program with the OpenXR or OpenVR library loaded) so a session can
+tell "VR is up but no mod is logging" from "nothing is running".
 
-It also notices a **jump** (one snap of the view in an otherwise still second: a nudge, a snap turn, a respawn)
-and a **cut** (scene change) and keeps both out of the jitter verdict, and it says when the view **barely
-moved**, because a recording with no movement cannot show jitter.
+**What the checker can say that a recording cannot.** While the head turns:
 
-How it measures: each frame is shrunk, greyed, and compared with the last one. A frame that differs is a **new
-picture**. For every new picture it reads how far the whole view slid since the previous new picture (phase
-correlation on the middle 70% of the picture, so HUDs and borders stay out). A second of recording in which the
-view travels, but a fifth or more of its new pictures did not move, is a JITTER second. Two eyes side by side
-are recognised (the left half is found inside the right half) and only the left eye is measured.
+| It measures | When it is off, the verdict names |
+| --- | --- |
+| camera writes per picture | *the camera is renewed less often than pictures are drawn* — the rate fault |
+| pose reads identical to the one before | *the runtime handed a stale pose* — read at the wrong moment, or from a cache |
+| pose reads per picture | *the pose is read less often than pictures are drawn* |
+| pictures whose camera matches the pose before last | *the camera trails the pose by one frame* — swim, not jitter |
+| age of the pose when the camera was written | *the pose was N ms old when used* |
+| pictures that went out with an unchanged camera | **JITTER**, whatever the cause above |
 
 ```
-python camera-jitter/tool/begone_jitter.py scan <recording.mp4>         # check one, plus its headset twin
-python camera-jitter/tool/begone_jitter.py follow                       # watch the recordings folder
-python camera-jitter/tool/begone_jitter.py runs                         # every run, newest first
-python camera-jitter/tool/begone_jitter.py discard <run> "<why>"        # mark a run as not to be trusted
-python camera-jitter/tool/begone_jitter.py headset-window               # the --also value to record the headset view
-python camera-jitter/tool/begone_jitter.py selftest                     # nine made-up recordings, known answers
+python camera-jitter/ride-along/ride.py install            # start with Windows, start now (no admin needed)
+python camera-jitter/ride-along/ride.py status             # running? VR seen? which mod is logging?
+python camera-jitter/ride-along/ride.py check <file.jl>    # file one log by hand
+python camera-jitter/ride-along/jitter_log_check.py selftest   # six made-up logs with known faults
 ```
 
-Needs Python 3 with `opencv-python` and `numpy`. The self-test needs `ffmpeg` on the path to encode its clips
-the way OBS does; without it the clips are checked unencoded.
+Needs Python 3 with `numpy` (and `psutil` for the outside signs, `opencv-python` for the chart). The header
+compiles as C89 and C++11 with no dependencies beyond Windows. Logs live in `%LOCALAPPDATA%\BeG0nE\jitter\`
+and cost about 10 KB a second at 90 Hz.
 
-**What its numbers are worth.** Everything it prints is `[measured]`: one recording, one scene. It judges only
-what reached the recording. A capture that got 30 pictures a second from a game drawing 90 cannot see a step
-that lasts one game frame, and the report says so when the rate is low. It cannot tell a jump of the view from
-the player snapping the camera on purpose; that is what the **note** on a run and `discard` are for. The
-thresholds live at the top of `tool/jitter_judge.py` and `tool/jitter_measure.py`, each with its name and the
-measurement that set it.
+**Wiring a mod takes four lines**: `jl_init` at load, `jl_vr_on/off` with the session, one `jl_pose_*` where
+the pose is read, one `jl_camera_*` where the camera is written, `jl_present` where the frame goes out. The
+log is only as honest as the placing: put `jl_pose_*` at the actual read of the runtime, not at a copy of it.
 
-### `data/` — every run, kept
+### `data/` — every VR session, kept
 
-One folder per checked recording: `summary.json` (all the numbers, per second), `report.md` (the plain verdict)
-and `chart.png` (coloured bands and a line, never a picture from the game). `data/INDEX.csv` lists them all.
-Runs are never deleted; a run the numbers got wrong is marked **discarded** with the reason and stays, so the
-next reading of the data knows to skip it.
+One folder per session the rider filed: `summary.json`, `report.md` (the verdict and the why) and `chart.png`.
+`INDEX.csv` lists them. Nothing is deleted. The data is what the cause will be confirmed from: the same mod
+before and after a change, a mod that jitters beside one that does not.
 
-The data is what the cause will be found from: the same mod, before and after a change; a mod that jitters
-beside one that does not; the game window beside the headset view of the same seconds.
+### `archive/video-check/` — the first attempt, kept
+
+A checker that read screen recordings (game window and headset view) and judged jitter / shake / hitch /
+freeze from the pictures alone. Built and self-tested 2026-10-08, set aside the same day: the flat window
+does not show the jitter, and the headset view can be recorded but says nothing about the cause. Its four
+checked runs are kept beside it.
 
 ## The plan
 
-1. **Find out why.** Compare mods that jitter with mods that do not, in games we can measure. The working
-   suspicion is a rate fault: the camera's position is renewed less often than the headset's movement is
-   sampled, so each frame shows a pose that is a step behind. That is a hypothesis until it is measured.
-   `[hypothesis]`
+1. **Find out why.** Wire `jitterlog.h` into a mod that jitters and one that does not; turn the head slowly in
+   each; read the two reports. The working suspicion is the rate fault (camera renewed less often than the
+   headset is sampled). `[hypothesis]` until a log shows it.
 2. **A tool for modders**, human or AI: how to tell jitter from the other faults, where to look in a mod for
    the cause, and the code shape that avoids it. Goes in `guide/`.
 3. **A jitter-free camera for specific games**, as a drop-in fix beside the game's VR mod, once the cause is
