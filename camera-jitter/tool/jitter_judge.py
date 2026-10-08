@@ -22,6 +22,7 @@ MIN_MOVING_PICTURES = 5      # ... and at least this many pictures in the second
                              # a smooth movement and says nothing about jitter (Hard Reset recording, 2026-10-08)
 HELD_SHARE_OF_MEDIAN = 0.25  # a new picture that moved under 25% of the second's average step counts as HELD
 JITTER_HELD_SHARE = 0.20     # a travelling second with 20%+ held pictures is JITTER
+JITTER_ALTERNATING = -0.3    # lag-one correlation of step sizes below this means big-small-big-small
 JITTER_UNEVEN = 0.60         # ... or with step sizes this uneven (spread / typical) and alternating big-small
 REVERSE_SHARE = 0.15         # a travelling second with 15%+ pictures moving backwards is SHAKE
 WOBBLE_PCT = 0.25            # a still second whose pictures wobble more than 0.25% of the width each is SHAKE
@@ -87,7 +88,7 @@ def judge_window(pics):
             res["kind"] = "jump"
         elif backwards >= REVERSE_SHARE:
             res["kind"] = "SHAKE"
-        elif held >= JITTER_HELD_SHARE or (uneven >= JITTER_UNEVEN and alt < -0.3):
+        elif held >= JITTER_HELD_SHARE or (uneven >= JITTER_UNEVEN and alt < JITTER_ALTERNATING):
             res["kind"] = "JITTER"
         else:
             res["kind"] = "smooth"
