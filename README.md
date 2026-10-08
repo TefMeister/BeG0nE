@@ -7,7 +7,7 @@ each earlier one, and a drop-in fix for gamers, per game, that just needs copyin
 | Cure | What it removes | Where it stands |
 | --- | --- | --- |
 | [**Occlusion Drift BeG0nE**](occlusion-drift/) | In VR, a two-handed weapon's aim drifting because the front hand hides the back controller from the headset. The cure: hold the weapon with the left controller just above the right, and the game accepts that as a proper grip. | In testing on Resident Evil Village. No download yet. |
-| [**Camera Jitter/Shake BeG0nE**](camera-jitter/) | The stepped, jittery camera that VR mods written with AI code so often have. First job: find out why. Then a tool for modders, and a jitter-free camera for specific games. | Started 2026-10-01. Nothing built yet. |
+| [**Camera Jitter/Shake BeG0nE**](camera-jitter/) | The stepped, jittery camera that VR mods written with AI code so often have. First job: find out why. Then a tool for modders, and a jitter-free camera for specific games. | Since 2026-10-08 a tool reads every session recording (game window and headset view) and says whether the view stepped, shook, hitched or froze; the runs collect in `camera-jitter/data/`. No cure yet. |
 
 ## How this repo is organised
 
