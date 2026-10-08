@@ -48,6 +48,7 @@ FOLLOW_STATE = os.path.join(os.path.expandvars("%LOCALAPPDATA%"), "begone-jitter
 FOLLOW_POLL_S = 15            # how often follow looks for new recordings
 SETTLE_S = 20                 # a recording counts as finished when it has not grown for this long
 NAME_RE = re.compile(r"^(?P<label>.+?)(?P<second>_second)?_(?P<date>\d{4}-\d{2}-\d{2})_(?P<time>\d{2}-\d{2}-\d{2})\.(mp4|mkv|mov)$")
+PATH_CHARS = 520              # room for a long exe path (2x MAX_PATH), as in obs-rec.py
 HEADSET_TITLES = ("VR View", "Headset Window", "OpenXR", "Simulator", "Preview")
 
 
@@ -310,7 +311,7 @@ def cmd_headset_window():
             hp = k.OpenProcess(0x1000, False, pid.value)
             exe = ""
             if hp:
-                buf = ctypes.create_unicode_buffer(520); n = W.DWORD(520)
+                buf = ctypes.create_unicode_buffer(PATH_CHARS); n = W.DWORD(PATH_CHARS)
                 if k.QueryFullProcessImageNameW(hp, 0, buf, ctypes.byref(n)):
                     exe = os.path.basename(buf.value)
                 k.CloseHandle(hp)

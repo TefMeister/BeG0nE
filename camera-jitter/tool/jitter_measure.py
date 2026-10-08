@@ -29,6 +29,8 @@ NEW_PICTURE_FRACTION = 0.0005  # a frame is a NEW picture when at least this sha
                             # encoder repaints whole repeated frames with tiny noise (mean ~0.1, max ~2-4, measured
                             # 2026-10-08 on OBS/NVENC files), so the mean alone cannot tell a repeat from a new frame
 BLUR_KERNEL = 3             # light blur so encoder noise does not count as motion
+FALLBACK_FPS = 60.0         # used when the file does not say its frame rate (OBS files always do)
+PROGRESS_EVERY = 600        # frames between progress lines (10 s of a 60 fps file)
 MIN_RESPONSE = 0.04         # phase-correlation confidence below which the motion reading is not trusted
 
 
@@ -74,7 +76,7 @@ def measure(path, progress=None, max_seconds=None):
     cap = cv2.VideoCapture(path)
     if not cap.isOpened():
         raise RuntimeError("cannot open the video")
-    fps = cap.get(cv2.CAP_PROP_FPS) or 60.0
+    fps = cap.get(cv2.CAP_PROP_FPS) or FALLBACK_FPS
     w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)); h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     total = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     one_eye = two_eyes(cap, total)
@@ -115,7 +117,7 @@ def measure(path, progress=None, max_seconds=None):
         if new:
             gap = 0
         last_seen = cur
-        if progress and i % 600 == 0:
+        if progress and i % PROGRESS_EVERY == 0:
             progress(i, total)
     cap.release()
     info = {"fps": fps, "width": mw, "one_eye": one_eye, "height": h, "frames": i + 1, "seconds": round((i + 1) / fps, 2)}
