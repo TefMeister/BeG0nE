@@ -7,7 +7,7 @@ each earlier one, and a drop-in fix for gamers, per game, that just needs copyin
 | Cure | What it removes | Where it stands |
 | --- | --- | --- |
 | [**Occlusion Drift BeG0nE**](occlusion-drift/) | In VR, a two-handed weapon's aim drifting because the front hand hides the back controller from the headset. The cure: hold the weapon with the left controller just above the right, and the game accepts that as a proper grip. | In testing on Resident Evil Village. No download yet. |
-| [**Camera Jitter/Shake BeG0nE**](camera-jitter/) | The stepped, jittery camera that VR mods written with AI code so often have. First job: find out why. Then a tool for modders, and a jitter-free camera for specific games. | Since 2026-10-08 a mod can log the three moments that matter (pose read, camera written, picture out) and a rider in the background files each VR session's verdict and its cause into `camera-jitter/data/`. No mod wired yet; no cure yet. |
+| [**Camera Jitter/Shake BeG0nE**](camera-jitter/) | The stepped, jittery camera that VR mods written with AI code so often have. First job: find out why. Then a tool for modders, and a jitter-free camera for specific games. | Since 2026-10-08 a mod can log the three moments that matter (pose read, camera written, picture out) and a rider in the background files each VR session's verdict and its cause into `camera-jitter/data/`. Rides along every Lanes session (0.52.0). No mod wired yet; no cure yet. |
 
 ## How this repo is organised
 
