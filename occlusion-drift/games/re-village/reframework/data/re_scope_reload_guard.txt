@@ -1,0 +1,2 @@
+# re_scope_reload_guard.txt -- on=1: a reload is not cancelled by the hands-up block gesture; on=0: off. Read every second.
+on=1
