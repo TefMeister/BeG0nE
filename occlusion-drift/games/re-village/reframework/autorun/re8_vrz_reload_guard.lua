@@ -10,7 +10,7 @@
 -- With LG held the left hand sits beside the right on the rifle, so raising the rifle to the face is exactly that gesture;
 -- with the left hand hanging down it never is. `[inferred-static 2026-10-10]` until the first wear.
 --
--- WHAT: while the game says the player is reloading, tryGuardStart is skipped (the same hook praydog uses to allow the
+-- WHAT (first try, kept): while the game says the player is reloading, tryGuardStart is skipped (the same hook praydog uses to allow the
 -- guard only by gesture; REFramework chains both). The guard button press still goes through (praydog's pad code is not
 -- touched), so if the press alone also cancels the reload, this script's log line will show the guard skipped and the
 -- reload still ending early -- then the next lever is the pad press itself.
@@ -52,6 +52,29 @@ re.on_frame(function()
         if reload_t0 == nil then reload_t0 = os.clock() end
     else
         reload_t0 = nil
+    end
+end)
+
+-- 2026-10-10 00:35, the probe (re8_vrz_reload_probe.lua): a full reload is 2.65 s; every reload that broke ended with
+-- praydog's wants_block TRUE, every good one with it false -- and tryGuardStart was never called. So the cancel comes from
+-- the guard BUTTON praydog presses for the game (re8_vr.lua: wants_block -> LTrigTop in the pad update), which the reload
+-- honours on its own. The gesture is computed in praydog's UpdateBehavior callback and read by the pad hook in the NEXT
+-- frame's UpdateHID, so clearing wants_block after UpdateBehavior, while reloading, stops the press before it is made.
+local cleared_this_reload = false
+re.on_application_entry("UpdateBehavior", function()
+    if cfg.on == 0 then return end
+    local v = rawget(_G, "re8vr")
+    if v == nil then return end
+    if not reloading_now() then cleared_this_reload = false return end
+    local wb = false
+    pcall(function() wb = v.wants_block == true end)
+    if wb then
+        pcall(function() v.wants_block = false end)
+        if not cleared_this_reload then
+            cleared_this_reload = true
+            L(string.format("block gesture held %.2f s into a reload -- its guard button press is withheld until the reload is done",
+                reload_t0 and (os.clock() - reload_t0) or 0))
+        end
     end
 end)
 
