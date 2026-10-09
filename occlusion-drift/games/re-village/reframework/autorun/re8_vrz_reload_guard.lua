@@ -70,7 +70,7 @@ local function two_hands_now(v)
 end
 
 local withheld_why = nil   -- nil = the block is free; otherwise why it is being withheld (logged on change)
-re.on_application_entry("UpdateBehavior", function()
+local function withhold_block()
     if cfg.on == 0 then return end
     local v = rawget(_G, "re8vr")
     if v == nil then return end
@@ -90,7 +90,29 @@ re.on_application_entry("UpdateBehavior", function()
         withheld_why = nil
         L("block gesture free again")
     end
-end)
+end
+
+-- 2026-10-10 01:05 (third wear: still broke, the reload ended 4-16 ms AFTER the clear above was logged): the clear ran too
+-- late. praydog presses the button in his PRE-hook on HIDPadManager.doUpdate (re8_vr.lua:551), and REFramework runs the
+-- hooks on one method NEWEST FIRST (HookManager.cpp:132 "iterate in reverse"). So the clear now lives in our own pre-hook
+-- on that same method, registered on the first frame (after every autorun script has registered its hooks), so it runs
+-- right before praydog reads wants_block. The UpdateBehavior clear stays as a second layer.
+local pad_hooked = false
+local function hook_pad()
+    if pad_hooked then return end
+    pad_hooked = true
+    local ok, err = pcall(function()
+        local td = sdk.find_type_definition(sdk.game_namespace("HIDPadManager"))
+        local m = td and td:get_method("doUpdate")
+        if m == nil then error("HIDPadManager.doUpdate not found") end
+        sdk.hook(m, function(args) withhold_block() end, function(r) return r end)
+    end)
+    L(ok and "hooked HIDPadManager.doUpdate (newest first, so before praydog's pad hook): the block button is withheld there"
+         or ("could not hook the pad update: " .. tostring(err)))
+end
+
+re.on_frame(function() hook_pad() end)
+re.on_application_entry("UpdateBehavior", withhold_block)
 
 local function on_pre_try_guard_start(args)
     if cfg.on == 0 then return end
