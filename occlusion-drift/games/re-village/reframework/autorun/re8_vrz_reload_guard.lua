@@ -22,7 +22,10 @@ local function L(s) log.info(TAG .. tostring(s)) end
 local CFG_FILE = "re_scope_reload_guard.txt"
 local CFG_EVERY_S = 1.0
 
-local cfg = { on = 1 }
+-- two_hands=1 (2026-10-10, Tefa: "block the guard if there are two hands on the weapon for all guns, so if LG held and
+-- hand docked"): with the left grip button held AND the left hand docked on the weapon (praydog's was_gripping_weapon),
+-- the block gesture is ignored on every gun, reloading or not. two_hands=0 = only during reloads.
+local cfg = { on = 1, two_hands = 1 }
 local cfg_at = -10
 local function read_cfg()
     if os.clock() - cfg_at < CFG_EVERY_S then return end
@@ -60,21 +63,32 @@ end)
 -- the guard BUTTON praydog presses for the game (re8_vr.lua: wants_block -> LTrigTop in the pad update), which the reload
 -- honours on its own. The gesture is computed in praydog's UpdateBehavior callback and read by the pad hook in the NEXT
 -- frame's UpdateHID, so clearing wants_block after UpdateBehavior, while reloading, stops the press before it is made.
-local cleared_this_reload = false
+local function two_hands_now(v)
+    if cfg.two_hands == 0 then return false end
+    local ok, r = pcall(function() return v.is_holding_left_grip == true and v.was_gripping_weapon == true end)
+    return ok and r == true
+end
+
+local withheld_why = nil   -- nil = the block is free; otherwise why it is being withheld (logged on change)
 re.on_application_entry("UpdateBehavior", function()
     if cfg.on == 0 then return end
     local v = rawget(_G, "re8vr")
     if v == nil then return end
-    if not reloading_now() then cleared_this_reload = false return end
+    local why = nil
+    if reloading_now() then why = "reloading"
+    elseif two_hands_now(v) then why = "two hands on the weapon (LG held, left hand docked)" end
     local wb = false
     pcall(function() wb = v.wants_block == true end)
-    if wb then
+    if why ~= nil and wb then
         pcall(function() v.wants_block = false end)
-        if not cleared_this_reload then
-            cleared_this_reload = true
-            L(string.format("block gesture held %.2f s into a reload -- its guard button press is withheld until the reload is done",
-                reload_t0 and (os.clock() - reload_t0) or 0))
+        if withheld_why ~= why then
+            withheld_why = why
+            L(string.format("block gesture ignored: %s%s", why,
+                why == "reloading" and string.format(" (%.2f s into it)", reload_t0 and (os.clock() - reload_t0) or 0) or ""))
         end
+    elseif why == nil and withheld_why ~= nil then
+        withheld_why = nil
+        L("block gesture free again")
     end
 end)
 
