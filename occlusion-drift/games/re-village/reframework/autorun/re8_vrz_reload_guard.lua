@@ -142,6 +142,32 @@ local function hook_pad()
 end
 
 re.on_pre_application_entry("UpdateHID", withhold_block)
+
+-- 2026-10-10 01:55 (fifth wear): the pad bit was removed in our post-hook and the probe STILL read it set at the cancel,
+-- so the pad route is a losing race. The game has its own gate: app.PlayerStatus.get_isGuardCommandAcceptable, asked
+-- before a guard command is honoured. While withholding, it answers NO -- whatever button or gesture arrived.
+local acceptable_hooked = false
+local refused_logged = false
+local function hook_acceptable()
+    if acceptable_hooked then return end
+    acceptable_hooked = true
+    local ok, err = pcall(function()
+        local td = sdk.find_type_definition("app.PlayerStatus")
+        local m = td and td:get_method("get_isGuardCommandAcceptable")
+        if m == nil then error("app.PlayerStatus.get_isGuardCommandAcceptable not found") end
+        sdk.hook(m, function(args) end, function(retval)
+            if withheld_why == nil then refused_logged = false return retval end
+            if not refused_logged then
+                refused_logged = true
+                L("guard command refused by the game's own gate (" .. tostring(withheld_why) .. ")")
+            end
+            return sdk.to_ptr(0)
+        end)
+    end)
+    L(ok and "hooked app.PlayerStatus.get_isGuardCommandAcceptable: answers no while withholding"
+         or ("could not hook the guard gate: " .. tostring(err)))
+end
+re.on_frame(function() hook_acceptable() end)
 re.on_frame(function() hook_pad() end)
 re.on_application_entry("UpdateBehavior", withhold_block)
 
