@@ -647,7 +647,16 @@ local function grip_pass(final)
     S.last_rr_new, S.last_rr = rr_new, rr
     set_ik(v, v.right_hand_ik, v.right_hand_ik_transform, rp, rr_new)
     S.stage = "apply left hand"
-    if reloading then g.applied = g.applied + 1 return end   -- praydog's parked hand works the bolt; the right hand keeps our aim
+    if reloading then
+        -- 2026-10-10 (Tefa, recording: "ethan's hand doesnt follow the reload animation, when i hold on to the gun with LG,
+        -- without LG held the reload animation is fine"): praydog's reload hand is placed against the right hand as HE posed
+        -- it (rp_ik/rr_ik), but we just turned the right hand (rr_new), so the left hand came off the gun. Keep the
+        -- animation's left hand exactly as it is relative to the right hand, re-attached to OUR right hand.
+        local inv = rr_ik:inverse()
+        set_ik(v, v.left_hand_ik, v.left_hand_ik_transform, rp + rr_new * (inv * sub(lp_ik, rp_ik)), (rr_new * (inv * lr_ik)):normalized())
+        g.applied = g.applied + 1
+        return
+    end
     local pos, rot
     local use_spot = rifle_scope and g.on and g.pos ~= nil
     if use_spot then
