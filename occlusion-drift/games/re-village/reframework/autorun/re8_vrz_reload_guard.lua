@@ -97,7 +97,36 @@ end
 -- hooks on one method NEWEST FIRST (HookManager.cpp:132 "iterate in reverse"). So the clear now lives in our own pre-hook
 -- on that same method, registered on the first frame (after every autorun script has registered its hooks), so it runs
 -- right before praydog reads wants_block. The UpdateBehavior clear stays as a second layer.
+-- 2026-10-10 01:40 (fourth wear, probe round three): still breaks, and the probe shows the game entering its GUARD
+-- (isGuard/isGunGuard flip on) in the same frame the reload is cancelled -- with no guard-named method called first, so
+-- the guard comes from the pad's guard button. All autorun scripts share one Lua state, whose hooks on a method run in
+-- registration order (praydog's first), so our pre-hook clear above lands AFTER he has already pressed the button.
+-- Two fixes that do not depend on hook order: (1) the flag is cleared in on_pre_application_entry("UpdateHID"), which
+-- runs before the engine's pad update and so before praydog's hook; (2) in our POST-hook on the pad update the guard
+-- bit (LTrigTop) is removed again from the pad device praydog wrote to, so even a press that got through is undone
+-- before the game reads it.
 local pad_hooked = false
+local pad_padman = nil
+local bit_removed_logged = false
+local function pad_strip_guard()
+    if withheld_why == nil then return end
+    pcall(function()
+        local pad = pad_padman:call("get_activePad")
+        if pad == nil then pad = pad_padman:call("get_mergedPad") end
+        local device = pad:get_field("Device")
+        local guard = via.hid.GamePadButton.LTrigTop
+        local b = device:call("get_Button")
+        local bd = device:call("get_ButtonDown")
+        local had = (b & guard) ~= 0 or (bd & guard) ~= 0
+        if (b & guard) ~= 0 then device:call("set_Button", b & ~guard) end
+        if (bd & guard) ~= 0 then device:call("set_ButtonDown", bd & ~guard) end
+        if had and not bit_removed_logged then
+            bit_removed_logged = true
+            L("the guard button was pressed on the pad anyway -- bit removed (" .. tostring(withheld_why) .. ")")
+        end
+        if not had then bit_removed_logged = false end
+    end)
+end
 local function hook_pad()
     if pad_hooked then return end
     pad_hooked = true
@@ -105,12 +134,14 @@ local function hook_pad()
         local td = sdk.find_type_definition(sdk.game_namespace("HIDPadManager"))
         local m = td and td:get_method("doUpdate")
         if m == nil then error("HIDPadManager.doUpdate not found") end
-        sdk.hook(m, function(args) withhold_block() end, function(r) return r end)
+        sdk.hook(m, function(args) pad_padman = sdk.to_managed_object(args[2]) withhold_block() end,
+                    function(r) pad_strip_guard() return r end)
     end)
-    L(ok and "hooked HIDPadManager.doUpdate (newest first, so before praydog's pad hook): the block button is withheld there"
+    L(ok and "hooked HIDPadManager.doUpdate: the block flag is cleared before, and the guard bit removed after, praydog's pad hook"
          or ("could not hook the pad update: " .. tostring(err)))
 end
 
+re.on_pre_application_entry("UpdateHID", withhold_block)
 re.on_frame(function() hook_pad() end)
 re.on_application_entry("UpdateBehavior", withhold_block)
 
