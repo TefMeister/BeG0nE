@@ -539,6 +539,17 @@ local function grip_pass(final)
         if S.need_clear and not near then S.need_clear = false end
         our_grip = allowed and (holding or (near and not S.need_clear))
     end
+    -- 2026-10-10 (Tefa: tilting the rifle or moving the right controller "breaks that reload animation and it doesn't
+    -- finish, the hand teleports back on the gun"): one line whenever the reload / button / dock / our grip changes, so the
+    -- next run shows what cut the reload short.
+    do
+        local key = string.format("reloading=%s button=%s praydog_docked=%s our_grip=%s take=%s", tostring(reloading),
+            tostring(holding), tostring(cpp_grip), tostring(our_grip), tostring(S.take ~= nil))
+        if key ~= S.state_key then
+            S.state_key = key
+            L(string.format("state: %s | hand %.1f cm / %.0f deg from the take", key, (d_keep or -0.01) * 100, ang_keep or -1))
+        end
+    end
     S.hand_from_frozen_m = d_keep or -1
     S.hand_angle_deg = ang_keep or -1
 
