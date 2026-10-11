@@ -1,0 +1,2 @@
+run,game,runtime,date,time,seconds,pictures_per_s,pose_reads_per_s,camera_writes_per_s,turning_s,jitter_s,quality,verdict
+2026-10-11_21-07-09_openxr,alan-wake-vr,openxr,2026-10-11,21-07-09,1990.57,72.0,72.0,88.9,636,329,good,"JITTER in 329 of 636 turning seconds. Why: the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)."
