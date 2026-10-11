@@ -1,0 +1,36 @@
+{
+ "patterns": {
+  "650cf56b9d": {
+   "causes": [
+    "the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)"
+   ],
+   "count": 1,
+   "first_seen": "2026-10-11",
+   "games": {
+    "alan-wake-vr": [
+     "2026-10-11_21-07-09_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-10-11",
+   "values": {
+    "camera_per_picture": 1.15,
+    "held_share": 0.2,
+    "lag_share": 0.5,
+    "pictures_per_s": 70.0,
+    "pose_age_ms": 8.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 0.0,
+    "verdict": "JITTER"
+   }
+  }
+ },
+ "sessions": {
+  "2026-10-11_21-07-09_openxr": {
+   "game": "alan-wake-vr",
+   "pattern": "650cf56b9d",
+   "runtime": "openxr"
+  }
+ },
+ "version": 1
+}
