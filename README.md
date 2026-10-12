@@ -8,7 +8,11 @@ each earlier one, and a drop-in fix for gamers, per game, that just needs copyin
 | --- | --- | --- |
 | [**Occlusion Drift BeG0nE**](occlusion-drift/) | In VR, a two-handed weapon's aim drifting because the front hand hides the back controller from the headset. The cure: hold the weapon with the left controller just above the right, and the game accepts that as a proper grip. | In testing on Resident Evil Village. No download yet. |
 | [**Camera Jitter/Shake BeG0nE**](camera-jitter/) | The stepped, jittery camera that VR mods written with AI code so often have. First job: find out why. Then a tool for modders, and a jitter-free camera for specific games. | Since 2026-10-08 a mod can log the three moments that matter (pose read, camera written, picture out) and a rider in the background files each VR session's verdict and its cause into `camera-jitter/data/`. Rides along every Lanes session (0.52.0). No mod wired yet; no cure yet. |
-| [**Ghost Hand BeG0nE**](ghost-hand/) | In VR, the gaps between your real hand and the player's hand: lag, offset and sudden jumps that make hand gestures (racking a slide, grabbing, two-handed holds) miss. The tool records both controllers, the game's hands and the weapon every frame and points at where the two part. | Planned 2026-10-12. Not built yet. First use: hand racking in Resident Evil 2. |
+| [**Ghost Hand BeG0nE**](ghost-hand/) | In VR, the gaps between your real hand and the player's hand: lag, offset and sudden jumps that make hand gestures (racking a slide, grabbing, two-handed holds) miss. The tool records both controllers, the game's hands and the weapon every frame and points at where the two part. | Since 2026-10-12 the recorder (`ghosthand.lua`) and its reader ship in Lanes 0.62.0. Not wired into a game yet; first use: hand racking in Resident Evil 2. |
+
+## The tools live in Lanes
+
+Since 2026-10-12 the tools' code (the recorders a mod carries, the rider and the programs that turn a recording into a short report) ships inside the [Lanes plugin](https://github.com/TefMeister/lanes-plugin), in its `begone/` folder, so everyone who installs Lanes has them. This repo keeps what is not code for one PC: the fault and its cure explained, each game's cure, and the reports and knowledge gathered (`<tool>/data/`, `camera-jitter/knowledge/`), which Lanes writes here when `begone = <this clone>` is set.
 
 ## How this repo is organised
 
