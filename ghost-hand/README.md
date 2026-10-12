@@ -31,7 +31,7 @@ an answer too, and the game keeps a button for it.
 
 Built 2026-10-12: the recorder (`ghosthand.lua`, for REFramework mods) and the program that turns a recording into a
 short report both ship in Lanes 0.62.0 (`begone/ghost-hand/`), checked on made-up sessions with known faults. Not
-wired into a game yet. First use: Resident Evil 2 (Visceral), hand racking of the pistol slide, to find out whether
+wired into a game yet. First use: Resident Evil 2 (Visceral), hand racking on the Matilda (slide) and the W870 (pump), to find out whether
 it can be made accurate enough for combat. Reports land in `ghost-hand/data/`.
 
 ## What it is, and what it is not
