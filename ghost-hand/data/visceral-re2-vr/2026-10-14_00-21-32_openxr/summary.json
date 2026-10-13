@@ -1,0 +1,94 @@
+{
+ "game": "visceral-re2-vr",
+ "runtime": "openxr",
+ "frames": 3239,
+ "seconds": 45.46,
+ "frames_per_s": 71.2,
+ "hands": {
+  "L": {
+   "frames": 460,
+   "usual_m": 0.1027,
+   "wander_p95_m": 0.1932,
+   "wander_max_m": 24.0428
+  },
+  "R": {
+   "frames": 460,
+   "usual_m": 0.1051,
+   "wander_p95_m": 0.1291,
+   "wander_max_m": 24.3736
+  }
+ },
+ "jumps": [
+  {
+   "t": 27.931,
+   "side": "L",
+   "who": "game",
+   "m": 25.03
+  },
+  {
+   "t": 27.931,
+   "side": "R",
+   "who": "game",
+   "m": 24.998
+  },
+  {
+   "t": 27.945,
+   "side": "L",
+   "who": "game",
+   "m": 0.866
+  },
+  {
+   "t": 27.945,
+   "side": "R",
+   "who": "game",
+   "m": 0.87
+  },
+  {
+   "t": 29.653,
+   "side": "L",
+   "who": "game",
+   "m": 0.182
+  },
+  {
+   "t": 29.653,
+   "side": "R",
+   "who": "game",
+   "m": 0.334
+  },
+  {
+   "t": 29.667,
+   "side": "L",
+   "who": "game",
+   "m": 0.183
+  },
+  {
+   "t": 29.667,
+   "side": "R",
+   "who": "game",
+   "m": 0.319
+  },
+  {
+   "t": 31.93,
+   "side": "L",
+   "who": "game",
+   "m": 0.09
+  },
+  {
+   "t": 31.93,
+   "side": "R",
+   "who": "game",
+   "m": 0.102
+  },
+  {
+   "t": 33.937,
+   "side": "R",
+   "who": "game",
+   "m": 0.167
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand wanders up to 19.3 cm from its usual place; the game's right hand wanders up to 12.9 cm from its usual place; the game's hand jumped 11 times while the controller was calm.",
+ "file": "visceral-re2-vr_20261014-002047.ghl"
+}
