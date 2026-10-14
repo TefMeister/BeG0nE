@@ -1,6 +1,6 @@
 # What the numbers say about jittery and smooth VR cameras
 
-Rebuilt 2026-10-11 21:08 from 1 sessions boiled down to 1 patterns. A pattern is one way a mod behaved; sessions that behaved the same way count as one. A pattern is grouped as jittery or smooth by the checker's own verdict, unless the person wearing the headset said otherwise with `ride.py label`, which outranks it. Every line is `[measured]` on our own mods.
+Rebuilt 2026-10-14 17:57 from 4 sessions boiled down to 1 patterns. A pattern is one way a mod behaved; sessions that behaved the same way count as one. A pattern is grouped as jittery or smooth by the checker's own verdict, unless the person wearing the headset said otherwise with `ride.py label`, which outranks it. Every line is `[measured]` on our own mods.
 
 ## Across every game
 
