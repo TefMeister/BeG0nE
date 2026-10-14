@@ -30,6 +30,21 @@
    "game": "alan-wake-vr",
    "pattern": "650cf56b9d",
    "runtime": "openxr"
+  },
+  "2026-10-14_17-51-46_openxr": {
+   "game": "manhunt-2003-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-14_17-54-17_openxr": {
+   "game": "manhunt-2003-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-14_17-57-01_openxr": {
+   "game": "manhunt-2003-vr",
+   "pattern": null,
+   "runtime": "openxr"
   }
  },
  "version": 1
