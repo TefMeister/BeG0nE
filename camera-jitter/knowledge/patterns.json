@@ -60,6 +60,26 @@
    "game": "mad-max-vr",
    "pattern": null,
    "runtime": "openxr"
+  },
+  "2026-10-15_17-09-26_openxr": {
+   "game": "mad-max-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-15_17-12-58_openxr": {
+   "game": "mad-max-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-15_17-38-53_openxr": {
+   "game": "mad-max-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-15_17-55-19_openxr": {
+   "game": "mad-max-vr",
+   "pattern": null,
+   "runtime": "openxr"
   }
  },
  "version": 1
