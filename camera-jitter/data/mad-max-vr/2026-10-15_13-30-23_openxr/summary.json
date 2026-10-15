@@ -1,0 +1,32 @@
+{
+ "hands": {},
+ "seconds": 0.17,
+ "pictures_per_s": 149839.8,
+ "pose_reads_per_s": 0.0,
+ "camera_writes_per_s": 0.0,
+ "windows": [
+  {
+   "at_s": 0.0,
+   "pictures": 26137,
+   "pose_reads": 0,
+   "camera_writes": 0,
+   "held_share": 1.0,
+   "camera_per_picture": 0.0,
+   "pose_per_picture": 0.0,
+   "stale_pose_share": 0.0,
+   "lag_share": 0.0,
+   "pose_age_ms": null,
+   "kind": "still"
+  }
+ ],
+ "marks": [],
+ "seconds_turning": 0,
+ "seconds_jitter": 0,
+ "jitter_times_s": [],
+ "quality": "no-movement",
+ "verdict": "The head hardly turned, so this log cannot show jitter. Turn the head slowly and smoothly for a few seconds.",
+ "causes": [],
+ "file": "mad-max-vr_20261015-133023.jl",
+ "game": "mad-max-vr",
+ "runtime": "openxr"
+}
