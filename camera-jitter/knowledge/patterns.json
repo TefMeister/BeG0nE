@@ -25,6 +25,31 @@
     "verdict": "JITTER"
    }
   },
+  "13603247e5": {
+   "causes": [
+    "98% of pose reads returned the same pose as the read before while the head was turning: the runtime handed a stale pose (the pose is read at the wrong moment, or from a cached copy, not once per frame after waiting for the frame)"
+   ],
+   "count": 1,
+   "first_seen": "2026-10-15",
+   "games": {
+    "mad-max-vr": [
+     "2026-10-15_19-09-05_openxr-openxr-simulator-runtime"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-10-15",
+   "values": {
+    "camera_per_picture": 1.0,
+    "held_share": 1.0,
+    "lag_share": 0.0,
+    "pictures_per_s": 60.0,
+    "place": "simulator",
+    "pose_age_ms": 2.0,
+    "pose_per_picture": 1.05,
+    "stale_pose_share": 1.0,
+    "verdict": "JITTER"
+   }
+  },
   "33a9744571": {
    "causes": [
     "the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)"
@@ -185,6 +210,11 @@
   "2026-10-15_18-55-36_openxr-openxr-simulator-runtime": {
    "game": "mad-max-vr",
    "pattern": "cd363d8de5",
+   "runtime": "openxr-openxr-simulator-runtime"
+  },
+  "2026-10-15_19-09-05_openxr-openxr-simulator-runtime": {
+   "game": "mad-max-vr",
+   "pattern": "13603247e5",
    "runtime": "openxr-openxr-simulator-runtime"
   }
  },
