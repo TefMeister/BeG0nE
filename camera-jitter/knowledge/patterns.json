@@ -45,6 +45,21 @@
    "game": "manhunt-2003-vr",
    "pattern": null,
    "runtime": "openxr"
+  },
+  "2026-10-15_13-30-23_openxr": {
+   "game": "mad-max-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-15_13-32-44_openxr": {
+   "game": "mad-max-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-15_13-48-58_openxr": {
+   "game": "mad-max-vr",
+   "pattern": null,
+   "runtime": "openxr"
   }
  },
  "version": 1
