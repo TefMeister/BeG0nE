@@ -216,6 +216,26 @@
    "game": "mad-max-vr",
    "pattern": "13603247e5",
    "runtime": "openxr-openxr-simulator-runtime"
+  },
+  "2026-10-16_13-54-40_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-16_13-57-20_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-16_13-59-29_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-16_14-09-04_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
   }
  },
  "version": 1
