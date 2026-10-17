@@ -407,6 +407,21 @@
    "game": "hard-reset-vr",
    "pattern": "4fd84f808f",
    "runtime": "openxr"
+  },
+  "2026-10-17_16-06-18_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-17_16-10-40_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-17_16-15-15_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
   }
  },
  "version": 1
