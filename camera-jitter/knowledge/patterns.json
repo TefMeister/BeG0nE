@@ -125,6 +125,31 @@
     "verdict": "JITTER"
    }
   },
+  "7edfd2257f": {
+   "causes": [
+    "the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)"
+   ],
+   "count": 1,
+   "first_seen": "2026-10-17",
+   "games": {
+    "hard-reset-vr": [
+     "2026-10-17_17-14-41_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-10-17",
+   "values": {
+    "camera_per_picture": 2.0,
+    "held_share": 0.05,
+    "lag_share": 0.0,
+    "pictures_per_s": 60.0,
+    "place": "unknown",
+    "pose_age_ms": 4.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 0.05,
+    "verdict": "JITTER"
+   }
+  },
   "bdbaf5b39c": {
    "causes": [
     "the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)"
@@ -421,6 +446,11 @@
   "2026-10-17_16-15-15_openxr": {
    "game": "hard-reset-vr",
    "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-17_17-14-41_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": "7edfd2257f",
    "runtime": "openxr"
   }
  },
