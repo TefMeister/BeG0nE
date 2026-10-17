@@ -1,0 +1,81 @@
+{
+ "wall_ms": 1792251907354,
+ "clock": "log clock",
+ "game": "hard-reset-vr",
+ "videos": [
+  {
+   "file": "begone_second_2026-10-17_18-47-21.mp4",
+   "window": "OpenXR Simulator preview",
+   "offset_s": -134.641,
+   "cuts": [
+    {
+     "stretch": "jitter_352-357s",
+     "from_s": 352,
+     "to_s": 354.0,
+     "frames": 150,
+     "held": 10,
+     "jumped": 36,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_18-51-39_openxr/jitter_352-357s_headset",
+     "note": null
+    },
+    {
+     "stretch": "jitter_360-370s",
+     "from_s": 360,
+     "to_s": 362.0,
+     "frames": 150,
+     "held": 4,
+     "jumped": 9,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_18-51-39_openxr/jitter_360-370s_headset",
+     "note": null
+    },
+    {
+     "stretch": "jitter_373-378s",
+     "from_s": 373,
+     "to_s": 375.0,
+     "frames": 150,
+     "held": 18,
+     "jumped": 15,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_18-51-39_openxr/jitter_373-378s_headset",
+     "note": null
+    }
+   ]
+  },
+  {
+   "file": "begone_2026-10-17_18-47-21.mp4",
+   "window": "game window",
+   "offset_s": -134.641,
+   "cuts": [
+    {
+     "stretch": "jitter_352-357s",
+     "from_s": 352,
+     "to_s": 354.0,
+     "frames": 150,
+     "held": 2,
+     "jumped": 31,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_18-51-39_openxr/jitter_352-357s_game",
+     "note": null
+    },
+    {
+     "stretch": "jitter_360-370s",
+     "from_s": 360,
+     "to_s": 362.0,
+     "frames": 150,
+     "held": 0,
+     "jumped": 14,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_18-51-39_openxr/jitter_360-370s_game",
+     "note": null
+    },
+    {
+     "stretch": "jitter_373-378s",
+     "from_s": 373,
+     "to_s": 375.0,
+     "frames": 150,
+     "held": 4,
+     "jumped": 39,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_18-51-39_openxr/jitter_373-378s_game",
+     "note": null
+    }
+   ]
+  }
+ ]
+}
