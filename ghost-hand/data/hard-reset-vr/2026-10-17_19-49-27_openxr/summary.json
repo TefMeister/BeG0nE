@@ -1,0 +1,83 @@
+{
+ "game": "hard-reset-vr",
+ "runtime": "openxr",
+ "frames": 95098,
+ "seconds": 119.58,
+ "frames_per_s": 795.3,
+ "hands": {
+  "L": {
+   "frames": 6149,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.0,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 6150,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 89.932,
+   "side": "L",
+   "who": "game",
+   "m": 0.492
+  },
+  {
+   "t": 95.201,
+   "side": "L",
+   "who": "game",
+   "m": 0.492
+  },
+  {
+   "t": 98.802,
+   "side": "L",
+   "who": "game",
+   "m": 0.543
+  },
+  {
+   "t": 103.972,
+   "side": "L",
+   "who": "game",
+   "m": 0.543
+  }
+ ],
+ "tracking": [],
+ "attempts": [
+  {
+   "n": 1,
+   "gesture": "stacked",
+   "t": 89.932,
+   "s": 5.269,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.3028,
+   "left_travel_m": 0.4924,
+   "gun_moved_m": 0.0,
+   "lost": 0,
+   "jumps": 1,
+   "why": "finished"
+  },
+  {
+   "n": 2,
+   "gesture": "front",
+   "t": 98.802,
+   "s": 5.17,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.1528,
+   "left_travel_m": 0.5431,
+   "gun_moved_m": 0.0,
+   "lost": 0,
+   "jumps": 0,
+   "why": "finished"
+  }
+ ],
+ "quality": "good",
+ "verdict": "stacked: 1 of 1 finished; front: 1 of 1 finished; the game's hand jumped 4 times while the controller was calm.",
+ "file": "hard-reset-vr_20261017-194725.ghl"
+}

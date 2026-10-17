@@ -1,0 +1,89 @@
+{
+ "game": "hard-reset-vr",
+ "runtime": "openxr",
+ "frames": 4563,
+ "seconds": 106.51,
+ "frames_per_s": 42.8,
+ "hands": {
+  "L": {
+   "frames": 4517,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.5431,
+   "lag_frames": 1,
+   "lag_ms": 23.3
+  },
+  "R": {
+   "frames": 4517,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 88.249,
+   "side": "L",
+   "who": "game",
+   "m": 0.492
+  },
+  {
+   "t": 91.038,
+   "side": "L",
+   "who": "controller",
+   "m": 0.335
+  },
+  {
+   "t": 91.055,
+   "side": "L",
+   "who": "game",
+   "m": 0.335
+  },
+  {
+   "t": 93.807,
+   "side": "L",
+   "who": "controller",
+   "m": 0.543
+  },
+  {
+   "t": 93.824,
+   "side": "L",
+   "who": "game",
+   "m": 0.543
+  }
+ ],
+ "tracking": [],
+ "attempts": [
+  {
+   "n": 1,
+   "gesture": "stacked",
+   "t": 88.249,
+   "s": 2.805,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.15,
+   "left_travel_m": 0.3354,
+   "gun_moved_m": 0.0,
+   "lost": 0,
+   "jumps": 1,
+   "why": "finished"
+  },
+  {
+   "n": 2,
+   "gesture": "front",
+   "t": 91.055,
+   "s": 2.769,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.1528,
+   "left_travel_m": 0.5431,
+   "gun_moved_m": 0.0,
+   "lost": 0,
+   "jumps": 2,
+   "why": "finished"
+  }
+ ],
+ "quality": "good",
+ "verdict": "stacked: 1 of 1 finished; front: 1 of 1 finished; the game's left hand trails the controller by 1 frames (23.3 ms); the game's hand jumped 3 times while the controller was calm; a controller jumped 2 times (tracking glitches).",
+ "file": "hard-reset-vr_20261017-195855.ghl"
+}
