@@ -1,0 +1,101 @@
+{
+ "wall_ms": 1792246207637,
+ "clock": "log file made",
+ "game": "hard-reset-vr",
+ "videos": [
+  {
+   "file": "begone_second_2026-10-17_17-10-27.mp4",
+   "window": "OpenXR Simulator preview",
+   "offset_s": -19.772,
+   "cuts": [
+    {
+     "stretch": "jitter_242-243s",
+     "from_s": 242,
+     "to_s": 243,
+     "frames": 90,
+     "held": 2,
+     "jumped": 2,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_17-14-41_openxr/jitter_242-243s_headset",
+     "note": null
+    },
+    {
+     "stretch": "jitter_245-246s",
+     "from_s": 245,
+     "to_s": 246,
+     "frames": 90,
+     "held": 1,
+     "jumped": 1,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_17-14-41_openxr/jitter_245-246s_headset",
+     "note": null
+    },
+    {
+     "stretch": "jitter_250-251s",
+     "from_s": 250,
+     "to_s": 251,
+     "frames": 90,
+     "held": 1,
+     "jumped": 0,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_17-14-41_openxr/jitter_250-251s_headset",
+     "note": null
+    },
+    {
+     "stretch": "smooth_243-244s",
+     "from_s": 243,
+     "to_s": 244,
+     "frames": 90,
+     "held": 2,
+     "jumped": 1,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_17-14-41_openxr/smooth_243-244s_headset",
+     "note": null
+    }
+   ]
+  },
+  {
+   "file": "begone_2026-10-17_17-10-26.mp4",
+   "window": "game window",
+   "offset_s": -19.772,
+   "cuts": [
+    {
+     "stretch": "jitter_242-243s",
+     "from_s": 242,
+     "to_s": 243,
+     "frames": 90,
+     "held": 1,
+     "jumped": 2,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_17-14-41_openxr/jitter_242-243s_game",
+     "note": null
+    },
+    {
+     "stretch": "jitter_245-246s",
+     "from_s": 245,
+     "to_s": 246,
+     "frames": 90,
+     "held": 0,
+     "jumped": 1,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_17-14-41_openxr/jitter_245-246s_game",
+     "note": null
+    },
+    {
+     "stretch": "jitter_250-251s",
+     "from_s": 250,
+     "to_s": 251,
+     "frames": 90,
+     "held": 0,
+     "jumped": 0,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_17-14-41_openxr/jitter_250-251s_game",
+     "note": null
+    },
+    {
+     "stretch": "smooth_243-244s",
+     "from_s": 243,
+     "to_s": 244,
+     "frames": 90,
+     "held": 3,
+     "jumped": 2,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_17-14-41_openxr/smooth_243-244s_game",
+     "note": null
+    }
+   ]
+  }
+ ]
+}
