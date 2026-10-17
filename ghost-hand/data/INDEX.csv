@@ -14,3 +14,5 @@ run,game,runtime,date,time,seconds,attempts,finished,jumps,tracking_lost,quality
 2026-10-17_19-49-27_openxr,hard-reset-vr,openxr,2026-10-17,19-49-27,119.58,2,2,4,0,good,stacked: 1 of 1 finished; front: 1 of 1 finished; the game's hand jumped 4 times while the controller was calm.
 2026-10-17_20-00-44_openxr,hard-reset-vr,openxr,2026-10-17,20-00-44,106.51,2,2,5,0,good,stacked: 1 of 1 finished; front: 1 of 1 finished; the game's left hand trails the controller by 1 frames (23.3 ms); the game's hand jumped 3 times while the controller was calm; a controller jumped 2 times (tracking glitches).
 2026-10-17_20-12-45_openxr,hard-reset-vr,openxr,2026-10-17,20-12-45,113.84,0,0,0,0,good,"The hands followed cleanly: no jumps, no lost tracking, no lag."
+2026-10-17_20-50-26_openxr,hard-reset-vr,openxr,2026-10-17,20-50-26,1604.37,0,0,0,0,good,"The hands followed cleanly: no jumps, no lost tracking, no lag."
+2026-10-17_20-53-06_openxr,hard-reset-vr,openxr,2026-10-17,20-53-06,112.55,0,0,0,0,good,"The hands followed cleanly: no jumps, no lost tracking, no lag."
