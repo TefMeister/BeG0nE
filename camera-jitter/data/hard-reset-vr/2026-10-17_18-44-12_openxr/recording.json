@@ -1,0 +1,31 @@
+{
+ "wall_ms": 1792249960694,
+ "clock": "log clock",
+ "game": "hard-reset-vr",
+ "videos": [
+  {
+   "file": "begone_second_2026-10-17_18-17-57.mp4",
+   "window": "OpenXR Simulator preview",
+   "offset_s": -317.266,
+   "cuts": []
+  },
+  {
+   "file": "begone_second_2026-10-17_18-26-22.mp4",
+   "window": "OpenXR Simulator preview",
+   "offset_s": -821.661,
+   "cuts": []
+  },
+  {
+   "file": "begone_2026-10-17_18-17-57.mp4",
+   "window": "game window",
+   "offset_s": -317.266,
+   "cuts": []
+  },
+  {
+   "file": "begone_2026-10-17_18-26-21.mp4",
+   "window": "game window",
+   "offset_s": -821.661,
+   "cuts": []
+  }
+ ]
+}

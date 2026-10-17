@@ -1,0 +1,54 @@
+{
+ "wall_ms": 1792249467894,
+ "clock": "log clock",
+ "game": "hard-reset-vr",
+ "videos": [
+  {
+   "file": "begone_2026-10-17_18-04-32.mp4",
+   "window": "game window",
+   "offset_s": -5.643,
+   "cuts": [
+    {
+     "stretch": "jitter_205-207s",
+     "from_s": 205,
+     "to_s": 207,
+     "frames": 150,
+     "held": 3,
+     "jumped": 1,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_18-08-44_openxr/jitter_205-207s_game",
+     "note": null
+    },
+    {
+     "stretch": "jitter_228-229s",
+     "from_s": 228,
+     "to_s": 229,
+     "frames": 90,
+     "held": 7,
+     "jumped": 0,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_18-08-44_openxr/jitter_228-229s_game",
+     "note": null
+    },
+    {
+     "stretch": "jitter_231-232s",
+     "from_s": 231,
+     "to_s": 232,
+     "frames": 90,
+     "held": 0,
+     "jumped": 0,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_18-08-44_openxr/jitter_231-232s_game",
+     "note": null
+    },
+    {
+     "stretch": "smooth_197-198s",
+     "from_s": 197,
+     "to_s": 198,
+     "frames": 90,
+     "held": 5,
+     "jumped": 0,
+     "folder": "hard-reset-vr/begone-frames/2026-10-17_18-08-44_openxr/smooth_197-198s_game",
+     "note": null
+    }
+   ]
+  }
+ ]
+}
