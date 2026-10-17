@@ -50,6 +50,31 @@
     "verdict": "JITTER"
    }
   },
+  "14fbae90c7": {
+   "causes": [
+    "77% of pose reads returned the same pose as the read before while the head was turning: the runtime handed a stale pose (the pose is read at the wrong moment, or from a cached copy, not once per frame after waiting for the frame)"
+   ],
+   "count": 1,
+   "first_seen": "2026-10-17",
+   "games": {
+    "hard-reset-vr": [
+     "2026-10-17_14-32-26_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-10-17",
+   "values": {
+    "camera_per_picture": 1.45,
+    "held_share": 0.75,
+    "lag_share": 0.0,
+    "pictures_per_s": 60.0,
+    "place": "unknown",
+    "pose_age_ms": 8.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 0.75,
+    "verdict": "JITTER"
+   }
+  },
   "33a9744571": {
    "causes": [
     "the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)"
@@ -75,6 +100,31 @@
     "verdict": "JITTER"
    }
   },
+  "4fd84f808f": {
+   "causes": [
+    "98% of pose reads returned the same pose as the read before while the head was turning: the runtime handed a stale pose (the pose is read at the wrong moment, or from a cached copy, not once per frame after waiting for the frame)"
+   ],
+   "count": 1,
+   "first_seen": "2026-10-17",
+   "games": {
+    "hard-reset-vr": [
+     "2026-10-17_15-27-42_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-10-17",
+   "values": {
+    "camera_per_picture": 2.0,
+    "held_share": 1.0,
+    "lag_share": 0.0,
+    "pictures_per_s": 60.0,
+    "place": "unknown",
+    "pose_age_ms": 4.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 1.0,
+    "verdict": "JITTER"
+   }
+  },
   "bdbaf5b39c": {
    "causes": [
     "the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)"
@@ -97,6 +147,32 @@
     "pose_age_ms": 8.0,
     "pose_per_picture": 1.0,
     "stale_pose_share": 0.0,
+    "verdict": "JITTER"
+   }
+  },
+  "cc0583d319": {
+   "causes": [
+    "98% of pose reads returned the same pose as the read before while the head was turning: the runtime handed a stale pose (the pose is read at the wrong moment, or from a cached copy, not once per frame after waiting for the frame)",
+    "100% of pictures carry a camera that matches the pose BEFORE last: the camera trails the pose by one frame (swim, not jitter)"
+   ],
+   "count": 1,
+   "first_seen": "2026-10-17",
+   "games": {
+    "hard-reset-vr": [
+     "2026-10-17_14-21-38_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-10-17",
+   "values": {
+    "camera_per_picture": 1.15,
+    "held_share": 1.0,
+    "lag_share": 1.0,
+    "pictures_per_s": 60.0,
+    "place": "unknown",
+    "pose_age_ms": 8.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 1.0,
     "verdict": "JITTER"
    }
   },
@@ -305,6 +381,31 @@
   "2026-10-17_13-31-02_openxr": {
    "game": "hard-reset-vr",
    "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-17_14-21-38_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": "cc0583d319",
+   "runtime": "openxr"
+  },
+  "2026-10-17_14-32-26_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": "14fbae90c7",
+   "runtime": "openxr"
+  },
+  "2026-10-17_15-00-37_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-17_15-08-32_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-17_15-27-42_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": "4fd84f808f",
    "runtime": "openxr"
   }
  },
