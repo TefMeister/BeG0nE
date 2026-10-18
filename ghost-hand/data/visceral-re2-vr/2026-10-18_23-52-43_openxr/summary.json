@@ -1,0 +1,54 @@
+{
+ "game": "visceral-re2-vr",
+ "runtime": "openxr",
+ "frames": 2524,
+ "seconds": 35.34,
+ "frames_per_s": 71.4,
+ "hands": {},
+ "jumps": [
+  {
+   "t": 6.098,
+   "side": "L",
+   "who": "controller",
+   "m": 0.662
+  },
+  {
+   "t": 6.098,
+   "side": "R",
+   "who": "controller",
+   "m": 0.571
+  },
+  {
+   "t": 7.5,
+   "side": "L",
+   "who": "controller",
+   "m": 0.657
+  },
+  {
+   "t": 7.5,
+   "side": "R",
+   "who": "controller",
+   "m": 0.636
+  }
+ ],
+ "tracking": [
+  {
+   "t": 6.098,
+   "side": "L",
+   "s": 1.403,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 6.098,
+   "side": "R",
+   "s": 1.403,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "a controller jumped 4 times (tracking glitches); tracking lost 2 times, 2 with the hands stacked (occlusion).",
+ "file": "visceral-re2-vr_20261018-235207.ghl"
+}
