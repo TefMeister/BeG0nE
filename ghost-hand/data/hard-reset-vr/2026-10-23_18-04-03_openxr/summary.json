@@ -1,0 +1,27 @@
+{
+ "game": "hard-reset-vr",
+ "runtime": "openxr",
+ "frames": 10586,
+ "seconds": 187.4,
+ "frames_per_s": 56.5,
+ "hands": {
+  "L": {
+   "frames": 10201,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.0
+  },
+  "R": {
+   "frames": 10198,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.0
+  }
+ },
+ "jumps": [],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "The hands followed cleanly: no jumps, no lost tracking, no lag.",
+ "file": "hard-reset-vr_20261023-180043.ghl"
+}
