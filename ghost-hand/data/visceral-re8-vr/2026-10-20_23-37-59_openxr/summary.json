@@ -1,0 +1,44 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 74,
+ "seconds": 1.01,
+ "frames_per_s": 73.3,
+ "hands": {
+  "L": {
+   "frames": 74,
+   "usual_m": 0.0908,
+   "wander_p95_m": 0.0141,
+   "wander_max_m": 1.0577,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 74,
+   "usual_m": 0.0718,
+   "wander_p95_m": 0.0131,
+   "wander_max_m": 1.3025,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.013,
+   "side": "L",
+   "who": "controller",
+   "m": 1.251
+  },
+  {
+   "t": 0.013,
+   "side": "R",
+   "who": "controller",
+   "m": 1.411
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "a controller jumped 2 times (tracking glitches).",
+ "file": "visceral-re8-vr_20261020-233758.ghl"
+}
