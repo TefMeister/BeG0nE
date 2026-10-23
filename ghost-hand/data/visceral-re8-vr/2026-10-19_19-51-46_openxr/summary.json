@@ -1,0 +1,170 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 2644,
+ "seconds": 36.73,
+ "frames_per_s": 72.0,
+ "hands": {
+  "L": {
+   "frames": 2644,
+   "usual_m": 0.1636,
+   "wander_p95_m": 0.0499,
+   "wander_max_m": 0.4196,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 2644,
+   "usual_m": 0.1634,
+   "wander_p95_m": 0.0526,
+   "wander_max_m": 0.3867,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.013,
+   "side": "L",
+   "who": "controller",
+   "m": 0.495
+  },
+  {
+   "t": 0.013,
+   "side": "R",
+   "who": "controller",
+   "m": 0.396
+  },
+  {
+   "t": 1.5,
+   "side": "L",
+   "who": "game",
+   "m": 0.065
+  },
+  {
+   "t": 2.361,
+   "side": "L",
+   "who": "game",
+   "m": 0.127
+  },
+  {
+   "t": 2.875,
+   "side": "L",
+   "who": "game",
+   "m": 0.081
+  },
+  {
+   "t": 6.917,
+   "side": "L",
+   "who": "game",
+   "m": 0.256
+  },
+  {
+   "t": 6.917,
+   "side": "R",
+   "who": "game",
+   "m": 0.291
+  },
+  {
+   "t": 7.25,
+   "side": "L",
+   "who": "game",
+   "m": 0.082
+  },
+  {
+   "t": 7.25,
+   "side": "R",
+   "who": "game",
+   "m": 0.08
+  },
+  {
+   "t": 7.264,
+   "side": "L",
+   "who": "game",
+   "m": 0.08
+  },
+  {
+   "t": 7.264,
+   "side": "R",
+   "who": "game",
+   "m": 0.082
+  },
+  {
+   "t": 14.931,
+   "side": "L",
+   "who": "game",
+   "m": 0.708
+  },
+  {
+   "t": 14.931,
+   "side": "R",
+   "who": "game",
+   "m": 0.658
+  },
+  {
+   "t": 14.947,
+   "side": "L",
+   "who": "game",
+   "m": 0.65
+  },
+  {
+   "t": 14.947,
+   "side": "R",
+   "who": "game",
+   "m": 0.6
+  },
+  {
+   "t": 16.947,
+   "side": "L",
+   "who": "game",
+   "m": 0.373
+  },
+  {
+   "t": 16.947,
+   "side": "R",
+   "who": "game",
+   "m": 0.343
+  },
+  {
+   "t": 16.961,
+   "side": "L",
+   "who": "game",
+   "m": 0.463
+  },
+  {
+   "t": 16.961,
+   "side": "R",
+   "who": "game",
+   "m": 0.467
+  },
+  {
+   "t": 17.501,
+   "side": "L",
+   "who": "game",
+   "m": 0.093
+  },
+  {
+   "t": 22.596,
+   "side": "R",
+   "who": "controller",
+   "m": 0.069
+  },
+  {
+   "t": 22.969,
+   "side": "R",
+   "who": "controller",
+   "m": 0.073
+  },
+  {
+   "t": 22.982,
+   "side": "R",
+   "who": "controller",
+   "m": 0.073
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand wanders up to 5.0 cm from its usual place; the game's right hand wanders up to 5.3 cm from its usual place; the game's hand jumped 18 times while the controller was calm; a controller jumped 5 times (tracking glitches).",
+ "file": "visceral-re8-vr_20261019-195110.ghl"
+}
