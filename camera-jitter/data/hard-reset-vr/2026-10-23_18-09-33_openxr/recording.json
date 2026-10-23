@@ -1,0 +1,19 @@
+{
+ "wall_ms": 1792768111264,
+ "clock": "log clock",
+ "game": "hard-reset-vr",
+ "videos": [
+  {
+   "file": "begone_second_2026-10-23_18-08-43.mp4",
+   "window": "OpenXR Simulator preview",
+   "offset_s": -12.442,
+   "cuts": []
+  },
+  {
+   "file": "begone_2026-10-23_18-08-43.mp4",
+   "window": "game window",
+   "offset_s": -12.442,
+   "cuts": []
+  }
+ ]
+}
