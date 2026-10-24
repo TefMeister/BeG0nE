@@ -537,7 +537,10 @@ local function grip_pass(final)
         -- after the hand pulled away, it must leave the dock zone once before the auto-dock may take it again
         -- (otherwise praydog's dock re-grabs a hand that is still close, and the let-go never seems to happen)
         if S.need_clear and not near then S.need_clear = false end
-        our_grip = allowed and (holding or (near and not S.need_clear))
+        -- 2026-10-24 (Visceral RE8, Tefa: "LG is janky, it sometimes snaps the gun from any distance"): the button alone took
+        -- the grip anywhere within REDOCK_KEEP_S of letting go (our own dock on the frozen socket, 21-74 cm away in the log).
+        -- A take now needs the hand near the socket too, button or not.
+        our_grip = allowed and near and (holding or not S.need_clear)
     end
     -- 2026-10-10 (Tefa: tilting the rifle or moving the right controller "breaks that reload animation and it doesn't
     -- finish, the hand teleports back on the gun"): one line whenever the reload / button / dock / our grip changes, so the
