@@ -1,0 +1,181 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 5262,
+ "seconds": 101.39,
+ "frames_per_s": 51.9,
+ "hands": {
+  "L": {
+   "frames": 5262,
+   "usual_m": 0.0807,
+   "wander_p95_m": 0.0481,
+   "wander_max_m": 0.1965,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 5262,
+   "usual_m": 0.0806,
+   "wander_p95_m": 0.024,
+   "wander_max_m": 0.1555,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.021,
+   "side": "L",
+   "who": "controller",
+   "m": 0.714
+  },
+  {
+   "t": 0.021,
+   "side": "R",
+   "who": "controller",
+   "m": 0.306
+  },
+  {
+   "t": 6.667,
+   "side": "R",
+   "who": "game",
+   "m": 0.065
+  },
+  {
+   "t": 22.943,
+   "side": "L",
+   "who": "game",
+   "m": 0.123
+  },
+  {
+   "t": 28.365,
+   "side": "L",
+   "who": "game",
+   "m": 0.09
+  },
+  {
+   "t": 30.029,
+   "side": "L",
+   "who": "game",
+   "m": 0.181
+  },
+  {
+   "t": 35.103,
+   "side": "L",
+   "who": "game",
+   "m": 0.072
+  },
+  {
+   "t": 40.631,
+   "side": "L",
+   "who": "game",
+   "m": 0.108
+  },
+  {
+   "t": 45.046,
+   "side": "L",
+   "who": "game",
+   "m": 0.188
+  },
+  {
+   "t": 49.614,
+   "side": "L",
+   "who": "game",
+   "m": 0.164
+  },
+  {
+   "t": 67.742,
+   "side": "L",
+   "who": "game",
+   "m": 0.098
+  },
+  {
+   "t": 77.877,
+   "side": "R",
+   "who": "game",
+   "m": 0.112
+  },
+  {
+   "t": 77.898,
+   "side": "R",
+   "who": "game",
+   "m": 0.074
+  }
+ ],
+ "tracking": [],
+ "attempts": [
+  {
+   "n": 1,
+   "gesture": "bolt",
+   "t": 46.934,
+   "s": 1.735,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.0426,
+   "left_travel_m": 0.0982,
+   "gun_moved_m": 0.0897,
+   "lost": 0,
+   "jumps": 0,
+   "why": "finished"
+  },
+  {
+   "n": 2,
+   "gesture": "bolt",
+   "t": 51.408,
+   "s": 2.273,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.1892,
+   "left_travel_m": 0.2161,
+   "gun_moved_m": 0.2223,
+   "lost": 0,
+   "jumps": 0,
+   "why": "finished"
+  },
+  {
+   "n": 3,
+   "gesture": "bolt",
+   "t": 53.697,
+   "s": 0.686,
+   "outcome": "cancel",
+   "done": false,
+   "apart_m": 0.0323,
+   "left_travel_m": 0.0648,
+   "gun_moved_m": 0.0206,
+   "lost": 0,
+   "jumps": 0,
+   "why": "not judged: the mod does not log how far it needs (gh.value('<g>_need', metres))"
+  },
+  {
+   "n": 4,
+   "gesture": "bolt",
+   "t": 55.468,
+   "s": 11.7,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.0988,
+   "left_travel_m": 0.1813,
+   "gun_moved_m": 0.1253,
+   "lost": 0,
+   "jumps": 0,
+   "why": "finished"
+  },
+  {
+   "n": 5,
+   "gesture": "bolt",
+   "t": 67.19,
+   "s": 0.543,
+   "outcome": "cancel",
+   "done": false,
+   "apart_m": 0.0147,
+   "left_travel_m": 0.0299,
+   "gun_moved_m": 0.0154,
+   "lost": 0,
+   "jumps": 0,
+   "why": "not judged: the mod does not log how far it needs (gh.value('<g>_need', metres))"
+  }
+ ],
+ "quality": "good",
+ "verdict": "bolt: 3 of 5 finished; most misses: not judged (2 of 2); the game's left hand wanders up to 4.8 cm from its usual place; the game's hand jumped 11 times while the controller was calm; a controller jumped 2 times (tracking glitches).",
+ "file": "visceral-re8-vr_20261025-214539.ghl"
+}
