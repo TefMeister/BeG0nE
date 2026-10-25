@@ -1,0 +1,792 @@
+{
+ "game": "silent-hill-2-remake-vr",
+ "runtime": "openxr",
+ "frames": 17946,
+ "seconds": 501.76,
+ "frames_per_s": 35.8,
+ "hands": {
+  "L": {
+   "frames": 16515,
+   "usual_m": 0.1328,
+   "wander_p95_m": 0.0153,
+   "wander_max_m": 0.7161,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 16515,
+   "usual_m": 0.0935,
+   "wander_p95_m": 0.0001,
+   "wander_max_m": 1.0176,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 1.036,
+   "side": "L",
+   "who": "controller",
+   "m": 0.677
+  },
+  {
+   "t": 1.091,
+   "side": "L",
+   "who": "controller",
+   "m": 0.13
+  },
+  {
+   "t": 1.118,
+   "side": "L",
+   "who": "controller",
+   "m": 0.066
+  },
+  {
+   "t": 1.202,
+   "side": "L",
+   "who": "controller",
+   "m": 0.066
+  },
+  {
+   "t": 1.565,
+   "side": "L",
+   "who": "controller",
+   "m": 0.074
+  },
+  {
+   "t": 7.761,
+   "side": "R",
+   "who": "controller",
+   "m": 0.495
+  },
+  {
+   "t": 7.82,
+   "side": "R",
+   "who": "controller",
+   "m": 0.077
+  },
+  {
+   "t": 7.918,
+   "side": "R",
+   "who": "controller",
+   "m": 0.067
+  },
+  {
+   "t": 8.068,
+   "side": "R",
+   "who": "controller",
+   "m": 0.065
+  },
+  {
+   "t": 8.097,
+   "side": "R",
+   "who": "controller",
+   "m": 0.067
+  },
+  {
+   "t": 8.162,
+   "side": "R",
+   "who": "controller",
+   "m": 0.085
+  },
+  {
+   "t": 8.206,
+   "side": "R",
+   "who": "controller",
+   "m": 0.179
+  },
+  {
+   "t": 8.219,
+   "side": "R",
+   "who": "controller",
+   "m": 0.183
+  },
+  {
+   "t": 9.862,
+   "side": "R",
+   "who": "controller",
+   "m": 0.081
+  },
+  {
+   "t": 10.031,
+   "side": "L",
+   "who": "controller",
+   "m": 0.077
+  },
+  {
+   "t": 10.031,
+   "side": "R",
+   "who": "controller",
+   "m": 0.117
+  },
+  {
+   "t": 10.295,
+   "side": "R",
+   "who": "controller",
+   "m": 0.133
+  },
+  {
+   "t": 10.327,
+   "side": "R",
+   "who": "controller",
+   "m": 0.166
+  },
+  {
+   "t": 10.361,
+   "side": "R",
+   "who": "controller",
+   "m": 0.063
+  },
+  {
+   "t": 29.787,
+   "side": "R",
+   "who": "controller",
+   "m": 0.079
+  },
+  {
+   "t": 29.808,
+   "side": "R",
+   "who": "controller",
+   "m": 0.087
+  },
+  {
+   "t": 29.825,
+   "side": "R",
+   "who": "controller",
+   "m": 0.1
+  },
+  {
+   "t": 29.861,
+   "side": "R",
+   "who": "controller",
+   "m": 0.103
+  },
+  {
+   "t": 30.754,
+   "side": "L",
+   "who": "game",
+   "m": 0.923
+  },
+  {
+   "t": 30.754,
+   "side": "R",
+   "who": "game",
+   "m": 1.065
+  },
+  {
+   "t": 36.424,
+   "side": "L",
+   "who": "game",
+   "m": 0.087
+  },
+  {
+   "t": 40.127,
+   "side": "L",
+   "who": "game",
+   "m": 0.074
+  },
+  {
+   "t": 40.543,
+   "side": "R",
+   "who": "controller",
+   "m": 0.073
+  },
+  {
+   "t": 40.7,
+   "side": "L",
+   "who": "controller",
+   "m": 0.082
+  },
+  {
+   "t": 40.7,
+   "side": "R",
+   "who": "controller",
+   "m": 0.107
+  },
+  {
+   "t": 74.619,
+   "side": "R",
+   "who": "controller",
+   "m": 0.09
+  },
+  {
+   "t": 74.649,
+   "side": "L",
+   "who": "game",
+   "m": 0.063
+  },
+  {
+   "t": 74.68,
+   "side": "L",
+   "who": "game",
+   "m": 0.132
+  },
+  {
+   "t": 74.803,
+   "side": "L",
+   "who": "controller",
+   "m": 0.165
+  },
+  {
+   "t": 75.198,
+   "side": "L",
+   "who": "game",
+   "m": 0.104
+  },
+  {
+   "t": 75.198,
+   "side": "R",
+   "who": "game",
+   "m": 0.082
+  },
+  {
+   "t": 75.229,
+   "side": "L",
+   "who": "game",
+   "m": 0.138
+  },
+  {
+   "t": 75.229,
+   "side": "R",
+   "who": "controller",
+   "m": 0.06
+  },
+  {
+   "t": 75.258,
+   "side": "R",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 75.38,
+   "side": "L",
+   "who": "game",
+   "m": 0.06
+  },
+  {
+   "t": 75.658,
+   "side": "R",
+   "who": "controller",
+   "m": 0.276
+  },
+  {
+   "t": 75.688,
+   "side": "L",
+   "who": "controller",
+   "m": 0.061
+  },
+  {
+   "t": 77.813,
+   "side": "L",
+   "who": "controller",
+   "m": 0.068
+  },
+  {
+   "t": 123.105,
+   "side": "L",
+   "who": "controller",
+   "m": 0.07
+  },
+  {
+   "t": 162.82,
+   "side": "L",
+   "who": "controller",
+   "m": 0.064
+  },
+  {
+   "t": 194.027,
+   "side": "L",
+   "who": "game",
+   "m": 0.061
+  },
+  {
+   "t": 234.196,
+   "side": "R",
+   "who": "game",
+   "m": 0.097
+  },
+  {
+   "t": 234.359,
+   "side": "R",
+   "who": "game",
+   "m": 0.072
+  },
+  {
+   "t": 234.544,
+   "side": "L",
+   "who": "game",
+   "m": 0.062
+  },
+  {
+   "t": 236.521,
+   "side": "R",
+   "who": "controller",
+   "m": 0.077
+  },
+  {
+   "t": 236.549,
+   "side": "R",
+   "who": "controller",
+   "m": 0.065
+  },
+  {
+   "t": 236.574,
+   "side": "R",
+   "who": "controller",
+   "m": 0.07
+  },
+  {
+   "t": 236.683,
+   "side": "L",
+   "who": "controller",
+   "m": 0.467
+  },
+  {
+   "t": 236.683,
+   "side": "R",
+   "who": "game",
+   "m": 0.086
+  },
+  {
+   "t": 236.765,
+   "side": "L",
+   "who": "controller",
+   "m": 0.117
+  },
+  {
+   "t": 236.765,
+   "side": "R",
+   "who": "controller",
+   "m": 0.082
+  },
+  {
+   "t": 264.264,
+   "side": "L",
+   "who": "game",
+   "m": 0.07
+  },
+  {
+   "t": 266.119,
+   "side": "L",
+   "who": "controller",
+   "m": 0.182
+  },
+  {
+   "t": 266.145,
+   "side": "L",
+   "who": "controller",
+   "m": 0.068
+  },
+  {
+   "t": 273.48,
+   "side": "L",
+   "who": "game",
+   "m": 0.062
+  },
+  {
+   "t": 278.666,
+   "side": "L",
+   "who": "game",
+   "m": 0.062
+  },
+  {
+   "t": 310.042,
+   "side": "R",
+   "who": "controller",
+   "m": 0.107
+  },
+  {
+   "t": 316.266,
+   "side": "L",
+   "who": "controller",
+   "m": 0.472
+  },
+  {
+   "t": 317.778,
+   "side": "R",
+   "who": "controller",
+   "m": 0.491
+  },
+  {
+   "t": 320.748,
+   "side": "L",
+   "who": "controller",
+   "m": 0.472
+  },
+  {
+   "t": 320.775,
+   "side": "R",
+   "who": "controller",
+   "m": 0.496
+  },
+  {
+   "t": 326.458,
+   "side": "L",
+   "who": "controller",
+   "m": 0.472
+  },
+  {
+   "t": 328.133,
+   "side": "R",
+   "who": "controller",
+   "m": 0.505
+  },
+  {
+   "t": 333.943,
+   "side": "L",
+   "who": "controller",
+   "m": 0.472
+  },
+  {
+   "t": 333.943,
+   "side": "R",
+   "who": "controller",
+   "m": 0.525
+  },
+  {
+   "t": 334.488,
+   "side": "L",
+   "who": "controller",
+   "m": 0.183
+  },
+  {
+   "t": 334.515,
+   "side": "R",
+   "who": "controller",
+   "m": 0.061
+  },
+  {
+   "t": 334.889,
+   "side": "L",
+   "who": "game",
+   "m": 0.075
+  },
+  {
+   "t": 334.995,
+   "side": "L",
+   "who": "game",
+   "m": 0.077
+  },
+  {
+   "t": 335.022,
+   "side": "L",
+   "who": "game",
+   "m": 0.126
+  },
+  {
+   "t": 335.1,
+   "side": "L",
+   "who": "game",
+   "m": 0.108
+  },
+  {
+   "t": 335.153,
+   "side": "L",
+   "who": "game",
+   "m": 0.1
+  },
+  {
+   "t": 335.153,
+   "side": "R",
+   "who": "controller",
+   "m": 0.111
+  },
+  {
+   "t": 335.179,
+   "side": "R",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 335.205,
+   "side": "R",
+   "who": "controller",
+   "m": 0.124
+  },
+  {
+   "t": 335.469,
+   "side": "R",
+   "who": "controller",
+   "m": 0.19
+  },
+  {
+   "t": 335.496,
+   "side": "R",
+   "who": "controller",
+   "m": 0.095
+  },
+  {
+   "t": 340.738,
+   "side": "R",
+   "who": "controller",
+   "m": 0.271
+  },
+  {
+   "t": 354.017,
+   "side": "L",
+   "who": "controller",
+   "m": 0.074
+  },
+  {
+   "t": 356.682,
+   "side": "L",
+   "who": "controller",
+   "m": 0.193
+  },
+  {
+   "t": 375.556,
+   "side": "L",
+   "who": "controller",
+   "m": 0.191
+  },
+  {
+   "t": 375.586,
+   "side": "L",
+   "who": "controller",
+   "m": 0.064
+  },
+  {
+   "t": 376.169,
+   "side": "L",
+   "who": "game",
+   "m": 0.18
+  },
+  {
+   "t": 391.511,
+   "side": "L",
+   "who": "game",
+   "m": 0.191
+  },
+  {
+   "t": 392.293,
+   "side": "L",
+   "who": "game",
+   "m": 0.25
+  },
+  {
+   "t": 396.39,
+   "side": "L",
+   "who": "game",
+   "m": 0.12
+  },
+  {
+   "t": 397.089,
+   "side": "L",
+   "who": "game",
+   "m": 0.328
+  },
+  {
+   "t": 406.042,
+   "side": "L",
+   "who": "controller",
+   "m": 0.062
+  },
+  {
+   "t": 413.098,
+   "side": "L",
+   "who": "game",
+   "m": 0.091
+  },
+  {
+   "t": 413.126,
+   "side": "L",
+   "who": "game",
+   "m": 0.08
+  },
+  {
+   "t": 416.875,
+   "side": "L",
+   "who": "controller",
+   "m": 0.288
+  },
+  {
+   "t": 416.904,
+   "side": "L",
+   "who": "controller",
+   "m": 0.101
+  },
+  {
+   "t": 417.4,
+   "side": "L",
+   "who": "controller",
+   "m": 0.15
+  },
+  {
+   "t": 421.275,
+   "side": "L",
+   "who": "controller",
+   "m": 0.214
+  },
+  {
+   "t": 431.066,
+   "side": "L",
+   "who": "controller",
+   "m": 0.083
+  },
+  {
+   "t": 431.095,
+   "side": "L",
+   "who": "controller",
+   "m": 0.131
+  },
+  {
+   "t": 431.123,
+   "side": "L",
+   "who": "controller",
+   "m": 0.071
+  },
+  {
+   "t": 433.9,
+   "side": "L",
+   "who": "controller",
+   "m": 0.066
+  },
+  {
+   "t": 435.527,
+   "side": "L",
+   "who": "controller",
+   "m": 0.064
+  },
+  {
+   "t": 435.553,
+   "side": "L",
+   "who": "controller",
+   "m": 0.064
+  },
+  {
+   "t": 435.583,
+   "side": "L",
+   "who": "controller",
+   "m": 0.063
+  },
+  {
+   "t": 441.886,
+   "side": "R",
+   "who": "controller",
+   "m": 0.07
+  },
+  {
+   "t": 483.77,
+   "side": "L",
+   "who": "controller",
+   "m": 0.09
+  },
+  {
+   "t": 491.95,
+   "side": "L",
+   "who": "controller",
+   "m": 0.407
+  },
+  {
+   "t": 491.977,
+   "side": "L",
+   "who": "controller",
+   "m": 0.153
+  },
+  {
+   "t": 492.005,
+   "side": "L",
+   "who": "controller",
+   "m": 0.216
+  },
+  {
+   "t": 492.033,
+   "side": "L",
+   "who": "controller",
+   "m": 0.357
+  },
+  {
+   "t": 492.062,
+   "side": "L",
+   "who": "controller",
+   "m": 0.074
+  },
+  {
+   "t": 492.119,
+   "side": "L",
+   "who": "controller",
+   "m": 0.116
+  },
+  {
+   "t": 492.146,
+   "side": "L",
+   "who": "controller",
+   "m": 0.094
+  },
+  {
+   "t": 492.176,
+   "side": "L",
+   "who": "controller",
+   "m": 0.081
+  },
+  {
+   "t": 492.203,
+   "side": "L",
+   "who": "controller",
+   "m": 0.091
+  }
+ ],
+ "tracking": [
+  {
+   "t": 0.0,
+   "side": "L",
+   "s": 1.036,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 0.0,
+   "side": "R",
+   "s": 7.761,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 316.266,
+   "side": "L",
+   "s": 4.482,
+   "hands_m": 0.491,
+   "stacked": false
+  },
+  {
+   "t": 317.778,
+   "side": "R",
+   "s": 2.997,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 326.458,
+   "side": "L",
+   "s": 7.486,
+   "hands_m": 0.505,
+   "stacked": false
+  },
+  {
+   "t": 328.133,
+   "side": "R",
+   "s": 5.811,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "gesture": "slide",
+   "t": 393.284,
+   "s": 3.106,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.1219,
+   "left_travel_m": 0.1847,
+   "gun_moved_m": 0.0643,
+   "lost": 0,
+   "jumps": 1,
+   "why": "finished"
+  }
+ ],
+ "quality": "good",
+ "verdict": "slide: 1 of 1 finished; the game's hand jumped 30 times while the controller was calm; a controller jumped 87 times (tracking glitches); tracking lost 6 times, 4 with the hands stacked (occlusion).",
+ "file": "silent-hill-2-remake-vr_20261025-181942.ghl"
+}
