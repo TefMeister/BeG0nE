@@ -1,0 +1,384 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 24731,
+ "seconds": 375.96,
+ "frames_per_s": 65.8,
+ "hands": {
+  "L": {
+   "frames": 24731,
+   "usual_m": 0.0713,
+   "wander_p95_m": 0.0232,
+   "wander_max_m": 0.2487,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 24731,
+   "usual_m": 0.0807,
+   "wander_p95_m": 0.0036,
+   "wander_max_m": 0.3551,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.013,
+   "side": "L",
+   "who": "controller",
+   "m": 0.379
+  },
+  {
+   "t": 0.013,
+   "side": "R",
+   "who": "controller",
+   "m": 0.435
+  },
+  {
+   "t": 12.117,
+   "side": "L",
+   "who": "game",
+   "m": 0.075
+  },
+  {
+   "t": 24.938,
+   "side": "L",
+   "who": "game",
+   "m": 0.113
+  },
+  {
+   "t": 235.066,
+   "side": "L",
+   "who": "game",
+   "m": 0.146
+  },
+  {
+   "t": 235.079,
+   "side": "L",
+   "who": "controller",
+   "m": 0.23
+  },
+  {
+   "t": 235.079,
+   "side": "R",
+   "who": "controller",
+   "m": 0.252
+  },
+  {
+   "t": 253.038,
+   "side": "L",
+   "who": "game",
+   "m": 0.086
+  },
+  {
+   "t": 269.005,
+   "side": "L",
+   "who": "game",
+   "m": 0.167
+  },
+  {
+   "t": 292.392,
+   "side": "L",
+   "who": "game",
+   "m": 0.155
+  },
+  {
+   "t": 303.999,
+   "side": "L",
+   "who": "controller",
+   "m": 0.515
+  },
+  {
+   "t": 303.999,
+   "side": "R",
+   "who": "controller",
+   "m": 0.32
+  },
+  {
+   "t": 310.315,
+   "side": "L",
+   "who": "controller",
+   "m": 0.53
+  },
+  {
+   "t": 310.315,
+   "side": "R",
+   "who": "controller",
+   "m": 0.507
+  },
+  {
+   "t": 322.903,
+   "side": "L",
+   "who": "game",
+   "m": 0.315
+  },
+  {
+   "t": 325.253,
+   "side": "L",
+   "who": "game",
+   "m": 0.234
+  },
+  {
+   "t": 337.014,
+   "side": "R",
+   "who": "controller",
+   "m": 0.356
+  },
+  {
+   "t": 337.03,
+   "side": "R",
+   "who": "controller",
+   "m": 0.356
+  },
+  {
+   "t": 367.09,
+   "side": "L",
+   "who": "controller",
+   "m": 0.101
+  },
+  {
+   "t": 367.09,
+   "side": "R",
+   "who": "controller",
+   "m": 0.133
+  },
+  {
+   "t": 367.104,
+   "side": "L",
+   "who": "controller",
+   "m": 0.101
+  },
+  {
+   "t": 367.104,
+   "side": "R",
+   "who": "controller",
+   "m": 0.133
+  },
+  {
+   "t": 370.812,
+   "side": "R",
+   "who": "controller",
+   "m": 0.082
+  },
+  {
+   "t": 371.281,
+   "side": "R",
+   "who": "game",
+   "m": 0.084
+  },
+  {
+   "t": 371.297,
+   "side": "R",
+   "who": "game",
+   "m": 0.082
+  },
+  {
+   "t": 373.665,
+   "side": "R",
+   "who": "game",
+   "m": 0.081
+  },
+  {
+   "t": 373.681,
+   "side": "R",
+   "who": "game",
+   "m": 0.088
+  }
+ ],
+ "tracking": [
+  {
+   "t": 303.999,
+   "side": "L",
+   "s": 6.316,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 303.999,
+   "side": "R",
+   "s": 6.316,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "gesture": "mag",
+   "t": 14.768,
+   "s": 1.548,
+   "outcome": "fail",
+   "done": false,
+   "apart_m": 0.2444,
+   "left_travel_m": 0.1994,
+   "gun_moved_m": 0.0892,
+   "need_m": 0.16,
+   "lost": 0,
+   "jumps": 0,
+   "why": "the hands moved 24.4 cm apart, enough for the 16.0 cm needed, but the mod measured less"
+  },
+  {
+   "n": 2,
+   "gesture": "mag",
+   "t": 20.534,
+   "s": 1.273,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.3996,
+   "left_travel_m": 0.5103,
+   "gun_moved_m": 0.0645,
+   "need_m": 0.16,
+   "lost": 0,
+   "jumps": 0,
+   "why": "finished"
+  },
+  {
+   "n": 3,
+   "gesture": "bolt",
+   "t": 250.723,
+   "s": 1.482,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.1369,
+   "left_travel_m": 0.2233,
+   "gun_moved_m": 0.0314,
+   "lost": 0,
+   "jumps": 0,
+   "why": "finished"
+  },
+  {
+   "n": 4,
+   "gesture": "mag",
+   "t": 261.128,
+   "s": 3.554,
+   "outcome": "fail",
+   "done": false,
+   "apart_m": 0.2268,
+   "left_travel_m": 0.3378,
+   "gun_moved_m": 0.1018,
+   "need_m": 0.16,
+   "lost": 0,
+   "jumps": 0,
+   "why": "the hands moved 22.7 cm apart, enough for the 16.0 cm needed, but the mod measured less"
+  },
+  {
+   "n": 5,
+   "gesture": "mag",
+   "t": 266.072,
+   "s": 2.097,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.358,
+   "left_travel_m": 0.6732,
+   "gun_moved_m": 0.1185,
+   "need_m": 0.16,
+   "lost": 0,
+   "jumps": 0,
+   "why": "finished"
+  },
+  {
+   "n": 6,
+   "gesture": "bolt",
+   "t": 275.68,
+   "s": 1.624,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.1053,
+   "left_travel_m": 0.2218,
+   "gun_moved_m": 0.0377,
+   "lost": 0,
+   "jumps": 0,
+   "why": "finished"
+  },
+  {
+   "n": 7,
+   "gesture": "bolt",
+   "t": 277.316,
+   "s": 0.644,
+   "outcome": "cancel",
+   "done": false,
+   "apart_m": 0.0355,
+   "left_travel_m": 0.0338,
+   "gun_moved_m": 0.0076,
+   "lost": 0,
+   "jumps": 0,
+   "why": "not judged: the mod does not log how far it needs (gh.value('<g>_need', metres))"
+  },
+  {
+   "n": 8,
+   "gesture": "bolt",
+   "t": 282.214,
+   "s": 1.602,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.0498,
+   "left_travel_m": 0.2418,
+   "gun_moved_m": 0.0192,
+   "lost": 0,
+   "jumps": 0,
+   "why": "finished"
+  },
+  {
+   "n": 9,
+   "gesture": "bolt",
+   "t": 283.831,
+   "s": 0.319,
+   "outcome": "cancel",
+   "done": false,
+   "apart_m": 0.0501,
+   "left_travel_m": 0.119,
+   "gun_moved_m": 0.0058,
+   "lost": 0,
+   "jumps": 0,
+   "why": "not judged: the mod does not log how far it needs (gh.value('<g>_need', metres))"
+  },
+  {
+   "n": 10,
+   "gesture": "mag",
+   "t": 287.972,
+   "s": 1.379,
+   "outcome": "fail",
+   "done": false,
+   "apart_m": 0.3954,
+   "left_travel_m": 0.6153,
+   "gun_moved_m": 0.0342,
+   "need_m": 0.16,
+   "lost": 0,
+   "jumps": 0,
+   "why": "the hands moved 39.5 cm apart, enough for the 16.0 cm needed, but the mod measured less"
+  },
+  {
+   "n": 11,
+   "gesture": "mag",
+   "t": 290.564,
+   "s": 1.307,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.4757,
+   "left_travel_m": 0.6512,
+   "gun_moved_m": 0.0679,
+   "need_m": 0.16,
+   "lost": 0,
+   "jumps": 0,
+   "why": "finished"
+  },
+  {
+   "n": 12,
+   "gesture": "bolt",
+   "t": 294.116,
+   "s": 1.328,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.0386,
+   "left_travel_m": 0.2603,
+   "gun_moved_m": 0.0211,
+   "lost": 0,
+   "jumps": 0,
+   "why": "finished"
+  }
+ ],
+ "quality": "good",
+ "verdict": "mag: 3 of 6 finished; most misses: the hands moved 22.7 cm apart, enough for the 16.0 cm needed, but the mod measured less (1 of 3); bolt: 4 of 6 finished; most misses: not judged (2 of 2); the game's hand jumped 12 times while the controller was calm; a controller jumped 15 times (tracking glitches); tracking lost 2 times, 2 with the hands stacked (occlusion).",
+ "file": "visceral-re8-vr_20261025-142731.ghl"
+}
