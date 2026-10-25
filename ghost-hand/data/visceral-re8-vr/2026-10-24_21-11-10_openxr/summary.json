@@ -1,0 +1,75 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 3570,
+ "seconds": 50.19,
+ "frames_per_s": 71.1,
+ "hands": {},
+ "jumps": [
+  {
+   "t": 5.379,
+   "side": "R",
+   "who": "controller",
+   "m": 0.063
+  },
+  {
+   "t": 5.394,
+   "side": "R",
+   "who": "controller",
+   "m": 0.063
+  },
+  {
+   "t": 6.893,
+   "side": "R",
+   "who": "controller",
+   "m": 0.213
+  },
+  {
+   "t": 9.407,
+   "side": "R",
+   "who": "controller",
+   "m": 0.87
+  },
+  {
+   "t": 10.449,
+   "side": "R",
+   "who": "controller",
+   "m": 0.215
+  },
+  {
+   "t": 11.243,
+   "side": "R",
+   "who": "controller",
+   "m": 0.104
+  },
+  {
+   "t": 11.621,
+   "side": "R",
+   "who": "controller",
+   "m": 0.071
+  },
+  {
+   "t": 15.375,
+   "side": "R",
+   "who": "controller",
+   "m": 0.458
+  },
+  {
+   "t": 15.57,
+   "side": "L",
+   "who": "controller",
+   "m": 0.064
+  },
+  {
+   "t": 29.863,
+   "side": "R",
+   "who": "controller",
+   "m": 0.532
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "a controller jumped 10 times (tracking glitches).",
+ "file": "visceral-re8-vr_20261024-211019.ghl"
+}
