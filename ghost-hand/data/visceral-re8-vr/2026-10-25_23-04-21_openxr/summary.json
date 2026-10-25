@@ -1,0 +1,105 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 4252,
+ "seconds": 59.05,
+ "frames_per_s": 72.0,
+ "hands": {},
+ "jumps": [
+  {
+   "t": 0.012,
+   "side": "L",
+   "who": "controller",
+   "m": 0.556
+  },
+  {
+   "t": 0.012,
+   "side": "R",
+   "who": "controller",
+   "m": 0.537
+  },
+  {
+   "t": 24.834,
+   "side": "L",
+   "who": "controller",
+   "m": 0.297
+  },
+  {
+   "t": 24.834,
+   "side": "R",
+   "who": "controller",
+   "m": 0.202
+  },
+  {
+   "t": 37.933,
+   "side": "L",
+   "who": "controller",
+   "m": 0.809
+  },
+  {
+   "t": 39.447,
+   "side": "R",
+   "who": "controller",
+   "m": 0.788
+  },
+  {
+   "t": 40.613,
+   "side": "R",
+   "who": "controller",
+   "m": 0.771
+  },
+  {
+   "t": 51.989,
+   "side": "R",
+   "who": "controller",
+   "m": 0.77
+  },
+  {
+   "t": 52.962,
+   "side": "R",
+   "who": "controller",
+   "m": 0.77
+  }
+ ],
+ "tracking": [
+  {
+   "t": 0.0,
+   "side": "L",
+   "s": 0.012,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 0.0,
+   "side": "R",
+   "s": 0.012,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 37.933,
+   "side": "L",
+   "s": 0.0,
+   "hands_m": 0.788,
+   "stacked": false
+  },
+  {
+   "t": 39.447,
+   "side": "R",
+   "s": 1.166,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 51.989,
+   "side": "R",
+   "s": 0.973,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "a controller jumped 9 times (tracking glitches); tracking lost 5 times, 4 with the hands stacked (occlusion).",
+ "file": "visceral-re8-vr_20261025-230322.ghl"
+}
