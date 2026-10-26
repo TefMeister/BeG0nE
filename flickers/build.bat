@@ -11,7 +11,7 @@ call "%VCVARS%" >nul 2>&1
 if not exist "%HERE%dist" mkdir "%HERE%dist"
 if not exist "%HERE%build" mkdir "%HERE%build"
 if not exist "%HERE%build\layer" mkdir "%HERE%build\layer"
-set CORE="%HERE%src\core\fb_core.cpp" "%HERE%src\core\fb_views.cpp" "%HERE%src\core\fb_gpu.cpp" "%HERE%src\core\fb_dump.cpp"
+set CORE="%HERE%src\core\fb_core.cpp" "%HERE%src\core\fb_views.cpp" "%HERE%src\core\fb_gpu.cpp" "%HERE%src\core\fb_dump.cpp" "%HERE%src\core\fb_calm.cpp"
 set LIBS=d3d12.lib dxgi.lib d3dcompiler.lib user32.lib
 
 rem the OpenXR layer (any OpenXR game; the dev PC tests with it)

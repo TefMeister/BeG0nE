@@ -199,8 +199,8 @@ XRAPI_ATTR XrResult XRAPI_CALL xrEndFrame(XrSession session, const XrFrameEndInf
                 eyes[0].rect.extent.height, eyes[0].slice, (void*)eyes[1].sc, eyes[1].image, eyes[1].rect.offset.x,
                 eyes[1].rect.offset.y, eyes[1].rect.extent.width, eyes[1].rect.extent.height, eyes[1].slice);
         }
-        if (g_set.on < 2) {
-            // on = 1: watch and log only; the game's images go to the headset untouched
+        if (g_set.on < 2 && !g_set.calm && !g_set.hold) {
+            // on = 1 without calm: watch and log only; the game's images go to the headset untouched
         } else if (g_queue) {
             g_gpu.frame(g_set, g_dir.c_str(), session, g_queue, g_views.generation(), eyes, out);
         } else if (!g_said_no_queue) {
