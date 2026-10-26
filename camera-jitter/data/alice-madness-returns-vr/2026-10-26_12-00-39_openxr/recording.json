@@ -1,0 +1,61 @@
+{
+ "wall_ms": 1793008519649,
+ "clock": "log clock",
+ "game": "alice-madness-returns-vr",
+ "videos": [
+  {
+   "file": "begone_second_2026-10-26_11-55-31.mp4",
+   "window": "OpenXR Simulator preview",
+   "offset_s": -12.44,
+   "cuts": [
+    {
+     "stretch": "jitter_293-294s",
+     "from_s": 293,
+     "to_s": 294,
+     "frames": 0,
+     "held": null,
+     "jumped": null,
+     "folder": "alice-madness-returns-vr/begone-frames/2026-10-26_12-00-39_openxr/jitter_293-294s_headset",
+     "note": "ffmpeg is not installed"
+    },
+    {
+     "stretch": "jitter_304-305s",
+     "from_s": 304,
+     "to_s": 305,
+     "frames": 0,
+     "held": null,
+     "jumped": null,
+     "folder": "alice-madness-returns-vr/begone-frames/2026-10-26_12-00-39_openxr/jitter_304-305s_headset",
+     "note": "ffmpeg is not installed"
+    }
+   ]
+  },
+  {
+   "file": "begone_2026-10-26_11-55-31.mp4",
+   "window": "game window",
+   "offset_s": -12.44,
+   "cuts": [
+    {
+     "stretch": "jitter_293-294s",
+     "from_s": 293,
+     "to_s": 294,
+     "frames": 0,
+     "held": null,
+     "jumped": null,
+     "folder": "alice-madness-returns-vr/begone-frames/2026-10-26_12-00-39_openxr/jitter_293-294s_game",
+     "note": "ffmpeg is not installed"
+    },
+    {
+     "stretch": "jitter_304-305s",
+     "from_s": 304,
+     "to_s": 305,
+     "frames": 0,
+     "held": null,
+     "jumped": null,
+     "folder": "alice-madness-returns-vr/begone-frames/2026-10-26_12-00-39_openxr/jitter_304-305s_game",
+     "note": "ffmpeg is not installed"
+    }
+   ]
+  }
+ ]
+}

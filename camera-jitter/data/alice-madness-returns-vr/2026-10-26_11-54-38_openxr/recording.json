@@ -1,0 +1,19 @@
+{
+ "wall_ms": 1793008432614,
+ "clock": "log clock",
+ "game": "alice-madness-returns-vr",
+ "videos": [
+  {
+   "file": "begone_second_2026-10-26_11-54-08.mp4",
+   "window": "OpenXR Simulator preview",
+   "offset_s": -15.998,
+   "cuts": []
+  },
+  {
+   "file": "begone_2026-10-26_11-54-08.mp4",
+   "window": "game window",
+   "offset_s": -15.998,
+   "cuts": []
+  }
+ ]
+}

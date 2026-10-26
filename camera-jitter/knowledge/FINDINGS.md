@@ -1,6 +1,6 @@
 # What the numbers say about jittery and smooth VR cameras
 
-Rebuilt 2026-10-25 17:40 from 62 sessions boiled down to 13 patterns. A pattern is one way a mod behaved; sessions that behaved the same way count as one. A pattern is grouped as jittery or smooth by the checker's own verdict, unless the person wearing the headset said otherwise with `ride.py label`, which outranks it. Every line is `[measured]` on our own mods.
+Rebuilt 2026-10-26 12:01 from 65 sessions boiled down to 14 patterns. A pattern is one way a mod behaved; sessions that behaved the same way count as one. A pattern is grouped as jittery or smooth by the checker's own verdict, unless the person wearing the headset said otherwise with `ride.py label`, which outranks it. Every line is `[measured]` on our own mods.
 
 ## Across every game, headset simulator
 
@@ -16,11 +16,17 @@ Nothing to compare yet: it needs at least one labelled jittery and one labelled 
 
 ## Across every game, VR, headset or simulator not recorded
 
-9 patterns: 9 jittery, 0 smooth, 0 contradictory, 9 unlabelled.
+10 patterns: 10 jittery, 0 smooth, 0 contradictory, 10 unlabelled.
 
 Nothing to compare yet: it needs at least one labelled jittery and one labelled smooth pattern.
 
 ## alan-wake-vr, VR, headset or simulator not recorded
+
+1 patterns: 1 jittery, 0 smooth, 0 contradictory, 1 unlabelled.
+
+Nothing to compare yet: it needs at least one labelled jittery and one labelled smooth pattern.
+
+## alice-madness-returns-vr, VR, headset or simulator not recorded
 
 1 patterns: 1 jittery, 0 smooth, 0 contradictory, 1 unlabelled.
 
@@ -44,6 +50,7 @@ Nothing to compare yet: it needs at least one labelled jittery and one labelled 
 | `33a9744571` | unlabelled | headset simulator | 1 | mad-max-vr | 1 | 1 | 0 | 0 | 0 | 4 | 60 | JITTER |
 | `4fd84f808f` | unlabelled | VR, headset or simulator not recorded | 1 | hard-reset-vr | 2 | 1 | 1 | 1 | 0 | 4 | 60 | JITTER |
 | `7edfd2257f` | unlabelled | VR, headset or simulator not recorded | 1 | hard-reset-vr | 2 | 1 | 0.05 | 0.05 | 0 | 4 | 60 | JITTER |
+| `9b651f93fc` | unlabelled | VR, headset or simulator not recorded | 1 | alice-madness-returns-vr | 0.25 | 1 | 1 | 1 | 0 | 10 | 60 | JITTER |
 | `bdbaf5b39c` | unlabelled | VR, headset or simulator not recorded | 1 | alan-wake-vr | 1.15 | 1 | 0.2 | 0 | 0.5 | 8 | 70 | JITTER |
 | `cc0583d319` | unlabelled | VR, headset or simulator not recorded | 1 | hard-reset-vr | 1.15 | 1 | 1 | 1 | 1 | 8 | 60 | JITTER |
 | `cd363d8de5` | unlabelled | headset simulator | 1 | mad-max-vr | 1 | 1.05 | 1 | 1 | 0 | 2 | 55 | JITTER |
