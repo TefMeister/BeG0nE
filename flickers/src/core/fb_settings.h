@@ -28,6 +28,12 @@ struct Settings {
     int fake_every_max = 20;              // ... and at most
     int fake_patch_px = 96;               // the spoiled square's side, in pixels of the eye picture
     uint32_t fake_seed = 1;               // same seed, same frames
+    int calm = 0;                         // 1 = the cure: each eye blended with its previous picture, turned to the head
+    int calm_keep = 85;                   // percent of the previous picture kept (more = calmer, slower to follow change)
+    int calm_clip = 12;                   // tenths of the local spread the previous picture may differ by (less = less smear)
+    int hold = 0;                         // 1 = a patch that jumps much brighter or darker for one frame shows the frame before
+    int hold_ratio = 18;                  // tenths: the brightness jump (new/old or old/new) that counts as a flash
+    int hold_min = 15;                    // thousandths: and the jump must be at least this much brightness (0-1000)
 };
 
 namespace detail {
@@ -62,6 +68,12 @@ inline bool parse_settings(const char* text, Settings& out) {
         {"fake_every_min", &out.fake_every_min, 2, 10000},
         {"fake_every_max", &out.fake_every_max, 2, 10000},
         {"fake_patch_px", &out.fake_patch_px, 4, 1024},
+        {"calm", &out.calm, 0, 1},
+        {"calm_keep", &out.calm_keep, 0, 97},
+        {"calm_clip", &out.calm_clip, 3, 60},
+        {"hold", &out.hold, 0, 1},
+        {"hold_ratio", &out.hold_ratio, 11, 100},
+        {"hold_min", &out.hold_min, 1, 1000},
     };
     std::string all(text), line;
     size_t pos = 0;

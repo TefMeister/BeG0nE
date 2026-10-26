@@ -3,6 +3,7 @@
 // the submitted view at the own image. A dump copies the whole ring to readback memory and a worker thread writes it.
 // All of it is recorded on one command list submitted to the game's own queue after the game's work, so nothing waits.
 #include "fb_gpu.h"
+#include "fb_calm.h"
 #include "fb_dump.h"
 #include "fb_fake.h"
 
@@ -128,7 +129,9 @@ struct Gpu::Impl {
     uint32_t gen = 0;
     bool broken = false;                  // something could not be made: pass through for the rest of this session
     bool dead = false;                    // the GPU side could not be set up at all: pass through for the whole launch
-    int built_frames = 0, built_half = -1;   // the ring settings the rings were made with
+    int built_frames = 0, built_half = -1, built_calm = -1;   // the settings the eyes were made with
+    bool built_catch = false;             // the eyes were made with a catcher ring
+    Calm calm;                            // the shimmer cure (fb_calm.h)
     int dump_base = -1;                   // the highest flickers-dump-N already in the folder (-1 = not looked yet)
     ID3D12CommandAllocator* alloc[kInFlight] = {};
     UINT64 alloc_v[kInFlight] = {};
@@ -192,6 +195,7 @@ struct Gpu::Impl {
             for (auto& s : e.ring) if (s.tex) s.tex->Release();
             e = EyeGpu{};
         }
+        calm.drop_eyes();
         rtv_next = 0;
         game_images.clear();
     }
@@ -290,7 +294,7 @@ struct Gpu::Impl {
         td.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
         td.SampleDesc.Count = 1;
         td.Flags = D3D12_RESOURCE_FLAG_ALLOW_UNORDERED_ACCESS;
-        g.ring.resize((size_t)s.ring_frames);
+        g.ring.resize(s.on >= 2 ? (size_t)s.ring_frames : 0);   // no catcher, no ring (calm alone)
         for (auto& sl : g.ring)
             if (FAILED(dev->CreateCommittedResource(&hp, D3D12_HEAP_FLAG_NONE, &td, D3D12_RESOURCE_STATE_UNORDERED_ACCESS, nullptr, IID_PPV_ARGS(&sl.tex)))) {
                 log("eye %d: ring picture %ux%u refused", e, g.rw, g.rh);
@@ -300,6 +304,7 @@ struct Gpu::Impl {
         log("eye %d: own swapchain %ux%u fmt %d (game fmt %d, image %d), ring %d x %ux%u = %llu MB of video memory", e, g.w, g.h,
             (int)g.fmt, (int)r.fmt, (int)gd.Format, s.ring_frames, g.rw, g.rh,
             (unsigned long long)((uint64_t)s.ring_frames * g.rw * g.rh * 4 >> 20));
+        if ((s.calm || s.hold) && (!calm.setup(dev) || !calm.make_eye(e, g.fmt, g.w, g.h))) { log("eye %d: calm could not be made: passing through", e); return false; }
         return true;
     }
 };
@@ -333,12 +338,15 @@ void Gpu::frame(const Settings& s, const char* dir, XrSession session, ID3D12Com
         m.queue = queue;
         log("queue changed: using the new one");
     }
-    if (generation != m.gen || s.ring_frames != m.built_frames || s.ring_half != m.built_half) {
+    if (generation != m.gen || s.ring_frames != m.built_frames || s.ring_half != m.built_half || (s.calm || s.hold) != m.built_calm ||
+        (s.on >= 2) != m.built_catch) {
         if (m.gen) log("swapchains or ring settings changed: rebuilding");
         m.drop_eyes();
         m.gen = generation;
         m.built_frames = s.ring_frames;
         m.built_half = s.ring_half;
+        m.built_calm = s.calm || s.hold;
+        m.built_catch = s.on >= 2;
     }
     ID3D12Resource* gimg[2] = {m.game_image(eyes[0].sc, eyes[0].image), m.game_image(eyes[1].sc, eyes[1].image)};
     if (!gimg[0] || !gimg[1]) return;
@@ -368,16 +376,24 @@ void Gpu::frame(const Settings& s, const char* dir, XrSession session, ID3D12Com
         ID3D12Resource* own = g.own_images[own_idx[e]];
         const D3D12_RESOURCE_DESC gd = gimg[e]->GetDesc();
         const UINT gsub = eyes[e].slice * gd.MipLevels;
+        const bool cure = m.built_calm == 1;
+        ID3D12Resource* into = cure ? m.calm.input(e) : own;   // calm's input waits in COPY_DEST between frames
         barrier(m.list, gimg[e], gsub, D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_COPY_SOURCE);
-        barrier(m.list, own, 0, D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_COPY_DEST);
-        D3D12_TEXTURE_COPY_LOCATION dst{own, D3D12_TEXTURE_COPY_TYPE_SUBRESOURCE_INDEX, {}}, src{gimg[e], D3D12_TEXTURE_COPY_TYPE_SUBRESOURCE_INDEX, {}};
+        if (!cure) barrier(m.list, own, 0, D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_COPY_DEST);
+        D3D12_TEXTURE_COPY_LOCATION dst{into, D3D12_TEXTURE_COPY_TYPE_SUBRESOURCE_INDEX, {}}, src{gimg[e], D3D12_TEXTURE_COPY_TYPE_SUBRESOURCE_INDEX, {}};
         dst.SubresourceIndex = 0;
         src.SubresourceIndex = gsub;
         const D3D12_BOX box{(UINT)eyes[e].rect.offset.x, (UINT)eyes[e].rect.offset.y, 0,
                             (UINT)(eyes[e].rect.offset.x + eyes[e].rect.extent.width), (UINT)(eyes[e].rect.offset.y + eyes[e].rect.extent.height), 1};
         m.list->CopyTextureRegion(&dst, 0, 0, 0, &src, &box);
         barrier(m.list, gimg[e], gsub, D3D12_RESOURCE_STATE_COPY_SOURCE, D3D12_RESOURCE_STATE_RENDER_TARGET);
-        barrier(m.list, own, 0, D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_RENDER_TARGET);
+        if (cure) {
+            D3D12_CPU_DESCRIPTOR_HANDLE oh = m.rtv->GetCPUDescriptorHandleForHeapStart();
+            oh.ptr += (SIZE_T)(g.rtv0 + own_idx[e]) * m.rtv_step;
+            m.calm.draw(m.list, e, oh, eyes[e].pose, eyes[e].fov, s);
+        } else {
+            barrier(m.list, own, 0, D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_RENDER_TARGET);
+        }
         FakeSpot spot;
         const bool fake = s.fake && g.fake->spoil(eyes[e].frame, e, spot);
         if (fake) {
@@ -524,7 +540,7 @@ void Gpu::release() {
 std::string Gpu::status_line() const {
     if (!p_ || !p_->dev) return "";
     char b[160];
-    snprintf(b, sizeof b, " | own=%s spoiled=%u dumps=%u+%u core_max=%.2fms", p_->broken ? "off" : "on", p_->spoiled,
+    snprintf(b, sizeof b, " | own=%s calm=%s spoiled=%u dumps=%u+%u core_max=%.2fms", p_->broken ? "off" : "on", p_->built_calm == 1 ? "on" : "off", p_->spoiled,
              p_->dumps_auto, p_->dumps_hand, p_->stall_max_ms);
     p_->spoiled = 0;
     p_->stall_max_ms = 0;

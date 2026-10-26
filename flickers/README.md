@@ -22,6 +22,17 @@ the frame before is shown in its place, at its own head position, so the headset
 If only a patch of the picture flashes, only that patch is filled in from the frame before. A frame is never held
 twice in a row, and no delay is added to the picture.
 
+## The cures (home PC, 2026-10-26)
+
+Two switches in `flickers_begone.txt`, both off by default; each can be flipped while the game runs:
+
+- `hold = 1`: a patch of the picture that jumps much brighter or darker for one frame shows the frame before instead,
+  turned to the head. A pixel is never held twice in a row, so a real change is at most one frame late. The jump
+  that counts: brighter or darker by `hold_ratio` tenths (13 = 1.3x) and by at least `hold_min` thousandths of full
+  brightness. On the RE4 bush catches this took flagged frames from 43/59 per eye to 0/0, holding ~5% of pixels.
+- `calm = 1`: every pixel blended with the frame before (`calm_keep` percent), kept within the local spread
+  (`calm_clip` tenths of a standard deviation). Softens edge shimmer; did nothing visible against RE4's leaf flashes.
+
 ## Where it stands
 
 Built 2026-10-26, step 1 of 3: the catcher and the reader. Tested on the dev PC with no game and no headset: a test
