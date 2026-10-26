@@ -23,7 +23,7 @@ struct Settings {
     int auto_dump_s = 20;                 // with on = 2, a dump every this many seconds
     int max_dumps_hand = 4;               // dumps asked for by hand (on = 3) per launch
     int max_dumps_auto = 12;              // automatic dumps per launch
-    int fake = 0;                         // 1 = spoil a patch of one eye now and then, on purpose (testing only)
+    int fake = 0;                         // 1 = spoil a patch of one eye now and then, on purpose (testing only; on = 2)
     int fake_every_min = 10;              // frames between two fake flickers, at least ...
     int fake_every_max = 20;              // ... and at most
     int fake_patch_px = 96;               // the spoiled square's side, in pixels of the eye picture

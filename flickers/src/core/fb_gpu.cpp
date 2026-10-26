@@ -74,6 +74,20 @@ struct DumpJob {
     std::atomic<bool>* busy = nullptr;    // the readback buffer is the core's, made once; this frees it for the next dump
 };
 
+// The highest N of the flickers-dump-N folders already in `dir`, 0 when there are none.
+int highest_dump(const char* dir) {
+    int best = 0;
+    WIN32_FIND_DATAA fd;
+    HANDLE h = FindFirstFileA((std::string(dir) + "\\flickers-dump-*").c_str(), &fd);
+    if (h == INVALID_HANDLE_VALUE) return 0;
+    do {
+        const int n = atoi(fd.cFileName + strlen("flickers-dump-"));
+        if ((fd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) && n > best) best = n;
+    } while (FindNextFileA(h, &fd));
+    FindClose(h);
+    return best;
+}
+
 void write_dump(DumpJob* j) {
     // below the game's threads, but not "background mode": that also throttles the disk, and a dump then took 8+ s
     SetThreadPriority(GetCurrentThread(), THREAD_PRIORITY_BELOW_NORMAL);
@@ -101,6 +115,7 @@ void write_dump(DumpJob* j) {
     } else {
         log("dump FAILED: could not map the readback memory");
     }
+    j->buf->Release();                    // the dump's own reference (the core may have dropped its one meanwhile)
     j->busy->store(false);
     delete j;
 }
@@ -111,7 +126,10 @@ struct Gpu::Impl {
     ID3D12CommandQueue* queue = nullptr;
     XrSession session = XR_NULL_HANDLE;
     uint32_t gen = 0;
-    bool broken = false;                  // something could not be made: pass through for the rest of the run
+    bool broken = false;                  // something could not be made: pass through for the rest of this session
+    bool dead = false;                    // the GPU side could not be set up at all: pass through for the whole launch
+    int built_frames = 0, built_half = -1;   // the ring settings the rings were made with
+    int dump_base = -1;                   // the highest flickers-dump-N already in the folder (-1 = not looked yet)
     ID3D12CommandAllocator* alloc[kInFlight] = {};
     UINT64 alloc_v[kInFlight] = {};
     ID3D12GraphicsCommandList* list = nullptr;
@@ -167,8 +185,7 @@ struct Gpu::Impl {
     }
     void drop_eyes() {
         wait_idle();
-        for (int i = 0; i < 200 && rb_busy.load(); i++) Sleep(50);   // a dump still being written keeps its buffer
-        if (rb && !rb_busy.load()) { rb->Release(); rb = nullptr; }
+        if (rb) { rb->Release(); rb = nullptr; }   // a dump still being written holds its own reference: no waiting here
         rb_tried = false;
         for (auto& e : eye) {
             if (e.own) core_next().DestroySwapchain(e.own);
@@ -237,7 +254,7 @@ struct Gpu::Impl {
         core_next().EnumerateSwapchainFormats(session, 0, &nf, nullptr);
         std::vector<int64_t> offered(nf);
         if (nf) core_next().EnumerateSwapchainFormats(session, nf, &nf, offered.data());
-        const int64_t f = pick_format(gd.Format, offered.data(), nf);
+        const int64_t f = own_format(r.fmt, gd.Format, offered.data(), nf);
         if (!f) { log("eye %d: no own format for the game's format %d: passing through", e, (int)gd.Format); return false; }
         XrSwapchainCreateInfo ci{XR_TYPE_SWAPCHAIN_CREATE_INFO};
         ci.usageFlags = XR_SWAPCHAIN_USAGE_COLOR_ATTACHMENT_BIT | XR_SWAPCHAIN_USAGE_TRANSFER_DST_BIT | XR_SWAPCHAIN_USAGE_SAMPLED_BIT;
@@ -280,7 +297,9 @@ struct Gpu::Impl {
                 return false;
             }
         g.fake = std::make_unique<FakeSchedule>(s.fake_seed, s.fake_every_min, s.fake_every_max, s.fake_patch_px, (int)g.w, (int)g.h);
-        log("eye %d: own swapchain %ux%u fmt %d (game fmt %d), ring %d x %ux%u", e, g.w, g.h, (int)g.fmt, (int)gd.Format, s.ring_frames, g.rw, g.rh);
+        log("eye %d: own swapchain %ux%u fmt %d (game fmt %d, image %d), ring %d x %ux%u = %llu MB of video memory", e, g.w, g.h,
+            (int)g.fmt, (int)r.fmt, (int)gd.Format, s.ring_frames, g.rw, g.rh,
+            (unsigned long long)((uint64_t)s.ring_frames * g.rw * g.rh * 4 >> 20));
         return true;
     }
 };
@@ -289,18 +308,37 @@ void Gpu::frame(const Settings& s, const char* dir, XrSession session, ID3D12Com
                 const EyeRecord eyes[2], XrFrameEndInfo& out) {
     if (!p_) p_ = new Impl;
     Impl& m = *p_;
+    if (m.dead) return;
+    if (m.dev && session != m.session) {  // a new session (headset reconnected, VR restarted): start over in it
+        log("new session: rebuilding");
+        m.drop_eyes();
+        m.gen = 0;
+        m.session = session;
+        m.broken = false;
+    }
     if (m.broken) return;
     LARGE_INTEGER t0, t1, qf;
     QueryPerformanceCounter(&t0);
     if (!m.dev) {
         ID3D12Device* d = nullptr;
-        if (FAILED(queue->GetDevice(IID_PPV_ARGS(&d))) || !m.setup(queue, d)) { log("GPU setup failed: passing through"); m.broken = true; return; }
+        if (FAILED(queue->GetDevice(IID_PPV_ARGS(&d))) || !m.setup(queue, d)) { log("GPU setup failed: passing through"); m.dead = true; return; }
         m.session = session;
     }
-    if (generation != m.gen) {
-        if (m.gen) log("swapchains changed: rebuilding");
+    if (queue != m.queue) {               // the plugin's first guess and the session's queue can differ
+        ID3D12Device* d = nullptr;
+        const bool same = SUCCEEDED(queue->GetDevice(IID_PPV_ARGS(&d))) && d == m.dev;
+        if (d) d->Release();
+        if (!same) { log("the game's queue moved to another device: passing through"); m.drop_eyes(); m.dead = true; return; }
+        m.wait_idle();
+        m.queue = queue;
+        log("queue changed: using the new one");
+    }
+    if (generation != m.gen || s.ring_frames != m.built_frames || s.ring_half != m.built_half) {
+        if (m.gen) log("swapchains or ring settings changed: rebuilding");
         m.drop_eyes();
         m.gen = generation;
+        m.built_frames = s.ring_frames;
+        m.built_half = s.ring_half;
     }
     ID3D12Resource* gimg[2] = {m.game_image(eyes[0].sc, eyes[0].image), m.game_image(eyes[1].sc, eyes[1].image)};
     if (!gimg[0] || !gimg[1]) return;
@@ -401,7 +439,8 @@ void Gpu::frame(const Settings& s, const char* dir, XrSession session, ID3D12Com
     DumpJob* job = nullptr;
     if (!reason.empty()) {
         job = new DumpJob;
-        const int no = (int)(m.dumps_auto + m.dumps_hand) + 1;
+        if (m.dump_base < 0) m.dump_base = highest_dump(dir);   // numbers go on from earlier launches, never overwrite
+        const int no = m.dump_base + (int)(m.dumps_auto + m.dumps_hand) + 1;
         job->dir = std::string(dir) + "\\flickers-dump-" + std::to_string(no);
         job->reason = reason;
         std::vector<std::pair<int, Slot*>> order;
@@ -418,6 +457,7 @@ void Gpu::frame(const Settings& s, const char* dir, XrSession session, ID3D12Com
         } else {
             m.rb_busy.store(true);
             job->buf = m.rb;
+            job->buf->AddRef();
             job->busy = &m.rb_busy;
             for (size_t i = 0; i < order.size(); i++) {
                 ID3D12Resource* t = order[i].second->tex;
@@ -442,9 +482,11 @@ void Gpu::frame(const Settings& s, const char* dir, XrSession session, ID3D12Com
     m.queue->ExecuteCommandLists(1, lists);
     m.queue->Signal(m.fence, ++m.fence_v);
     m.alloc_v[slot_a] = m.fence_v;
+    std::string job_dir;
     if (job) {
         job->fence = m.fence;
         job->value = m.fence_v;
+        job_dir = job->dir;               // the writer deletes the job when it is done
         std::thread(write_dump, job).detach();
     }
     for (int e = 0; e < 2; e++) core_next().ReleaseSwapchainImage(m.eye[e].own, nullptr);
@@ -470,11 +512,11 @@ void Gpu::frame(const Settings& s, const char* dir, XrSession session, ID3D12Com
     QueryPerformanceFrequency(&qf);
     const double ms = 1000.0 * (double)(t1.QuadPart - t0.QuadPart) / (double)qf.QuadPart;
     if (ms > m.stall_max_ms) m.stall_max_ms = ms;
-    if (job) log("dump %s queued (%s), this frame took %.2f ms in the core (limit %d)", job->dir.c_str(), reason.c_str(), ms, kDumpStallMs);
+    if (!job_dir.empty()) log("dump %s queued (%s), this frame took %.2f ms in the core (limit %d)", job_dir.c_str(), reason.c_str(), ms, kDumpStallMs);
 }
 
 void Gpu::release() {
-    if (!p_) return;
+    if (!p_ || !p_->dev) return;
     p_->drop_eyes();
     p_->gen = 0;
 }

@@ -170,7 +170,12 @@ XRAPI_ATTR XrResult XRAPI_CALL xrWaitSwapchainImage(XrSwapchain sc, const XrSwap
 }
 
 XRAPI_ATTR XrResult XRAPI_CALL xrReleaseSwapchainImage(XrSwapchain sc, const XrSwapchainImageReleaseInfo* info) {
-    return g_next.ReleaseSwapchainImage(sc, info);
+    const XrResult r = g_next.ReleaseSwapchainImage(sc, info);
+    if (XR_SUCCEEDED(r)) {
+        std::lock_guard<std::mutex> lk(g_mx);
+        g_views.on_release(sc);
+    }
+    return r;
 }
 
 XRAPI_ATTR XrResult XRAPI_CALL xrEndFrame(XrSession session, const XrFrameEndInfo* info) {
@@ -194,7 +199,9 @@ XRAPI_ATTR XrResult XRAPI_CALL xrEndFrame(XrSession session, const XrFrameEndInf
                 eyes[0].rect.extent.height, eyes[0].slice, (void*)eyes[1].sc, eyes[1].image, eyes[1].rect.offset.x,
                 eyes[1].rect.offset.y, eyes[1].rect.extent.width, eyes[1].rect.extent.height, eyes[1].slice);
         }
-        if (g_queue) {
+        if (g_set.on < 2) {
+            // on = 1: watch and log only; the game's images go to the headset untouched
+        } else if (g_queue) {
             g_gpu.frame(g_set, g_dir.c_str(), session, g_queue, g_views.generation(), eyes, out);
         } else if (!g_said_no_queue) {
             g_said_no_queue = true;
