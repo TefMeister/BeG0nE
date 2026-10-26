@@ -53,6 +53,7 @@ private:
         int read = 0;                     // the history picture read this frame; the other one is written
         bool have_prev = false;
         XrQuaternionf prev_q{};
+        XrVector3f prev_p{};
         XrFovf prev_fov{};
     };
     ID3D12Device* dev_ = nullptr;

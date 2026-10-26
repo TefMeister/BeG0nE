@@ -29,7 +29,11 @@ Two switches in `flickers_begone.txt`, both off by default; each can be flipped 
 - `hold = 1`: a patch of the picture that jumps much brighter or darker for one frame shows the frame before instead,
   turned to the head. A pixel is never held twice in a row, so a real change is at most one frame late. The jump
   that counts: brighter or darker by `hold_ratio` tenths (13 = 1.3x) and by at least `hold_min` thousandths of full
-  brightness. On the RE4 bush catches this took flagged frames from 43/59 per eye to 0/0, holding ~5% of pixels.
+  brightness. Nothing is held while the head turns more than `hold_turn` tenths of a degree or moves more than
+  `hold_shift` mm in one frame (moving makes real jumps everywhere), and only flat patches are held (local spread
+  under `hold_flat` thousandths; the flashes are flat, moving leaves are not). On the RE4 bush catches this took
+  flagged frames from 43/59 per eye to 0/0, holding ~5% of pixels. Tefa in the headset: the flicker is much reduced,
+  not gone; without the two gates the game smeared on every move.
 - `calm = 1`: every pixel blended with the frame before (`calm_keep` percent), kept within the local spread
   (`calm_clip` tenths of a standard deviation). Softens edge shimmer; did nothing visible against RE4's leaf flashes.
 

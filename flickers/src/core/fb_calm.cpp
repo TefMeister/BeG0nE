@@ -50,7 +50,7 @@ O ps(V i) {
                 // hold: the patch around this pixel jumped in brightness since the frame before, and this pixel was not
                 // held last frame (a real change is never held twice, so it is at most one frame late)
                 float a = mu.x + 0.002, b = toy(hs.rgb).x + 0.002;
-                bool flash = hd.x > 0.5 && hs.a < 0.5 && max(a, b) / min(a, b) > hd.y && abs(a - b) > hd.z;
+                bool flash = hd.x > 0.5 && hs.a < 0.5 && max(a, b) / min(a, b) > hd.y && abs(a - b) > hd.z && sd.x < hd.w;
                 if (flash) { res = hs.rgb; held = 1; }
                 else if (p.w > 0.5) {
                     float3 hy = clamp(toy(hs.rgb), mu - p.y * sd, mu + p.y * sd);
@@ -178,7 +178,16 @@ void Calm::draw(ID3D12GraphicsCommandList* l, int e, D3D12_CPU_DESCRIPTOR_HANDLE
     c[21] = (float)s.calm_clip / 10.0f;
     c[22] = g.have_prev ? 1.0f : 0.0f;
     c[23] = s.calm ? 1.0f : 0.0f;
-    c[24] = s.hold ? 1.0f : 0.0f;
+    bool still = true;                    // the hold is for a head that is (nearly) still: moving makes real jumps everywhere
+    if (g.have_prev) {
+        const XrQuaternionf& q = pose.orientation; const XrQuaternionf& o = g.prev_q;
+        const float dot = fabsf(q.x * o.x + q.y * o.y + q.z * o.z + q.w * o.w);
+        const float turn = 2.0f * acosf(dot > 1 ? 1 : dot) * 57.2958f;
+        const float dx = pose.position.x - g.prev_p.x, dy = pose.position.y - g.prev_p.y, dz = pose.position.z - g.prev_p.z;
+        still = turn <= (float)s.hold_turn / 10.0f && sqrtf(dx * dx + dy * dy + dz * dz) <= (float)s.hold_shift / 1000.0f;
+    }
+    c[24] = s.hold && still ? 1.0f : 0.0f;
+    c[27] = (float)s.hold_flat / 1000.0f;
     c[25] = (float)s.hold_ratio / 10.0f;
     c[26] = (float)s.hold_min / 1000.0f;
     barrier(l, g.cur, D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE);
@@ -205,6 +214,7 @@ void Calm::draw(ID3D12GraphicsCommandList* l, int e, D3D12_CPU_DESCRIPTOR_HANDLE
     g.read = write;
     g.have_prev = true;
     g.prev_q = pose.orientation;
+    g.prev_p = pose.position;
     g.prev_fov = fov;
 }
 

@@ -34,6 +34,9 @@ struct Settings {
     int hold = 0;                         // 1 = a patch that jumps much brighter or darker for one frame shows the frame before
     int hold_ratio = 18;                  // tenths: the brightness jump (new/old or old/new) that counts as a flash
     int hold_min = 15;                    // thousandths: and the jump must be at least this much brightness (0-1000)
+    int hold_turn = 2;                    // tenths of a degree the head may turn in one frame before nothing is held
+    int hold_shift = 2;                   // millimetres the head may move in one frame before nothing is held
+    int hold_flat = 60;                   // thousandths: only patches whose local spread is below this are held (flashes are flat)
 };
 
 namespace detail {
@@ -74,6 +77,9 @@ inline bool parse_settings(const char* text, Settings& out) {
         {"hold", &out.hold, 0, 1},
         {"hold_ratio", &out.hold_ratio, 11, 100},
         {"hold_min", &out.hold_min, 1, 1000},
+        {"hold_turn", &out.hold_turn, 0, 900},
+        {"hold_shift", &out.hold_shift, 0, 1000},
+        {"hold_flat", &out.hold_flat, 1, 1000},
     };
     std::string all(text), line;
     size_t pos = 0;
