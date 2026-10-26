@@ -21,6 +21,13 @@ if errorlevel 1 (type "%HERE%build\layer.build.txt" & echo LAYER BUILD FAILED & 
 findstr /c:"warning" "%HERE%build\layer.build.txt"
 copy /y "%HERE%src\layer\flickers_begone_layer.json" "%HERE%dist\" >nul
 
+rem the REFramework plugin: the RE4 fix, one file for reframework\plugins\
+if not exist "%HERE%build\plugin" mkdir "%HERE%build\plugin"
+cl /nologo /O2 /EHsc /std:c++17 /LD /MT /W4 /I"%HERE%third_party" %CORE% "%HERE%src\plugin\fb_iat.cpp" "%HERE%src\plugin\fb_plugin.cpp" ^
+   /Fo"%HERE%build\plugin\\" /Fe"%HERE%dist\flickers_begone.dll" /link /NOLOGO /IMPLIB:"%HERE%build\plugin\fb_plugin.lib" %LIBS% psapi.lib >"%HERE%build\plugin.build.txt" 2>&1
+if errorlevel 1 (type "%HERE%build\plugin.build.txt" & echo PLUGIN BUILD FAILED & exit /b 1)
+findstr /c:"warning" "%HERE%build\plugin.build.txt"
+
 rem the test program (no game, no headset: run it on the OpenXR Simulator); delay-loads the loader like REFramework
 if not exist "%HERE%build\testapp" mkdir "%HERE%build\testapp"
 cl /nologo /O2 /EHsc /std:c++17 /MT /W4 /I"%HERE%third_party" "%HERE%test\xr_testapp.cpp" /Fo"%HERE%build\testapp\\" ^
