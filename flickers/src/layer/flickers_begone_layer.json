@@ -1,0 +1,11 @@
+{
+  "file_format_version": "1.0.0",
+  "api_layer": {
+    "name": "XR_APILAYER_BEGONE_flickers",
+    "library_path": "./flickers_begone_layer.dll",
+    "api_version": "1.0",
+    "implementation_version": "1",
+    "description": "Flickers BeG0nE: catches one-frame flickers in each eye's picture, and (later) hides them",
+    "disable_environment": "DISABLE_FLICKERS_BEGONE"
+  }
+}
