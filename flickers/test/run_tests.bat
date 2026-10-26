@@ -11,4 +11,7 @@ for %%f in ("%T%*_test.cpp") do (
     "%OUT%\%%~nf.exe"
     if errorlevel 1 (echo TEST FAILED: %%~nf & exit /b 1)
 )
+python -I "%T%..\tools\test_flicker_read.py" >"%OUT%\reader_test.txt" 2>&1
+if errorlevel 1 (type "%OUT%\reader_test.txt" & echo TEST FAILED: reader & exit /b 1)
+echo reader_test: OK
 echo ALL TESTS PASS
