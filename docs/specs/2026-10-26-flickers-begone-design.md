@@ -1,6 +1,6 @@
 # Flickers BeG0nE: design
 
-**Status:** written 2026-10-26, waiting for Tefa's approval. Nothing built yet.
+**Status:** written and approved 2026-10-26 (Tefa, with the RE4 fix as one plugin file). Nothing built yet.
 **First target:** the grass flickering in Resident Evil 4 (2023 remake) in VR under REFramework.
 
 ## 1. What it is, and why
@@ -59,22 +59,40 @@ other eye's data the way Village's did, the cure becomes a cheap swap with no pi
 
 ## 5. How it works
 
-### 5.1 Where it sits: an OpenXR layer
+### 5.1 Where it sits: one core, two shells
 
-A small OpenXR API layer, the same kind as VR Bench's layer (`vr-bench/layer/`), between the game and the OpenXR
-runtime. REFramework already runs RE2, Village and RE4 over OpenXR on the home PC (Virtual Desktop)
-`[verified-live 2026-09-10 for RE2]`. The layer sees every eye picture the game hands to the headset, with the pose
-and field of view it was drawn for, so it works the same for every OpenXR game. Direct3D 12 first (RE Engine);
-Direct3D 11 later, when a game needs it.
+Tefa, 2026-10-26: *"if works we have to be able to share the fix as just an re4 fix with others, not as a separate
+layer if that is possible"*. So the work is one **core** (catcher, reader data, cure) behind two thin **shells**:
 
-It watches:
-- `xrCreateSession`: the D3D12 device and queue (from the graphics binding);
-- `xrCreateSwapchain` / `xrEnumerateSwapchainImages`: the images the game draws into;
-- `xrReleaseSwapchainImage`: the moment an eye picture is finished, the last point it can still be copied or replaced;
-- `xrEndFrame`: which image, which part of it, which pose and which field of view each eye was submitted with.
+1. **The RE4 fix: a REFramework plugin**, `reframework/plugins/flickers_begone.dll`. Drop it in, done; nothing to
+   register. REFramework (praydog build `a24c3459`, the one Village uses) **delay-loads 39 OpenXR functions from
+   `openxr_loader.dll`**, among them `xrEndFrame`, `xrCreateSwapchain`, `xrAcquireSwapchainImage`,
+   `xrReleaseSwapchainImage`, `xrEnumerateSwapchainImages`, `xrCreateSession` and `xrGetInstanceProcAddr`
+   `[measured 2026-10-26, from dinput8.dll's delay-import table]`. The plugin rewrites those slots in REFramework's
+   own table to point at the core, which then calls the real loader. ⚠️ Check on every new REFramework build that
+   the table still lists them (the plugin logs what it found and does nothing if they are missing).
+2. **The modders' tool: an OpenXR API layer**, the VR Bench kind (`vr-bench/layer/`), for any OpenXR game; registered
+   as an implicit layer with a `disable_environment` switch, off unless its settings name the game's exe, with its
+   own entry in Lanes `features.py`. Also the shell the dev PC tests with (`hello_xr` + the OpenXR Simulator).
 
-Installed the VR Bench way: registered as an implicit layer with a `disable_environment` switch, and it does nothing
-unless a settings file next to it names the game's exe. Its own on/off entry in Lanes `features.py`.
+REFramework runs RE2, Village and RE4 over OpenXR on the home PC (Virtual Desktop) `[verified-live 2026-09-10 for
+RE2]`. Direct3D 12 first (RE Engine); Direct3D 11 if logging shows REFramework hands the runtime D3D11 pictures.
+
+**How the core changes a picture without touching the game's own (the OpenXR Toolkit pattern):** at `xrEndFrame` it
+reads each eye's projection view (the game's swapchain, the part of it, the pose, the field of view), copies that
+part into **its own swapchain** for that eye (created on the same session, same format family), and rewrites the
+submitted view to point at its swapchain. Holding a frame = copying the eye's previous picture instead, and
+submitting that picture's **old pose**, so the runtime turns it to match the current head. The game's images are only
+read, after the game released them.
+
+It needs, and gets, from either shell:
+- the D3D12 queue the game submits on: from `xrCreateSession`'s graphics binding when the shell is in place in time,
+  otherwise (plugin shell) from REFramework's plugin API (`renderer_data->command_queue`);
+- the game's swapchain images: `xrEnumerateSwapchainImages` called again by the core on first sight of a swapchain,
+  and the image index from `xrAcquireSwapchainImage`;
+- the device: from the image itself (`ID3D12Resource::GetDevice`).
+⚠️ If REFramework created its session before the plugin loads, only the `xrCreateSession` hook is missed; the rest
+is seen from the next frame on. The plugin logs which case it hit.
 
 ### 5.2 Part 1: the catcher
 
@@ -126,17 +144,20 @@ home PC.
 | 2 | Auto catch in RE4: the session stands in the grass and turns the head with the simulator or VR Bench; the reader marks the odd frames. Only if that stays empty: Tefa holds the chord on each flicker | VR CLAUDE, home PC (VR USER only as the fallback) |
 | 3 | Read the caught frames; choose A or B; build it; fake-flicker test again | PD |
 | 4 | Tefa wears the cure: grass flicker gone, no stutter? | VR USER, home PC |
-| 5 | RE4 drop-in package, guide for modders | PD |
+| 5 | RE4 drop-in package (the one plugin file + a readme in Tefa's layout, shared privately), guide for modders | PD |
 
 ## 7. Where things live
 
-- Layer and reader code: `lanes-plugin/begone/flickers/` (BeG0nE's tools ship in Lanes).
+- Layer, plugin and reader code: `BeG0nE/flickers/` (a compiled add-on with its own build, like VR Bench; Lanes
+  carries small recorders). The reader joins Lanes `begone/flickers/` with a `tool.json` once the cure works.
 - `BeG0nE/flickers/`: README (the fault and the cure in plain words), `guide/`, `games/re4/`, caught data in `data/`.
 - Board rows on `claude-memory/status/BeG0nE.md`.
 
 ## 8. Calls made by the builder (Claude), open to change
 
-- An OpenXR layer instead of a REFramework plugin: it works in every OpenXR game and needs no REFramework patch.
+- One core, two shells (Tefa asked for the plugin; the layer is my call, for other games and for testing here).
+- Tefa approved building on 2026-10-26 (*"if you can build it without the game that is great"*), with the
+  single-file RE4 fix as the condition.
 - 72 frames per eye at half size in the catcher; 4 dumps per launch.
 - The VR Bench chord as the catch button.
 - Code shape: files under 800 lines, every number named in one settings table.
