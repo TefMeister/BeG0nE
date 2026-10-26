@@ -55,6 +55,26 @@ int main() {
         CHECK(vw.on_end_frame(g.info, 12, e));
         CHECK(!e[0].same_as_last && e[1].same_as_last);
     }
+    // the game already holds the next image when it ends this frame: the submitted one is the last RELEASED
+    // (images are released in the order they were acquired)
+    {
+        fb::Views vw;
+        vw.on_create_swapchain(sc(1), 29, 1280, 1400, 1);
+        vw.on_create_swapchain(sc(2), 29, 1280, 1400, 1);
+        vw.on_acquire(sc(1), 0); vw.on_acquire(sc(2), 0);
+        vw.on_release(sc(1)); vw.on_release(sc(2));
+        vw.on_acquire(sc(1), 1); vw.on_acquire(sc(2), 1);       // drawing frame N+1 already
+        Frame f; f.set(sc(1), sc(2), full, full, 0, 0, 0.0f);
+        CHECK(vw.on_end_frame(f.info, 1, e));
+        CHECK(e[0].image == 0 && e[1].image == 0);
+        vw.on_release(sc(1)); vw.on_release(sc(2));
+        CHECK(vw.on_end_frame(f.info, 2, e));
+        CHECK(e[0].image == 1 && e[1].image == 1);
+        // two held at once, released in order
+        vw.on_acquire(sc(1), 2); vw.on_acquire(sc(1), 0); vw.on_release(sc(1));
+        CHECK(vw.on_end_frame(f.info, 3, e));
+        CHECK(e[0].image == 2);
+    }
     // shared swapchain, two rects
     {
         fb::Views vw;

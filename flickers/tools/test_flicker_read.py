@@ -25,19 +25,26 @@ def scene(frame, eye):
     return np.dstack([g, g * 0.9, g * 0.7]).astype(np.uint8)
 
 
-def make_dump(folder, n=40, spoil=(), swap_fov=()):
+def make_dump(folder, n=40, spoil=(), swap_fov=(), swap_pos=(), repeat=1):
+    """spoil / swap_fov / swap_pos hold (render, eye) pairs. repeat=2 submits every rendered picture twice in a row
+    (the repeat marked `same`), the way a game that renders each eye every other frame does."""
     lines = ["# reason test", "frame eye px py pz qx qy qz qw fovL fovR fovU fovD image rect_x rect_y rect_w rect_h same fake"]
     for eye in (0, 1):
         for k in range(n):
-            img = scene(k, eye)
-            fake = (k, eye) in spoil
+            r = k // repeat
+            img = scene(r, eye)
+            fake = (r, eye) in spoil
             if fake:
                 img = img.copy()
                 img[100:148, 150:198] = (255, 0, 255)
             fr.write_ppm(os.path.join(folder, "frame-%d-%02d.ppm" % (eye, k)), img)
-            fov = FOV[1 - eye] if (k, eye) in swap_fov else FOV[eye]
-            lines.append("%d %d %.6f 1.7 0 0 0 0 1 %.4f %.4f %.4f %.4f %d 0 0 %d %d 0 %d"
-                         % (1000 + k, eye, -0.032 if eye == 0 else 0.032, fov[0], fov[1], fov[2], fov[3], k % 3, W, H, 1 if fake else 0))
+            fov = FOV[1 - eye] if (r, eye) in swap_fov else FOV[eye]
+            px = -0.032 if eye == 0 else 0.032
+            if (r, eye) in swap_pos:
+                px = -px
+            lines.append("%d %d %.6f 1.7 0 0 0 0 1 %.4f %.4f %.4f %.4f %d 0 0 %d %d %d %d"
+                         % (1000 + k, eye, px, fov[0], fov[1], fov[2], fov[3], k % 3, W, H, 1 if k % repeat else 0,
+                            1 if fake else 0))
     with open(os.path.join(folder, "frames.txt"), "w") as f:
         f.write("\n".join(lines) + "\n")
 
@@ -89,7 +96,25 @@ def test_report_files_are_written():
         check(text.count("closest:") == fr.CLOSEST_SHOWN, text)
 
 
+def test_doubled_frames_still_find_a_flicker():
+    with tempfile.TemporaryDirectory() as d:
+        make_dump(d, n=60, spoil={(13, 0)}, repeat=2)
+        rep = fr.read_dump(d)
+        check(len(rep["odd"]) == 1 and rep["odd"][0]["eye"] == 0, "a flicker submitted twice was not found: %s" % rep["odd"])
+        check(rep["odd"][0]["frame"] in (1026, 1027), "odd frame %s" % rep["odd"])
+
+
+def test_other_eye_position_is_named():
+    with tempfile.TemporaryDirectory() as d:
+        make_dump(d, spoil={(19, 0)}, swap_pos={(19, 0)})
+        rep = fr.read_dump(d)
+        check([o["index"] for o in rep["odd"]] == [19], "odd %s" % rep["odd"])
+        check(rep["odd"][0].get("pos_swapped"), "the other eye's position was not seen")
+        check(rep["verdict"] == "other-eye data on odd frames", rep["verdict"])
+
+
 if __name__ == "__main__":
-    for t in (test_spoiled_frames_are_found, test_steady_pan_has_none, test_other_eye_fov_is_named, test_report_files_are_written):
+    for t in (test_spoiled_frames_are_found, test_steady_pan_has_none, test_other_eye_fov_is_named, test_report_files_are_written,
+              test_doubled_frames_still_find_a_flicker, test_other_eye_position_is_named):
         t()
     print("OK")

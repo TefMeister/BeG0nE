@@ -21,6 +21,8 @@ DIFF_LEVEL = 12          # a pixel "changed" when some colour channel moved more
 TILE_PX = 32             # odd changes are judged per square of this side
 ODD_TILE_SHARE = 0.25    # a frame is odd when one square is at least this full of changes only that frame has
 POSE_JUMP_DEG = 2.0      # an odd frame turned this far off its neighbours' mean counts as pose data gone wrong
+MIN_EYE_GAP_M = 0.01     # eyes closer than this (metres) are not told apart by position
+POS_SWAP_SHARE = 0.3     # an odd frame this close to the other eye's position (share of the eyes' gap) carries it
 MAX_SHEET_ROWS = 8
 CLOSEST_SHOWN = 5        # the highest-scoring frames are always listed, odd or not, so the line can be set from real frames
 HEADER = "frame eye px py pz qx qy qz qw fovL fovR fovU fovD image rect_x rect_y rect_w rect_h same fake".split()
@@ -97,6 +99,10 @@ def angle_deg(q1, q2):
     return float(np.degrees(2 * np.arccos(min(1.0, abs(float(np.dot(q1, q2)))))))
 
 
+def pos_of(rec):
+    return np.array([rec["px"], rec["py"], rec["pz"]])
+
+
 def fov_of(rec):
     return np.array([rec["fovL"], rec["fovR"], rec["fovU"], rec["fovD"]])
 
@@ -115,26 +121,39 @@ def read_dump(folder):
             r["fov_swapped"] = bool(own > 1e-3 and other < 0.5 * own)
             if r["fov_swapped"]:
                 swapped.append((e, r["index"]))
+    # the eyes' usual distance apart, from frames both eyes have: an odd frame sitting where the other eye is carries
+    # the other eye's position (on most headsets the eyes differ by position, not by angle)
+    by_frame = {e: {r["frame"]: r for r in recs} for e, recs in eyes.items()}
+    gaps = [np.linalg.norm(pos_of(r) - pos_of(by_frame[1][f])) for f, r in by_frame[0].items() if f in by_frame[1]]
+    eye_gap = float(np.median(gaps)) if gaps else 0.0
     odd, heat, scores = [], {}, []
     fakes = matched = 0
     for e, recs in eyes.items():
         heat[e] = np.zeros(recs[0]["img"].shape[:2], np.float32) if recs else None
-        for k in range(1, len(recs) - 1):
-            m = odd_mask(recs[k - 1]["img"], recs[k]["img"], recs[k + 1]["img"])
+        # a picture submitted again (marked `same`, or identical) is one picture: judged once, against the pictures
+        # before and after it, so a game that shows each picture twice still has its flickers found
+        distinct = [r for k, r in enumerate(recs)
+                    if k == 0 or not (r["same"] or np.array_equal(r["img"], recs[k - 1]["img"]))]
+        for j in range(1, len(distinct) - 1):
+            prev, cur, nxt = distinct[j - 1], distinct[j], distinct[j + 1]
+            m = odd_mask(prev["img"], cur["img"], nxt["img"])
             heat[e] += m
             share = best_tile_share(m)
-            scores.append((share, recs[k]["frame"], e))
-            fakes += recs[k]["fake"]
+            scores.append((share, cur["frame"], e))
+            fakes += cur["fake"]
             if share < ODD_TILE_SHARE:
                 continue
-            mid = quat(recs[k - 1]) + quat(recs[k + 1])
-            jump = angle_deg(quat(recs[k]), mid / (np.linalg.norm(mid) or 1.0))
-            matched += recs[k]["fake"]
-            odd.append({"eye": e, "index": k, "frame": recs[k]["frame"], "share": share, "pose_jump": jump,
-                        "fov_swapped": recs[k].get("fov_swapped", False), "fake": recs[k]["fake"]})
+            mid = quat(prev) + quat(nxt)
+            jump = angle_deg(quat(cur), mid / (np.linalg.norm(mid) or 1.0))
+            other = by_frame[1 - e].get(cur["frame"])
+            pos_swapped = bool(other is not None and eye_gap > MIN_EYE_GAP_M
+                               and np.linalg.norm(pos_of(cur) - pos_of(other)) < POS_SWAP_SHARE * eye_gap)
+            matched += cur["fake"]
+            odd.append({"eye": e, "index": cur["index"], "frame": cur["frame"], "share": share, "pose_jump": jump,
+                        "fov_swapped": cur.get("fov_swapped", False), "pos_swapped": pos_swapped, "fake": cur["fake"]})
     if not odd:
         verdict = "no odd frames"
-    elif sum(1 for o in odd if o["fov_swapped"] or o["pose_jump"] > POSE_JUMP_DEG) * 2 >= len(odd):
+    elif sum(1 for o in odd if o["fov_swapped"] or o["pos_swapped"] or o["pose_jump"] > POSE_JUMP_DEG) * 2 >= len(odd):
         verdict = "other-eye data on odd frames"
     else:
         verdict = "picture-only odd frames"

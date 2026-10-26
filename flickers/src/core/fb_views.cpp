@@ -16,8 +16,19 @@ void Views::on_destroy_swapchain(XrSwapchain sc) {
 
 void Views::on_acquire(XrSwapchain sc, uint32_t index) {
     Chain& c = chains_[sc];                  // a swapchain made before the core was in place is learned here
-    c.last = index;
+    if (!c.released) c.last = index;         // until a release is seen, the last acquired is the best guess
+    c.held.push_back(index);
+    if (c.held.size() > 8) c.held.pop_front();   // releases missed (a core put in place mid-frame): stay bounded
     c.acquired = true;
+}
+
+void Views::on_release(XrSwapchain sc) {
+    auto it = chains_.find(sc);
+    if (it == chains_.end() || it->second.held.empty()) return;
+    Chain& c = it->second;
+    c.last = c.held.front();
+    c.held.pop_front();
+    c.released = true;
 }
 
 bool Views::on_end_frame(const XrFrameEndInfo& info, uint64_t frame, EyeRecord out[2]) {
@@ -79,6 +90,10 @@ int64_t pick_format(int64_t app_fmt, const int64_t* offered, uint32_t n) {
         return 0;
     }
     return 0;
+}
+
+int64_t own_format(int64_t sc_fmt, int64_t image_fmt, const int64_t* offered, uint32_t n) {
+    return pick_format(sc_fmt ? sc_fmt : image_fmt, offered, n);
 }
 
 }  // namespace fb

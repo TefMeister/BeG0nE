@@ -7,6 +7,7 @@
 //     --plugin   act as REFramework: LoadLibrary the plugin and call its reframework_plugin_initialize with a
 //                renderer_data that carries the D3D12 queue (only renderer_data is filled in)
 //     --late     do that after the session and swapchains exist (the plugin then misses their creation)
+//     --sessions N  run N sessions one after another, N seconds each (a headset reconnecting, VR restarted)
 #define XR_USE_GRAPHICS_API_D3D12
 #include <windows.h>
 #include <d3d12.h>
@@ -114,16 +115,19 @@ void draw_eye(const Eye& e, uint32_t index, uint64_t frame, int eye) {
     g_list->ClearRenderTargetView(h, kBar, kBars, bars);
 }
 
+uint64_t run_session(XrInstance inst, XrSystemId sys, int seconds, const char* late_plugin);
+
 }  // namespace
 
 int main(int argc, char** argv) {
-    int seconds = 10;
+    int seconds = 10, sessions = 1;
     const char* plugin = nullptr;
     bool late = false;
     for (int i = 1; i < argc; i++) {
         if (!strcmp(argv[i], "--seconds") && i + 1 < argc) seconds = atoi(argv[++i]);
         else if (!strcmp(argv[i], "--plugin") && i + 1 < argc) plugin = argv[++i];
         else if (!strcmp(argv[i], "--late")) late = true;
+        else if (!strcmp(argv[i], "--sessions") && i + 1 < argc) sessions = atoi(argv[++i]);
     }
     setvbuf(stdout, nullptr, _IONBF, 0);
 
@@ -141,7 +145,20 @@ int main(int argc, char** argv) {
     CHK(xrGetSystem(inst, &sgi, &sys));
     make_device(inst, sys);
     if (plugin && !late) load_plugin(plugin);
+    uint64_t frames = 0;
+    for (int run = 0; run < sessions; run++) {
+        if (sessions > 1) printf("session %d\n", run + 1);
+        frames += run_session(inst, sys, seconds, plugin && late && run == 0 ? plugin : nullptr);
+    }
+    printf("frames: %llu\n", (unsigned long long)frames);
+    xrDestroyInstance(inst);
+    return 0;
+}
 
+namespace {
+
+// One session: swapchains, `seconds` of moving bars, then a clean exit. Returns the frames drawn.
+uint64_t run_session(XrInstance inst, XrSystemId sys, int seconds, const char* late_plugin) {
     XrGraphicsBindingD3D12KHR bind{XR_TYPE_GRAPHICS_BINDING_D3D12_KHR};
     bind.device = g_dev;
     bind.queue = g_queue;
@@ -159,11 +176,13 @@ int main(int argc, char** argv) {
     uint32_t nv = 0;
     XrViewConfigurationView vcv[2]{{XR_TYPE_VIEW_CONFIGURATION_VIEW}, {XR_TYPE_VIEW_CONFIGURATION_VIEW}};
     CHK(xrEnumerateViewConfigurationViews(inst, sys, XR_VIEW_CONFIGURATION_TYPE_PRIMARY_STEREO, 2, &nv, vcv));
-    D3D12_DESCRIPTOR_HEAP_DESC hd{};
-    hd.Type = D3D12_DESCRIPTOR_HEAP_TYPE_RTV;
-    hd.NumDescriptors = 16;
-    HCHK(g_dev->CreateDescriptorHeap(&hd, IID_PPV_ARGS(&g_rtv)));
-    g_rtv_step = g_dev->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV);
+    if (!g_rtv) {
+        D3D12_DESCRIPTOR_HEAP_DESC hd{};
+        hd.Type = D3D12_DESCRIPTOR_HEAP_TYPE_RTV;
+        hd.NumDescriptors = 16;
+        HCHK(g_dev->CreateDescriptorHeap(&hd, IID_PPV_ARGS(&g_rtv)));
+        g_rtv_step = g_dev->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV);
+    }
     Eye eyes[2];
     UINT next_rtv = 0;
     for (int e = 0; e < 2; e++) {
@@ -192,7 +211,7 @@ int main(int argc, char** argv) {
         }
     }
     printf("eyes: %ux%u, %zu images each\n", eyes[0].w, eyes[0].h, eyes[0].images.size());
-    if (plugin && late) load_plugin(plugin);
+    if (late_plugin) load_plugin(late_plugin);
 
     bool running = false, quit = false, exit_asked = false;
     const ULONGLONG start = GetTickCount64();
@@ -270,11 +289,11 @@ int main(int argc, char** argv) {
         CHK(xrEndFrame(ses, &fe));
         frame++;
     }
-    printf("frames: %llu\n", (unsigned long long)frame);
     gpu_wait();
     for (auto& e : eyes) xrDestroySwapchain(e.sc);
     xrDestroySpace(space);
     xrDestroySession(ses);
-    xrDestroyInstance(inst);
-    return 0;
+    return frame;
 }
+
+}  // namespace
