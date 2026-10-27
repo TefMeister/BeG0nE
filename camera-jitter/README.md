@@ -14,7 +14,11 @@ not in any one game.
 
 ## What is here
 
-### `ride-along/` — the mod writes three timestamps a frame; a rider in the background reads them
+### The ride-along — the mod writes three timestamps a frame; a rider in the background reads them
+
+> **Since 2026-10-12 this code ships in the Lanes plugin** (`begone/rider.py`, `begone/camera-jitter/`), where it is
+> kept up to date. The frozen copy that lived here moved to `archive/ride-along-before-lanes/` on 2026-10-27, once
+> both PCs ran Lanes 0.62.0 or newer. The file table below describes the Lanes copy.
 
 A recording of the screen can show *that* the view steps. It cannot show *why*. The mod itself can: it knows
 the moment it **read the headset pose**, the moment it **wrote the game's camera**, and the moment a **picture
@@ -25,7 +29,7 @@ went out**. Those three streams, timed to the microsecond, are the whole log.
 | `jitterlog.h` | one header a C or C++ mod includes; six calls (`jl_init`, `jl_vr_on/off`, `jl_pose_*`, `jl_camera_*`, `jl_present`) |
 | `jitterlog.lua` | the same for REFramework scripts |
 | `jitter_log_check.py` | reads a log and says, per second of head turning, whether the view stepped and **why** |
-| `ride.py` | the rider: idles in the background, notices a VR session, files its log the moment it ends. Started by the Lanes plugin at every session (`begone = <this clone>` in lanes.conf, Lanes 0.52.0+), or by `ride.py install` to start with Windows |
+| `rider.py` (Lanes `begone/`) | the rider: idles in the background, notices a VR session, files its log the moment it ends. Started by the Lanes plugin at every session (`begone = <this clone>` in lanes.conf, Lanes 0.52.0+), or by `rider.py install` to start with Windows |
 
 **It only activates when the game is really in VR.** The mod writes its log only between `jl_vr_on()` and
 `jl_vr_off()`, which it calls when the VR session starts and stops (OpenXR READY/STOPPING, SteamVR init and
@@ -49,10 +53,10 @@ the other controller was within 30 cm when it did.
 | pictures that went out with an unchanged camera | **JITTER**, whatever the cause above |
 
 ```
-python camera-jitter/ride-along/ride.py install            # start with Windows, start now (no admin needed)
-python camera-jitter/ride-along/ride.py status             # running? VR seen? which mod is logging?
-python camera-jitter/ride-along/ride.py check <file.jl>    # file one log by hand
-python camera-jitter/ride-along/jitter_log_check.py selftest   # six made-up logs with known faults
+python <lanes>/begone/rider.py install                     # start with Windows, start now (no admin needed)
+python <lanes>/tools/begone.py status                      # running? VR seen? what is new?
+python <lanes>/begone/rider.py file <file.jl>              # file one log by hand
+python <lanes>/begone/camera-jitter/jitter_log_check.py selftest   # made-up logs with known faults
 ```
 
 Needs Python 3 with `numpy` (and `psutil` for the outside signs, `opencv-python` for the chart). The header
@@ -65,11 +69,11 @@ log is only as honest as the placing: put `jl_pose_*` at the actual read of the 
 
 ### `knowledge/` — what jittery looks like, what smooth looks like, and what separates them
 
-`ride-along/knowledge.py` boils every filed session down to a **fingerprint** (the typical value of each
+`knowledge.py` (Lanes `begone/camera-jitter/`) boils every filed session down to a **fingerprint** (the typical value of each
 measure, rounded into buckets). Sessions with the same fingerprint are **one pattern** with a tally, so the base
 never holds copies; only a genuinely new behaviour makes a new entry. Nobody is asked anything: a pattern is grouped as
 jittery or smooth by the checker's own verdict. If the person wearing the headset does say how a session **felt**
-(`ride.py label <run> jittery|smooth`) that label sticks to the pattern and outranks the checker. `FINDINGS.md`
+(`file_jitter.py label <run> jittery|smooth --home <BeG0nE home>`) that label sticks to the pattern and outranks the checker. `FINDINGS.md`
 is rebuilt from the whole base after every session: per game and across games, the range of each measure over
 the jittery patterns beside the range over the smooth ones, and **which measures separate the two**. That
 difference is the why. A pattern called jittery once and smooth another time is listed as a contradiction to
