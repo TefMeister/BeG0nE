@@ -26,6 +26,8 @@ One folder per cure. Inside each: a `README.md` that explains the fault and the 
 A game gets a download only after the cure has been tested in that game and passes its own test, written in
 the cure's README. Every download says which game and, where it applies, which VR mod it needs.
 
+The tools and the knowledge they have gathered so far: **[download everything as one zip](https://github.com/TefMeister/BeG0nE/archive/refs/heads/main.zip)** (always the newest copy; no account or Lanes needed). The tools themselves run inside [Lanes](https://github.com/TefMeister/lanes-plugin).
+
 ## What this is, and what it is not
 
 - **It is** a set of small add-ons for games, and for games that already have a VR mod. Each one changes one
