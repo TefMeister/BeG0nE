@@ -42,8 +42,9 @@ DATA = os.path.join(os.path.dirname(HERE), "data")
 INDEX = os.path.join(DATA, "INDEX.csv")
 INDEX_FIELDS = ["run", "game", "date", "time", "label", "view", "seconds", "pictures_per_s", "travelling_s",
                 "jitter_s", "shake_s", "freezes", "hitches", "quality", "verdict", "tool"]
-REC_ROOTS = {"RTX": r"D:\MEGA transfer\Videos"}      # same choice as claude-memory/tools/obs-rec.py
-REC_ROOT = REC_ROOTS.get(os.environ.get("COMPUTERNAME", ""), r"E:\OBS gameplay videos")
+# The home PC records into its MEGA transfer folder, the dev PC into its OBS folder: chosen by which one exists,
+# so no machine name is written here.
+REC_ROOT = next((p for p in (r"D:\MEGA transfer\Videos",) if os.path.isdir(p)), r"E:\OBS gameplay videos")
 FOLLOW_STATE = os.path.join(os.path.expandvars("%LOCALAPPDATA%"), "begone-jitter-follow.json")
 FOLLOW_POLL_S = 15            # how often follow looks for new recordings
 SETTLE_TIMEOUT_S = 120        # how long scan waits for a file to stop growing before giving up on waiting
