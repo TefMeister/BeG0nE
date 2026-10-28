@@ -1,0 +1,86 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 4115,
+ "seconds": 58.56,
+ "frames_per_s": 70.3,
+ "hands": {
+  "L": {
+   "frames": 4115,
+   "usual_m": 0.1633,
+   "wander_p95_m": 0.0001,
+   "wander_max_m": 0.0001,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 4115,
+   "usual_m": 0.1633,
+   "wander_p95_m": 0.0033,
+   "wander_max_m": 0.3224,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.012,
+   "side": "L",
+   "who": "controller",
+   "m": 0.15
+  },
+  {
+   "t": 0.012,
+   "side": "R",
+   "who": "controller",
+   "m": 0.355
+  },
+  {
+   "t": 13.009,
+   "side": "L",
+   "who": "controller",
+   "m": 0.146
+  },
+  {
+   "t": 13.009,
+   "side": "R",
+   "who": "controller",
+   "m": 0.161
+  },
+  {
+   "t": 13.02,
+   "side": "L",
+   "who": "controller",
+   "m": 0.146
+  },
+  {
+   "t": 13.02,
+   "side": "R",
+   "who": "controller",
+   "m": 0.161
+  },
+  {
+   "t": 23.83,
+   "side": "L",
+   "who": "controller",
+   "m": 0.132
+  },
+  {
+   "t": 28.585,
+   "side": "L",
+   "who": "controller",
+   "m": 0.076
+  },
+  {
+   "t": 28.599,
+   "side": "L",
+   "who": "controller",
+   "m": 0.077
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "a controller jumped 9 times (tracking glitches).",
+ "file": "visceral-re8-vr_20261028-003215.ghl"
+}

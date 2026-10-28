@@ -1,0 +1,95 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 2943,
+ "seconds": 41.07,
+ "frames_per_s": 71.7,
+ "hands": {
+  "L": {
+   "frames": 2943,
+   "usual_m": 0.1634,
+   "wander_p95_m": 0.0001,
+   "wander_max_m": 0.0002,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 2943,
+   "usual_m": 0.1645,
+   "wander_p95_m": 0.0821,
+   "wander_max_m": 0.5533,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.014,
+   "side": "L",
+   "who": "controller",
+   "m": 0.667
+  },
+  {
+   "t": 0.014,
+   "side": "R",
+   "who": "controller",
+   "m": 0.512
+  },
+  {
+   "t": 4.874,
+   "side": "R",
+   "who": "controller",
+   "m": 0.102
+  },
+  {
+   "t": 29.684,
+   "side": "R",
+   "who": "game",
+   "m": 0.074
+  },
+  {
+   "t": 29.795,
+   "side": "R",
+   "who": "game",
+   "m": 0.083
+  },
+  {
+   "t": 29.824,
+   "side": "R",
+   "who": "game",
+   "m": 0.075
+  },
+  {
+   "t": 29.85,
+   "side": "R",
+   "who": "game",
+   "m": 0.102
+  },
+  {
+   "t": 29.864,
+   "side": "R",
+   "who": "game",
+   "m": 0.069
+  }
+ ],
+ "tracking": [
+  {
+   "t": 0.0,
+   "side": "L",
+   "s": 0.014,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 0.0,
+   "side": "R",
+   "s": 0.014,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's right hand wanders up to 8.2 cm from its usual place; the game's hand jumped 5 times while the controller was calm; a controller jumped 3 times (tracking glitches); tracking lost 2 times, 2 with the hands stacked (occlusion).",
+ "file": "visceral-re8-vr_20261028-000539.ghl"
+}

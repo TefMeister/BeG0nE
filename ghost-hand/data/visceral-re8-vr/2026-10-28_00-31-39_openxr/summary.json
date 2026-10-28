@@ -1,0 +1,122 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 5616,
+ "seconds": 80.48,
+ "frames_per_s": 69.8,
+ "hands": {
+  "L": {
+   "frames": 5616,
+   "usual_m": 0.1633,
+   "wander_p95_m": 0.0001,
+   "wander_max_m": 0.001,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 5616,
+   "usual_m": 0.1633,
+   "wander_p95_m": 0.0054,
+   "wander_max_m": 0.282,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.014,
+   "side": "L",
+   "who": "controller",
+   "m": 0.091
+  },
+  {
+   "t": 0.014,
+   "side": "R",
+   "who": "controller",
+   "m": 0.345
+  },
+  {
+   "t": 3.499,
+   "side": "L",
+   "who": "controller",
+   "m": 0.076
+  },
+  {
+   "t": 3.499,
+   "side": "R",
+   "who": "controller",
+   "m": 0.222
+  },
+  {
+   "t": 3.513,
+   "side": "L",
+   "who": "controller",
+   "m": 0.075
+  },
+  {
+   "t": 3.513,
+   "side": "R",
+   "who": "controller",
+   "m": 0.222
+  },
+  {
+   "t": 30.469,
+   "side": "L",
+   "who": "controller",
+   "m": 0.095
+  },
+  {
+   "t": 30.481,
+   "side": "L",
+   "who": "controller",
+   "m": 0.091
+  },
+  {
+   "t": 44.777,
+   "side": "R",
+   "who": "controller",
+   "m": 0.208
+  },
+  {
+   "t": 46.081,
+   "side": "L",
+   "who": "controller",
+   "m": 0.213
+  },
+  {
+   "t": 46.081,
+   "side": "R",
+   "who": "controller",
+   "m": 0.123
+  },
+  {
+   "t": 50.5,
+   "side": "L",
+   "who": "controller",
+   "m": 0.191
+  },
+  {
+   "t": 50.5,
+   "side": "R",
+   "who": "controller",
+   "m": 0.272
+  },
+  {
+   "t": 50.513,
+   "side": "L",
+   "who": "controller",
+   "m": 0.191
+  },
+  {
+   "t": 50.513,
+   "side": "R",
+   "who": "controller",
+   "m": 0.272
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "a controller jumped 15 times (tracking glitches).",
+ "file": "visceral-re8-vr_20261028-003018.ghl"
+}
