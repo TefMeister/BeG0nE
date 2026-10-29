@@ -201,6 +201,31 @@
     "verdict": "JITTER"
    }
   },
+  "8ebb906ef1": {
+   "causes": [
+    "98% of pose reads returned the same pose as the read before while the head was turning: the runtime handed a stale pose (the pose is read at the wrong moment, or from a cached copy, not once per frame after waiting for the frame)"
+   ],
+   "count": 1,
+   "first_seen": "2026-10-29",
+   "games": {
+    "psychonauts-vr": [
+     "2026-10-29_17-07-41_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-10-29",
+   "values": {
+    "camera_per_picture": 1.0,
+    "held_share": 1.0,
+    "lag_share": 0.5,
+    "pictures_per_s": 60.0,
+    "place": "unknown",
+    "pose_age_ms": 8.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 1.0,
+    "verdict": "JITTER"
+   }
+  },
   "9b651f93fc": {
    "causes": [
     "the camera is written 0.24 times per picture: it is renewed less often than pictures are drawn, so some pictures reuse the previous camera (the rate fault)",
@@ -303,6 +328,31 @@
     "verdict": "JITTER"
    }
   },
+  "de5015242c": {
+   "causes": [
+    "98% of pose reads returned the same pose as the read before while the head was turning: the runtime handed a stale pose (the pose is read at the wrong moment, or from a cached copy, not once per frame after waiting for the frame)"
+   ],
+   "count": 1,
+   "first_seen": "2026-10-29",
+   "games": {
+    "psychonauts-vr": [
+     "2026-10-29_17-00-02_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-10-29",
+   "values": {
+    "camera_per_picture": 1.0,
+    "held_share": 1.0,
+    "lag_share": 0.0,
+    "pictures_per_s": 60.0,
+    "place": "unknown",
+    "pose_age_ms": 10.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 1.0,
+    "verdict": "JITTER"
+   }
+  },
   "e5a43b867f": {
    "causes": [
     "78% of pose reads returned the same pose as the read before while the head was turning: the runtime handed a stale pose (the pose is read at the wrong moment, or from a cached copy, not once per frame after waiting for the frame)",
@@ -351,6 +401,31 @@
     "pose_age_ms": 10.0,
     "pose_per_picture": 1.0,
     "stale_pose_share": 0.1,
+    "verdict": "JITTER"
+   }
+  },
+  "fd3a0cb673": {
+   "causes": [
+    "98% of pose reads returned the same pose as the read before while the head was turning: the runtime handed a stale pose (the pose is read at the wrong moment, or from a cached copy, not once per frame after waiting for the frame)"
+   ],
+   "count": 1,
+   "first_seen": "2026-10-29",
+   "games": {
+    "psychonauts-vr": [
+     "2026-10-29_17-10-51_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-10-29",
+   "values": {
+    "camera_per_picture": 0.9,
+    "held_share": 1.0,
+    "lag_share": 0.5,
+    "pictures_per_s": 60.0,
+    "place": "unknown",
+    "pose_age_ms": 8.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 1.0,
     "verdict": "JITTER"
    }
   }
@@ -679,6 +754,21 @@
   "2026-10-26_12-00-39_openxr": {
    "game": "alice-madness-returns-vr",
    "pattern": "9b651f93fc",
+   "runtime": "openxr"
+  },
+  "2026-10-29_17-00-02_openxr": {
+   "game": "psychonauts-vr",
+   "pattern": "de5015242c",
+   "runtime": "openxr"
+  },
+  "2026-10-29_17-07-41_openxr": {
+   "game": "psychonauts-vr",
+   "pattern": "8ebb906ef1",
+   "runtime": "openxr"
+  },
+  "2026-10-29_17-10-51_openxr": {
+   "game": "psychonauts-vr",
+   "pattern": "fd3a0cb673",
    "runtime": "openxr"
   }
  },

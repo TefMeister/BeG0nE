@@ -1,0 +1,34 @@
+{
+ "wall_ms": 1793286470825,
+ "clock": "log file made",
+ "game": "psychonauts-vr",
+ "videos": [
+  {
+   "file": "begone_2026-10-29_16-52-40.mp4",
+   "window": "game window",
+   "offset_s": 909.828,
+   "cuts": [
+    {
+     "stretch": "jitter_114-115s",
+     "from_s": 114,
+     "to_s": 115,
+     "frames": 90,
+     "held": 1,
+     "jumped": 1,
+     "folder": "psychonauts-vr/begone-frames/2026-10-29_17-10-51_openxr/jitter_114-115s_game",
+     "note": null
+    },
+    {
+     "stretch": "jitter_156-157s",
+     "from_s": 156,
+     "to_s": 157,
+     "frames": 90,
+     "held": 6,
+     "jumped": 3,
+     "folder": "psychonauts-vr/begone-frames/2026-10-29_17-10-51_openxr/jitter_156-157s_game",
+     "note": null
+    }
+   ]
+  }
+ ]
+}
