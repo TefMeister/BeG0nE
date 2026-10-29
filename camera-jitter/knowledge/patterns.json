@@ -770,6 +770,16 @@
    "game": "psychonauts-vr",
    "pattern": "fd3a0cb673",
    "runtime": "openxr"
+  },
+  "2026-10-29_17-20-31_openxr": {
+   "game": "psychonauts-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-29_17-21-41_openxr": {
+   "game": "psychonauts-vr",
+   "pattern": null,
+   "runtime": "openxr"
   }
  },
  "version": 1
