@@ -1,0 +1,103 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 35993,
+ "seconds": 501.95,
+ "frames_per_s": 71.7,
+ "hands": {
+  "L": {
+   "frames": 21721,
+   "usual_m": 155.7278,
+   "wander_p95_m": 0.001,
+   "wander_max_m": 0.0014
+  },
+  "R": {
+   "frames": 21721,
+   "usual_m": 156.0292,
+   "wander_p95_m": 0.001,
+   "wander_max_m": 0.0014
+  }
+ },
+ "jumps": [
+  {
+   "t": 199.641,
+   "side": "L",
+   "who": "game",
+   "m": 0.068
+  },
+  {
+   "t": 199.641,
+   "side": "R",
+   "who": "game",
+   "m": 0.068
+  },
+  {
+   "t": 279.067,
+   "side": "L",
+   "who": "game",
+   "m": 0.063
+  },
+  {
+   "t": 279.067,
+   "side": "R",
+   "who": "game",
+   "m": 0.063
+  },
+  {
+   "t": 336.455,
+   "side": "L",
+   "who": "game",
+   "m": 0.061
+  },
+  {
+   "t": 336.455,
+   "side": "R",
+   "who": "game",
+   "m": 0.061
+  },
+  {
+   "t": 354.924,
+   "side": "L",
+   "who": "game",
+   "m": 0.07
+  },
+  {
+   "t": 354.924,
+   "side": "R",
+   "who": "game",
+   "m": 0.07
+  },
+  {
+   "t": 500.706,
+   "side": "L",
+   "who": "game",
+   "m": 0.067
+  },
+  {
+   "t": 500.706,
+   "side": "R",
+   "who": "game",
+   "m": 0.067
+  }
+ ],
+ "tracking": [
+  {
+   "t": 0.0,
+   "side": "L",
+   "s": 0.0,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 0.0,
+   "side": "R",
+   "s": 0.0,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's hand jumped 10 times while the controller was calm; tracking lost 2 times, 2 with the hands stacked (occlusion).",
+ "file": "visceral-re8-vr_20261030-200911.ghl"
+}

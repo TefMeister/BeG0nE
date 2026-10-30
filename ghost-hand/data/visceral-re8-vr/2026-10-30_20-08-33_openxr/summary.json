@@ -1,0 +1,29 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 13441,
+ "seconds": 187.38,
+ "frames_per_s": 71.7,
+ "hands": {},
+ "jumps": [],
+ "tracking": [
+  {
+   "t": 0.0,
+   "side": "L",
+   "s": 0.0,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 0.0,
+   "side": "R",
+   "s": 0.0,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "tracking lost 2 times, 2 with the hands stacked (occlusion).",
+ "file": "visceral-re8-vr_20261030-200525.ghl"
+}
