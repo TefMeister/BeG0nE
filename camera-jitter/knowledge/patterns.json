@@ -810,6 +810,16 @@
    "game": "hard-reset-vr",
    "pattern": "f3f41c5656",
    "runtime": "openxr"
+  },
+  "2026-10-30_13-32-54_openxr": {
+   "game": "manhunt-2003-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-30_13-45-11_openxr": {
+   "game": "manhunt-2003-vr",
+   "pattern": null,
+   "runtime": "openxr"
   }
  },
  "version": 1

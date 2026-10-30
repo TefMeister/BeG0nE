@@ -1,0 +1,44 @@
+{
+ "wall_ms": 1793359394117,
+ "clock": "log file made",
+ "game": "manhunt-2003-vr",
+ "videos": [
+  {
+   "file": "begone_2026-10-30_13-23-20.mp4",
+   "window": "game window",
+   "offset_s": -7.157,
+   "cuts": [
+    {
+     "stretch": "jitter_9-11s",
+     "from_s": 9,
+     "to_s": 11,
+     "frames": 150,
+     "held": 28,
+     "jumped": 8,
+     "folder": "manhunt-2003-vr/begone-frames/2026-10-30_13-32-54_openxr/jitter_9-11s_game",
+     "note": null
+    },
+    {
+     "stretch": "jitter_12-15s",
+     "from_s": 12,
+     "to_s": 14.0,
+     "frames": 150,
+     "held": 31,
+     "jumped": 15,
+     "folder": "manhunt-2003-vr/begone-frames/2026-10-30_13-32-54_openxr/jitter_12-15s_game",
+     "note": null
+    },
+    {
+     "stretch": "jitter_16-17s",
+     "from_s": 16,
+     "to_s": 17,
+     "frames": 90,
+     "held": 8,
+     "jumped": 3,
+     "folder": "manhunt-2003-vr/begone-frames/2026-10-30_13-32-54_openxr/jitter_16-17s_game",
+     "note": null
+    }
+   ]
+  }
+ ]
+}
