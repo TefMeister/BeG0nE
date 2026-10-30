@@ -404,6 +404,31 @@
     "verdict": "JITTER"
    }
   },
+  "f3f41c5656": {
+   "causes": [
+    "the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)"
+   ],
+   "count": 1,
+   "first_seen": "2026-10-30",
+   "games": {
+    "hard-reset-vr": [
+     "2026-10-30_01-24-04_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-10-30",
+   "values": {
+    "camera_per_picture": 189.0,
+    "held_share": 0.15,
+    "lag_share": 0.1,
+    "pictures_per_s": 70.0,
+    "place": "unknown",
+    "pose_age_ms": 8.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 0.0,
+    "verdict": "JITTER"
+   }
+  },
   "fd3a0cb673": {
    "causes": [
     "98% of pose reads returned the same pose as the read before while the head was turning: the runtime handed a stale pose (the pose is read at the wrong moment, or from a cached copy, not once per frame after waiting for the frame)"
@@ -779,6 +804,11 @@
   "2026-10-29_17-21-41_openxr": {
    "game": "psychonauts-vr",
    "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-10-30_01-24-04_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": "f3f41c5656",
    "runtime": "openxr"
   }
  },
