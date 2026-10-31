@@ -1,0 +1,121 @@
+{
+ "game": "silent-hill-2-remake-vr",
+ "runtime": "openxr",
+ "frames": 1943,
+ "seconds": 64.1,
+ "frames_per_s": 30.3,
+ "hands": {
+  "L": {
+   "frames": 1291,
+   "usual_m": 0.1328,
+   "wander_p95_m": 0.0001,
+   "wander_max_m": 0.7337,
+   "lag_frames": 1,
+   "lag_ms": 33.0
+  },
+  "R": {
+   "frames": 1291,
+   "usual_m": 0.0935,
+   "wander_p95_m": 0.0001,
+   "wander_max_m": 0.9873,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.433,
+   "side": "L",
+   "who": "controller",
+   "m": 0.7
+  },
+  {
+   "t": 0.433,
+   "side": "R",
+   "who": "controller",
+   "m": 0.744
+  },
+  {
+   "t": 13.276,
+   "side": "R",
+   "who": "controller",
+   "m": 0.102
+  },
+  {
+   "t": 13.299,
+   "side": "R",
+   "who": "controller",
+   "m": 0.106
+  },
+  {
+   "t": 13.317,
+   "side": "R",
+   "who": "controller",
+   "m": 0.116
+  },
+  {
+   "t": 13.34,
+   "side": "R",
+   "who": "controller",
+   "m": 0.12
+  },
+  {
+   "t": 14.119,
+   "side": "L",
+   "who": "game",
+   "m": 0.941
+  },
+  {
+   "t": 14.119,
+   "side": "R",
+   "who": "game",
+   "m": 1.034
+  },
+  {
+   "t": 55.75,
+   "side": "R",
+   "who": "controller",
+   "m": 0.487
+  },
+  {
+   "t": 56.483,
+   "side": "L",
+   "who": "controller",
+   "m": 0.719
+  }
+ ],
+ "tracking": [
+  {
+   "t": 0.0,
+   "side": "L",
+   "s": 0.433,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 0.0,
+   "side": "R",
+   "s": 0.433,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 55.75,
+   "side": "R",
+   "s": 0.0,
+   "hands_m": 0.719,
+   "stacked": false
+  },
+  {
+   "t": 56.483,
+   "side": "L",
+   "s": 0.0,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand trails the controller by 1 frames (33.0 ms); the game's hand jumped 2 times while the controller was calm; a controller jumped 8 times (tracking glitches); tracking lost 4 times, 3 with the hands stacked (occlusion).",
+ "file": "silent-hill-2-remake-vr_20261031-185132.ghl"
+}
