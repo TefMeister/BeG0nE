@@ -1,0 +1,124 @@
+{
+ "game": "visceral-re2-vr",
+ "runtime": "openxr",
+ "frames": 10515,
+ "seconds": 147.14,
+ "frames_per_s": 71.5,
+ "hands": {
+  "L": {
+   "frames": 3422,
+   "usual_m": 0.1003,
+   "wander_p95_m": 0.0076,
+   "wander_max_m": 31.2341,
+   "lag_frames": 2,
+   "lag_ms": 28.0
+  },
+  "R": {
+   "frames": 3422,
+   "usual_m": 0.1011,
+   "wander_p95_m": 0.0077,
+   "wander_max_m": 30.9528,
+   "lag_frames": 2,
+   "lag_ms": 28.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 55.854,
+   "side": "L",
+   "who": "controller",
+   "m": 0.508
+  },
+  {
+   "t": 58.146,
+   "side": "L",
+   "who": "controller",
+   "m": 0.508
+  },
+  {
+   "t": 97.744,
+   "side": "R",
+   "who": "controller",
+   "m": 0.062
+  },
+  {
+   "t": 97.911,
+   "side": "L",
+   "who": "controller",
+   "m": 0.094
+  },
+  {
+   "t": 99.619,
+   "side": "L",
+   "who": "game",
+   "m": 31.968
+  },
+  {
+   "t": 99.619,
+   "side": "R",
+   "who": "game",
+   "m": 31.838
+  },
+  {
+   "t": 99.633,
+   "side": "L",
+   "who": "game",
+   "m": 0.673
+  },
+  {
+   "t": 99.633,
+   "side": "R",
+   "who": "game",
+   "m": 0.92
+  },
+  {
+   "t": 101.245,
+   "side": "L",
+   "who": "game",
+   "m": 0.206
+  },
+  {
+   "t": 101.245,
+   "side": "R",
+   "who": "game",
+   "m": 0.149
+  },
+  {
+   "t": 101.258,
+   "side": "L",
+   "who": "game",
+   "m": 0.201
+  },
+  {
+   "t": 101.258,
+   "side": "R",
+   "who": "game",
+   "m": 0.148
+  },
+  {
+   "t": 144.405,
+   "side": "L",
+   "who": "game",
+   "m": 0.08
+  },
+  {
+   "t": 144.405,
+   "side": "R",
+   "who": "game",
+   "m": 0.081
+  }
+ ],
+ "tracking": [
+  {
+   "t": 55.854,
+   "side": "L",
+   "s": 2.291,
+   "hands_m": 0.534,
+   "stacked": false
+  }
+ ],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand trails the controller by 2 frames (28.0 ms); the game's right hand trails the controller by 2 frames (28.0 ms); the game's hand jumped 10 times while the controller was calm; a controller jumped 4 times (tracking glitches); tracking lost 1 times.",
+ "file": "visceral-re2-vr_20261031-212046.ghl"
+}
