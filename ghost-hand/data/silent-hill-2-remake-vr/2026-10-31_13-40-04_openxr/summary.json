@@ -1,0 +1,119 @@
+{
+ "game": "silent-hill-2-remake-vr",
+ "runtime": "openxr",
+ "frames": 8018,
+ "seconds": 169.05,
+ "frames_per_s": 47.4,
+ "hands": {
+  "L": {
+   "frames": 5591,
+   "usual_m": 0.2469,
+   "wander_p95_m": 0.1441,
+   "wander_max_m": 0.7847,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 5591,
+   "usual_m": 0.0935,
+   "wander_p95_m": 0.1589,
+   "wander_max_m": 1.2392,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.063,
+   "side": "L",
+   "who": "controller",
+   "m": 1.47
+  },
+  {
+   "t": 0.063,
+   "side": "R",
+   "who": "controller",
+   "m": 1.47
+  },
+  {
+   "t": 50.741,
+   "side": "L",
+   "who": "game",
+   "m": 1.064
+  },
+  {
+   "t": 50.741,
+   "side": "R",
+   "who": "game",
+   "m": 1.098
+  },
+  {
+   "t": 59.801,
+   "side": "L",
+   "who": "game",
+   "m": 0.062
+  },
+  {
+   "t": 59.801,
+   "side": "R",
+   "who": "game",
+   "m": 0.237
+  },
+  {
+   "t": 60.643,
+   "side": "L",
+   "who": "controller",
+   "m": 0.502
+  },
+  {
+   "t": 64.288,
+   "side": "L",
+   "who": "controller",
+   "m": 0.472
+  },
+  {
+   "t": 86.323,
+   "side": "R",
+   "who": "controller",
+   "m": 0.628
+  },
+  {
+   "t": 91.15,
+   "side": "R",
+   "who": "controller",
+   "m": 0.539
+  },
+  {
+   "t": 91.216,
+   "side": "L",
+   "who": "controller",
+   "m": 0.427
+  },
+  {
+   "t": 95.288,
+   "side": "L",
+   "who": "controller",
+   "m": 0.274
+  }
+ ],
+ "tracking": [
+  {
+   "t": 0.0,
+   "side": "L",
+   "s": 0.063,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 0.0,
+   "side": "R",
+   "s": 0.063,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand wanders up to 14.4 cm from its usual place; the game's right hand wanders up to 15.9 cm from its usual place; the game's hand jumped 4 times while the controller was calm; a controller jumped 8 times (tracking glitches); tracking lost 2 times, 2 with the hands stacked (occlusion).",
+ "file": "silent-hill-2-remake-vr_20261031-133715.ghl"
+}
