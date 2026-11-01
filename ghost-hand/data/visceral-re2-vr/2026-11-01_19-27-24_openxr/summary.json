@@ -1,0 +1,132 @@
+{
+ "game": "visceral-re2-vr",
+ "runtime": "openxr",
+ "frames": 20615,
+ "seconds": 229.24,
+ "frames_per_s": 89.9,
+ "hands": {
+  "L": {
+   "frames": 15291,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0009,
+   "wander_max_m": 31.0519,
+   "lag_frames": 12,
+   "lag_ms": 133.4
+  },
+  "R": {
+   "frames": 15291,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0009,
+   "wander_max_m": 30.6619
+  }
+ },
+ "jumps": [
+  {
+   "t": 48.432,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 48.432,
+   "side": "R",
+   "who": "controller",
+   "m": 0.096
+  },
+  {
+   "t": 59.365,
+   "side": "L",
+   "who": "game",
+   "m": 31.952
+  },
+  {
+   "t": 59.365,
+   "side": "R",
+   "who": "game",
+   "m": 31.798
+  },
+  {
+   "t": 59.376,
+   "side": "L",
+   "who": "game",
+   "m": 0.834
+  },
+  {
+   "t": 59.376,
+   "side": "R",
+   "who": "game",
+   "m": 0.968
+  },
+  {
+   "t": 60.898,
+   "side": "L",
+   "who": "game",
+   "m": 0.219
+  },
+  {
+   "t": 60.898,
+   "side": "R",
+   "who": "game",
+   "m": 0.139
+  },
+  {
+   "t": 60.909,
+   "side": "L",
+   "who": "game",
+   "m": 0.198
+  },
+  {
+   "t": 60.909,
+   "side": "R",
+   "who": "game",
+   "m": 0.131
+  },
+  {
+   "t": 175.743,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 175.743,
+   "side": "R",
+   "who": "controller",
+   "m": 0.096
+  },
+  {
+   "t": 180.187,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 180.187,
+   "side": "R",
+   "who": "controller",
+   "m": 0.096
+  },
+  {
+   "t": 182.698,
+   "side": "L",
+   "who": "game",
+   "m": 0.534
+  },
+  {
+   "t": 202.743,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 202.743,
+   "side": "R",
+   "who": "controller",
+   "m": 0.087
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand trails the controller by 12 frames (133.4 ms); the game's hand jumped 9 times while the controller was calm; a controller jumped 8 times (tracking glitches).",
+ "file": "visceral-re2-vr_20261101-192334.ghl"
+}

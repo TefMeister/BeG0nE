@@ -1,0 +1,106 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 22319,
+ "seconds": 285.99,
+ "frames_per_s": 78.0,
+ "hands": {
+  "L": {
+   "frames": 15922,
+   "usual_m": 0.0806,
+   "wander_p95_m": 156.5954,
+   "wander_max_m": 156.5954
+  },
+  "R": {
+   "frames": 15922,
+   "usual_m": 0.0806,
+   "wander_p95_m": 156.9755,
+   "wander_max_m": 156.9755
+  }
+ },
+ "jumps": [
+  {
+   "t": 10.155,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 10.155,
+   "side": "R",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 99.634,
+   "side": "L",
+   "who": "game",
+   "m": 140.976
+  },
+  {
+   "t": 99.634,
+   "side": "R",
+   "who": "game",
+   "m": 140.557
+  },
+  {
+   "t": 99.658,
+   "side": "L",
+   "who": "game",
+   "m": 57.369
+  },
+  {
+   "t": 99.658,
+   "side": "R",
+   "who": "game",
+   "m": 56.8
+  },
+  {
+   "t": 111.409,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 111.409,
+   "side": "R",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 111.421,
+   "side": "L",
+   "who": "game",
+   "m": 0.198
+  },
+  {
+   "t": 111.435,
+   "side": "L",
+   "who": "game",
+   "m": 0.102
+  },
+  {
+   "t": 146.157,
+   "side": "R",
+   "who": "controller",
+   "m": 0.166
+  },
+  {
+   "t": 148.845,
+   "side": "R",
+   "who": "game",
+   "m": 0.068
+  },
+  {
+   "t": 148.867,
+   "side": "R",
+   "who": "game",
+   "m": 0.068
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand wanders up to 15659.5 cm from its usual place; the game's right hand wanders up to 15697.6 cm from its usual place; the game's hand jumped 8 times while the controller was calm; a controller jumped 5 times (tracking glitches).",
+ "file": "visceral-re8-vr_20261101-113329.ghl"
+}

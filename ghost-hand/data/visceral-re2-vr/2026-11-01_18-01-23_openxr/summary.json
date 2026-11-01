@@ -1,0 +1,88 @@
+{
+ "game": "visceral-re2-vr",
+ "runtime": "openxr",
+ "frames": 9807,
+ "seconds": 109.07,
+ "frames_per_s": 89.9,
+ "hands": {
+  "L": {
+   "frames": 4453,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0007,
+   "wander_max_m": 31.0519
+  },
+  "R": {
+   "frames": 4453,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0007,
+   "wander_max_m": 30.6619
+  }
+ },
+ "jumps": [
+  {
+   "t": 48.715,
+   "side": "L",
+   "who": "controller",
+   "m": 0.331
+  },
+  {
+   "t": 48.715,
+   "side": "R",
+   "who": "controller",
+   "m": 0.096
+  },
+  {
+   "t": 59.615,
+   "side": "L",
+   "who": "game",
+   "m": 31.952
+  },
+  {
+   "t": 59.615,
+   "side": "R",
+   "who": "game",
+   "m": 31.797
+  },
+  {
+   "t": 59.626,
+   "side": "L",
+   "who": "game",
+   "m": 0.836
+  },
+  {
+   "t": 59.626,
+   "side": "R",
+   "who": "game",
+   "m": 0.966
+  },
+  {
+   "t": 61.159,
+   "side": "L",
+   "who": "game",
+   "m": 0.222
+  },
+  {
+   "t": 61.159,
+   "side": "R",
+   "who": "game",
+   "m": 0.141
+  },
+  {
+   "t": 61.171,
+   "side": "L",
+   "who": "game",
+   "m": 0.203
+  },
+  {
+   "t": 61.171,
+   "side": "R",
+   "who": "game",
+   "m": 0.133
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's hand jumped 8 times while the controller was calm; a controller jumped 2 times (tracking glitches).",
+ "file": "visceral-re2-vr_20261101-175934.ghl"
+}

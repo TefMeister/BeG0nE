@@ -1,0 +1,136 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 24013,
+ "seconds": 294.13,
+ "frames_per_s": 81.6,
+ "hands": {
+  "L": {
+   "frames": 11667,
+   "usual_m": 0.0806,
+   "wander_p95_m": 156.5954,
+   "wander_max_m": 156.5954
+  },
+  "R": {
+   "frames": 11667,
+   "usual_m": 0.0807,
+   "wander_p95_m": 156.9754,
+   "wander_max_m": 156.9754
+  }
+ },
+ "jumps": [
+  {
+   "t": 12.422,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 12.422,
+   "side": "R",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 53.721,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 53.721,
+   "side": "R",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 75.497,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 75.497,
+   "side": "R",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 110.053,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 110.053,
+   "side": "R",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 127.065,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 127.065,
+   "side": "R",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 163.701,
+   "side": "L",
+   "who": "game",
+   "m": 140.976
+  },
+  {
+   "t": 163.701,
+   "side": "R",
+   "who": "game",
+   "m": 140.557
+  },
+  {
+   "t": 163.72,
+   "side": "L",
+   "who": "game",
+   "m": 57.369
+  },
+  {
+   "t": 163.72,
+   "side": "R",
+   "who": "game",
+   "m": 56.8
+  },
+  {
+   "t": 174.432,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 174.432,
+   "side": "R",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 174.445,
+   "side": "L",
+   "who": "game",
+   "m": 0.179
+  },
+  {
+   "t": 174.459,
+   "side": "L",
+   "who": "game",
+   "m": 0.086
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand wanders up to 15659.5 cm from its usual place; the game's right hand wanders up to 15697.5 cm from its usual place; the game's hand jumped 6 times while the controller was calm; a controller jumped 12 times (tracking glitches).",
+ "file": "visceral-re8-vr_20261101-112805.ghl"
+}

@@ -1,0 +1,274 @@
+{
+ "game": "visceral-re3-vr",
+ "runtime": "openxr",
+ "frames": 44392,
+ "seconds": 617.92,
+ "frames_per_s": 71.8,
+ "hands": {},
+ "jumps": [
+  {
+   "t": 54.103,
+   "side": "R",
+   "who": "controller",
+   "m": 0.782
+  },
+  {
+   "t": 60.633,
+   "side": "L",
+   "who": "controller",
+   "m": 0.81
+  },
+  {
+   "t": 113.446,
+   "side": "R",
+   "who": "controller",
+   "m": 0.779
+  },
+  {
+   "t": 113.64,
+   "side": "L",
+   "who": "controller",
+   "m": 0.809
+  },
+  {
+   "t": 113.861,
+   "side": "L",
+   "who": "controller",
+   "m": 0.129
+  },
+  {
+   "t": 136.863,
+   "side": "L",
+   "who": "controller",
+   "m": 0.526
+  },
+  {
+   "t": 138.002,
+   "side": "L",
+   "who": "controller",
+   "m": 0.524
+  },
+  {
+   "t": 147.476,
+   "side": "L",
+   "who": "controller",
+   "m": 0.827
+  },
+  {
+   "t": 147.879,
+   "side": "R",
+   "who": "controller",
+   "m": 0.774
+  },
+  {
+   "t": 158.044,
+   "side": "R",
+   "who": "controller",
+   "m": 0.761
+  },
+  {
+   "t": 158.155,
+   "side": "L",
+   "who": "controller",
+   "m": 0.828
+  },
+  {
+   "t": 158.863,
+   "side": "L",
+   "who": "controller",
+   "m": 0.123
+  },
+  {
+   "t": 159.308,
+   "side": "R",
+   "who": "controller",
+   "m": 0.064
+  },
+  {
+   "t": 159.419,
+   "side": "R",
+   "who": "controller",
+   "m": 0.111
+  },
+  {
+   "t": 159.461,
+   "side": "R",
+   "who": "controller",
+   "m": 0.071
+  },
+  {
+   "t": 159.586,
+   "side": "R",
+   "who": "controller",
+   "m": 0.086
+  },
+  {
+   "t": 184.462,
+   "side": "R",
+   "who": "controller",
+   "m": 0.74
+  },
+  {
+   "t": 188.672,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 194.825,
+   "side": "L",
+   "who": "controller",
+   "m": 0.796
+  },
+  {
+   "t": 268.835,
+   "side": "L",
+   "who": "controller",
+   "m": 0.796
+  },
+  {
+   "t": 274.418,
+   "side": "L",
+   "who": "controller",
+   "m": 0.796
+  },
+  {
+   "t": 357.542,
+   "side": "L",
+   "who": "controller",
+   "m": 0.796
+  },
+  {
+   "t": 357.542,
+   "side": "R",
+   "who": "controller",
+   "m": 0.734
+  },
+  {
+   "t": 363.195,
+   "side": "L",
+   "who": "controller",
+   "m": 0.796
+  },
+  {
+   "t": 363.333,
+   "side": "R",
+   "who": "controller",
+   "m": 0.734
+  },
+  {
+   "t": 477.739,
+   "side": "L",
+   "who": "controller",
+   "m": 0.795
+  },
+  {
+   "t": 477.754,
+   "side": "R",
+   "who": "controller",
+   "m": 0.733
+  },
+  {
+   "t": 483.393,
+   "side": "R",
+   "who": "controller",
+   "m": 0.733
+  },
+  {
+   "t": 483.407,
+   "side": "L",
+   "who": "controller",
+   "m": 0.795
+  }
+ ],
+ "tracking": [
+  {
+   "t": 54.103,
+   "side": "R",
+   "s": 59.342,
+   "hands_m": 0.81,
+   "stacked": false
+  },
+  {
+   "t": 60.633,
+   "side": "L",
+   "s": 53.007,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 136.863,
+   "side": "L",
+   "s": 1.139,
+   "hands_m": 0.51,
+   "stacked": false
+  },
+  {
+   "t": 147.476,
+   "side": "L",
+   "s": 10.679,
+   "hands_m": 0.774,
+   "stacked": false
+  },
+  {
+   "t": 147.879,
+   "side": "R",
+   "s": 10.165,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 184.462,
+   "side": "R",
+   "s": 173.079,
+   "hands_m": 0.82,
+   "stacked": false
+  },
+  {
+   "t": 194.825,
+   "side": "L",
+   "s": 74.01,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 274.418,
+   "side": "L",
+   "s": 83.123,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 363.195,
+   "side": "L",
+   "s": 114.544,
+   "hands_m": 0.734,
+   "stacked": false
+  },
+  {
+   "t": 363.333,
+   "side": "R",
+   "s": 114.421,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 483.393,
+   "side": "R",
+   "s": 0.0,
+   "hands_m": 0.795,
+   "stacked": false
+  },
+  {
+   "t": 483.407,
+   "side": "L",
+   "s": 0.0,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "a controller jumped 29 times (tracking glitches); tracking lost 12 times, 6 with the hands stacked (occlusion).",
+ "file": "visceral-re3-vr_20261101-213927.ghl"
+}

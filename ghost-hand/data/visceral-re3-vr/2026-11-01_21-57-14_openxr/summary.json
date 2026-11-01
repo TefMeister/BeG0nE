@@ -1,0 +1,51 @@
+{
+ "game": "visceral-re3-vr",
+ "runtime": "openxr",
+ "frames": 19507,
+ "seconds": 216.97,
+ "frames_per_s": 89.9,
+ "hands": {},
+ "jumps": [
+  {
+   "t": 86.477,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 86.477,
+   "side": "R",
+   "who": "controller",
+   "m": 0.087
+  },
+  {
+   "t": 87.121,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 87.121,
+   "side": "R",
+   "who": "controller",
+   "m": 0.087
+  },
+  {
+   "t": 126.41,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 126.41,
+   "side": "R",
+   "who": "controller",
+   "m": 0.128
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "a controller jumped 6 times (tracking glitches).",
+ "file": "visceral-re3-vr_20261101-215337.ghl"
+}

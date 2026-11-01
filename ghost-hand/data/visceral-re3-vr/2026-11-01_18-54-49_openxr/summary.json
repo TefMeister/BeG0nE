@@ -1,0 +1,27 @@
+{
+ "game": "visceral-re3-vr",
+ "runtime": "openxr",
+ "frames": 11143,
+ "seconds": 124.07,
+ "frames_per_s": 89.8,
+ "hands": {},
+ "jumps": [
+  {
+   "t": 55.249,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 55.249,
+   "side": "R",
+   "who": "controller",
+   "m": 0.096
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "a controller jumped 2 times (tracking glitches).",
+ "file": "visceral-re3-vr_20261101-185245.ghl"
+}

@@ -1,0 +1,134 @@
+{
+ "game": "visceral-re2-vr",
+ "runtime": "openxr",
+ "frames": 11977,
+ "seconds": 133.2,
+ "frames_per_s": 89.9,
+ "hands": {
+  "L": {
+   "frames": 6627,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0008,
+   "wander_max_m": 31.0519,
+   "lag_frames": 10,
+   "lag_ms": 111.2
+  },
+  "R": {
+   "frames": 6627,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0008,
+   "wander_max_m": 30.6619,
+   "lag_frames": 12,
+   "lag_ms": 133.5
+  }
+ },
+ "jumps": [
+  {
+   "t": 48.607,
+   "side": "L",
+   "who": "controller",
+   "m": 0.331
+  },
+  {
+   "t": 48.607,
+   "side": "R",
+   "who": "controller",
+   "m": 0.096
+  },
+  {
+   "t": 59.573,
+   "side": "L",
+   "who": "game",
+   "m": 31.952
+  },
+  {
+   "t": 59.573,
+   "side": "R",
+   "who": "game",
+   "m": 31.797
+  },
+  {
+   "t": 59.585,
+   "side": "L",
+   "who": "game",
+   "m": 0.836
+  },
+  {
+   "t": 59.585,
+   "side": "R",
+   "who": "game",
+   "m": 0.966
+  },
+  {
+   "t": 61.129,
+   "side": "L",
+   "who": "game",
+   "m": 0.221
+  },
+  {
+   "t": 61.129,
+   "side": "R",
+   "who": "game",
+   "m": 0.14
+  },
+  {
+   "t": 61.14,
+   "side": "L",
+   "who": "game",
+   "m": 0.201
+  },
+  {
+   "t": 61.14,
+   "side": "R",
+   "who": "game",
+   "m": 0.132
+  },
+  {
+   "t": 80.952,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 80.952,
+   "side": "R",
+   "who": "controller",
+   "m": 0.497
+  },
+  {
+   "t": 83.563,
+   "side": "R",
+   "who": "controller",
+   "m": 0.4
+  },
+  {
+   "t": 86.186,
+   "side": "R",
+   "who": "controller",
+   "m": 0.633
+  },
+  {
+   "t": 88.797,
+   "side": "R",
+   "who": "controller",
+   "m": 0.467
+  },
+  {
+   "t": 102.986,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 102.986,
+   "side": "R",
+   "who": "controller",
+   "m": 0.122
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand trails the controller by 10 frames (111.2 ms); the game's right hand trails the controller by 12 frames (133.5 ms); the game's hand jumped 8 times while the controller was calm; a controller jumped 9 times (tracking glitches).",
+ "file": "visceral-re2-vr_20261101-174647.ghl"
+}

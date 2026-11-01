@@ -1,0 +1,123 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 11494,
+ "seconds": 142.95,
+ "frames_per_s": 80.4,
+ "hands": {
+  "L": {
+   "frames": 8296,
+   "usual_m": 0.0806,
+   "wander_p95_m": 156.5954,
+   "wander_max_m": 156.5954,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 8296,
+   "usual_m": 0.0806,
+   "wander_p95_m": 156.9755,
+   "wander_max_m": 156.9755
+  }
+ },
+ "jumps": [
+  {
+   "t": 24.168,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 24.168,
+   "side": "R",
+   "who": "controller",
+   "m": 0.087
+  },
+  {
+   "t": 64.063,
+   "side": "L",
+   "who": "game",
+   "m": 140.995
+  },
+  {
+   "t": 64.063,
+   "side": "R",
+   "who": "game",
+   "m": 140.549
+  },
+  {
+   "t": 64.081,
+   "side": "L",
+   "who": "game",
+   "m": 57.34
+  },
+  {
+   "t": 64.081,
+   "side": "R",
+   "who": "game",
+   "m": 56.831
+  },
+  {
+   "t": 78.651,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 78.651,
+   "side": "R",
+   "who": "controller",
+   "m": 0.096
+  },
+  {
+   "t": 78.666,
+   "side": "L",
+   "who": "game",
+   "m": 0.185
+  },
+  {
+   "t": 78.681,
+   "side": "L",
+   "who": "game",
+   "m": 0.092
+  },
+  {
+   "t": 84.176,
+   "side": "L",
+   "who": "controller",
+   "m": 0.593
+  },
+  {
+   "t": 112.468,
+   "side": "L",
+   "who": "controller",
+   "m": 0.556
+  },
+  {
+   "t": 112.468,
+   "side": "R",
+   "who": "controller",
+   "m": 0.184
+  }
+ ],
+ "tracking": [],
+ "attempts": [
+  {
+   "n": 1,
+   "gesture": "breech",
+   "t": 91.037,
+   "s": 21.441,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.5833,
+   "left_travel_m": 0.5323,
+   "gun_moved_m": 0.1838,
+   "lost": 0,
+   "jumps": 2,
+   "why": "finished"
+  }
+ ],
+ "quality": "good",
+ "verdict": "breech: 1 of 1 finished; the game's left hand wanders up to 15659.5 cm from its usual place; the game's right hand wanders up to 15697.6 cm from its usual place; the game's hand jumped 6 times while the controller was calm; a controller jumped 7 times (tracking glitches).",
+ "file": "visceral-re8-vr_20261101-220609.ghl"
+}
