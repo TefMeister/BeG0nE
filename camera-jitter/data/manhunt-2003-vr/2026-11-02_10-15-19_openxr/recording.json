@@ -1,0 +1,19 @@
+{
+ "wall_ms": 1793607189348,
+ "clock": "log file made",
+ "game": "manhunt-2003-vr",
+ "videos": [
+  {
+   "file": "begone_second_2026-11-02_10-13-23.mp4",
+   "window": "OpenXR Simulator preview",
+   "offset_s": -14.245,
+   "cuts": []
+  },
+  {
+   "file": "begone_2026-11-02_10-13-23.mp4",
+   "window": "game window",
+   "offset_s": -14.245,
+   "cuts": []
+  }
+ ]
+}

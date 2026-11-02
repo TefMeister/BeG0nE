@@ -820,6 +820,21 @@
    "game": "manhunt-2003-vr",
    "pattern": null,
    "runtime": "openxr"
+  },
+  "2026-11-02_10-12-57_openxr": {
+   "game": "manhunt-2003-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-11-02_10-15-19_openxr": {
+   "game": "manhunt-2003-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-11-02_10-23-19_openxr": {
+   "game": "alice-madness-returns-vr",
+   "pattern": null,
+   "runtime": "openxr"
   }
  },
  "version": 1
