@@ -1,0 +1,132 @@
+{
+ "game": "visceral-re2-vr",
+ "runtime": "openxr",
+ "frames": 16614,
+ "seconds": 184.7,
+ "frames_per_s": 90.0,
+ "hands": {
+  "L": {
+   "frames": 12049,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0009,
+   "wander_max_m": 31.1505
+  },
+  "R": {
+   "frames": 12049,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0012,
+   "wander_max_m": 30.6625,
+   "lag_frames": 10,
+   "lag_ms": 111.2
+  }
+ },
+ "jumps": [
+  {
+   "t": 19.111,
+   "side": "L",
+   "who": "controller",
+   "m": 0.141
+  },
+  {
+   "t": 19.111,
+   "side": "R",
+   "who": "controller",
+   "m": 0.228
+  },
+  {
+   "t": 50.844,
+   "side": "L",
+   "who": "game",
+   "m": 31.952
+  },
+  {
+   "t": 50.844,
+   "side": "R",
+   "who": "game",
+   "m": 31.797
+  },
+  {
+   "t": 50.855,
+   "side": "L",
+   "who": "game",
+   "m": 0.74
+  },
+  {
+   "t": 50.855,
+   "side": "R",
+   "who": "game",
+   "m": 0.963
+  },
+  {
+   "t": 51.111,
+   "side": "L",
+   "who": "game",
+   "m": 0.76
+  },
+  {
+   "t": 51.111,
+   "side": "R",
+   "who": "game",
+   "m": 0.961
+  },
+  {
+   "t": 51.122,
+   "side": "L",
+   "who": "game",
+   "m": 0.76
+  },
+  {
+   "t": 51.122,
+   "side": "R",
+   "who": "game",
+   "m": 0.963
+  },
+  {
+   "t": 52.422,
+   "side": "L",
+   "who": "game",
+   "m": 0.209
+  },
+  {
+   "t": 52.422,
+   "side": "R",
+   "who": "game",
+   "m": 0.14
+  },
+  {
+   "t": 52.433,
+   "side": "L",
+   "who": "game",
+   "m": 0.193
+  },
+  {
+   "t": 52.433,
+   "side": "R",
+   "who": "game",
+   "m": 0.133
+  },
+  {
+   "t": 164.333,
+   "side": "R",
+   "who": "controller",
+   "m": 0.796
+  },
+  {
+   "t": 169.155,
+   "side": "R",
+   "who": "controller",
+   "m": 0.729
+  },
+  {
+   "t": 174.366,
+   "side": "R",
+   "who": "controller",
+   "m": 0.071
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's right hand trails the controller by 10 frames (111.2 ms); the game's hand jumped 12 times while the controller was calm; a controller jumped 5 times (tracking glitches).",
+ "file": "visceral-re2-vr_20261102-142023.ghl"
+}
