@@ -26,4 +26,23 @@ camera before our VR layer touches it. Named Camera Hijack BeG0nE (easier to fin
 Hard case to watch: grab attacks that turn you to face the enemy; with the turn removed you might be looking away from
 the animation.
 
+**Added by Tefa the same day (2026-11-03): let the game turn you only where it must, and dim the edges when it does.**
+
+> "possibly it can be used to mark the areas in the game where camera hijack can be completely turned off and also
+> introduce a feature where it creates a black vignette around the view, so it's not so nausiating and looks more like
+> a 2d cutscene playing out when it would not make sense to leave the camera facing the same direction, exactly for
+> example the enemies turning the player around"
+
+1. **The recorder sorts every hijack into two kinds:** turns that can simply be removed (recoil, flinch, shake, head
+   bob, most look-ats) and turns the scene needs (an enemy grabbing you and spinning you round). The second kind is
+   marked per area and per event, so the cure knows where to leave the game in charge.
+2. **When the game is allowed to turn you, a black frame closes in around the view** for as long as the turn lasts,
+   so it reads like a flat cutscene playing out in front of you rather than your head being twisted. It opens again
+   when control comes back.
+
+**What it'd take (this part):** the recorder already sees each turn; marking them needs a short label per event (what
+was playing, where, how far it turned). The black frame is a comfort vignette drawn by our VR layer, faded in and out
+over a fraction of a second. ⚠️ Not checked against Village yet. This is our own comfort feature, not a game screen
+effect, so the "screen effects off in VR" rule does not touch it.
+
 ---
