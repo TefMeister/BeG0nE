@@ -1,2 +1,3 @@
 - 2026-10-16 settled `all-games--a-universal-poser-finds-a-game-s-hand-and-arm-joints-by-itself-then-be` - A universal poser: finds a game's hand and arm joints by itself, then bends them with sliders (Tefa: already being worked on in another session; cleared here)
 - 2026-10-16 settled `all-games--a-hand-and-body-poser-like-emv-engine-s-for-our-other-third-person-gam` - A hand and body poser like EMV Engine's, for our other third-person games (Tefa: already being worked on in another session; cleared here)
+- 2026-11-03 chose `begone--camera-hijack-beg0ne-the-game-may-move-the-player-but-never-turn-their-v` - Camera Hijack BeG0nE: the game may move the player, never turn their view (Tefa: "Camera Hijack BeG0nE it is then ... let's build stuff tomorrow")
