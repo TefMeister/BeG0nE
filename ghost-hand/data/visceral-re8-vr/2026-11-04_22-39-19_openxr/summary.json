@@ -1,0 +1,58 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 10727,
+ "seconds": 122.73,
+ "frames_per_s": 87.4,
+ "hands": {
+  "L": {
+   "frames": 3599,
+   "usual_m": 156.676,
+   "wander_p95_m": 156.5634,
+   "wander_max_m": 156.5954
+  },
+  "R": {
+   "frames": 3599,
+   "usual_m": 157.0561,
+   "wander_p95_m": 156.9755,
+   "wander_max_m": 156.9755
+  }
+ },
+ "jumps": [
+  {
+   "t": 109.045,
+   "side": "L",
+   "who": "game",
+   "m": 141.021
+  },
+  {
+   "t": 109.045,
+   "side": "R",
+   "who": "game",
+   "m": 140.545
+  },
+  {
+   "t": 109.071,
+   "side": "L",
+   "who": "game",
+   "m": 57.289
+  },
+  {
+   "t": 109.071,
+   "side": "R",
+   "who": "game",
+   "m": 56.883
+  },
+  {
+   "t": 110.679,
+   "side": "L",
+   "who": "game",
+   "m": 0.1
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand wanders up to 15656.3 cm from its usual place; the game's right hand wanders up to 15697.6 cm from its usual place; the game's hand jumped 5 times while the controller was calm.",
+ "file": "visceral-re8-vr_20261104-223716.ghl"
+}
