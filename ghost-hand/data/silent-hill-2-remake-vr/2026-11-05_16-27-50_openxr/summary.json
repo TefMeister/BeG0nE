@@ -1,0 +1,99 @@
+{
+ "game": "silent-hill-2-remake-vr",
+ "runtime": "openxr",
+ "frames": 16243,
+ "seconds": 348.72,
+ "frames_per_s": 46.6,
+ "hands": {
+  "L": {
+   "frames": 12619,
+   "usual_m": 0.2694,
+   "wander_p95_m": 0.1665,
+   "wander_max_m": 0.7622,
+   "lag_frames": 1,
+   "lag_ms": 21.5
+  },
+  "R": {
+   "frames": 12619,
+   "usual_m": 0.0935,
+   "wander_p95_m": 0.1589,
+   "wander_max_m": 1.2392
+  }
+ },
+ "jumps": [
+  {
+   "t": 1.367,
+   "side": "L",
+   "who": "controller",
+   "m": 1.47
+  },
+  {
+   "t": 1.367,
+   "side": "R",
+   "who": "controller",
+   "m": 1.47
+  },
+  {
+   "t": 77.504,
+   "side": "L",
+   "who": "game",
+   "m": 1.064
+  },
+  {
+   "t": 77.504,
+   "side": "R",
+   "who": "game",
+   "m": 1.098
+  },
+  {
+   "t": 179.63,
+   "side": "R",
+   "who": "controller",
+   "m": 0.071
+  },
+  {
+   "t": 179.65,
+   "side": "L",
+   "who": "game",
+   "m": 0.062
+  },
+  {
+   "t": 179.65,
+   "side": "R",
+   "who": "game",
+   "m": 0.172
+  },
+  {
+   "t": 180.398,
+   "side": "L",
+   "who": "controller",
+   "m": 0.407
+  },
+  {
+   "t": 316.425,
+   "side": "L",
+   "who": "controller",
+   "m": 0.142
+  }
+ ],
+ "tracking": [
+  {
+   "t": 0.001,
+   "side": "L",
+   "s": 1.366,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 0.001,
+   "side": "R",
+   "s": 1.366,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand trails the controller by 1 frames (21.5 ms); the game's left hand wanders up to 16.7 cm from its usual place; the game's right hand wanders up to 15.9 cm from its usual place; the game's hand jumped 4 times while the controller was calm; a controller jumped 5 times (tracking glitches); tracking lost 2 times, 2 with the hands stacked (occlusion).",
+ "file": "silent-hill-2-remake-vr_20261105-162202.ghl"
+}
