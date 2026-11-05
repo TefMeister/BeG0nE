@@ -1,0 +1,145 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 19867,
+ "seconds": 258.89,
+ "frames_per_s": 76.7,
+ "hands": {
+  "L": {
+   "frames": 12743,
+   "usual_m": 0.0806,
+   "wander_p95_m": 156.5954,
+   "wander_max_m": 156.5954,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 12743,
+   "usual_m": 0.0806,
+   "wander_p95_m": 156.9755,
+   "wander_max_m": 156.9755
+  }
+ },
+ "jumps": [
+  {
+   "t": 68.356,
+   "side": "L",
+   "who": "controller",
+   "m": 0.478
+  },
+  {
+   "t": 68.356,
+   "side": "R",
+   "who": "controller",
+   "m": 0.122
+  },
+  {
+   "t": 108.905,
+   "side": "L",
+   "who": "game",
+   "m": 141.018
+  },
+  {
+   "t": 108.905,
+   "side": "R",
+   "who": "game",
+   "m": 140.545
+  },
+  {
+   "t": 108.93,
+   "side": "L",
+   "who": "game",
+   "m": 57.295
+  },
+  {
+   "t": 108.93,
+   "side": "R",
+   "who": "game",
+   "m": 56.877
+  },
+  {
+   "t": 139.777,
+   "side": "L",
+   "who": "controller",
+   "m": 0.374
+  },
+  {
+   "t": 139.777,
+   "side": "R",
+   "who": "controller",
+   "m": 0.122
+  },
+  {
+   "t": 139.791,
+   "side": "L",
+   "who": "game",
+   "m": 0.185
+  },
+  {
+   "t": 139.804,
+   "side": "L",
+   "who": "game",
+   "m": 0.094
+  },
+  {
+   "t": 155.59,
+   "side": "L",
+   "who": "controller",
+   "m": 0.207
+  },
+  {
+   "t": 155.605,
+   "side": "L",
+   "who": "game",
+   "m": 0.124
+  },
+  {
+   "t": 161.821,
+   "side": "L",
+   "who": "controller",
+   "m": 0.207
+  },
+  {
+   "t": 161.834,
+   "side": "L",
+   "who": "game",
+   "m": 0.127
+  }
+ ],
+ "tracking": [],
+ "attempts": [
+  {
+   "n": 1,
+   "gesture": "mag",
+   "t": 156.382,
+   "s": 5.423,
+   "outcome": "fail",
+   "done": false,
+   "apart_m": 0.0,
+   "left_travel_m": 0.0,
+   "gun_moved_m": 0.0,
+   "need_m": 0.16,
+   "lost": 0,
+   "jumps": 0,
+   "why": "pull too short: 0.0 cm of 16.0 cm"
+  },
+  {
+   "n": 2,
+   "gesture": "mag",
+   "t": 163.695,
+   "s": 8.385,
+   "outcome": "fail",
+   "done": false,
+   "apart_m": 0.0,
+   "left_travel_m": 0.0,
+   "gun_moved_m": 0.0,
+   "need_m": 0.16,
+   "lost": 0,
+   "jumps": 0,
+   "why": "pull too short: 0.0 cm of 16.0 cm"
+  }
+ ],
+ "quality": "good",
+ "verdict": "mag: 0 of 2 finished; most misses: pull too short (2 of 2); the game's left hand wanders up to 15659.5 cm from its usual place; the game's right hand wanders up to 15697.6 cm from its usual place; the game's hand jumped 8 times while the controller was calm; a controller jumped 6 times (tracking glitches).",
+ "file": "visceral-re8-vr_20261105-144958.ghl"
+}
