@@ -1,0 +1,14 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 544,
+ "seconds": 6.03,
+ "frames_per_s": 90.2,
+ "hands": {},
+ "jumps": [],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "The hands followed cleanly: no jumps, no lost tracking, no lag.",
+ "file": "visceral-re8-vr_20261105-145524.ghl"
+}
