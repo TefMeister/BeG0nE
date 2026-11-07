@@ -1,0 +1,123 @@
+{
+ "game": "visceral-re2-vr",
+ "runtime": "openxr",
+ "frames": 8634,
+ "seconds": 95.97,
+ "frames_per_s": 90.0,
+ "hands": {
+  "L": {
+   "frames": 4013,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0033,
+   "wander_max_m": 31.0519,
+   "lag_frames": 4,
+   "lag_ms": 44.5
+  },
+  "R": {
+   "frames": 4013,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0008,
+   "wander_max_m": 30.6619
+  }
+ },
+ "jumps": [
+  {
+   "t": 40.528,
+   "side": "L",
+   "who": "controller",
+   "m": 0.436
+  },
+  {
+   "t": 40.528,
+   "side": "R",
+   "who": "controller",
+   "m": 0.464
+  },
+  {
+   "t": 51.406,
+   "side": "L",
+   "who": "game",
+   "m": 31.952
+  },
+  {
+   "t": 51.406,
+   "side": "R",
+   "who": "game",
+   "m": 31.798
+  },
+  {
+   "t": 51.417,
+   "side": "L",
+   "who": "game",
+   "m": 0.834
+  },
+  {
+   "t": 51.417,
+   "side": "R",
+   "who": "game",
+   "m": 0.967
+  },
+  {
+   "t": 53.017,
+   "side": "L",
+   "who": "game",
+   "m": 0.225
+  },
+  {
+   "t": 53.017,
+   "side": "R",
+   "who": "game",
+   "m": 0.142
+  },
+  {
+   "t": 53.028,
+   "side": "L",
+   "who": "game",
+   "m": 0.206
+  },
+  {
+   "t": 53.028,
+   "side": "R",
+   "who": "game",
+   "m": 0.134
+  },
+  {
+   "t": 87.539,
+   "side": "L",
+   "who": "controller",
+   "m": 0.55
+  },
+  {
+   "t": 87.539,
+   "side": "R",
+   "who": "controller",
+   "m": 0.096
+  },
+  {
+   "t": 89.694,
+   "side": "L",
+   "who": "controller",
+   "m": 0.53
+  }
+ ],
+ "tracking": [],
+ "attempts": [
+  {
+   "n": 1,
+   "gesture": "mag",
+   "t": 90.181,
+   "s": 0.596,
+   "outcome": "fail",
+   "done": false,
+   "apart_m": 0.0,
+   "left_travel_m": 0.0,
+   "gun_moved_m": 0.0,
+   "lost": 0,
+   "jumps": 0,
+   "why": "not judged: the mod does not log how far it needs (gh.value('<g>_need', metres))"
+  }
+ ],
+ "quality": "good",
+ "verdict": "mag: 0 of 1 finished; most misses: not judged (1 of 1); the game's left hand trails the controller by 4 frames (44.5 ms); the game's hand jumped 8 times while the controller was calm; a controller jumped 5 times (tracking glitches).",
+ "file": "visceral-re2-vr_20261107-173821.ghl"
+}
