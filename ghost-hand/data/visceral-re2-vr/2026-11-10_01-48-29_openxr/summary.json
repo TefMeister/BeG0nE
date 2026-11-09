@@ -1,0 +1,76 @@
+{
+ "game": "visceral-re2-vr",
+ "runtime": "openxr",
+ "frames": 20503,
+ "seconds": 227.88,
+ "frames_per_s": 90.0,
+ "hands": {
+  "L": {
+   "frames": 16608,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 31.1505
+  },
+  "R": {
+   "frames": 16608,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 30.6625
+  }
+ },
+ "jumps": [
+  {
+   "t": 43.369,
+   "side": "L",
+   "who": "game",
+   "m": 31.952
+  },
+  {
+   "t": 43.369,
+   "side": "R",
+   "who": "game",
+   "m": 31.797
+  },
+  {
+   "t": 43.38,
+   "side": "L",
+   "who": "game",
+   "m": 0.74
+  },
+  {
+   "t": 43.38,
+   "side": "R",
+   "who": "game",
+   "m": 0.963
+  },
+  {
+   "t": 45.08,
+   "side": "L",
+   "who": "game",
+   "m": 0.249
+  },
+  {
+   "t": 45.08,
+   "side": "R",
+   "who": "game",
+   "m": 0.162
+  },
+  {
+   "t": 45.093,
+   "side": "L",
+   "who": "game",
+   "m": 0.23
+  },
+  {
+   "t": 45.093,
+   "side": "R",
+   "who": "game",
+   "m": 0.151
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's hand jumped 8 times while the controller was calm.",
+ "file": "visceral-re2-vr_20261110-014441.ghl"
+}
