@@ -1,0 +1,64 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 13172,
+ "seconds": 162.06,
+ "frames_per_s": 81.3,
+ "hands": {
+  "L": {
+   "frames": 9365,
+   "usual_m": 0.2871,
+   "wander_p95_m": 156.4955,
+   "wander_max_m": 156.4955
+  },
+  "R": {
+   "frames": 9365,
+   "usual_m": 0.5166,
+   "wander_p95_m": 156.499,
+   "wander_max_m": 156.499
+  }
+ },
+ "jumps": [
+  {
+   "t": 39.811,
+   "side": "L",
+   "who": "controller",
+   "m": 0.224
+  },
+  {
+   "t": 41.889,
+   "side": "L",
+   "who": "controller",
+   "m": 0.224
+  },
+  {
+   "t": 74.328,
+   "side": "L",
+   "who": "game",
+   "m": 141.04
+  },
+  {
+   "t": 74.328,
+   "side": "R",
+   "who": "game",
+   "m": 140.577
+  },
+  {
+   "t": 74.359,
+   "side": "L",
+   "who": "game",
+   "m": 57.106
+  },
+  {
+   "t": 74.359,
+   "side": "R",
+   "who": "game",
+   "m": 56.981
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "suspect",
+ "verdict": "Numbers not to be trusted: the game's left and right hand sits metres from its controller, so the two were logged in different spaces (world and room); every gap, wander and jump below is off by the player's walking. the game's left hand wanders up to 15649.5 cm from its usual place; the game's right hand wanders up to 15649.9 cm from its usual place; the game's hand jumped 4 times while the controller was calm; a controller jumped 2 times (tracking glitches).",
+ "file": "visceral-re8-vr_20261110-023452.ghl"
+}
