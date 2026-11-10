@@ -1,0 +1,168 @@
+{
+ "game": "visceral-re3-vr",
+ "runtime": "openxr",
+ "frames": 14337,
+ "seconds": 159.36,
+ "frames_per_s": 90.0,
+ "hands": {
+  "L": {
+   "frames": 9968,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0006,
+   "wander_max_m": 120.4278,
+   "lag_frames": 2,
+   "lag_ms": 22.2
+  },
+  "R": {
+   "frames": 9968,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0005,
+   "wander_max_m": 121.0767
+  }
+ },
+ "jumps": [
+  {
+   "t": 35.212,
+   "side": "L",
+   "who": "controller",
+   "m": 0.206
+  },
+  {
+   "t": 35.212,
+   "side": "R",
+   "who": "controller",
+   "m": 0.268
+  },
+  {
+   "t": 48.605,
+   "side": "L",
+   "who": "game",
+   "m": 121.392
+  },
+  {
+   "t": 48.605,
+   "side": "R",
+   "who": "game",
+   "m": 121.535
+  },
+  {
+   "t": 48.613,
+   "side": "L",
+   "who": "game",
+   "m": 0.927
+  },
+  {
+   "t": 48.613,
+   "side": "R",
+   "who": "game",
+   "m": 0.543
+  },
+  {
+   "t": 49.768,
+   "side": "L",
+   "who": "game",
+   "m": 0.27
+  },
+  {
+   "t": 49.768,
+   "side": "R",
+   "who": "game",
+   "m": 0.135
+  },
+  {
+   "t": 49.779,
+   "side": "L",
+   "who": "game",
+   "m": 0.248
+  },
+  {
+   "t": 49.779,
+   "side": "R",
+   "who": "game",
+   "m": 0.123
+  },
+  {
+   "t": 77.418,
+   "side": "L",
+   "who": "controller",
+   "m": 0.094
+  },
+  {
+   "t": 77.418,
+   "side": "R",
+   "who": "controller",
+   "m": 0.268
+  },
+  {
+   "t": 84.329,
+   "side": "L",
+   "who": "controller",
+   "m": 0.187
+  },
+  {
+   "t": 84.34,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 85.929,
+   "side": "L",
+   "who": "controller",
+   "m": 0.534
+  },
+  {
+   "t": 88.762,
+   "side": "L",
+   "who": "game",
+   "m": 0.083
+  },
+  {
+   "t": 88.762,
+   "side": "R",
+   "who": "game",
+   "m": 0.088
+  },
+  {
+   "t": 88.773,
+   "side": "L",
+   "who": "game",
+   "m": 0.084
+  },
+  {
+   "t": 88.773,
+   "side": "R",
+   "who": "game",
+   "m": 0.088
+  },
+  {
+   "t": 113.418,
+   "side": "L",
+   "who": "game",
+   "m": 0.068
+  },
+  {
+   "t": 113.418,
+   "side": "R",
+   "who": "game",
+   "m": 0.061
+  },
+  {
+   "t": 113.429,
+   "side": "L",
+   "who": "game",
+   "m": 0.069
+  },
+  {
+   "t": 113.429,
+   "side": "R",
+   "who": "game",
+   "m": 0.062
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand trails the controller by 2 frames (22.2 ms); the game's hand jumped 16 times while the controller was calm; a controller jumped 7 times (tracking glitches).",
+ "file": "visceral-re3-vr_20261110-113710.ghl"
+}
