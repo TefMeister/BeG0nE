@@ -23,7 +23,6 @@ import argparse
 import math
 import os
 import re
-import sys
 
 import cv2
 import numpy as np
