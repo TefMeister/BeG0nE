@@ -479,3 +479,4 @@ run,game,runtime,date,time,seconds,attempts,finished,jumps,tracking_lost,quality
 2026-11-12_11-27-02_openxr,visceral-re2-vr,openxr,2026-11-12,11-27-02,128.52,0,0,8,0,good,the game's hand jumped 8 times while the controller was calm.
 2026-11-12_11-34-46_openxr,visceral-re2-vr,openxr,2026-11-12,11-34-46,187.7,0,0,8,0,good,the game's hand jumped 8 times while the controller was calm.
 2026-11-12_11-36-47_openxr,visceral-re2-vr,openxr,2026-11-12,11-36-47,101.9,0,0,8,0,good,the game's hand jumped 8 times while the controller was calm.
+2026-11-12_12-40-46_openxr,visceral-re2-vr,openxr,2026-11-12,12-40-46,232.05,0,0,14,0,good,the game's left hand trails the controller by 2 frames (22.2 ms); the game's hand jumped 8 times while the controller was calm; a controller jumped 6 times (tracking glitches).
