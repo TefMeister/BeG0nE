@@ -1,0 +1,126 @@
+{
+ "game": "visceral-re2-vr",
+ "runtime": "openxr",
+ "frames": 13526,
+ "seconds": 150.34,
+ "frames_per_s": 90.0,
+ "hands": {
+  "L": {
+   "frames": 9358,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0007,
+   "wander_max_m": 31.052,
+   "lag_frames": 2,
+   "lag_ms": 22.2
+  },
+  "R": {
+   "frames": 9358,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0006,
+   "wander_max_m": 30.662
+  }
+ },
+ "jumps": [
+  {
+   "t": 46.37,
+   "side": "L",
+   "who": "game",
+   "m": 31.952
+  },
+  {
+   "t": 46.37,
+   "side": "R",
+   "who": "game",
+   "m": 31.798
+  },
+  {
+   "t": 46.381,
+   "side": "L",
+   "who": "game",
+   "m": 0.834
+  },
+  {
+   "t": 46.381,
+   "side": "R",
+   "who": "game",
+   "m": 0.967
+  },
+  {
+   "t": 48.047,
+   "side": "L",
+   "who": "game",
+   "m": 0.267
+  },
+  {
+   "t": 48.047,
+   "side": "R",
+   "who": "game",
+   "m": 0.162
+  },
+  {
+   "t": 48.059,
+   "side": "L",
+   "who": "game",
+   "m": 0.242
+  },
+  {
+   "t": 48.059,
+   "side": "R",
+   "who": "game",
+   "m": 0.149
+  },
+  {
+   "t": 71.326,
+   "side": "L",
+   "who": "controller",
+   "m": 0.315
+  },
+  {
+   "t": 71.337,
+   "side": "L",
+   "who": "controller",
+   "m": 0.092
+  },
+  {
+   "t": 72.726,
+   "side": "L",
+   "who": "controller",
+   "m": 0.307
+  },
+  {
+   "t": 72.737,
+   "side": "L",
+   "who": "controller",
+   "m": 0.109
+  },
+  {
+   "t": 87.226,
+   "side": "L",
+   "who": "controller",
+   "m": 0.242
+  },
+  {
+   "t": 101.793,
+   "side": "L",
+   "who": "controller",
+   "m": 0.498
+  },
+  {
+   "t": 103.204,
+   "side": "L",
+   "who": "controller",
+   "m": 0.307
+  },
+  {
+   "t": 103.215,
+   "side": "L",
+   "who": "controller",
+   "m": 0.109
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand trails the controller by 2 frames (22.2 ms); the game's hand jumped 8 times while the controller was calm; a controller jumped 8 times (tracking glitches).",
+ "file": "visceral-re2-vr_20261112-124136.ghl"
+}
