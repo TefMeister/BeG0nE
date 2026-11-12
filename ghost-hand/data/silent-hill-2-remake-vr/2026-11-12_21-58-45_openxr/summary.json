@@ -1,0 +1,151 @@
+{
+ "game": "silent-hill-2-remake-vr",
+ "runtime": "openxr",
+ "frames": 11379,
+ "seconds": 157.29,
+ "frames_per_s": 72.3,
+ "hands": {
+  "L": {
+   "frames": 5959,
+   "usual_m": 0.6618,
+   "wander_p95_m": 3.9821,
+   "wander_max_m": 749.3631
+  },
+  "R": {
+   "frames": 5959,
+   "usual_m": 0.2807,
+   "wander_p95_m": 4.293,
+   "wander_max_m": 749.7347
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.242,
+   "side": "L",
+   "who": "controller",
+   "m": 1.47
+  },
+  {
+   "t": 0.242,
+   "side": "R",
+   "who": "controller",
+   "m": 1.47
+  },
+  {
+   "t": 66.864,
+   "side": "L",
+   "who": "game",
+   "m": 1.064
+  },
+  {
+   "t": 66.864,
+   "side": "R",
+   "who": "game",
+   "m": 1.098
+  },
+  {
+   "t": 67.323,
+   "side": "L",
+   "who": "game",
+   "m": 750.127
+  },
+  {
+   "t": 67.323,
+   "side": "R",
+   "who": "game",
+   "m": 750.191
+  },
+  {
+   "t": 67.328,
+   "side": "L",
+   "who": "game",
+   "m": 750.134
+  },
+  {
+   "t": 67.328,
+   "side": "R",
+   "who": "game",
+   "m": 750.007
+  },
+  {
+   "t": 92.799,
+   "side": "L",
+   "who": "game",
+   "m": 1.652
+  },
+  {
+   "t": 92.799,
+   "side": "R",
+   "who": "game",
+   "m": 0.941
+  },
+  {
+   "t": 112.999,
+   "side": "L",
+   "who": "game",
+   "m": 2.012
+  },
+  {
+   "t": 112.999,
+   "side": "R",
+   "who": "game",
+   "m": 1.569
+  },
+  {
+   "t": 121.863,
+   "side": "L",
+   "who": "game",
+   "m": 0.721
+  },
+  {
+   "t": 121.863,
+   "side": "R",
+   "who": "game",
+   "m": 1.031
+  },
+  {
+   "t": 129.34,
+   "side": "L",
+   "who": "game",
+   "m": 0.672
+  },
+  {
+   "t": 129.34,
+   "side": "R",
+   "who": "game",
+   "m": 0.183
+  },
+  {
+   "t": 151.309,
+   "side": "L",
+   "who": "game",
+   "m": 5.075
+  },
+  {
+   "t": 151.309,
+   "side": "R",
+   "who": "game",
+   "m": 4.728
+  }
+ ],
+ "tracking": [
+  {
+   "t": 0.001,
+   "side": "L",
+   "s": 0.241,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 0.001,
+   "side": "R",
+   "s": 0.241,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [],
+ "quality": "suspect",
+ "verdict": "Numbers not to be trusted: the game's left and right hand sits metres from its controller, so the two were logged in different spaces (world and room); every gap, wander and jump below is off by the player's walking. the game's left hand wanders up to 398.2 cm from its usual place; the game's right hand wanders up to 429.3 cm from its usual place; the game's hand jumped 16 times while the controller was calm; a controller jumped 2 times (tracking glitches); tracking lost 2 times, 2 with the hands stacked (occlusion).",
+ "file": "silent-hill-2-remake-vr_20261112-215607.ghl"
+}
