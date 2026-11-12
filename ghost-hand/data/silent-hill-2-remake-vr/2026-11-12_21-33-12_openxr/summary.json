@@ -1,0 +1,42 @@
+{
+ "game": "silent-hill-2-remake-vr",
+ "runtime": "openxr",
+ "frames": 219,
+ "seconds": 3.96,
+ "frames_per_s": 55.3,
+ "hands": {},
+ "jumps": [
+  {
+   "t": 1.972,
+   "side": "L",
+   "who": "controller",
+   "m": 1.47
+  },
+  {
+   "t": 1.972,
+   "side": "R",
+   "who": "controller",
+   "m": 1.47
+  }
+ ],
+ "tracking": [
+  {
+   "t": 0.07,
+   "side": "L",
+   "s": 1.902,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 0.07,
+   "side": "R",
+   "s": 1.902,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "a controller jumped 2 times (tracking glitches); tracking lost 2 times, 2 with the hands stacked (occlusion).",
+ "file": "silent-hill-2-remake-vr_20261112-213308.ghl"
+}
