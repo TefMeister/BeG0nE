@@ -1,0 +1,91 @@
+{
+ "game": "silent-hill-2-remake-vr",
+ "runtime": "openxr",
+ "frames": 6856,
+ "seconds": 91.61,
+ "frames_per_s": 74.8,
+ "hands": {
+  "L": {
+   "frames": 1993,
+   "usual_m": 0.1328,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 749.8921
+  },
+  "R": {
+   "frames": 1993,
+   "usual_m": 0.0935,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 749.9218
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.309,
+   "side": "L",
+   "who": "controller",
+   "m": 1.47
+  },
+  {
+   "t": 0.309,
+   "side": "R",
+   "who": "controller",
+   "m": 1.47
+  },
+  {
+   "t": 66.428,
+   "side": "L",
+   "who": "game",
+   "m": 1.064
+  },
+  {
+   "t": 66.428,
+   "side": "R",
+   "who": "game",
+   "m": 1.098
+  },
+  {
+   "t": 67.04,
+   "side": "L",
+   "who": "game",
+   "m": 750.127
+  },
+  {
+   "t": 67.04,
+   "side": "R",
+   "who": "game",
+   "m": 750.191
+  },
+  {
+   "t": 67.054,
+   "side": "L",
+   "who": "game",
+   "m": 750.134
+  },
+  {
+   "t": 67.054,
+   "side": "R",
+   "who": "game",
+   "m": 750.007
+  }
+ ],
+ "tracking": [
+  {
+   "t": 0.074,
+   "side": "L",
+   "s": 0.235,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 0.074,
+   "side": "R",
+   "s": 0.235,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's hand jumped 6 times while the controller was calm; a controller jumped 2 times (tracking glitches); tracking lost 2 times, 2 with the hands stacked (occlusion).",
+ "file": "silent-hill-2-remake-vr_20261112-233602.ghl"
+}
