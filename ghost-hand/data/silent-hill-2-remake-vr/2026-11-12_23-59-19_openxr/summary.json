@@ -1,0 +1,139 @@
+{
+ "game": "silent-hill-2-remake-vr",
+ "runtime": "openxr",
+ "frames": 10524,
+ "seconds": 136.14,
+ "frames_per_s": 77.3,
+ "hands": {
+  "L": {
+   "frames": 5717,
+   "usual_m": 0.6248,
+   "wander_p95_m": 0.9863,
+   "wander_max_m": 749.4001
+  },
+  "R": {
+   "frames": 5717,
+   "usual_m": 0.2666,
+   "wander_p95_m": 0.7619,
+   "wander_max_m": 749.7487
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.299,
+   "side": "L",
+   "who": "controller",
+   "m": 1.47
+  },
+  {
+   "t": 0.299,
+   "side": "R",
+   "who": "controller",
+   "m": 1.47
+  },
+  {
+   "t": 64.129,
+   "side": "L",
+   "who": "game",
+   "m": 1.064
+  },
+  {
+   "t": 64.129,
+   "side": "R",
+   "who": "game",
+   "m": 1.098
+  },
+  {
+   "t": 64.784,
+   "side": "L",
+   "who": "game",
+   "m": 750.127
+  },
+  {
+   "t": 64.784,
+   "side": "R",
+   "who": "game",
+   "m": 750.191
+  },
+  {
+   "t": 64.795,
+   "side": "L",
+   "who": "game",
+   "m": 750.134
+  },
+  {
+   "t": 64.795,
+   "side": "R",
+   "who": "game",
+   "m": 750.007
+  },
+  {
+   "t": 89.871,
+   "side": "L",
+   "who": "game",
+   "m": 1.652
+  },
+  {
+   "t": 89.871,
+   "side": "R",
+   "who": "game",
+   "m": 0.941
+  },
+  {
+   "t": 110.084,
+   "side": "L",
+   "who": "game",
+   "m": 2.012
+  },
+  {
+   "t": 110.084,
+   "side": "R",
+   "who": "game",
+   "m": 1.569
+  },
+  {
+   "t": 118.95,
+   "side": "L",
+   "who": "game",
+   "m": 0.721
+  },
+  {
+   "t": 118.95,
+   "side": "R",
+   "who": "game",
+   "m": 1.031
+  },
+  {
+   "t": 126.416,
+   "side": "L",
+   "who": "game",
+   "m": 0.672
+  },
+  {
+   "t": 126.416,
+   "side": "R",
+   "who": "game",
+   "m": 0.183
+  }
+ ],
+ "tracking": [
+  {
+   "t": 0.07,
+   "side": "L",
+   "s": 0.229,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 0.07,
+   "side": "R",
+   "s": 0.229,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand wanders up to 98.6 cm from its usual place; the game's right hand wanders up to 76.2 cm from its usual place; the game's hand jumped 14 times while the controller was calm; a controller jumped 2 times (tracking glitches); tracking lost 2 times, 2 with the hands stacked (occlusion).",
+ "file": "silent-hill-2-remake-vr_20261112-235703.ghl"
+}
