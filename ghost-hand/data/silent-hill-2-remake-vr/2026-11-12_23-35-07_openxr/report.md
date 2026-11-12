@@ -1,0 +1,10 @@
+# silent-hill-2-remake-vr (openxr) - Ghost Hand
+
+Log `silent-hill-2-remake-vr_20261112-233215.ghl`, checked 2026-11-12 23:35. `[measured]`: one VR session.
+
+Numbers not to be trusted: the game's left and right hand sits metres from its controller, so the two were logged in different spaces (world and room); every gap, wander and jump below is off by the player's walking. the game's left hand wanders up to 395.5 cm from its usual place; the game's right hand wanders up to 428.6 cm from its usual place; the game's hand jumped 20 times while the controller was calm; a controller jumped 2 times (tracking glitches); tracking lost 2 times, 2 with the hands stacked (occlusion).
+
+- quality: **suspect**
+- 171.72 s, 78.0 frames a second
+- left hand: usual gap 69.0 cm, wanders 395.5 cm (95%), lag ? frames
+- right hand: usual gap 28.8 cm, wanders 428.6 cm (95%), lag ? frames
