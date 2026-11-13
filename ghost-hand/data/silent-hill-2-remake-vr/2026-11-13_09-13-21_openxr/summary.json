@@ -1,0 +1,402 @@
+{
+ "game": "silent-hill-2-remake-vr",
+ "runtime": "openxr",
+ "frames": 55486,
+ "seconds": 966.15,
+ "frames_per_s": 57.4,
+ "hands": {
+  "L": {
+   "frames": 4574,
+   "usual_m": 0.1328,
+   "wander_p95_m": 0.5301,
+   "wander_max_m": 0.5322,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 4574,
+   "usual_m": 0.0935,
+   "wander_p95_m": 0.3626,
+   "wander_max_m": 0.3646,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 14.469,
+   "side": "L",
+   "who": "controller",
+   "m": 0.734
+  },
+  {
+   "t": 15.648,
+   "side": "R",
+   "who": "controller",
+   "m": 1.43
+  },
+  {
+   "t": 21.279,
+   "side": "L",
+   "who": "controller",
+   "m": 0.734
+  },
+  {
+   "t": 25.364,
+   "side": "R",
+   "who": "controller",
+   "m": 1.43
+  },
+  {
+   "t": 46.318,
+   "side": "R",
+   "who": "controller",
+   "m": 1.432
+  },
+  {
+   "t": 50.594,
+   "side": "R",
+   "who": "controller",
+   "m": 0.115
+  },
+  {
+   "t": 50.612,
+   "side": "R",
+   "who": "controller",
+   "m": 0.067
+  },
+  {
+   "t": 50.628,
+   "side": "R",
+   "who": "controller",
+   "m": 0.104
+  },
+  {
+   "t": 52.516,
+   "side": "R",
+   "who": "controller",
+   "m": 0.287
+  },
+  {
+   "t": 52.535,
+   "side": "R",
+   "who": "controller",
+   "m": 0.178
+  },
+  {
+   "t": 65.849,
+   "side": "R",
+   "who": "controller",
+   "m": 0.18
+  },
+  {
+   "t": 67.577,
+   "side": "R",
+   "who": "controller",
+   "m": 0.063
+  },
+  {
+   "t": 76.862,
+   "side": "R",
+   "who": "controller",
+   "m": 0.366
+  },
+  {
+   "t": 132.112,
+   "side": "R",
+   "who": "controller",
+   "m": 0.363
+  },
+  {
+   "t": 132.3,
+   "side": "L",
+   "who": "controller",
+   "m": 0.737
+  },
+  {
+   "t": 138.305,
+   "side": "L",
+   "who": "controller",
+   "m": 0.737
+  },
+  {
+   "t": 138.83,
+   "side": "L",
+   "who": "controller",
+   "m": 0.737
+  },
+  {
+   "t": 139.051,
+   "side": "R",
+   "who": "controller",
+   "m": 0.157
+  },
+  {
+   "t": 139.068,
+   "side": "R",
+   "who": "controller",
+   "m": 0.068
+  },
+  {
+   "t": 139.082,
+   "side": "R",
+   "who": "controller",
+   "m": 0.087
+  },
+  {
+   "t": 139.099,
+   "side": "R",
+   "who": "controller",
+   "m": 0.079
+  },
+  {
+   "t": 139.116,
+   "side": "R",
+   "who": "controller",
+   "m": 0.081
+  },
+  {
+   "t": 139.132,
+   "side": "R",
+   "who": "controller",
+   "m": 0.07
+  },
+  {
+   "t": 139.147,
+   "side": "R",
+   "who": "controller",
+   "m": 0.083
+  },
+  {
+   "t": 139.164,
+   "side": "R",
+   "who": "controller",
+   "m": 0.148
+  },
+  {
+   "t": 139.179,
+   "side": "R",
+   "who": "controller",
+   "m": 0.081
+  },
+  {
+   "t": 139.195,
+   "side": "R",
+   "who": "controller",
+   "m": 0.082
+  },
+  {
+   "t": 140.243,
+   "side": "L",
+   "who": "controller",
+   "m": 0.387
+  },
+  {
+   "t": 200.673,
+   "side": "L",
+   "who": "controller",
+   "m": 0.721
+  },
+  {
+   "t": 201.122,
+   "side": "R",
+   "who": "controller",
+   "m": 0.599
+  },
+  {
+   "t": 206.75,
+   "side": "L",
+   "who": "controller",
+   "m": 0.72
+  },
+  {
+   "t": 210.902,
+   "side": "R",
+   "who": "controller",
+   "m": 0.599
+  },
+  {
+   "t": 212.366,
+   "side": "L",
+   "who": "controller",
+   "m": 0.72
+  },
+  {
+   "t": 217.733,
+   "side": "R",
+   "who": "controller",
+   "m": 0.599
+  },
+  {
+   "t": 224.119,
+   "side": "R",
+   "who": "controller",
+   "m": 0.599
+  },
+  {
+   "t": 234.478,
+   "side": "R",
+   "who": "controller",
+   "m": 0.599
+  },
+  {
+   "t": 249.987,
+   "side": "L",
+   "who": "controller",
+   "m": 0.719
+  },
+  {
+   "t": 256.103,
+   "side": "L",
+   "who": "controller",
+   "m": 0.719
+  },
+  {
+   "t": 343.961,
+   "side": "R",
+   "who": "controller",
+   "m": 0.598
+  },
+  {
+   "t": 357.186,
+   "side": "R",
+   "who": "controller",
+   "m": 0.597
+  },
+  {
+   "t": 419.515,
+   "side": "R",
+   "who": "controller",
+   "m": 0.596
+  },
+  {
+   "t": 421.628,
+   "side": "L",
+   "who": "controller",
+   "m": 0.715
+  },
+  {
+   "t": 430.079,
+   "side": "L",
+   "who": "controller",
+   "m": 0.715
+  },
+  {
+   "t": 433.463,
+   "side": "R",
+   "who": "controller",
+   "m": 0.596
+  }
+ ],
+ "tracking": [
+  {
+   "t": 0.0,
+   "side": "L",
+   "s": 14.469,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 0.0,
+   "side": "R",
+   "s": 15.648,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 21.279,
+   "side": "L",
+   "s": 111.021,
+   "hands_m": 1.43,
+   "stacked": false
+  },
+  {
+   "t": 25.364,
+   "side": "R",
+   "s": 20.954,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 76.862,
+   "side": "R",
+   "s": 55.25,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 138.305,
+   "side": "L",
+   "s": 0.525,
+   "hands_m": 0.567,
+   "stacked": false
+  },
+  {
+   "t": 200.673,
+   "side": "L",
+   "s": 6.077,
+   "hands_m": 0.599,
+   "stacked": false
+  },
+  {
+   "t": 201.122,
+   "side": "R",
+   "s": 9.78,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 212.366,
+   "side": "L",
+   "s": 37.622,
+   "hands_m": 0.599,
+   "stacked": false
+  },
+  {
+   "t": 217.733,
+   "side": "R",
+   "s": 6.387,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 234.478,
+   "side": "R",
+   "s": 109.483,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 256.103,
+   "side": "L",
+   "s": 165.525,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 357.186,
+   "side": "R",
+   "s": 62.328,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 430.079,
+   "side": "L",
+   "s": 0.0,
+   "hands_m": 0.596,
+   "stacked": false
+  },
+  {
+   "t": 433.463,
+   "side": "R",
+   "s": 0.0,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand wanders up to 53.0 cm from its usual place; the game's right hand wanders up to 36.3 cm from its usual place; a controller jumped 44 times (tracking glitches); tracking lost 15 times, 10 with the hands stacked (occlusion).",
+ "file": "silent-hill-2-remake-vr_20261113-085714.ghl"
+}
