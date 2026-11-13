@@ -540,3 +540,4 @@ run,game,runtime,date,time,seconds,attempts,finished,jumps,tracking_lost,quality
 2026-11-13_09-13-21_openxr,silent-hill-2-remake-vr,openxr,2026-11-13,09-13-21,966.15,0,0,44,15,good,"the game's left hand wanders up to 53.0 cm from its usual place; the game's right hand wanders up to 36.3 cm from its usual place; a controller jumped 44 times (tracking glitches); tracking lost 15 times, 10 with the hands stacked (occlusion)."
 2026-11-13_09-17-42_openxr,silent-hill-2-remake-vr,openxr,2026-11-13,09-17-42,142.2,0,0,0,2,good,"tracking lost 2 times, 2 with the hands stacked (occlusion)."
 2026-11-13_09-27-03_openxr,silent-hill-2-remake-vr,openxr,2026-11-13,09-27-03,453.03,0,0,0,2,good,"tracking lost 2 times, 2 with the hands stacked (occlusion)."
+2026-11-13_09-57-46_openxr,silent-hill-2-remake-vr,openxr,2026-11-13,09-57-46,1714.97,0,0,0,2,good,"tracking lost 2 times, 2 with the hands stacked (occlusion)."
