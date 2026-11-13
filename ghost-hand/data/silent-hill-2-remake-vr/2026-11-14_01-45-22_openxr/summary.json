@@ -1,0 +1,284 @@
+{
+ "game": "silent-hill-2-remake-vr",
+ "runtime": "openxr",
+ "frames": 28705,
+ "seconds": 471.99,
+ "frames_per_s": 60.8,
+ "hands": {
+  "L": {
+   "frames": 20215,
+   "usual_m": 0.1328,
+   "wander_p95_m": 0.0793,
+   "wander_max_m": 0.7078,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 20215,
+   "usual_m": 0.0935,
+   "wander_p95_m": 0.0001,
+   "wander_max_m": 0.9425,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 154.578,
+   "side": "R",
+   "who": "controller",
+   "m": 0.338
+  },
+  {
+   "t": 154.666,
+   "side": "L",
+   "who": "controller",
+   "m": 0.391
+  },
+  {
+   "t": 154.666,
+   "side": "R",
+   "who": "controller",
+   "m": 0.081
+  },
+  {
+   "t": 154.688,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 154.755,
+   "side": "L",
+   "who": "controller",
+   "m": 0.074
+  },
+  {
+   "t": 164.184,
+   "side": "L",
+   "who": "game",
+   "m": 0.915
+  },
+  {
+   "t": 164.184,
+   "side": "R",
+   "who": "game",
+   "m": 1.001
+  },
+  {
+   "t": 172.686,
+   "side": "R",
+   "who": "controller",
+   "m": 0.475
+  },
+  {
+   "t": 172.812,
+   "side": "L",
+   "who": "controller",
+   "m": 0.507
+  },
+  {
+   "t": 173.083,
+   "side": "R",
+   "who": "controller",
+   "m": 0.475
+  },
+  {
+   "t": 176.349,
+   "side": "L",
+   "who": "controller",
+   "m": 0.498
+  },
+  {
+   "t": 190.296,
+   "side": "R",
+   "who": "controller",
+   "m": 0.142
+  },
+  {
+   "t": 247.062,
+   "side": "R",
+   "who": "controller",
+   "m": 0.128
+  },
+  {
+   "t": 258.237,
+   "side": "R",
+   "who": "controller",
+   "m": 0.07
+  },
+  {
+   "t": 279.429,
+   "side": "L",
+   "who": "game",
+   "m": 0.203
+  },
+  {
+   "t": 279.429,
+   "side": "R",
+   "who": "game",
+   "m": 0.343
+  },
+  {
+   "t": 305.374,
+   "side": "L",
+   "who": "controller",
+   "m": 0.498
+  },
+  {
+   "t": 307.743,
+   "side": "L",
+   "who": "controller",
+   "m": 0.482
+  },
+  {
+   "t": 307.743,
+   "side": "R",
+   "who": "controller",
+   "m": 0.106
+  },
+  {
+   "t": 310.433,
+   "side": "L",
+   "who": "game",
+   "m": 0.124
+  },
+  {
+   "t": 311.023,
+   "side": "L",
+   "who": "game",
+   "m": 0.134
+  },
+  {
+   "t": 317.176,
+   "side": "L",
+   "who": "controller",
+   "m": 0.101
+  },
+  {
+   "t": 326.375,
+   "side": "R",
+   "who": "controller",
+   "m": 0.076
+  },
+  {
+   "t": 327.501,
+   "side": "L",
+   "who": "game",
+   "m": 0.09
+  },
+  {
+   "t": 335.915,
+   "side": "L",
+   "who": "game",
+   "m": 0.078
+  },
+  {
+   "t": 338.773,
+   "side": "L",
+   "who": "game",
+   "m": 0.089
+  },
+  {
+   "t": 348.539,
+   "side": "L",
+   "who": "game",
+   "m": 0.094
+  },
+  {
+   "t": 355.111,
+   "side": "L",
+   "who": "game",
+   "m": 0.14
+  },
+  {
+   "t": 372.915,
+   "side": "R",
+   "who": "controller",
+   "m": 0.073
+  },
+  {
+   "t": 422.437,
+   "side": "L",
+   "who": "game",
+   "m": 0.137
+  },
+  {
+   "t": 423.006,
+   "side": "L",
+   "who": "game",
+   "m": 0.122
+  },
+  {
+   "t": 429.078,
+   "side": "L",
+   "who": "game",
+   "m": 0.13
+  },
+  {
+   "t": 429.62,
+   "side": "L",
+   "who": "game",
+   "m": 0.089
+  },
+  {
+   "t": 430.467,
+   "side": "L",
+   "who": "game",
+   "m": 0.09
+  },
+  {
+   "t": 430.847,
+   "side": "L",
+   "who": "game",
+   "m": 0.092
+  },
+  {
+   "t": 467.817,
+   "side": "L",
+   "who": "game",
+   "m": 0.092
+  }
+ ],
+ "tracking": [
+  {
+   "t": 0.0,
+   "side": "L",
+   "s": 154.666,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 0.0,
+   "side": "R",
+   "s": 154.578,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 172.686,
+   "side": "R",
+   "s": 0.397,
+   "hands_m": 0.507,
+   "stacked": false
+  },
+  {
+   "t": 172.812,
+   "side": "L",
+   "s": 3.537,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 305.374,
+   "side": "L",
+   "s": 2.369,
+   "hands_m": 0.319,
+   "stacked": false
+  }
+ ],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand wanders up to 7.9 cm from its usual place; the game's hand jumped 18 times while the controller was calm; a controller jumped 18 times (tracking glitches); tracking lost 5 times, 3 with the hands stacked (occlusion).",
+ "file": "silent-hill-2-remake-vr_20261114-013730.ghl"
+}
