@@ -1,0 +1,345 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 14661,
+ "seconds": 189.3,
+ "frames_per_s": 77.4,
+ "hands": {
+  "L": {
+   "frames": 11047,
+   "usual_m": 0.2871,
+   "wander_p95_m": 156.4955,
+   "wander_max_m": 156.4955,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 11047,
+   "usual_m": 0.5166,
+   "wander_p95_m": 156.499,
+   "wander_max_m": 156.499
+  }
+ },
+ "jumps": [
+  {
+   "t": 22.111,
+   "side": "L",
+   "who": "controller",
+   "m": 0.224
+  },
+  {
+   "t": 37.752,
+   "side": "L",
+   "who": "controller",
+   "m": 0.224
+  },
+  {
+   "t": 39.829,
+   "side": "L",
+   "who": "controller",
+   "m": 0.224
+  },
+  {
+   "t": 72.246,
+   "side": "L",
+   "who": "game",
+   "m": 140.953
+  },
+  {
+   "t": 72.246,
+   "side": "R",
+   "who": "game",
+   "m": 140.711
+  },
+  {
+   "t": 72.264,
+   "side": "L",
+   "who": "game",
+   "m": 56.943
+  },
+  {
+   "t": 72.264,
+   "side": "R",
+   "who": "game",
+   "m": 57.079
+  },
+  {
+   "t": 130.588,
+   "side": "L",
+   "who": "controller",
+   "m": 0.087
+  },
+  {
+   "t": 130.588,
+   "side": "R",
+   "who": "controller",
+   "m": 0.071
+  },
+  {
+   "t": 130.614,
+   "side": "R",
+   "who": "game",
+   "m": 0.068
+  },
+  {
+   "t": 130.628,
+   "side": "R",
+   "who": "game",
+   "m": 0.082
+  },
+  {
+   "t": 130.642,
+   "side": "R",
+   "who": "game",
+   "m": 0.069
+  },
+  {
+   "t": 130.654,
+   "side": "R",
+   "who": "game",
+   "m": 0.065
+  },
+  {
+   "t": 131.613,
+   "side": "L",
+   "who": "controller",
+   "m": 0.29
+  },
+  {
+   "t": 133.669,
+   "side": "L",
+   "who": "controller",
+   "m": 0.634
+  },
+  {
+   "t": 133.698,
+   "side": "L",
+   "who": "game",
+   "m": 0.104
+  },
+  {
+   "t": 133.711,
+   "side": "L",
+   "who": "game",
+   "m": 0.087
+  },
+  {
+   "t": 133.723,
+   "side": "L",
+   "who": "game",
+   "m": 0.107
+  },
+  {
+   "t": 133.736,
+   "side": "L",
+   "who": "game",
+   "m": 0.096
+  },
+  {
+   "t": 133.753,
+   "side": "L",
+   "who": "game",
+   "m": 0.105
+  },
+  {
+   "t": 134.2,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 134.755,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 135.291,
+   "side": "L",
+   "who": "controller",
+   "m": 0.141
+  },
+  {
+   "t": 135.848,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 136.391,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 136.943,
+   "side": "L",
+   "who": "controller",
+   "m": 0.141
+  },
+  {
+   "t": 137.473,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 138.025,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 138.56,
+   "side": "L",
+   "who": "controller",
+   "m": 0.141
+  },
+  {
+   "t": 139.108,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 139.652,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 140.18,
+   "side": "L",
+   "who": "controller",
+   "m": 0.141
+  },
+  {
+   "t": 140.741,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 141.27,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 141.819,
+   "side": "L",
+   "who": "controller",
+   "m": 0.62
+  },
+  {
+   "t": 141.819,
+   "side": "R",
+   "who": "controller",
+   "m": 0.071
+  },
+  {
+   "t": 141.85,
+   "side": "R",
+   "who": "game",
+   "m": 0.083
+  },
+  {
+   "t": 141.865,
+   "side": "R",
+   "who": "game",
+   "m": 0.093
+  },
+  {
+   "t": 141.884,
+   "side": "R",
+   "who": "game",
+   "m": 0.11
+  },
+  {
+   "t": 141.899,
+   "side": "R",
+   "who": "game",
+   "m": 0.107
+  },
+  {
+   "t": 159.642,
+   "side": "L",
+   "who": "controller",
+   "m": 0.305
+  },
+  {
+   "t": 159.642,
+   "side": "R",
+   "who": "controller",
+   "m": 0.071
+  },
+  {
+   "t": 159.671,
+   "side": "R",
+   "who": "game",
+   "m": 0.077
+  },
+  {
+   "t": 159.688,
+   "side": "R",
+   "who": "game",
+   "m": 0.092
+  },
+  {
+   "t": 159.701,
+   "side": "R",
+   "who": "game",
+   "m": 0.074
+  },
+  {
+   "t": 159.719,
+   "side": "R",
+   "who": "game",
+   "m": 0.072
+  },
+  {
+   "t": 162.098,
+   "side": "L",
+   "who": "controller",
+   "m": 0.135
+  },
+  {
+   "t": 162.309,
+   "side": "L",
+   "who": "controller",
+   "m": 0.135
+  },
+  {
+   "t": 162.52,
+   "side": "L",
+   "who": "controller",
+   "m": 0.135
+  },
+  {
+   "t": 162.747,
+   "side": "L",
+   "who": "controller",
+   "m": 0.135
+  }
+ ],
+ "tracking": [],
+ "attempts": [
+  {
+   "n": 1,
+   "gesture": "shell",
+   "t": 132.623,
+   "s": 9.182,
+   "outcome": "fail",
+   "done": false,
+   "apart_m": 0.5074,
+   "left_travel_m": 0.9155,
+   "gun_moved_m": 0.0,
+   "lost": 0,
+   "jumps": 20,
+   "why": "a hand jumped during it"
+  }
+ ],
+ "quality": "suspect",
+ "verdict": "Numbers not to be trusted: the game's left and right hand sits metres from its controller, so the two were logged in different spaces (world and room); every gap, wander and jump below is off by the player's walking. shell: 0 of 1 finished; most misses: a hand jumped during it (1 of 1); the game's left hand wanders up to 15649.5 cm from its usual place; the game's right hand wanders up to 15649.9 cm from its usual place; the game's hand jumped 21 times while the controller was calm; a controller jumped 29 times (tracking glitches).",
+ "file": "visceral-re8-vr_20261115-182847.ghl"
+}
