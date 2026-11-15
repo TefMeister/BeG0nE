@@ -1,0 +1,118 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 14893,
+ "seconds": 174.22,
+ "frames_per_s": 85.5,
+ "hands": {
+  "L": {
+   "frames": 11180,
+   "usual_m": 0.4821,
+   "wander_p95_m": 156.3005,
+   "wander_max_m": 156.3005
+  },
+  "R": {
+   "frames": 11180,
+   "usual_m": 0.4821,
+   "wander_p95_m": 156.5335,
+   "wander_max_m": 156.5335
+  }
+ },
+ "jumps": [
+  {
+   "t": 38.902,
+   "side": "L",
+   "who": "controller",
+   "m": 0.224
+  },
+  {
+   "t": 40.971,
+   "side": "L",
+   "who": "controller",
+   "m": 0.224
+  },
+  {
+   "t": 73.362,
+   "side": "L",
+   "who": "game",
+   "m": 140.953
+  },
+  {
+   "t": 73.362,
+   "side": "R",
+   "who": "game",
+   "m": 140.711
+  },
+  {
+   "t": 73.38,
+   "side": "L",
+   "who": "game",
+   "m": 56.943
+  },
+  {
+   "t": 73.38,
+   "side": "R",
+   "who": "game",
+   "m": 57.079
+  },
+  {
+   "t": 90.466,
+   "side": "L",
+   "who": "controller",
+   "m": 0.224
+  },
+  {
+   "t": 90.481,
+   "side": "L",
+   "who": "game",
+   "m": 0.085
+  },
+  {
+   "t": 90.481,
+   "side": "R",
+   "who": "game",
+   "m": 0.085
+  },
+  {
+   "t": 90.497,
+   "side": "L",
+   "who": "game",
+   "m": 0.096
+  },
+  {
+   "t": 90.497,
+   "side": "R",
+   "who": "game",
+   "m": 0.096
+  },
+  {
+   "t": 90.514,
+   "side": "L",
+   "who": "game",
+   "m": 0.108
+  },
+  {
+   "t": 90.514,
+   "side": "R",
+   "who": "game",
+   "m": 0.108
+  },
+  {
+   "t": 90.525,
+   "side": "L",
+   "who": "game",
+   "m": 0.076
+  },
+  {
+   "t": 90.525,
+   "side": "R",
+   "who": "game",
+   "m": 0.076
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "suspect",
+ "verdict": "Numbers not to be trusted: the game's left and right hand sits metres from its controller, so the two were logged in different spaces (world and room); every gap, wander and jump below is off by the player's walking. the game's left hand wanders up to 15630.0 cm from its usual place; the game's right hand wanders up to 15653.4 cm from its usual place; the game's hand jumped 12 times while the controller was calm; a controller jumped 3 times (tracking glitches).",
+ "file": "visceral-re8-vr_20261115-184417.ghl"
+}
