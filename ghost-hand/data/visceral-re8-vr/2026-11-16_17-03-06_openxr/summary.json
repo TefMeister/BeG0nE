@@ -1,0 +1,260 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 28868,
+ "seconds": 358.32,
+ "frames_per_s": 80.6,
+ "hands": {
+  "L": {
+   "frames": 25163,
+   "usual_m": 0.4821,
+   "wander_p95_m": 156.3005,
+   "wander_max_m": 156.3005,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 25163,
+   "usual_m": 0.5166,
+   "wander_p95_m": 156.499,
+   "wander_max_m": 156.499,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 23.225,
+   "side": "L",
+   "who": "controller",
+   "m": 0.224
+  },
+  {
+   "t": 38.859,
+   "side": "L",
+   "who": "controller",
+   "m": 0.224
+  },
+  {
+   "t": 40.937,
+   "side": "L",
+   "who": "controller",
+   "m": 0.224
+  },
+  {
+   "t": 73.354,
+   "side": "L",
+   "who": "game",
+   "m": 140.934
+  },
+  {
+   "t": 73.354,
+   "side": "R",
+   "who": "game",
+   "m": 140.733
+  },
+  {
+   "t": 73.375,
+   "side": "L",
+   "who": "game",
+   "m": 56.929
+  },
+  {
+   "t": 73.375,
+   "side": "R",
+   "who": "game",
+   "m": 57.082
+  },
+  {
+   "t": 119.686,
+   "side": "L",
+   "who": "controller",
+   "m": 0.224
+  },
+  {
+   "t": 119.713,
+   "side": "L",
+   "who": "game",
+   "m": 0.074
+  },
+  {
+   "t": 119.713,
+   "side": "R",
+   "who": "game",
+   "m": 0.075
+  },
+  {
+   "t": 119.725,
+   "side": "L",
+   "who": "game",
+   "m": 0.091
+  },
+  {
+   "t": 119.725,
+   "side": "R",
+   "who": "game",
+   "m": 0.092
+  },
+  {
+   "t": 119.744,
+   "side": "L",
+   "who": "game",
+   "m": 0.11
+  },
+  {
+   "t": 119.744,
+   "side": "R",
+   "who": "game",
+   "m": 0.113
+  },
+  {
+   "t": 119.757,
+   "side": "L",
+   "who": "game",
+   "m": 0.079
+  },
+  {
+   "t": 119.757,
+   "side": "R",
+   "who": "game",
+   "m": 0.081
+  },
+  {
+   "t": 119.774,
+   "side": "L",
+   "who": "game",
+   "m": 0.063
+  },
+  {
+   "t": 119.774,
+   "side": "R",
+   "who": "game",
+   "m": 0.067
+  },
+  {
+   "t": 194.682,
+   "side": "L",
+   "who": "controller",
+   "m": 0.385
+  },
+  {
+   "t": 194.682,
+   "side": "R",
+   "who": "controller",
+   "m": 0.385
+  },
+  {
+   "t": 194.712,
+   "side": "L",
+   "who": "game",
+   "m": 0.096
+  },
+  {
+   "t": 194.712,
+   "side": "R",
+   "who": "game",
+   "m": 0.096
+  },
+  {
+   "t": 194.724,
+   "side": "L",
+   "who": "game",
+   "m": 0.079
+  },
+  {
+   "t": 194.724,
+   "side": "R",
+   "who": "game",
+   "m": 0.079
+  },
+  {
+   "t": 194.739,
+   "side": "L",
+   "who": "game",
+   "m": 0.088
+  },
+  {
+   "t": 194.739,
+   "side": "R",
+   "who": "game",
+   "m": 0.088
+  },
+  {
+   "t": 194.754,
+   "side": "L",
+   "who": "game",
+   "m": 0.097
+  },
+  {
+   "t": 194.754,
+   "side": "R",
+   "who": "game",
+   "m": 0.097
+  },
+  {
+   "t": 194.771,
+   "side": "L",
+   "who": "game",
+   "m": 0.077
+  },
+  {
+   "t": 194.771,
+   "side": "R",
+   "who": "game",
+   "m": 0.077
+  },
+  {
+   "t": 262.995,
+   "side": "L",
+   "who": "controller",
+   "m": 0.447
+  },
+  {
+   "t": 262.995,
+   "side": "R",
+   "who": "controller",
+   "m": 0.388
+  },
+  {
+   "t": 263.018,
+   "side": "R",
+   "who": "game",
+   "m": 0.082
+  },
+  {
+   "t": 263.031,
+   "side": "R",
+   "who": "game",
+   "m": 0.096
+  },
+  {
+   "t": 263.043,
+   "side": "R",
+   "who": "game",
+   "m": 0.101
+  },
+  {
+   "t": 263.057,
+   "side": "R",
+   "who": "game",
+   "m": 0.124
+  },
+  {
+   "t": 263.072,
+   "side": "R",
+   "who": "game",
+   "m": 0.089
+  },
+  {
+   "t": 263.084,
+   "side": "R",
+   "who": "game",
+   "m": 0.087
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "suspect",
+ "verdict": "Numbers not to be trusted: the game's left and right hand sits metres from its controller, so the two were logged in different spaces (world and room); every gap, wander and jump below is off by the player's walking. the game's left hand wanders up to 15630.0 cm from its usual place; the game's right hand wanders up to 15649.9 cm from its usual place; the game's hand jumped 30 times while the controller was calm; a controller jumped 8 times (tracking glitches).",
+ "file": "visceral-re8-vr_20261116-165707.ghl"
+}
