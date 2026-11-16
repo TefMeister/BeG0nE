@@ -610,3 +610,4 @@ run,game,runtime,date,time,seconds,attempts,finished,jumps,tracking_lost,quality
 2026-11-16_15-07-34_openxr,visceral-re3-vr,openxr,2026-11-16,15-07-34,125.21,0,0,18,0,good,the game's hand jumped 18 times while the controller was calm.
 2026-11-16_15-11-26_openxr,visceral-re2-vr,openxr,2026-11-16,15-11-26,122.1,0,0,8,0,good,the game's hand jumped 8 times while the controller was calm.
 2026-11-16_15-19-36_openxr,visceral-re2-vr,openxr,2026-11-16,15-19-36,117.15,0,0,8,0,good,the game's hand jumped 8 times while the controller was calm.
+2026-11-16_15-22-27_openxr,visceral-re3-vr,openxr,2026-11-16,15-22-27,151.31,0,0,10,0,good,the game's hand jumped 10 times while the controller was calm.
