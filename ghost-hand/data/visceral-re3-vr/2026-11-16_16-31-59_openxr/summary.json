@@ -1,0 +1,134 @@
+{
+ "game": "visceral-re3-vr",
+ "runtime": "openxr",
+ "frames": 13966,
+ "seconds": 155.23,
+ "frames_per_s": 90.0,
+ "hands": {
+  "L": {
+   "frames": 9604,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0006,
+   "wander_max_m": 120.4197,
+   "lag_frames": 5,
+   "lag_ms": 55.6
+  },
+  "R": {
+   "frames": 9604,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.3886,
+   "wander_max_m": 121.0691,
+   "lag_frames": 3,
+   "lag_ms": 33.3
+  }
+ },
+ "jumps": [
+  {
+   "t": 35.155,
+   "side": "R",
+   "who": "controller",
+   "m": 1.397
+  },
+  {
+   "t": 48.523,
+   "side": "L",
+   "who": "game",
+   "m": 121.382
+  },
+  {
+   "t": 48.523,
+   "side": "R",
+   "who": "game",
+   "m": 121.526
+  },
+  {
+   "t": 48.532,
+   "side": "L",
+   "who": "game",
+   "m": 0.921
+  },
+  {
+   "t": 48.532,
+   "side": "R",
+   "who": "game",
+   "m": 0.537
+  },
+  {
+   "t": 49.699,
+   "side": "L",
+   "who": "game",
+   "m": 0.266
+  },
+  {
+   "t": 49.699,
+   "side": "R",
+   "who": "game",
+   "m": 0.132
+  },
+  {
+   "t": 49.71,
+   "side": "L",
+   "who": "game",
+   "m": 0.245
+  },
+  {
+   "t": 49.71,
+   "side": "R",
+   "who": "game",
+   "m": 0.121
+  },
+  {
+   "t": 81.943,
+   "side": "L",
+   "who": "game",
+   "m": 0.914
+  },
+  {
+   "t": 81.943,
+   "side": "R",
+   "who": "game",
+   "m": 0.913
+  },
+  {
+   "t": 81.954,
+   "side": "L",
+   "who": "controller",
+   "m": 0.855
+  },
+  {
+   "t": 81.954,
+   "side": "R",
+   "who": "controller",
+   "m": 0.855
+  },
+  {
+   "t": 87.065,
+   "side": "R",
+   "who": "controller",
+   "m": 0.069
+  },
+  {
+   "t": 131.654,
+   "side": "R",
+   "who": "controller",
+   "m": 0.11
+  },
+  {
+   "t": 155.23,
+   "side": "L",
+   "who": "game",
+   "m": 0.685
+  },
+  {
+   "t": 155.23,
+   "side": "R",
+   "who": "game",
+   "m": 0.743
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand trails the controller by 5 frames (55.6 ms); the game's right hand trails the controller by 3 frames (33.3 ms); the game's right hand wanders up to 38.9 cm from its usual place; the game's hand jumped 12 times while the controller was calm; a controller jumped 5 times (tracking glitches).",
+ "file": "visceral-re3-vr_20261116-162924.ghl"
+}
