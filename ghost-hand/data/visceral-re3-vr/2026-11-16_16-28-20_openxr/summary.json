@@ -1,0 +1,122 @@
+{
+ "game": "visceral-re3-vr",
+ "runtime": "openxr",
+ "frames": 15543,
+ "seconds": 172.87,
+ "frames_per_s": 89.9,
+ "hands": {
+  "L": {
+   "frames": 11188,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0006,
+   "wander_max_m": 120.4298,
+   "lag_frames": 8,
+   "lag_ms": 89.0
+  },
+  "R": {
+   "frames": 11188,
+   "usual_m": 0.4772,
+   "wander_p95_m": 0.377,
+   "wander_max_m": 120.7021,
+   "lag_frames": 3,
+   "lag_ms": 33.4
+  }
+ },
+ "jumps": [
+  {
+   "t": 48.553,
+   "side": "L",
+   "who": "game",
+   "m": 121.394
+  },
+  {
+   "t": 48.553,
+   "side": "R",
+   "who": "game",
+   "m": 121.538
+  },
+  {
+   "t": 48.562,
+   "side": "L",
+   "who": "game",
+   "m": 0.924
+  },
+  {
+   "t": 48.562,
+   "side": "R",
+   "who": "game",
+   "m": 0.54
+  },
+  {
+   "t": 49.74,
+   "side": "L",
+   "who": "game",
+   "m": 0.268
+  },
+  {
+   "t": 49.74,
+   "side": "R",
+   "who": "game",
+   "m": 0.133
+  },
+  {
+   "t": 49.751,
+   "side": "L",
+   "who": "game",
+   "m": 0.248
+  },
+  {
+   "t": 49.751,
+   "side": "R",
+   "who": "game",
+   "m": 0.122
+  },
+  {
+   "t": 83.744,
+   "side": "L",
+   "who": "game",
+   "m": 0.913
+  },
+  {
+   "t": 83.744,
+   "side": "R",
+   "who": "game",
+   "m": 0.913
+  },
+  {
+   "t": 83.755,
+   "side": "L",
+   "who": "controller",
+   "m": 0.855
+  },
+  {
+   "t": 83.755,
+   "side": "R",
+   "who": "controller",
+   "m": 0.855
+  },
+  {
+   "t": 95.144,
+   "side": "R",
+   "who": "controller",
+   "m": 0.069
+  },
+  {
+   "t": 172.866,
+   "side": "L",
+   "who": "game",
+   "m": 0.85
+  },
+  {
+   "t": 172.866,
+   "side": "R",
+   "who": "game",
+   "m": 0.578
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand trails the controller by 8 frames (89.0 ms); the game's right hand trails the controller by 3 frames (33.4 ms); the game's right hand wanders up to 37.7 cm from its usual place; the game's hand jumped 12 times while the controller was calm; a controller jumped 3 times (tracking glitches).",
+ "file": "visceral-re3-vr_20261116-162527.ghl"
+}
