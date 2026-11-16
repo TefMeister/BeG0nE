@@ -1,0 +1,136 @@
+{
+ "game": "visceral-re3-vr",
+ "runtime": "openxr",
+ "frames": 11254,
+ "seconds": 125.21,
+ "frames_per_s": 89.9,
+ "hands": {
+  "L": {
+   "frames": 6899,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0009,
+   "wander_max_m": 120.4294
+  },
+  "R": {
+   "frames": 6899,
+   "usual_m": 0.1008,
+   "wander_p95_m": 0.0006,
+   "wander_max_m": 121.0781
+  }
+ },
+ "jumps": [
+  {
+   "t": 48.557,
+   "side": "L",
+   "who": "game",
+   "m": 121.394
+  },
+  {
+   "t": 48.557,
+   "side": "R",
+   "who": "game",
+   "m": 121.537
+  },
+  {
+   "t": 48.566,
+   "side": "L",
+   "who": "game",
+   "m": 0.924
+  },
+  {
+   "t": 48.566,
+   "side": "R",
+   "who": "game",
+   "m": 0.541
+  },
+  {
+   "t": 49.733,
+   "side": "L",
+   "who": "game",
+   "m": 0.259
+  },
+  {
+   "t": 49.733,
+   "side": "R",
+   "who": "game",
+   "m": 0.129
+  },
+  {
+   "t": 49.744,
+   "side": "L",
+   "who": "game",
+   "m": 0.24
+  },
+  {
+   "t": 49.744,
+   "side": "R",
+   "who": "game",
+   "m": 0.118
+  },
+  {
+   "t": 101.067,
+   "side": "L",
+   "who": "game",
+   "m": 0.607
+  },
+  {
+   "t": 101.067,
+   "side": "R",
+   "who": "game",
+   "m": 0.64
+  },
+  {
+   "t": 101.234,
+   "side": "L",
+   "who": "game",
+   "m": 0.603
+  },
+  {
+   "t": 101.234,
+   "side": "R",
+   "who": "game",
+   "m": 0.641
+  },
+  {
+   "t": 111.578,
+   "side": "L",
+   "who": "game",
+   "m": 0.608
+  },
+  {
+   "t": 111.578,
+   "side": "R",
+   "who": "game",
+   "m": 0.647
+  },
+  {
+   "t": 111.745,
+   "side": "L",
+   "who": "game",
+   "m": 0.607
+  },
+  {
+   "t": 111.745,
+   "side": "R",
+   "who": "game",
+   "m": 0.647
+  },
+  {
+   "t": 125.207,
+   "side": "L",
+   "who": "game",
+   "m": 0.073
+  },
+  {
+   "t": 125.207,
+   "side": "R",
+   "who": "game",
+   "m": 0.07
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's hand jumped 18 times while the controller was calm.",
+ "file": "visceral-re3-vr_20261116-150529.ghl"
+}
