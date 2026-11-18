@@ -1,0 +1,260 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 13323,
+ "seconds": 169.26,
+ "frames_per_s": 78.7,
+ "hands": {
+  "L": {
+   "frames": 9656,
+   "usual_m": 0.4821,
+   "wander_p95_m": 156.3005,
+   "wander_max_m": 156.3005,
+   "lag_frames": 4,
+   "lag_ms": 50.8
+  },
+  "R": {
+   "frames": 9656,
+   "usual_m": 0.8224,
+   "wander_p95_m": 156.1932,
+   "wander_max_m": 156.1932,
+   "lag_frames": 1,
+   "lag_ms": 12.7
+  }
+ },
+ "jumps": [
+  {
+   "t": 22.924,
+   "side": "L",
+   "who": "controller",
+   "m": 0.224
+  },
+  {
+   "t": 22.924,
+   "side": "R",
+   "who": "controller",
+   "m": 1.405
+  },
+  {
+   "t": 38.44,
+   "side": "L",
+   "who": "controller",
+   "m": 0.224
+  },
+  {
+   "t": 40.45,
+   "side": "L",
+   "who": "controller",
+   "m": 0.224
+  },
+  {
+   "t": 72.826,
+   "side": "L",
+   "who": "game",
+   "m": 140.92
+  },
+  {
+   "t": 72.826,
+   "side": "R",
+   "who": "game",
+   "m": 140.748
+  },
+  {
+   "t": 72.851,
+   "side": "L",
+   "who": "game",
+   "m": 56.921
+  },
+  {
+   "t": 72.851,
+   "side": "R",
+   "who": "game",
+   "m": 57.084
+  },
+  {
+   "t": 88.361,
+   "side": "L",
+   "who": "game",
+   "m": 0.375
+  },
+  {
+   "t": 88.361,
+   "side": "R",
+   "who": "game",
+   "m": 0.375
+  },
+  {
+   "t": 89.718,
+   "side": "L",
+   "who": "controller",
+   "m": 0.733
+  },
+  {
+   "t": 89.718,
+   "side": "R",
+   "who": "controller",
+   "m": 0.752
+  },
+  {
+   "t": 89.753,
+   "side": "L",
+   "who": "game",
+   "m": 0.067
+  },
+  {
+   "t": 89.753,
+   "side": "R",
+   "who": "game",
+   "m": 0.067
+  },
+  {
+   "t": 89.766,
+   "side": "L",
+   "who": "game",
+   "m": 0.087
+  },
+  {
+   "t": 89.766,
+   "side": "R",
+   "who": "game",
+   "m": 0.087
+  },
+  {
+   "t": 89.78,
+   "side": "L",
+   "who": "game",
+   "m": 0.09
+  },
+  {
+   "t": 89.78,
+   "side": "R",
+   "who": "game",
+   "m": 0.09
+  },
+  {
+   "t": 89.796,
+   "side": "L",
+   "who": "game",
+   "m": 0.095
+  },
+  {
+   "t": 89.796,
+   "side": "R",
+   "who": "game",
+   "m": 0.095
+  },
+  {
+   "t": 108.778,
+   "side": "R",
+   "who": "controller",
+   "m": 0.68
+  },
+  {
+   "t": 108.796,
+   "side": "R",
+   "who": "game",
+   "m": 0.13
+  },
+  {
+   "t": 108.814,
+   "side": "R",
+   "who": "game",
+   "m": 0.199
+  },
+  {
+   "t": 108.831,
+   "side": "R",
+   "who": "game",
+   "m": 0.127
+  },
+  {
+   "t": 108.848,
+   "side": "R",
+   "who": "game",
+   "m": 0.074
+  },
+  {
+   "t": 138.481,
+   "side": "R",
+   "who": "controller",
+   "m": 0.499
+  },
+  {
+   "t": 138.501,
+   "side": "R",
+   "who": "game",
+   "m": 0.207
+  },
+  {
+   "t": 138.521,
+   "side": "R",
+   "who": "game",
+   "m": 0.223
+  },
+  {
+   "t": 138.537,
+   "side": "R",
+   "who": "game",
+   "m": 0.096
+  },
+  {
+   "t": 145.01,
+   "side": "R",
+   "who": "game",
+   "m": 0.065
+  },
+  {
+   "t": 145.024,
+   "side": "R",
+   "who": "game",
+   "m": 0.061
+  },
+  {
+   "t": 145.039,
+   "side": "R",
+   "who": "game",
+   "m": 0.061
+  },
+  {
+   "t": 154.771,
+   "side": "R",
+   "who": "game",
+   "m": 0.078
+  },
+  {
+   "t": 154.789,
+   "side": "R",
+   "who": "game",
+   "m": 0.198
+  },
+  {
+   "t": 154.807,
+   "side": "R",
+   "who": "game",
+   "m": 0.202
+  },
+  {
+   "t": 154.827,
+   "side": "R",
+   "who": "game",
+   "m": 0.115
+  },
+  {
+   "t": 161.327,
+   "side": "R",
+   "who": "game",
+   "m": 0.07
+  },
+  {
+   "t": 161.341,
+   "side": "R",
+   "who": "game",
+   "m": 0.067
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "suspect",
+ "verdict": "Numbers not to be trusted: the game's left and right hand sits metres from its controller, so the two were logged in different spaces (world and room); every gap, wander and jump below is off by the player's walking. the game's left hand trails the controller by 4 frames (50.8 ms); the game's left hand wanders up to 15630.0 cm from its usual place; the game's right hand trails the controller by 1 frames (12.7 ms); the game's right hand wanders up to 15619.3 cm from its usual place; the game's hand jumped 30 times while the controller was calm; a controller jumped 8 times (tracking glitches).",
+ "file": "visceral-re8-vr_20261118-185640.ghl"
+}
