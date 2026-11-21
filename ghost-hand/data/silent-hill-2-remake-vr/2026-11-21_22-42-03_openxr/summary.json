@@ -1,0 +1,106 @@
+{
+ "game": "silent-hill-2-remake-vr",
+ "runtime": "openxr",
+ "frames": 12648,
+ "seconds": 203.4,
+ "frames_per_s": 62.2,
+ "hands": {},
+ "jumps": [
+  {
+   "t": 4.379,
+   "side": "R",
+   "who": "controller",
+   "m": 0.546
+  },
+  {
+   "t": 11.966,
+   "side": "R",
+   "who": "controller",
+   "m": 0.545
+  },
+  {
+   "t": 31.378,
+   "side": "R",
+   "who": "controller",
+   "m": 0.545
+  },
+  {
+   "t": 38.707,
+   "side": "R",
+   "who": "controller",
+   "m": 0.545
+  },
+  {
+   "t": 46.775,
+   "side": "R",
+   "who": "controller",
+   "m": 0.545
+  },
+  {
+   "t": 55.706,
+   "side": "R",
+   "who": "controller",
+   "m": 0.538
+  },
+  {
+   "t": 63.279,
+   "side": "R",
+   "who": "controller",
+   "m": 0.537
+  },
+  {
+   "t": 74.904,
+   "side": "R",
+   "who": "controller",
+   "m": 0.55
+  }
+ ],
+ "tracking": [
+  {
+   "t": 0.0,
+   "side": "L",
+   "s": 0.0,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 0.0,
+   "side": "R",
+   "s": 4.379,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 11.966,
+   "side": "R",
+   "s": 19.412,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 38.707,
+   "side": "R",
+   "s": 8.068,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 55.706,
+   "side": "R",
+   "s": 7.572,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 74.904,
+   "side": "R",
+   "s": 0.0,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "a controller jumped 8 times (tracking glitches); tracking lost 6 times, 6 with the hands stacked (occlusion).",
+ "file": "silent-hill-2-remake-vr_20261121-223839.ghl"
+}
