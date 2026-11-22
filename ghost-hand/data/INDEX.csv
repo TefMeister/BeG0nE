@@ -703,3 +703,4 @@ run,game,runtime,date,time,seconds,attempts,finished,jumps,tracking_lost,quality
 2026-11-22_00-04-42_openxr,silent-hill-2-remake-vr,openxr,2026-11-22,00-04-42,107.2,0,0,0,2,good,"tracking lost 2 times, 2 with the hands stacked (occlusion)."
 2026-11-22_12-22-46_openxr,silent-hill-2-remake-vr,openxr,2026-11-22,12-22-46,67.59,0,0,2,2,good,"a controller jumped 2 times (tracking glitches); tracking lost 2 times, 2 with the hands stacked (occlusion)."
 2026-11-22_12-24-36_openxr,silent-hill-2-remake-vr,openxr,2026-11-22,12-24-36,62.72,0,0,2,2,good,"a controller jumped 2 times (tracking glitches); tracking lost 2 times, 2 with the hands stacked (occlusion)."
+2026-11-22_12-26-13_openxr,silent-hill-2-remake-vr,openxr,2026-11-22,12-26-13,63.69,0,0,2,2,good,"a controller jumped 2 times (tracking glitches); tracking lost 2 times, 2 with the hands stacked (occlusion)."
