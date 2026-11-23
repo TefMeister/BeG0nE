@@ -1,0 +1,2079 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 29091,
+ "seconds": 724.72,
+ "frames_per_s": 40.1,
+ "hands": {
+  "L": {
+   "frames": 24088,
+   "usual_m": 0.0836,
+   "wander_p95_m": 154.8988,
+   "wander_max_m": 154.8993,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 24088,
+   "usual_m": 0.2501,
+   "wander_p95_m": 154.8642,
+   "wander_max_m": 154.8648,
+   "lag_frames": 1,
+   "lag_ms": 24.9
+  }
+ },
+ "jumps": [
+  {
+   "t": 38.961,
+   "side": "L",
+   "who": "controller",
+   "m": 1.253
+  },
+  {
+   "t": 38.961,
+   "side": "R",
+   "who": "controller",
+   "m": 1.517
+  },
+  {
+   "t": 46.729,
+   "side": "L",
+   "who": "controller",
+   "m": 1.253
+  },
+  {
+   "t": 46.729,
+   "side": "R",
+   "who": "controller",
+   "m": 1.517
+  },
+  {
+   "t": 49.251,
+   "side": "L",
+   "who": "controller",
+   "m": 1.253
+  },
+  {
+   "t": 49.251,
+   "side": "R",
+   "who": "controller",
+   "m": 1.517
+  },
+  {
+   "t": 55.967,
+   "side": "L",
+   "who": "controller",
+   "m": 1.253
+  },
+  {
+   "t": 55.967,
+   "side": "R",
+   "who": "controller",
+   "m": 1.517
+  },
+  {
+   "t": 62.847,
+   "side": "L",
+   "who": "controller",
+   "m": 1.253
+  },
+  {
+   "t": 62.847,
+   "side": "R",
+   "who": "controller",
+   "m": 1.517
+  },
+  {
+   "t": 109.456,
+   "side": "L",
+   "who": "game",
+   "m": 130.681
+  },
+  {
+   "t": 109.456,
+   "side": "R",
+   "who": "game",
+   "m": 130.69
+  },
+  {
+   "t": 109.503,
+   "side": "L",
+   "who": "game",
+   "m": 82.757
+  },
+  {
+   "t": 109.503,
+   "side": "R",
+   "who": "game",
+   "m": 81.942
+  },
+  {
+   "t": 128.753,
+   "side": "L",
+   "who": "controller",
+   "m": 2.105
+  },
+  {
+   "t": 128.753,
+   "side": "R",
+   "who": "controller",
+   "m": 1.931
+  },
+  {
+   "t": 128.782,
+   "side": "L",
+   "who": "game",
+   "m": 0.151
+  },
+  {
+   "t": 128.782,
+   "side": "R",
+   "who": "game",
+   "m": 0.292
+  },
+  {
+   "t": 128.809,
+   "side": "L",
+   "who": "game",
+   "m": 0.181
+  },
+  {
+   "t": 128.809,
+   "side": "R",
+   "who": "game",
+   "m": 0.279
+  },
+  {
+   "t": 128.839,
+   "side": "L",
+   "who": "game",
+   "m": 0.11
+  },
+  {
+   "t": 128.839,
+   "side": "R",
+   "who": "game",
+   "m": 0.079
+  },
+  {
+   "t": 132.334,
+   "side": "L",
+   "who": "controller",
+   "m": 0.413
+  },
+  {
+   "t": 133.131,
+   "side": "L",
+   "who": "controller",
+   "m": 0.082
+  },
+  {
+   "t": 133.474,
+   "side": "L",
+   "who": "controller",
+   "m": 0.159
+  },
+  {
+   "t": 133.828,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 134.199,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 134.537,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 134.887,
+   "side": "L",
+   "who": "controller",
+   "m": 0.114
+  },
+  {
+   "t": 135.239,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 135.657,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 135.938,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 136.319,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 136.668,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 137.0,
+   "side": "L",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 137.363,
+   "side": "L",
+   "who": "controller",
+   "m": 0.159
+  },
+  {
+   "t": 137.696,
+   "side": "L",
+   "who": "controller",
+   "m": 0.115
+  },
+  {
+   "t": 138.069,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 138.432,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 138.775,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 139.137,
+   "side": "L",
+   "who": "controller",
+   "m": 0.091
+  },
+  {
+   "t": 139.502,
+   "side": "L",
+   "who": "controller",
+   "m": 0.081
+  },
+  {
+   "t": 140.557,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 141.298,
+   "side": "L",
+   "who": "controller",
+   "m": 0.081
+  },
+  {
+   "t": 141.962,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 142.669,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 161.623,
+   "side": "L",
+   "who": "controller",
+   "m": 0.713
+  },
+  {
+   "t": 163.224,
+   "side": "L",
+   "who": "controller",
+   "m": 0.733
+  },
+  {
+   "t": 168.699,
+   "side": "L",
+   "who": "controller",
+   "m": 0.218
+  },
+  {
+   "t": 169.487,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 169.858,
+   "side": "L",
+   "who": "controller",
+   "m": 0.162
+  },
+  {
+   "t": 170.211,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 170.56,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 170.911,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 171.274,
+   "side": "L",
+   "who": "controller",
+   "m": 0.162
+  },
+  {
+   "t": 171.609,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 171.982,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 172.356,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 172.667,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 173.043,
+   "side": "L",
+   "who": "controller",
+   "m": 0.158
+  },
+  {
+   "t": 173.402,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 173.733,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 174.12,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 174.449,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 174.812,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 175.156,
+   "side": "L",
+   "who": "controller",
+   "m": 0.162
+  },
+  {
+   "t": 175.51,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 175.855,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 176.249,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 176.572,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 176.906,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 177.276,
+   "side": "L",
+   "who": "controller",
+   "m": 0.158
+  },
+  {
+   "t": 177.621,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 177.984,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 178.341,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 178.677,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 179.058,
+   "side": "L",
+   "who": "controller",
+   "m": 0.09
+  },
+  {
+   "t": 179.403,
+   "side": "L",
+   "who": "controller",
+   "m": 0.082
+  },
+  {
+   "t": 180.118,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 180.823,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 196.347,
+   "side": "L",
+   "who": "controller",
+   "m": 0.588
+  },
+  {
+   "t": 303.283,
+   "side": "L",
+   "who": "controller",
+   "m": 0.412
+  },
+  {
+   "t": 304.118,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 304.471,
+   "side": "L",
+   "who": "controller",
+   "m": 0.163
+  },
+  {
+   "t": 304.778,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 305.157,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 305.493,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 305.853,
+   "side": "L",
+   "who": "controller",
+   "m": 0.079
+  },
+  {
+   "t": 306.218,
+   "side": "L",
+   "who": "controller",
+   "m": 0.158
+  },
+  {
+   "t": 306.592,
+   "side": "L",
+   "who": "controller",
+   "m": 0.115
+  },
+  {
+   "t": 306.914,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 307.29,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 307.622,
+   "side": "L",
+   "who": "controller",
+   "m": 0.081
+  },
+  {
+   "t": 307.988,
+   "side": "L",
+   "who": "controller",
+   "m": 0.159
+  },
+  {
+   "t": 308.341,
+   "side": "L",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 308.671,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 309.028,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 309.391,
+   "side": "L",
+   "who": "controller",
+   "m": 0.114
+  },
+  {
+   "t": 309.744,
+   "side": "L",
+   "who": "controller",
+   "m": 0.159
+  },
+  {
+   "t": 310.133,
+   "side": "L",
+   "who": "controller",
+   "m": 0.111
+  },
+  {
+   "t": 310.464,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 310.808,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 311.149,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 311.524,
+   "side": "L",
+   "who": "controller",
+   "m": 0.088
+  },
+  {
+   "t": 312.258,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 312.912,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 313.637,
+   "side": "L",
+   "who": "controller",
+   "m": 0.077
+  },
+  {
+   "t": 314.34,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 315.044,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 330.225,
+   "side": "L",
+   "who": "controller",
+   "m": 0.266
+  },
+  {
+   "t": 331.005,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 331.364,
+   "side": "L",
+   "who": "controller",
+   "m": 0.159
+  },
+  {
+   "t": 331.764,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 332.077,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 332.434,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 332.772,
+   "side": "L",
+   "who": "controller",
+   "m": 0.082
+  },
+  {
+   "t": 333.174,
+   "side": "L",
+   "who": "controller",
+   "m": 0.161
+  },
+  {
+   "t": 333.506,
+   "side": "L",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 333.839,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 334.198,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 334.564,
+   "side": "L",
+   "who": "controller",
+   "m": 0.114
+  },
+  {
+   "t": 334.904,
+   "side": "L",
+   "who": "controller",
+   "m": 0.161
+  },
+  {
+   "t": 335.244,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 335.591,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 335.944,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 336.303,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 336.676,
+   "side": "L",
+   "who": "controller",
+   "m": 0.089
+  },
+  {
+   "t": 337.014,
+   "side": "L",
+   "who": "controller",
+   "m": 0.079
+  },
+  {
+   "t": 337.717,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 338.786,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 339.477,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 340.206,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 350.794,
+   "side": "L",
+   "who": "controller",
+   "m": 0.849
+  },
+  {
+   "t": 352.41,
+   "side": "L",
+   "who": "controller",
+   "m": 0.852
+  },
+  {
+   "t": 352.438,
+   "side": "L",
+   "who": "game",
+   "m": 0.072
+  },
+  {
+   "t": 352.464,
+   "side": "L",
+   "who": "game",
+   "m": 0.171
+  },
+  {
+   "t": 352.497,
+   "side": "L",
+   "who": "game",
+   "m": 0.236
+  },
+  {
+   "t": 352.525,
+   "side": "L",
+   "who": "game",
+   "m": 0.222
+  },
+  {
+   "t": 357.488,
+   "side": "L",
+   "who": "controller",
+   "m": 0.473
+  },
+  {
+   "t": 364.587,
+   "side": "L",
+   "who": "controller",
+   "m": 0.412
+  },
+  {
+   "t": 365.374,
+   "side": "L",
+   "who": "controller",
+   "m": 0.079
+  },
+  {
+   "t": 365.718,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 366.103,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 366.432,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 366.83,
+   "side": "L",
+   "who": "controller",
+   "m": 0.076
+  },
+  {
+   "t": 367.146,
+   "side": "L",
+   "who": "controller",
+   "m": 0.162
+  },
+  {
+   "t": 367.508,
+   "side": "L",
+   "who": "controller",
+   "m": 0.115
+  },
+  {
+   "t": 367.85,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 368.187,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 368.555,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 368.906,
+   "side": "L",
+   "who": "controller",
+   "m": 0.158
+  },
+  {
+   "t": 369.248,
+   "side": "L",
+   "who": "controller",
+   "m": 0.114
+  },
+  {
+   "t": 369.63,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 369.968,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 370.326,
+   "side": "L",
+   "who": "controller",
+   "m": 0.114
+  },
+  {
+   "t": 370.701,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 371.034,
+   "side": "L",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 371.404,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 371.736,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 372.119,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 372.429,
+   "side": "L",
+   "who": "controller",
+   "m": 0.162
+  },
+  {
+   "t": 372.784,
+   "side": "L",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 373.148,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 373.493,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 373.85,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 374.192,
+   "side": "L",
+   "who": "controller",
+   "m": 0.089
+  },
+  {
+   "t": 374.552,
+   "side": "L",
+   "who": "controller",
+   "m": 0.079
+  },
+  {
+   "t": 375.256,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 375.965,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 376.675,
+   "side": "L",
+   "who": "controller",
+   "m": 0.082
+  },
+  {
+   "t": 377.403,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 378.086,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 393.293,
+   "side": "L",
+   "who": "controller",
+   "m": 0.303
+  },
+  {
+   "t": 394.082,
+   "side": "L",
+   "who": "controller",
+   "m": 0.082
+  },
+  {
+   "t": 394.426,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 394.791,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 395.148,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 395.496,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 395.832,
+   "side": "L",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 396.194,
+   "side": "L",
+   "who": "controller",
+   "m": 0.162
+  },
+  {
+   "t": 396.551,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 396.926,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 397.27,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 397.599,
+   "side": "L",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 397.989,
+   "side": "L",
+   "who": "controller",
+   "m": 0.157
+  },
+  {
+   "t": 398.328,
+   "side": "L",
+   "who": "controller",
+   "m": 0.115
+  },
+  {
+   "t": 398.67,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 399.022,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 399.369,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 399.722,
+   "side": "L",
+   "who": "controller",
+   "m": 0.091
+  },
+  {
+   "t": 400.078,
+   "side": "L",
+   "who": "controller",
+   "m": 0.082
+  },
+  {
+   "t": 400.78,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 401.471,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 411.349,
+   "side": "L",
+   "who": "controller",
+   "m": 0.887
+  },
+  {
+   "t": 413.006,
+   "side": "L",
+   "who": "controller",
+   "m": 0.89
+  },
+  {
+   "t": 413.048,
+   "side": "L",
+   "who": "game",
+   "m": 0.133
+  },
+  {
+   "t": 413.075,
+   "side": "L",
+   "who": "game",
+   "m": 0.213
+  },
+  {
+   "t": 413.102,
+   "side": "L",
+   "who": "game",
+   "m": 0.189
+  },
+  {
+   "t": 413.131,
+   "side": "L",
+   "who": "game",
+   "m": 0.133
+  },
+  {
+   "t": 417.365,
+   "side": "L",
+   "who": "game",
+   "m": 0.08
+  },
+  {
+   "t": 418.049,
+   "side": "L",
+   "who": "controller",
+   "m": 0.53
+  },
+  {
+   "t": 438.969,
+   "side": "R",
+   "who": "controller",
+   "m": 0.455
+  },
+  {
+   "t": 438.994,
+   "side": "R",
+   "who": "game",
+   "m": 0.071
+  },
+  {
+   "t": 441.992,
+   "side": "L",
+   "who": "controller",
+   "m": 0.304
+  },
+  {
+   "t": 442.799,
+   "side": "L",
+   "who": "controller",
+   "m": 0.081
+  },
+  {
+   "t": 443.122,
+   "side": "L",
+   "who": "controller",
+   "m": 0.161
+  },
+  {
+   "t": 443.495,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 443.865,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 444.172,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 444.571,
+   "side": "L",
+   "who": "controller",
+   "m": 0.077
+  },
+  {
+   "t": 444.88,
+   "side": "L",
+   "who": "controller",
+   "m": 0.161
+  },
+  {
+   "t": 445.243,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 445.589,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 445.93,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 446.289,
+   "side": "L",
+   "who": "controller",
+   "m": 0.077
+  },
+  {
+   "t": 446.64,
+   "side": "L",
+   "who": "controller",
+   "m": 0.159
+  },
+  {
+   "t": 446.989,
+   "side": "L",
+   "who": "controller",
+   "m": 0.115
+  },
+  {
+   "t": 447.355,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 447.691,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 448.046,
+   "side": "L",
+   "who": "controller",
+   "m": 0.081
+  },
+  {
+   "t": 448.419,
+   "side": "L",
+   "who": "controller",
+   "m": 0.158
+  },
+  {
+   "t": 448.747,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 449.114,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 449.46,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 449.824,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 450.203,
+   "side": "L",
+   "who": "controller",
+   "m": 0.088
+  },
+  {
+   "t": 450.558,
+   "side": "L",
+   "who": "controller",
+   "m": 0.082
+  },
+  {
+   "t": 451.22,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 451.946,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 452.669,
+   "side": "L",
+   "who": "controller",
+   "m": 0.077
+  },
+  {
+   "t": 453.355,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 454.076,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 469.258,
+   "side": "L",
+   "who": "controller",
+   "m": 0.229
+  },
+  {
+   "t": 470.036,
+   "side": "L",
+   "who": "controller",
+   "m": 0.081
+  },
+  {
+   "t": 470.408,
+   "side": "L",
+   "who": "controller",
+   "m": 0.158
+  },
+  {
+   "t": 470.74,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 471.097,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 471.445,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 471.79,
+   "side": "L",
+   "who": "controller",
+   "m": 0.158
+  },
+  {
+   "t": 472.151,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 472.515,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 472.87,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 473.237,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 473.575,
+   "side": "L",
+   "who": "controller",
+   "m": 0.09
+  },
+  {
+   "t": 473.909,
+   "side": "L",
+   "who": "controller",
+   "m": 0.082
+  },
+  {
+   "t": 475.342,
+   "side": "L",
+   "who": "controller",
+   "m": 0.082
+  },
+  {
+   "t": 476.049,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 476.751,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 494.086,
+   "side": "L",
+   "who": "controller",
+   "m": 0.447
+  },
+  {
+   "t": 510.123,
+   "side": "L",
+   "who": "controller",
+   "m": 0.082
+  },
+  {
+   "t": 510.525,
+   "side": "L",
+   "who": "controller",
+   "m": 0.161
+  },
+  {
+   "t": 510.879,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 511.185,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 511.552,
+   "side": "L",
+   "who": "controller",
+   "m": 0.082
+  },
+  {
+   "t": 511.914,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 512.245,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 512.614,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 513.001,
+   "side": "L",
+   "who": "controller",
+   "m": 0.083
+  },
+  {
+   "t": 513.329,
+   "side": "L",
+   "who": "controller",
+   "m": 0.162
+  },
+  {
+   "t": 513.674,
+   "side": "L",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 514.023,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 514.403,
+   "side": "L",
+   "who": "controller",
+   "m": 0.082
+  },
+  {
+   "t": 514.734,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 515.09,
+   "side": "L",
+   "who": "controller",
+   "m": 0.111
+  },
+  {
+   "t": 515.441,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 515.818,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 516.158,
+   "side": "L",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 516.518,
+   "side": "L",
+   "who": "controller",
+   "m": 0.161
+  },
+  {
+   "t": 516.899,
+   "side": "L",
+   "who": "controller",
+   "m": 0.115
+  },
+  {
+   "t": 517.225,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 517.56,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 517.946,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 518.272,
+   "side": "L",
+   "who": "controller",
+   "m": 0.089
+  },
+  {
+   "t": 518.66,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 519.324,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 520.422,
+   "side": "L",
+   "who": "controller",
+   "m": 0.082
+  },
+  {
+   "t": 521.093,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 521.809,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 539.839,
+   "side": "L",
+   "who": "controller",
+   "m": 0.06
+  },
+  {
+   "t": 570.779,
+   "side": "L",
+   "who": "controller",
+   "m": 0.081
+  },
+  {
+   "t": 571.143,
+   "side": "L",
+   "who": "controller",
+   "m": 0.161
+  },
+  {
+   "t": 571.486,
+   "side": "L",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 571.845,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 572.191,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 572.541,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 572.907,
+   "side": "L",
+   "who": "controller",
+   "m": 0.088
+  },
+  {
+   "t": 573.239,
+   "side": "L",
+   "who": "controller",
+   "m": 0.079
+  },
+  {
+   "t": 573.961,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 574.661,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 575.37,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 576.07,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 576.797,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 584.986,
+   "side": "L",
+   "who": "controller",
+   "m": 0.122
+  },
+  {
+   "t": 594.568,
+   "side": "L",
+   "who": "controller",
+   "m": 0.172
+  },
+  {
+   "t": 604.207,
+   "side": "L",
+   "who": "controller",
+   "m": 0.17
+  },
+  {
+   "t": 613.786,
+   "side": "L",
+   "who": "controller",
+   "m": 0.12
+  },
+  {
+   "t": 623.717,
+   "side": "L",
+   "who": "controller",
+   "m": 0.083
+  },
+  {
+   "t": 624.105,
+   "side": "L",
+   "who": "controller",
+   "m": 0.163
+  },
+  {
+   "t": 624.418,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 624.765,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 625.123,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 625.497,
+   "side": "L",
+   "who": "controller",
+   "m": 0.079
+  },
+  {
+   "t": 625.841,
+   "side": "L",
+   "who": "controller",
+   "m": 0.161
+  },
+  {
+   "t": 626.181,
+   "side": "L",
+   "who": "controller",
+   "m": 0.114
+  },
+  {
+   "t": 626.564,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 626.92,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 627.263,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 627.622,
+   "side": "L",
+   "who": "controller",
+   "m": 0.09
+  },
+  {
+   "t": 627.981,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 628.679,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 629.716,
+   "side": "L",
+   "who": "controller",
+   "m": 0.081
+  },
+  {
+   "t": 630.43,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 631.139,
+   "side": "L",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 639.662,
+   "side": "L",
+   "who": "controller",
+   "m": 0.122
+  },
+  {
+   "t": 649.268,
+   "side": "L",
+   "who": "controller",
+   "m": 0.169
+  },
+  {
+   "t": 658.91,
+   "side": "L",
+   "who": "controller",
+   "m": 0.17
+  },
+  {
+   "t": 668.548,
+   "side": "L",
+   "who": "controller",
+   "m": 0.12
+  }
+ ],
+ "tracking": [
+  {
+   "t": 0.0,
+   "side": "L",
+   "s": 38.961,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 0.0,
+   "side": "R",
+   "s": 38.961,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 46.729,
+   "side": "L",
+   "s": 2.522,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 46.729,
+   "side": "R",
+   "s": 2.522,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 55.967,
+   "side": "L",
+   "s": 6.88,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 55.967,
+   "side": "R",
+   "s": 6.88,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [
+  {
+   "n": 1,
+   "gesture": "mag",
+   "t": 157.755,
+   "s": 3.124,
+   "outcome": "fail",
+   "done": false,
+   "apart_m": 0.0344,
+   "left_travel_m": 0.15,
+   "gun_moved_m": 0.0034,
+   "need_m": 0.16,
+   "lost": 0,
+   "jumps": 0,
+   "why": "pull too short: 3.4 cm of 16.0 cm"
+  },
+  {
+   "n": 2,
+   "gesture": "mag",
+   "t": 162.477,
+   "s": 0.958,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.7147,
+   "left_travel_m": 0.7336,
+   "gun_moved_m": 0.0037,
+   "need_m": 0.16,
+   "lost": 0,
+   "jumps": 1,
+   "why": "finished"
+  },
+  {
+   "n": 3,
+   "gesture": "mag",
+   "t": 166.058,
+   "s": 1.912,
+   "outcome": "fail",
+   "done": false,
+   "apart_m": 0.0,
+   "left_travel_m": 0.0031,
+   "gun_moved_m": 0.003,
+   "need_m": 0.16,
+   "lost": 0,
+   "jumps": 0,
+   "why": "pull too short: 0.0 cm of 16.0 cm"
+  },
+  {
+   "n": 4,
+   "gesture": "pump",
+   "t": 325.947,
+   "s": 2.344,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.1565,
+   "left_travel_m": 0.1815,
+   "gun_moved_m": 0.0021,
+   "lost": 0,
+   "jumps": 0,
+   "why": "finished"
+  },
+  {
+   "n": 5,
+   "gesture": "shell",
+   "t": 351.676,
+   "s": 3.521,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.6543,
+   "left_travel_m": 0.8517,
+   "gun_moved_m": 0.0039,
+   "lost": 0,
+   "jumps": 5,
+   "why": "finished"
+  },
+  {
+   "n": 6,
+   "gesture": "pump",
+   "t": 389.008,
+   "s": 2.46,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.1516,
+   "left_travel_m": 0.181,
+   "gun_moved_m": 0.0026,
+   "lost": 0,
+   "jumps": 0,
+   "why": "finished"
+  },
+  {
+   "n": 7,
+   "gesture": "shell",
+   "t": 412.234,
+   "s": 3.551,
+   "outcome": "done",
+   "done": true,
+   "apart_m": 0.7258,
+   "left_travel_m": 0.8911,
+   "gun_moved_m": 0.0039,
+   "lost": 0,
+   "jumps": 5,
+   "why": "finished"
+  }
+ ],
+ "quality": "suspect",
+ "verdict": "Numbers not to be trusted: the game's left and right hand sits metres from its controller, so the two were logged in different spaces (world and room); every gap, wander and jump below is off by the player's walking. mag: 1 of 3 finished; most misses: pull too short (2 of 2); pump: 2 of 2 finished; shell: 2 of 2 finished; the game's left hand wanders up to 15489.9 cm from its usual place; the game's right hand trails the controller by 1 frames (24.9 ms); the game's right hand wanders up to 15486.4 cm from its usual place; the game's hand jumped 20 times while the controller was calm; a controller jumped 297 times (tracking glitches); tracking lost 6 times, 6 with the hands stacked (occlusion).",
+ "file": "visceral-re8-vr_20261123-124829.ghl"
+}
