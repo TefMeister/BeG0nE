@@ -1,0 +1,27 @@
+{
+ "game": "hard-reset-vr",
+ "runtime": "openxr",
+ "frames": 9952,
+ "seconds": 125.63,
+ "frames_per_s": 79.2,
+ "hands": {
+  "L": {
+   "frames": 8625,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.0
+  },
+  "R": {
+   "frames": 8622,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.0
+  }
+ },
+ "jumps": [],
+ "tracking": [],
+ "attempts": [],
+ "quality": "suspect",
+ "verdict": "Numbers not to be trusted: the game's hand and the controller were the same point all session, so the mod logged one value twice; nothing here says where the game drew the hand. The hands followed cleanly: no jumps, no lost tracking, no lag.",
+ "file": "hard-reset-vr_20261124-014800.ghl"
+}
