@@ -1,0 +1,81 @@
+{
+ "wall_ms": 1795479127854,
+ "clock": "log file made",
+ "game": "mad-max-vr",
+ "videos": [
+  {
+   "file": "begone_second_2026-11-24_02-12-30.mp4",
+   "window": "OpenXR Simulator preview",
+   "offset_s": -22.666,
+   "cuts": [
+    {
+     "stretch": "jitter_204-205s",
+     "from_s": 204,
+     "to_s": 205,
+     "frames": 90,
+     "held": 0,
+     "jumped": 0,
+     "folder": "mad-max-vr/begone-frames/2026-11-24_02-16-14_openxr-openxr-simulator-runtime/jitter_204-205s_headset",
+     "note": null
+    },
+    {
+     "stretch": "jitter_208-209s",
+     "from_s": 208,
+     "to_s": 209,
+     "frames": 90,
+     "held": 7,
+     "jumped": 3,
+     "folder": "mad-max-vr/begone-frames/2026-11-24_02-16-14_openxr-openxr-simulator-runtime/jitter_208-209s_headset",
+     "note": null
+    },
+    {
+     "stretch": "jitter_211-212s",
+     "from_s": 211,
+     "to_s": 212,
+     "frames": 90,
+     "held": 7,
+     "jumped": 3,
+     "folder": "mad-max-vr/begone-frames/2026-11-24_02-16-14_openxr-openxr-simulator-runtime/jitter_211-212s_headset",
+     "note": null
+    }
+   ]
+  },
+  {
+   "file": "begone_2026-11-24_02-12-30.mp4",
+   "window": "game window",
+   "offset_s": -22.666,
+   "cuts": [
+    {
+     "stretch": "jitter_204-205s",
+     "from_s": 204,
+     "to_s": 205,
+     "frames": 90,
+     "held": 18,
+     "jumped": 6,
+     "folder": "mad-max-vr/begone-frames/2026-11-24_02-16-14_openxr-openxr-simulator-runtime/jitter_204-205s_game",
+     "note": null
+    },
+    {
+     "stretch": "jitter_208-209s",
+     "from_s": 208,
+     "to_s": 209,
+     "frames": 90,
+     "held": 6,
+     "jumped": 1,
+     "folder": "mad-max-vr/begone-frames/2026-11-24_02-16-14_openxr-openxr-simulator-runtime/jitter_208-209s_game",
+     "note": null
+    },
+    {
+     "stretch": "jitter_211-212s",
+     "from_s": 211,
+     "to_s": 212,
+     "frames": 90,
+     "held": 6,
+     "jumped": 1,
+     "folder": "mad-max-vr/begone-frames/2026-11-24_02-16-14_openxr-openxr-simulator-runtime/jitter_211-212s_game",
+     "note": null
+    }
+   ]
+  }
+ ]
+}
