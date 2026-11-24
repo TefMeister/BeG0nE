@@ -1,0 +1,54 @@
+{
+ "game": "hard-reset-vr",
+ "runtime": "openxr",
+ "frames": 14397,
+ "seconds": 137.07,
+ "frames_per_s": 105.0,
+ "hands": {
+  "L": {
+   "frames": 10109,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.5104,
+   "lag_frames": 1,
+   "lag_ms": 9.5
+  },
+  "R": {
+   "frames": 10109,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.1755
+  }
+ },
+ "jumps": [
+  {
+   "t": 73.5,
+   "side": "L",
+   "who": "game",
+   "m": 0.118
+  },
+  {
+   "t": 73.5,
+   "side": "R",
+   "who": "game",
+   "m": 0.124
+  },
+  {
+   "t": 119.643,
+   "side": "L",
+   "who": "game",
+   "m": 0.51
+  },
+  {
+   "t": 119.643,
+   "side": "R",
+   "who": "game",
+   "m": 0.175
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand trails the controller by 1 frames (9.5 ms); the game's hand jumped 4 times while the controller was calm.",
+ "file": "hard-reset-vr_20261124-015742.ghl"
+}
