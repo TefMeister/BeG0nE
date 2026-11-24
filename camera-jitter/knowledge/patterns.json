@@ -328,6 +328,32 @@
     "verdict": "JITTER"
    }
   },
+  "cdf605f801": {
+   "causes": [
+    "99% of pose reads returned the same pose as the read before while the head was turning: the runtime handed a stale pose (the pose is read at the wrong moment, or from a cached copy, not once per frame after waiting for the frame)",
+    "the pose is read 0.52 times per picture: less often than pictures are drawn"
+   ],
+   "count": 1,
+   "first_seen": "2026-11-24",
+   "games": {
+    "mad-max-vr": [
+     "2026-11-24_02-16-14_openxr-openxr-simulator-runtime"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-11-24",
+   "values": {
+    "camera_per_picture": 1.0,
+    "held_share": 1.0,
+    "lag_share": 0.5,
+    "pictures_per_s": 175.0,
+    "place": "simulator",
+    "pose_age_ms": 6.0,
+    "pose_per_picture": 0.5,
+    "stale_pose_share": 1.0,
+    "verdict": "JITTER"
+   }
+  },
   "de5015242c": {
    "causes": [
     "98% of pose reads returned the same pose as the read before while the head was turning: the runtime handed a stale pose (the pose is read at the wrong moment, or from a cached copy, not once per frame after waiting for the frame)"
@@ -835,6 +861,41 @@
    "game": "alice-madness-returns-vr",
    "pattern": null,
    "runtime": "openxr"
+  },
+  "2026-11-24_01-50-10_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-11-24_01-57-25_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-11-24_02-00-01_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-11-24_02-04-25_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-11-24_02-05-40_openxr-openxr-simulator-runtime": {
+   "game": "mad-max-vr",
+   "pattern": null,
+   "runtime": "openxr-openxr-simulator-runtime"
+  },
+  "2026-11-24_02-11-48_openxr-openxr-simulator-runtime": {
+   "game": "mad-max-vr",
+   "pattern": null,
+   "runtime": "openxr-openxr-simulator-runtime"
+  },
+  "2026-11-24_02-16-14_openxr-openxr-simulator-runtime": {
+   "game": "mad-max-vr",
+   "pattern": "cdf605f801",
+   "runtime": "openxr-openxr-simulator-runtime"
   }
  },
  "version": 1
