@@ -1,0 +1,101 @@
+{
+ "wall_ms": 1795736550842,
+ "clock": "log clock",
+ "game": "visceral-re8-vr",
+ "videos": [
+  {
+   "file": "begone_second_2026-11-27_01-42-39.mp4",
+   "window": "OpenXR headset view (OBS Mirror)",
+   "offset_s": -9.262,
+   "cuts": [
+    {
+     "stretch": "jitter_71-72s",
+     "from_s": 71,
+     "to_s": 72,
+     "frames": 90,
+     "held": 3,
+     "jumped": 4,
+     "folder": "visceral-re8-vr/begone-frames/2026-11-27_01-44-17_openxr/jitter_71-72s_headset",
+     "note": null
+    },
+    {
+     "stretch": "jitter_73-74s",
+     "from_s": 73,
+     "to_s": 74,
+     "frames": 90,
+     "held": 1,
+     "jumped": 6,
+     "folder": "visceral-re8-vr/begone-frames/2026-11-27_01-44-17_openxr/jitter_73-74s_headset",
+     "note": null
+    },
+    {
+     "stretch": "jitter_91-92s",
+     "from_s": 91,
+     "to_s": 92,
+     "frames": 90,
+     "held": 3,
+     "jumped": 5,
+     "folder": "visceral-re8-vr/begone-frames/2026-11-27_01-44-17_openxr/jitter_91-92s_headset",
+     "note": null
+    },
+    {
+     "stretch": "smooth_11-12s",
+     "from_s": 11,
+     "to_s": 12,
+     "frames": 90,
+     "held": 7,
+     "jumped": 2,
+     "folder": "visceral-re8-vr/begone-frames/2026-11-27_01-44-17_openxr/smooth_11-12s_headset",
+     "note": null
+    }
+   ]
+  },
+  {
+   "file": "begone_2026-11-27_01-42-39.mp4",
+   "window": "game window",
+   "offset_s": -9.262,
+   "cuts": [
+    {
+     "stretch": "jitter_71-72s",
+     "from_s": 71,
+     "to_s": 72,
+     "frames": 90,
+     "held": 10,
+     "jumped": 3,
+     "folder": "visceral-re8-vr/begone-frames/2026-11-27_01-44-17_openxr/jitter_71-72s_game",
+     "note": null
+    },
+    {
+     "stretch": "jitter_73-74s",
+     "from_s": 73,
+     "to_s": 74,
+     "frames": 90,
+     "held": 10,
+     "jumped": 3,
+     "folder": "visceral-re8-vr/begone-frames/2026-11-27_01-44-17_openxr/jitter_73-74s_game",
+     "note": null
+    },
+    {
+     "stretch": "jitter_91-92s",
+     "from_s": 91,
+     "to_s": 92,
+     "frames": 90,
+     "held": 9,
+     "jumped": 2,
+     "folder": "visceral-re8-vr/begone-frames/2026-11-27_01-44-17_openxr/jitter_91-92s_game",
+     "note": null
+    },
+    {
+     "stretch": "smooth_11-12s",
+     "from_s": 11,
+     "to_s": 12,
+     "frames": 90,
+     "held": 12,
+     "jumped": 6,
+     "folder": "visceral-re8-vr/begone-frames/2026-11-27_01-44-17_openxr/smooth_11-12s_game",
+     "note": null
+    }
+   ]
+  }
+ ]
+}
