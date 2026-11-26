@@ -1,0 +1,132 @@
+{
+ "game": "visceral-re8-vr",
+ "runtime": "openxr",
+ "frames": 10848,
+ "seconds": 151.55,
+ "frames_per_s": 71.6,
+ "hands": {
+  "L": {
+   "frames": 10583,
+   "usual_m": 0.5642,
+   "wander_p95_m": 0.4858,
+   "wander_max_m": 156.1778,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 10583,
+   "usual_m": 0.6507,
+   "wander_p95_m": 0.5715,
+   "wander_max_m": 156.5215,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 4.449,
+   "side": "L",
+   "who": "controller",
+   "m": 0.166
+  },
+  {
+   "t": 4.449,
+   "side": "R",
+   "who": "controller",
+   "m": 0.114
+  },
+  {
+   "t": 9.014,
+   "side": "L",
+   "who": "game",
+   "m": 118.367
+  },
+  {
+   "t": 9.014,
+   "side": "R",
+   "who": "game",
+   "m": 118.704
+  },
+  {
+   "t": 9.031,
+   "side": "L",
+   "who": "game",
+   "m": 80.839
+  },
+  {
+   "t": 9.031,
+   "side": "R",
+   "who": "game",
+   "m": 81.023
+  },
+  {
+   "t": 41.341,
+   "side": "L",
+   "who": "game",
+   "m": 0.11
+  },
+  {
+   "t": 41.341,
+   "side": "R",
+   "who": "game",
+   "m": 0.154
+  },
+  {
+   "t": 54.768,
+   "side": "L",
+   "who": "controller",
+   "m": 0.651
+  },
+  {
+   "t": 56.617,
+   "side": "R",
+   "who": "controller",
+   "m": 0.657
+  },
+  {
+   "t": 106.603,
+   "side": "L",
+   "who": "controller",
+   "m": 0.65
+  },
+  {
+   "t": 113.702,
+   "side": "L",
+   "who": "controller",
+   "m": 0.65
+  },
+  {
+   "t": 145.392,
+   "side": "L",
+   "who": "controller",
+   "m": 0.651
+  }
+ ],
+ "tracking": [
+  {
+   "t": 54.768,
+   "side": "L",
+   "s": 51.835,
+   "hands_m": 0.658,
+   "stacked": false
+  },
+  {
+   "t": 56.617,
+   "side": "R",
+   "s": 0.0,
+   "hands_m": 0.0,
+   "stacked": true
+  },
+  {
+   "t": 113.702,
+   "side": "L",
+   "s": 31.69,
+   "hands_m": 0.0,
+   "stacked": true
+  }
+ ],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand wanders up to 48.6 cm from its usual place; the game's right hand wanders up to 57.1 cm from its usual place; the game's hand jumped 6 times while the controller was calm; a controller jumped 7 times (tracking glitches); tracking lost 3 times, 2 with the hands stacked (occlusion).",
+ "file": "visceral-re8-vr_20261126-231229.ghl"
+}
