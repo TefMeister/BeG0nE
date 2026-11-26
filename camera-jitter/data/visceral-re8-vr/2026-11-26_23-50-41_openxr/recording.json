@@ -1,0 +1,81 @@
+{
+ "wall_ms": 1795729522245,
+ "clock": "log clock",
+ "game": "visceral-re8-vr",
+ "videos": [
+  {
+   "file": "begone_second_2026-11-26_23-45-29.mp4",
+   "window": "OpenXR headset view (OBS Mirror)",
+   "offset_s": -7.369,
+   "cuts": [
+    {
+     "stretch": "jitter_79-80s",
+     "from_s": 79,
+     "to_s": 80,
+     "frames": 90,
+     "held": 0,
+     "jumped": 1,
+     "folder": "visceral-re8-vr/begone-frames/2026-11-26_23-50-41_openxr/jitter_79-80s_headset",
+     "note": null
+    },
+    {
+     "stretch": "jitter_98-99s",
+     "from_s": 98,
+     "to_s": 99,
+     "frames": 90,
+     "held": 0,
+     "jumped": 4,
+     "folder": "visceral-re8-vr/begone-frames/2026-11-26_23-50-41_openxr/jitter_98-99s_headset",
+     "note": null
+    },
+    {
+     "stretch": "smooth_8-9s",
+     "from_s": 8,
+     "to_s": 9,
+     "frames": 90,
+     "held": 1,
+     "jumped": 4,
+     "folder": "visceral-re8-vr/begone-frames/2026-11-26_23-50-41_openxr/smooth_8-9s_headset",
+     "note": null
+    }
+   ]
+  },
+  {
+   "file": "begone_2026-11-26_23-45-29.mp4",
+   "window": "game window",
+   "offset_s": -7.369,
+   "cuts": [
+    {
+     "stretch": "jitter_79-80s",
+     "from_s": 79,
+     "to_s": 80,
+     "frames": 90,
+     "held": 7,
+     "jumped": 2,
+     "folder": "visceral-re8-vr/begone-frames/2026-11-26_23-50-41_openxr/jitter_79-80s_game",
+     "note": null
+    },
+    {
+     "stretch": "jitter_98-99s",
+     "from_s": 98,
+     "to_s": 99,
+     "frames": 90,
+     "held": 11,
+     "jumped": 5,
+     "folder": "visceral-re8-vr/begone-frames/2026-11-26_23-50-41_openxr/jitter_98-99s_game",
+     "note": null
+    },
+    {
+     "stretch": "smooth_8-9s",
+     "from_s": 8,
+     "to_s": 9,
+     "frames": 90,
+     "held": 7,
+     "jumped": 6,
+     "folder": "visceral-re8-vr/begone-frames/2026-11-26_23-50-41_openxr/smooth_8-9s_game",
+     "note": null
+    }
+   ]
+  }
+ ]
+}
