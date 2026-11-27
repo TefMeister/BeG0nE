@@ -1,0 +1,80 @@
+{
+ "game": "hard-reset-vr",
+ "runtime": "openxr",
+ "frames": 8522,
+ "seconds": 104.0,
+ "frames_per_s": 81.9,
+ "hands": {
+  "L": {
+   "frames": 6614,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.5445,
+   "lag_frames": 1,
+   "lag_ms": 12.2
+  },
+  "R": {
+   "frames": 6612,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.5445,
+   "lag_frames": 1,
+   "lag_ms": 12.2
+  }
+ },
+ "jumps": [
+  {
+   "t": 69.494,
+   "side": "L",
+   "who": "controller",
+   "m": 0.544
+  },
+  {
+   "t": 69.494,
+   "side": "R",
+   "who": "controller",
+   "m": 0.545
+  },
+  {
+   "t": 69.526,
+   "side": "L",
+   "who": "game",
+   "m": 0.544
+  },
+  {
+   "t": 69.526,
+   "side": "R",
+   "who": "game",
+   "m": 0.545
+  },
+  {
+   "t": 84.229,
+   "side": "L",
+   "who": "controller",
+   "m": 0.231
+  },
+  {
+   "t": 84.229,
+   "side": "R",
+   "who": "controller",
+   "m": 0.231
+  },
+  {
+   "t": 84.243,
+   "side": "L",
+   "who": "game",
+   "m": 0.231
+  },
+  {
+   "t": 84.243,
+   "side": "R",
+   "who": "game",
+   "m": 0.231
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand trails the controller by 1 frames (12.2 ms); the game's right hand trails the controller by 1 frames (12.2 ms); the game's hand jumped 4 times while the controller was calm; a controller jumped 4 times (tracking glitches).",
+ "file": "hard-reset-vr_20261127-153201.ghl"
+}
