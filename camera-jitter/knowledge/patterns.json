@@ -151,6 +151,31 @@
     "verdict": "JITTER"
    }
   },
+  "33ce525ad0": {
+   "causes": [
+    "the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)"
+   ],
+   "count": 1,
+   "first_seen": "2026-11-26",
+   "games": {
+    "visceral-re8-vr": [
+     "2026-11-26_23-55-56_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-11-26",
+   "values": {
+    "camera_per_picture": 1.0,
+    "held_share": 1.0,
+    "lag_share": 0.4,
+    "pictures_per_s": 70.0,
+    "place": "unknown",
+    "pose_age_ms": 0.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 0.0,
+    "verdict": "JITTER"
+   }
+  },
   "4fd84f808f": {
    "causes": [
     "98% of pose reads returned the same pose as the read before while the head was turning: the runtime handed a stale pose (the pose is read at the wrong moment, or from a cached copy, not once per frame after waiting for the frame)"
@@ -173,6 +198,133 @@
     "pose_age_ms": 4.0,
     "pose_per_picture": 1.0,
     "stale_pose_share": 1.0,
+    "verdict": "JITTER"
+   }
+  },
+  "53feda5d6f": {
+   "causes": [
+    "the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)"
+   ],
+   "count": 1,
+   "first_seen": "2026-11-26",
+   "games": {
+    "visceral-re8-vr": [
+     "2026-11-26_20-07-19_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-11-26",
+   "values": {
+    "camera_per_picture": 1.0,
+    "held_share": 0.05,
+    "lag_share": 0.2,
+    "pictures_per_s": 70.0,
+    "place": "unknown",
+    "pose_age_ms": 0.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 0.0,
+    "verdict": "JITTER"
+   }
+  },
+  "597cc4eefd": {
+   "causes": [
+    "the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)"
+   ],
+   "count": 1,
+   "first_seen": "2026-11-26",
+   "games": {
+    "visceral-re8-vr": [
+     "2026-11-26_23-43-41_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-11-26",
+   "values": {
+    "camera_per_picture": 1.0,
+    "held_share": 0.05,
+    "lag_share": 0.2,
+    "pictures_per_s": 70.0,
+    "place": "unknown",
+    "pose_age_ms": 0.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 0.05,
+    "verdict": "JITTER"
+   }
+  },
+  "5afdb64b9c": {
+   "causes": [
+    "the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)"
+   ],
+   "count": 1,
+   "first_seen": "2026-11-26",
+   "games": {
+    "visceral-re8-vr": [
+     "2026-11-26_20-30-42_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-11-26",
+   "values": {
+    "camera_per_picture": 1.0,
+    "held_share": 0.1,
+    "lag_share": 0.1,
+    "pictures_per_s": 70.0,
+    "place": "unknown",
+    "pose_age_ms": 0.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 0.0,
+    "verdict": "JITTER"
+   }
+  },
+  "6c1a63c27b": {
+   "causes": [
+    "the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)"
+   ],
+   "count": 2,
+   "first_seen": "2026-11-26",
+   "games": {
+    "visceral-re8-vr": [
+     "2026-11-26_21-43-02_openxr",
+     "2026-11-26_23-15-01_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-11-26",
+   "values": {
+    "camera_per_picture": 1.0,
+    "held_share": 0.0,
+    "lag_share": 0.2,
+    "pictures_per_s": 70.0,
+    "place": "unknown",
+    "pose_age_ms": 0.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 0.0,
+    "verdict": "JITTER"
+   }
+  },
+  "7567440f0f": {
+   "causes": [
+    "the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)"
+   ],
+   "count": 2,
+   "first_seen": "2026-11-26",
+   "games": {
+    "visceral-re8-vr": [
+     "2026-11-26_22-10-20_openxr",
+     "2026-11-27_00-25-37_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-11-27",
+   "values": {
+    "camera_per_picture": 1.0,
+    "held_share": 0.05,
+    "lag_share": 0.3,
+    "pictures_per_s": 70.0,
+    "place": "unknown",
+    "pose_age_ms": 0.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 0.0,
     "verdict": "JITTER"
    }
   },
@@ -226,6 +378,61 @@
     "verdict": "JITTER"
    }
   },
+  "90897fb697": {
+   "causes": [
+    "the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)"
+   ],
+   "count": 1,
+   "first_seen": "2026-11-27",
+   "games": {
+    "visceral-re8-vr": [
+     "2026-11-27_01-44-17_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-11-27",
+   "values": {
+    "camera_per_picture": 1.0,
+    "held_share": 0.0,
+    "lag_share": 0.3,
+    "pictures_per_s": 65.0,
+    "place": "unknown",
+    "pose_age_ms": 0.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 0.0,
+    "verdict": "JITTER"
+   }
+  },
+  "96a5808884": {
+   "causes": [
+    "the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)"
+   ],
+   "count": 6,
+   "first_seen": "2026-11-26",
+   "games": {
+    "visceral-re8-vr": [
+     "2026-11-26_20-03-55_openxr",
+     "2026-11-26_23-36-55_openxr",
+     "2026-11-26_23-50-41_openxr",
+     "2026-11-27_00-04-16_openxr",
+     "2026-11-27_00-11-16_openxr",
+     "2026-11-27_00-30-58_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-11-27",
+   "values": {
+    "camera_per_picture": 1.0,
+    "held_share": 0.05,
+    "lag_share": 0.3,
+    "pictures_per_s": 70.0,
+    "place": "unknown",
+    "pose_age_ms": 0.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 0.05,
+    "verdict": "JITTER"
+   }
+  },
   "9b651f93fc": {
    "causes": [
     "the camera is written 0.24 times per picture: it is renewed less often than pictures are drawn, so some pictures reuse the previous camera (the rate fault)",
@@ -272,6 +479,36 @@
     "pictures_per_s": 70.0,
     "place": "unknown",
     "pose_age_ms": 8.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 0.0,
+    "verdict": "JITTER"
+   }
+  },
+  "bf52fd0b10": {
+   "causes": [
+    "the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)"
+   ],
+   "count": 6,
+   "first_seen": "2026-11-26",
+   "games": {
+    "visceral-re8-vr": [
+     "2026-11-26_22-03-26_openxr",
+     "2026-11-27_00-18-17_openxr",
+     "2026-11-27_00-22-44_openxr",
+     "2026-11-27_00-34-38_openxr",
+     "2026-11-27_01-23-42_openxr",
+     "2026-11-27_01-38-04_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-11-27",
+   "values": {
+    "camera_per_picture": 1.0,
+    "held_share": 0.0,
+    "lag_share": 0.3,
+    "pictures_per_s": 70.0,
+    "place": "unknown",
+    "pose_age_ms": 0.0,
     "pose_per_picture": 1.0,
     "stale_pose_share": 0.0,
     "verdict": "JITTER"
@@ -895,6 +1132,151 @@
   "2026-11-24_02-16-14_openxr-openxr-simulator-runtime": {
    "game": "mad-max-vr",
    "pattern": "cdf605f801",
+   "runtime": "openxr-openxr-simulator-runtime"
+  },
+  "2026-11-26_20-03-55_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "96a5808884",
+   "runtime": "openxr"
+  },
+  "2026-11-26_20-07-19_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "53feda5d6f",
+   "runtime": "openxr"
+  },
+  "2026-11-26_20-30-42_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "5afdb64b9c",
+   "runtime": "openxr"
+  },
+  "2026-11-26_21-43-02_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "6c1a63c27b",
+   "runtime": "openxr"
+  },
+  "2026-11-26_22-03-26_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "bf52fd0b10",
+   "runtime": "openxr"
+  },
+  "2026-11-26_22-10-20_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "7567440f0f",
+   "runtime": "openxr"
+  },
+  "2026-11-26_23-15-01_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "6c1a63c27b",
+   "runtime": "openxr"
+  },
+  "2026-11-26_23-36-55_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "96a5808884",
+   "runtime": "openxr"
+  },
+  "2026-11-26_23-43-41_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "597cc4eefd",
+   "runtime": "openxr"
+  },
+  "2026-11-26_23-50-41_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "96a5808884",
+   "runtime": "openxr"
+  },
+  "2026-11-26_23-55-56_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "33ce525ad0",
+   "runtime": "openxr"
+  },
+  "2026-11-27_00-04-16_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "96a5808884",
+   "runtime": "openxr"
+  },
+  "2026-11-27_00-11-16_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "96a5808884",
+   "runtime": "openxr"
+  },
+  "2026-11-27_00-18-17_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "bf52fd0b10",
+   "runtime": "openxr"
+  },
+  "2026-11-27_00-22-44_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "bf52fd0b10",
+   "runtime": "openxr"
+  },
+  "2026-11-27_00-25-37_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "7567440f0f",
+   "runtime": "openxr"
+  },
+  "2026-11-27_00-30-58_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "96a5808884",
+   "runtime": "openxr"
+  },
+  "2026-11-27_00-34-38_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "bf52fd0b10",
+   "runtime": "openxr"
+  },
+  "2026-11-27_01-23-42_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "bf52fd0b10",
+   "runtime": "openxr"
+  },
+  "2026-11-27_01-38-04_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "bf52fd0b10",
+   "runtime": "openxr"
+  },
+  "2026-11-27_01-44-17_openxr": {
+   "game": "visceral-re8-vr",
+   "pattern": "90897fb697",
+   "runtime": "openxr"
+  },
+  "2026-11-27_10-20-11_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-11-27_10-26-35_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-11-27_10-46-29_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-11-27_10-49-43_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-11-27_11-11-23_openxr-openxr-simulator-runtime": {
+   "game": "mad-max-vr",
+   "pattern": null,
+   "runtime": "openxr-openxr-simulator-runtime"
+  },
+  "2026-11-27_11-15-31_openxr-openxr-simulator-runtime": {
+   "game": "mad-max-vr",
+   "pattern": null,
+   "runtime": "openxr-openxr-simulator-runtime"
+  },
+  "2026-11-27_11-24-22_openxr-openxr-simulator-runtime": {
+   "game": "mad-max-vr",
+   "pattern": null,
+   "runtime": "openxr-openxr-simulator-runtime"
+  },
+  "2026-11-27_11-24-49_openxr-openxr-simulator-runtime": {
+   "game": "mad-max-vr",
+   "pattern": null,
    "runtime": "openxr-openxr-simulator-runtime"
   }
  },
