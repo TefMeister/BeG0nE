@@ -1,0 +1,40 @@
+{
+ "game": "hard-reset-vr",
+ "runtime": "openxr",
+ "frames": 48939,
+ "seconds": 335.78,
+ "frames_per_s": 145.7,
+ "hands": {
+  "L": {
+   "frames": 27706,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.4975
+  },
+  "R": {
+   "frames": 27702,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.2958
+  }
+ },
+ "jumps": [
+  {
+   "t": 250.292,
+   "side": "L",
+   "who": "game",
+   "m": 0.497
+  },
+  {
+   "t": 250.292,
+   "side": "R",
+   "who": "game",
+   "m": 0.296
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's hand jumped 2 times while the controller was calm.",
+ "file": "hard-reset-vr_20261127-133749.ghl"
+}
