@@ -176,6 +176,31 @@
     "verdict": "JITTER"
    }
   },
+  "3e083d692f": {
+   "causes": [
+    "99% of pose reads returned the same pose as the read before while the head was turning: the runtime handed a stale pose (the pose is read at the wrong moment, or from a cached copy, not once per frame after waiting for the frame)"
+   ],
+   "count": 1,
+   "first_seen": "2026-11-27",
+   "games": {
+    "hard-reset-vr": [
+     "2026-11-27_14-18-05_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-11-27",
+   "values": {
+    "camera_per_picture": 1.7,
+    "held_share": 1.0,
+    "lag_share": 0.5,
+    "pictures_per_s": 90.0,
+    "place": "unknown",
+    "pose_age_ms": 6.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 1.0,
+    "verdict": "JITTER"
+   }
+  },
   "4fd84f808f": {
    "causes": [
     "98% of pose reads returned the same pose as the read before while the head was turning: the runtime handed a stale pose (the pose is read at the wrong moment, or from a cached copy, not once per frame after waiting for the frame)"
@@ -299,6 +324,31 @@
     "pose_age_ms": 0.0,
     "pose_per_picture": 1.0,
     "stale_pose_share": 0.0,
+    "verdict": "JITTER"
+   }
+  },
+  "71a4382280": {
+   "causes": [
+    "99% of pose reads returned the same pose as the read before while the head was turning: the runtime handed a stale pose (the pose is read at the wrong moment, or from a cached copy, not once per frame after waiting for the frame)"
+   ],
+   "count": 1,
+   "first_seen": "2026-11-27",
+   "games": {
+    "hard-reset-vr": [
+     "2026-11-27_15-33-46_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-11-27",
+   "values": {
+    "camera_per_picture": 1.6,
+    "held_share": 1.0,
+    "lag_share": 0.0,
+    "pictures_per_s": 90.0,
+    "place": "unknown",
+    "pose_age_ms": 6.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 1.0,
     "verdict": "JITTER"
    }
   },
@@ -1278,6 +1328,46 @@
    "game": "mad-max-vr",
    "pattern": null,
    "runtime": "openxr-openxr-simulator-runtime"
+  },
+  "2026-11-27_13-37-35_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-11-27_13-43-26_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-11-27_14-15-41_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-11-27_14-18-05_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": "3e083d692f",
+   "runtime": "openxr"
+  },
+  "2026-11-27_14-26-48_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-11-27_15-25-01_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-11-27_15-31-37_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": null,
+   "runtime": "openxr"
+  },
+  "2026-11-27_15-33-46_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": "71a4382280",
+   "runtime": "openxr"
   }
  },
  "version": 1
