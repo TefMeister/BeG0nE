@@ -1,0 +1,131 @@
+{
+ "hands": {
+  "L": {
+   "reads_per_s": 89.7,
+   "untracked_share": 0.002,
+   "longest_untracked_s": 0.0,
+   "untracked_while_hands_close_share": 1.0
+  },
+  "R": {
+   "reads_per_s": 89.7,
+   "untracked_share": 0.002,
+   "longest_untracked_s": 0.0,
+   "untracked_while_hands_close_share": 1.0
+  }
+ },
+ "seconds": 6.72,
+ "pictures_per_s": 128.9,
+ "pose_reads_per_s": 89.8,
+ "camera_writes_per_s": 0.0,
+ "windows": [
+  {
+   "at_s": 0.0,
+   "pictures": 84,
+   "pose_reads": 88,
+   "camera_writes": 0,
+   "head_deg_s": 0.0,
+   "held_share": 1.0,
+   "camera_per_picture": 0.0,
+   "pose_per_picture": 1.05,
+   "stale_pose_share": 1.0,
+   "lag_share": 0.0,
+   "pose_age_ms": null,
+   "kind": "still"
+  },
+  {
+   "at_s": 1.0,
+   "pictures": 113,
+   "pose_reads": 90,
+   "camera_writes": 0,
+   "head_deg_s": 0.0,
+   "held_share": 1.0,
+   "camera_per_picture": 0.0,
+   "pose_per_picture": 0.8,
+   "stale_pose_share": 1.0,
+   "lag_share": 0.0,
+   "pose_age_ms": null,
+   "kind": "still"
+  },
+  {
+   "at_s": 2.0,
+   "pictures": 145,
+   "pose_reads": 90,
+   "camera_writes": 0,
+   "head_deg_s": 0.0,
+   "held_share": 1.0,
+   "camera_per_picture": 0.0,
+   "pose_per_picture": 0.62,
+   "stale_pose_share": 1.0,
+   "lag_share": 0.0,
+   "pose_age_ms": null,
+   "kind": "still"
+  },
+  {
+   "at_s": 3.0,
+   "pictures": 82,
+   "pose_reads": 90,
+   "camera_writes": 0,
+   "head_deg_s": 0.0,
+   "held_share": 1.0,
+   "camera_per_picture": 0.0,
+   "pose_per_picture": 1.1,
+   "stale_pose_share": 1.0,
+   "lag_share": 0.0,
+   "pose_age_ms": null,
+   "kind": "still"
+  },
+  {
+   "at_s": 4.0,
+   "pictures": 165,
+   "pose_reads": 90,
+   "camera_writes": 0,
+   "head_deg_s": 0.0,
+   "held_share": 1.0,
+   "camera_per_picture": 0.0,
+   "pose_per_picture": 0.55,
+   "stale_pose_share": 1.0,
+   "lag_share": 0.0,
+   "pose_age_ms": null,
+   "kind": "still"
+  },
+  {
+   "at_s": 5.0,
+   "pictures": 154,
+   "pose_reads": 90,
+   "camera_writes": 0,
+   "head_deg_s": 0.0,
+   "held_share": 1.0,
+   "camera_per_picture": 0.0,
+   "pose_per_picture": 0.58,
+   "stale_pose_share": 1.0,
+   "lag_share": 0.0,
+   "pose_age_ms": null,
+   "kind": "still"
+  },
+  {
+   "at_s": 6.0,
+   "pictures": 124,
+   "pose_reads": 66,
+   "camera_writes": 0,
+   "head_deg_s": 0.0,
+   "held_share": 1.0,
+   "camera_per_picture": 0.0,
+   "pose_per_picture": 0.53,
+   "stale_pose_share": 1.0,
+   "lag_share": 0.0,
+   "pose_age_ms": null,
+   "kind": "still"
+  }
+ ],
+ "marks": [],
+ "seconds_turning": 0,
+ "seconds_jitter": 0,
+ "jitter_times_s": [],
+ "quality": "no-movement",
+ "verdict": "The head hardly turned, so this log cannot show jitter. Turn the head slowly and smoothly for a few seconds.",
+ "causes": [],
+ "file": "mad-max-vr_20261127-112442.jl",
+ "game": "mad-max-vr",
+ "runtime": "openxr-openxr-simulator-runtime",
+ "place": "simulator"
+}
