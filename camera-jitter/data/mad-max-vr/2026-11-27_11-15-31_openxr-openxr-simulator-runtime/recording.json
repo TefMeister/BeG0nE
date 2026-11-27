@@ -1,0 +1,19 @@
+{
+ "wall_ms": 1795770702212,
+ "clock": "log file made",
+ "game": "mad-max-vr",
+ "videos": [
+  {
+   "file": "begone_second_2026-11-27_11-12-08.mp4",
+   "window": "OpenXR Simulator preview",
+   "offset_s": -26.178,
+   "cuts": []
+  },
+  {
+   "file": "begone_2026-11-27_11-12-08.mp4",
+   "window": "game window",
+   "offset_s": -26.178,
+   "cuts": []
+  }
+ ]
+}
