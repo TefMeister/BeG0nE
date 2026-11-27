@@ -1,0 +1,40 @@
+{
+ "game": "hard-reset-vr",
+ "runtime": "openxr",
+ "frames": 3845,
+ "seconds": 147.33,
+ "frames_per_s": 26.1,
+ "hands": {
+  "L": {
+   "frames": 2387,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.0
+  },
+  "R": {
+   "frames": 2387,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 93.163,
+   "side": "L",
+   "who": "controller",
+   "m": 0.575
+  },
+  {
+   "t": 93.163,
+   "side": "R",
+   "who": "controller",
+   "m": 0.575
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "suspect",
+ "verdict": "Numbers not to be trusted: the game's hand and the controller were the same point all session, so the mod logged one value twice; nothing here says where the game drew the hand. a controller jumped 2 times (tracking glitches).",
+ "file": "hard-reset-vr_20261127-141313.ghl"
+}

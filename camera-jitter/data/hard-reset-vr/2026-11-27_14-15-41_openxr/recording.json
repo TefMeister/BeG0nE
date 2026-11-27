@@ -1,0 +1,41 @@
+{
+ "wall_ms": 1795781593353,
+ "clock": "log clock",
+ "game": "hard-reset-vr",
+ "videos": [
+  {
+   "file": "begone_second_2026-11-27_14-13-22.mp4",
+   "window": "OpenXR Simulator preview",
+   "offset_s": -9.803,
+   "cuts": [
+    {
+     "stretch": "jitter_92-93s",
+     "from_s": 92,
+     "to_s": 93,
+     "frames": 90,
+     "held": 0,
+     "jumped": 0,
+     "folder": "hard-reset-vr/begone-frames/2026-11-27_14-15-41_openxr/jitter_92-93s_headset",
+     "note": null
+    }
+   ]
+  },
+  {
+   "file": "begone_2026-11-27_14-13-22.mp4",
+   "window": "game window",
+   "offset_s": -9.803,
+   "cuts": [
+    {
+     "stretch": "jitter_92-93s",
+     "from_s": 92,
+     "to_s": 93,
+     "frames": 90,
+     "held": 0,
+     "jumped": 0,
+     "folder": "hard-reset-vr/begone-frames/2026-11-27_14-15-41_openxr/jitter_92-93s_game",
+     "note": null
+    }
+   ]
+  }
+ ]
+}
