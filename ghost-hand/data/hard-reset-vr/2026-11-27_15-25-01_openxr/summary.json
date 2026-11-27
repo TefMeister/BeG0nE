@@ -1,0 +1,140 @@
+{
+ "game": "hard-reset-vr",
+ "runtime": "openxr",
+ "frames": 83222,
+ "seconds": 523.52,
+ "frames_per_s": 159.0,
+ "hands": {
+  "L": {
+   "frames": 43948,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.7089,
+   "lag_frames": 1,
+   "lag_ms": 6.3
+  },
+  "R": {
+   "frames": 43947,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 0.6353,
+   "lag_frames": 1,
+   "lag_ms": 6.3
+  }
+ },
+ "jumps": [
+  {
+   "t": 17.397,
+   "side": "L",
+   "who": "controller",
+   "m": 0.1
+  },
+  {
+   "t": 17.397,
+   "side": "R",
+   "who": "controller",
+   "m": 0.1
+  },
+  {
+   "t": 17.431,
+   "side": "L",
+   "who": "controller",
+   "m": 0.1
+  },
+  {
+   "t": 17.431,
+   "side": "R",
+   "who": "controller",
+   "m": 0.1
+  },
+  {
+   "t": 17.463,
+   "side": "L",
+   "who": "controller",
+   "m": 0.1
+  },
+  {
+   "t": 17.463,
+   "side": "R",
+   "who": "controller",
+   "m": 0.1
+  },
+  {
+   "t": 17.497,
+   "side": "L",
+   "who": "controller",
+   "m": 0.1
+  },
+  {
+   "t": 17.497,
+   "side": "R",
+   "who": "controller",
+   "m": 0.1
+  },
+  {
+   "t": 17.995,
+   "side": "L",
+   "who": "controller",
+   "m": 0.067
+  },
+  {
+   "t": 17.995,
+   "side": "R",
+   "who": "controller",
+   "m": 0.067
+  },
+  {
+   "t": 18.03,
+   "side": "L",
+   "who": "controller",
+   "m": 0.1
+  },
+  {
+   "t": 18.03,
+   "side": "R",
+   "who": "controller",
+   "m": 0.1
+  },
+  {
+   "t": 18.066,
+   "side": "L",
+   "who": "controller",
+   "m": 0.1
+  },
+  {
+   "t": 18.066,
+   "side": "R",
+   "who": "controller",
+   "m": 0.1
+  },
+  {
+   "t": 473.83,
+   "side": "L",
+   "who": "controller",
+   "m": 0.709
+  },
+  {
+   "t": 473.83,
+   "side": "R",
+   "who": "controller",
+   "m": 0.635
+  },
+  {
+   "t": 473.865,
+   "side": "L",
+   "who": "game",
+   "m": 0.709
+  },
+  {
+   "t": 473.865,
+   "side": "R",
+   "who": "game",
+   "m": 0.635
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand trails the controller by 1 frames (6.3 ms); the game's right hand trails the controller by 1 frames (6.3 ms); the game's hand jumped 2 times while the controller was calm; a controller jumped 16 times (tracking glitches).",
+ "file": "hard-reset-vr_20261127-151617.ghl"
+}
