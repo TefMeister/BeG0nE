@@ -914,3 +914,4 @@ run,game,runtime,date,time,seconds,attempts,finished,jumps,tracking_lost,quality
 2026-11-28_17-34-48_openxr-sim,the-darkness-vr,openxr-sim,2026-11-28,17-34-48,41.29,0,0,4,0,good,the game's hand jumped 2 times while the controller was calm; a controller jumped 2 times (tracking glitches).
 2026-11-28_17-46-05_openxr-headset,the-darkness-vr,openxr-headset,2026-11-28,17-46-05,248.26,0,0,0,0,no-controllers,Too little to judge: the mod logged no controller positions (gh.real).
 2026-11-28_18-12-43_openxr-sim,the-darkness-vr,openxr-sim,2026-11-28,18-12-43,211.29,0,0,248,0,good,the game's hand jumped 2 times while the controller was calm; a controller jumped 246 times (tracking glitches).
+2026-11-28_18-46-11_openxr-sim,the-darkness-vr,openxr-sim,2026-11-28,18-46-11,264.79,0,0,4,0,good,the game's hand jumped 2 times while the controller was calm; a controller jumped 2 times (tracking glitches).
