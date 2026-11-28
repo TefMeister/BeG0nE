@@ -1,0 +1,80 @@
+{
+ "game": "the-darkness-vr",
+ "runtime": "openxr-sim",
+ "frames": 5607,
+ "seconds": 62.38,
+ "frames_per_s": 89.9,
+ "hands": {
+  "L": {
+   "frames": 3437,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 10.118,
+   "lag_frames": 7,
+   "lag_ms": 77.9
+  },
+  "R": {
+   "frames": 3437,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 11.5672,
+   "lag_frames": 7,
+   "lag_ms": 77.9
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.123,
+   "side": "L",
+   "who": "game",
+   "m": 1.636
+  },
+  {
+   "t": 0.123,
+   "side": "R",
+   "who": "game",
+   "m": 1.87
+  },
+  {
+   "t": 0.128,
+   "side": "L",
+   "who": "controller",
+   "m": 1.114
+  },
+  {
+   "t": 0.128,
+   "side": "R",
+   "who": "controller",
+   "m": 1.114
+  },
+  {
+   "t": 0.139,
+   "side": "L",
+   "who": "controller",
+   "m": 1.105
+  },
+  {
+   "t": 0.139,
+   "side": "R",
+   "who": "controller",
+   "m": 1.106
+  },
+  {
+   "t": 0.159,
+   "side": "L",
+   "who": "game",
+   "m": 5.242
+  },
+  {
+   "t": 0.159,
+   "side": "R",
+   "who": "game",
+   "m": 5.996
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's left hand trails the controller by 7 frames (77.9 ms); the game's right hand trails the controller by 7 frames (77.9 ms); the game's hand jumped 4 times while the controller was calm; a controller jumped 4 times (tracking glitches).",
+ "file": "the-darkness-vr_20261128-173030.ghl"
+}

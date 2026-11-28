@@ -1,0 +1,19 @@
+{
+ "wall_ms": 1795879830371,
+ "clock": "log clock",
+ "game": "the-darkness-vr",
+ "videos": [
+  {
+   "file": "begone_second_2026-11-28_17-30-37.mp4",
+   "window": "OpenXR Simulator preview",
+   "offset_s": -7.488,
+   "cuts": []
+  },
+  {
+   "file": "begone_2026-11-28_17-30-37.mp4",
+   "window": "game window",
+   "offset_s": -7.488,
+   "cuts": []
+  }
+ ]
+}
