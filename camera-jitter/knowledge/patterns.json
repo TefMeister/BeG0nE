@@ -641,6 +641,32 @@
     "verdict": "JITTER"
    }
   },
+  "da8645791e": {
+   "causes": [
+    "the camera held still on some pictures although it was written and the pose was fresh: the value written did not change, so look at what sits between the pose and the camera (a smoothing step, a rounding, a once-per-tick game update)",
+    "85% of pictures carry a camera that matches the pose BEFORE last: the camera trails the pose by one frame (swim, not jitter)"
+   ],
+   "count": 1,
+   "first_seen": "2026-11-28",
+   "games": {
+    "hard-reset-vr": [
+     "2026-11-28_01-42-00_openxr"
+    ]
+   },
+   "labels": {},
+   "last_seen": "2026-11-28",
+   "values": {
+    "camera_per_picture": 2.0,
+    "held_share": 0.15,
+    "lag_share": 0.8,
+    "pictures_per_s": 70.0,
+    "place": "unknown",
+    "pose_age_ms": 8.0,
+    "pose_per_picture": 1.0,
+    "stale_pose_share": 0.0,
+    "verdict": "JITTER"
+   }
+  },
   "de5015242c": {
    "causes": [
     "98% of pose reads returned the same pose as the read before while the head was turning: the runtime handed a stale pose (the pose is read at the wrong moment, or from a cached copy, not once per frame after waiting for the frame)"
@@ -1367,6 +1393,11 @@
   "2026-11-27_15-33-46_openxr": {
    "game": "hard-reset-vr",
    "pattern": "71a4382280",
+   "runtime": "openxr"
+  },
+  "2026-11-28_01-42-00_openxr": {
+   "game": "hard-reset-vr",
+   "pattern": "da8645791e",
    "runtime": "openxr"
   }
  },

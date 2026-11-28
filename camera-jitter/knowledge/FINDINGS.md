@@ -1,6 +1,6 @@
 # What the numbers say about jittery and smooth VR cameras
 
-Rebuilt 2026-11-27 15:34 from 120 sessions boiled down to 30 patterns. A pattern is one way a mod behaved; sessions that behaved the same way count as one. A pattern is grouped as jittery or smooth by the checker's own verdict, unless the person wearing the headset said otherwise with `file_jitter.py label`, which outranks it. Every line is `[measured]` on our own mods.
+Rebuilt 2026-11-28 01:42 from 121 sessions boiled down to 31 patterns. A pattern is one way a mod behaved; sessions that behaved the same way count as one. A pattern is grouped as jittery or smooth by the checker's own verdict, unless the person wearing the headset said otherwise with `file_jitter.py label`, which outranks it. Every line is `[measured]` on our own mods.
 
 ## Across every game, headset simulator
 
@@ -16,7 +16,7 @@ Nothing to compare yet: it needs at least one labelled jittery and one labelled 
 
 ## Across every game, VR, headset or simulator not recorded
 
-25 patterns: 25 jittery, 0 smooth, 0 contradictory, 25 unlabelled.
+26 patterns: 26 jittery, 0 smooth, 0 contradictory, 26 unlabelled.
 
 Nothing to compare yet: it needs at least one labelled jittery and one labelled smooth pattern.
 
@@ -34,7 +34,7 @@ Nothing to compare yet: it needs at least one labelled jittery and one labelled 
 
 ## hard-reset-vr, VR, headset or simulator not recorded
 
-11 patterns: 11 jittery, 0 smooth, 0 contradictory, 11 unlabelled.
+12 patterns: 12 jittery, 0 smooth, 0 contradictory, 12 unlabelled.
 
 Nothing to compare yet: it needs at least one labelled jittery and one labelled smooth pattern.
 
@@ -79,6 +79,7 @@ Nothing to compare yet: it needs at least one labelled jittery and one labelled 
 | `cc0583d319` | unlabelled | VR, headset or simulator not recorded | 1 | hard-reset-vr | 1.15 | 1 | 1 | 1 | 1 | 8 | 60 | JITTER |
 | `cd363d8de5` | unlabelled | headset simulator | 1 | mad-max-vr | 1 | 1.05 | 1 | 1 | 0 | 2 | 55 | JITTER |
 | `cdf605f801` | unlabelled | headset simulator | 1 | mad-max-vr | 1 | 0.5 | 1 | 1 | 0.5 | 6 | 175 | JITTER |
+| `da8645791e` | unlabelled | VR, headset or simulator not recorded | 1 | hard-reset-vr | 2 | 1 | 0.15 | 0 | 0.8 | 8 | 70 | JITTER |
 | `de5015242c` | unlabelled | VR, headset or simulator not recorded | 1 | psychonauts-vr | 1 | 1 | 1 | 1 | 0 | 10 | 60 | JITTER |
 | `e5a43b867f` | unlabelled | VR, headset or simulator not recorded | 1 | hard-reset-vr | 1.4 | 1 | 0.8 | 0.8 | 0.9 | 6 | 60 | JITTER |
 | `f273af45fa` | unlabelled | VR, headset or simulator not recorded | 1 | hard-reset-vr | 1.6 | 1 | 0.2 | 0.1 | 0 | 10 | 65 | JITTER |
