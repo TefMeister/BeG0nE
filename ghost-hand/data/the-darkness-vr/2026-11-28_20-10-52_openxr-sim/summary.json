@@ -1,0 +1,188 @@
+{
+ "game": "the-darkness-vr",
+ "runtime": "openxr-sim",
+ "frames": 681,
+ "seconds": 16.16,
+ "frames_per_s": 42.1,
+ "hands": {
+  "L": {
+   "frames": 469,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 15.1242,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 469,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 18.2892,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 3.636,
+   "side": "L",
+   "who": "controller",
+   "m": 7.418
+  },
+  {
+   "t": 3.636,
+   "side": "R",
+   "who": "controller",
+   "m": 7.412
+  },
+  {
+   "t": 4.263,
+   "side": "L",
+   "who": "controller",
+   "m": 0.724
+  },
+  {
+   "t": 4.263,
+   "side": "R",
+   "who": "controller",
+   "m": 0.724
+  },
+  {
+   "t": 4.289,
+   "side": "L",
+   "who": "controller",
+   "m": 0.968
+  },
+  {
+   "t": 4.289,
+   "side": "R",
+   "who": "controller",
+   "m": 0.968
+  },
+  {
+   "t": 4.644,
+   "side": "L",
+   "who": "controller",
+   "m": 2.098
+  },
+  {
+   "t": 4.644,
+   "side": "R",
+   "who": "controller",
+   "m": 2.098
+  },
+  {
+   "t": 4.667,
+   "side": "L",
+   "who": "controller",
+   "m": 1.455
+  },
+  {
+   "t": 4.667,
+   "side": "R",
+   "who": "controller",
+   "m": 1.454
+  },
+  {
+   "t": 4.694,
+   "side": "L",
+   "who": "controller",
+   "m": 1.054
+  },
+  {
+   "t": 4.694,
+   "side": "R",
+   "who": "controller",
+   "m": 1.054
+  },
+  {
+   "t": 4.719,
+   "side": "L",
+   "who": "controller",
+   "m": 1.203
+  },
+  {
+   "t": 4.719,
+   "side": "R",
+   "who": "controller",
+   "m": 1.203
+  },
+  {
+   "t": 4.751,
+   "side": "L",
+   "who": "controller",
+   "m": 0.858
+  },
+  {
+   "t": 4.751,
+   "side": "R",
+   "who": "controller",
+   "m": 0.858
+  },
+  {
+   "t": 4.854,
+   "side": "L",
+   "who": "controller",
+   "m": 0.275
+  },
+  {
+   "t": 4.854,
+   "side": "R",
+   "who": "controller",
+   "m": 0.275
+  },
+  {
+   "t": 4.884,
+   "side": "L",
+   "who": "controller",
+   "m": 0.171
+  },
+  {
+   "t": 4.884,
+   "side": "R",
+   "who": "controller",
+   "m": 0.171
+  },
+  {
+   "t": 4.911,
+   "side": "L",
+   "who": "controller",
+   "m": 0.159
+  },
+  {
+   "t": 4.911,
+   "side": "R",
+   "who": "controller",
+   "m": 0.159
+  },
+  {
+   "t": 5.025,
+   "side": "L",
+   "who": "controller",
+   "m": 0.069
+  },
+  {
+   "t": 5.025,
+   "side": "R",
+   "who": "controller",
+   "m": 0.069
+  },
+  {
+   "t": 6.75,
+   "side": "L",
+   "who": "controller",
+   "m": 7.397
+  },
+  {
+   "t": 6.75,
+   "side": "R",
+   "who": "controller",
+   "m": 7.396
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "a controller jumped 26 times (tracking glitches).",
+ "file": "the-darkness-vr_20261128-201035.ghl"
+}
