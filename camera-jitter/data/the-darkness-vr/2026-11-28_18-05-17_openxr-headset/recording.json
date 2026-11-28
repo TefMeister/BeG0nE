@@ -1,0 +1,81 @@
+{
+ "wall_ms": 1795880517390,
+ "clock": "log clock",
+ "game": "the-darkness-vr",
+ "videos": [
+  {
+   "file": "begone_second_2026-11-28_17-42-07.mp4",
+   "window": "OpenXR headset view (OBS Mirror)",
+   "offset_s": -8.982,
+   "cuts": [
+    {
+     "stretch": "jitter_283-284s",
+     "from_s": 283,
+     "to_s": 284,
+     "frames": 90,
+     "held": 11,
+     "jumped": 13,
+     "folder": "the-darkness-vr/begone-frames/2026-11-28_18-05-17_openxr-headset/jitter_283-284s_headset",
+     "note": null
+    },
+    {
+     "stretch": "jitter_1308-1309s",
+     "from_s": 1308,
+     "to_s": 1309,
+     "frames": 90,
+     "held": 26,
+     "jumped": 9,
+     "folder": "the-darkness-vr/begone-frames/2026-11-28_18-05-17_openxr-headset/jitter_1308-1309s_headset",
+     "note": null
+    },
+    {
+     "stretch": "smooth_12-13s",
+     "from_s": 12,
+     "to_s": 13,
+     "frames": 90,
+     "held": 18,
+     "jumped": 7,
+     "folder": "the-darkness-vr/begone-frames/2026-11-28_18-05-17_openxr-headset/smooth_12-13s_headset",
+     "note": null
+    }
+   ]
+  },
+  {
+   "file": "begone_2026-11-28_17-42-06.mp4",
+   "window": "game window",
+   "offset_s": -8.982,
+   "cuts": [
+    {
+     "stretch": "jitter_283-284s",
+     "from_s": 283,
+     "to_s": 284,
+     "frames": 90,
+     "held": 2,
+     "jumped": 3,
+     "folder": "the-darkness-vr/begone-frames/2026-11-28_18-05-17_openxr-headset/jitter_283-284s_game",
+     "note": null
+    },
+    {
+     "stretch": "jitter_1308-1309s",
+     "from_s": 1308,
+     "to_s": 1309,
+     "frames": 90,
+     "held": 25,
+     "jumped": 19,
+     "folder": "the-darkness-vr/begone-frames/2026-11-28_18-05-17_openxr-headset/jitter_1308-1309s_game",
+     "note": null
+    },
+    {
+     "stretch": "smooth_12-13s",
+     "from_s": 12,
+     "to_s": 13,
+     "frames": 90,
+     "held": 15,
+     "jumped": 2,
+     "folder": "the-darkness-vr/begone-frames/2026-11-28_18-05-17_openxr-headset/smooth_12-13s_game",
+     "note": null
+    }
+   ]
+  }
+ ]
+}
