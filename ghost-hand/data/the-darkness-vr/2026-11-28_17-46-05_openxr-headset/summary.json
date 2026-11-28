@@ -1,0 +1,14 @@
+{
+ "game": "the-darkness-vr",
+ "runtime": "openxr-headset",
+ "frames": 15356,
+ "seconds": 248.26,
+ "frames_per_s": 61.9,
+ "quality": "no-controllers",
+ "attempts": [],
+ "jumps": [],
+ "tracking": [],
+ "hands": {},
+ "verdict": "Too little to judge: the mod logged no controller positions (gh.real).",
+ "file": "the-darkness-vr_20261128-174157.ghl"
+}
