@@ -1,0 +1,3956 @@
+{
+ "game": "the-darkness-vr",
+ "runtime": "openxr-sim",
+ "frames": 3352,
+ "seconds": 38.25,
+ "frames_per_s": 87.6,
+ "hands": {
+  "L": {
+   "frames": 2004,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 10.1178,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 2004,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 11.5672,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.112,
+   "side": "L",
+   "who": "game",
+   "m": 1.658
+  },
+  {
+   "t": 0.112,
+   "side": "R",
+   "who": "game",
+   "m": 1.895
+  },
+  {
+   "t": 25.015,
+   "side": "L",
+   "who": "controller",
+   "m": 0.89
+  },
+  {
+   "t": 25.015,
+   "side": "R",
+   "who": "controller",
+   "m": 0.89
+  },
+  {
+   "t": 25.026,
+   "side": "L",
+   "who": "controller",
+   "m": 0.906
+  },
+  {
+   "t": 25.026,
+   "side": "R",
+   "who": "controller",
+   "m": 0.906
+  },
+  {
+   "t": 25.036,
+   "side": "L",
+   "who": "controller",
+   "m": 0.959
+  },
+  {
+   "t": 25.036,
+   "side": "R",
+   "who": "controller",
+   "m": 0.959
+  },
+  {
+   "t": 25.049,
+   "side": "L",
+   "who": "controller",
+   "m": 0.983
+  },
+  {
+   "t": 25.049,
+   "side": "R",
+   "who": "controller",
+   "m": 0.983
+  },
+  {
+   "t": 25.149,
+   "side": "L",
+   "who": "controller",
+   "m": 1.566
+  },
+  {
+   "t": 25.149,
+   "side": "R",
+   "who": "controller",
+   "m": 1.566
+  },
+  {
+   "t": 25.214,
+   "side": "L",
+   "who": "controller",
+   "m": 1.122
+  },
+  {
+   "t": 25.214,
+   "side": "R",
+   "who": "controller",
+   "m": 1.122
+  },
+  {
+   "t": 25.247,
+   "side": "L",
+   "who": "controller",
+   "m": 1.305
+  },
+  {
+   "t": 25.247,
+   "side": "R",
+   "who": "controller",
+   "m": 1.305
+  },
+  {
+   "t": 25.26,
+   "side": "L",
+   "who": "controller",
+   "m": 1.079
+  },
+  {
+   "t": 25.26,
+   "side": "R",
+   "who": "controller",
+   "m": 1.079
+  },
+  {
+   "t": 25.27,
+   "side": "L",
+   "who": "controller",
+   "m": 1.482
+  },
+  {
+   "t": 25.27,
+   "side": "R",
+   "who": "controller",
+   "m": 1.482
+  },
+  {
+   "t": 25.283,
+   "side": "L",
+   "who": "controller",
+   "m": 1.087
+  },
+  {
+   "t": 25.283,
+   "side": "R",
+   "who": "controller",
+   "m": 1.087
+  },
+  {
+   "t": 25.294,
+   "side": "L",
+   "who": "controller",
+   "m": 1.438
+  },
+  {
+   "t": 25.294,
+   "side": "R",
+   "who": "controller",
+   "m": 1.438
+  },
+  {
+   "t": 25.303,
+   "side": "L",
+   "who": "controller",
+   "m": 1.197
+  },
+  {
+   "t": 25.303,
+   "side": "R",
+   "who": "controller",
+   "m": 1.197
+  },
+  {
+   "t": 25.315,
+   "side": "L",
+   "who": "controller",
+   "m": 0.823
+  },
+  {
+   "t": 25.315,
+   "side": "R",
+   "who": "controller",
+   "m": 0.823
+  },
+  {
+   "t": 25.325,
+   "side": "L",
+   "who": "controller",
+   "m": 1.344
+  },
+  {
+   "t": 25.325,
+   "side": "R",
+   "who": "controller",
+   "m": 1.344
+  },
+  {
+   "t": 25.336,
+   "side": "L",
+   "who": "controller",
+   "m": 1.02
+  },
+  {
+   "t": 25.336,
+   "side": "R",
+   "who": "controller",
+   "m": 1.02
+  },
+  {
+   "t": 25.347,
+   "side": "L",
+   "who": "controller",
+   "m": 1.066
+  },
+  {
+   "t": 25.347,
+   "side": "R",
+   "who": "controller",
+   "m": 1.066
+  },
+  {
+   "t": 25.36,
+   "side": "L",
+   "who": "controller",
+   "m": 1.018
+  },
+  {
+   "t": 25.36,
+   "side": "R",
+   "who": "controller",
+   "m": 1.019
+  },
+  {
+   "t": 25.37,
+   "side": "L",
+   "who": "controller",
+   "m": 1.107
+  },
+  {
+   "t": 25.37,
+   "side": "R",
+   "who": "controller",
+   "m": 1.107
+  },
+  {
+   "t": 25.38,
+   "side": "L",
+   "who": "controller",
+   "m": 0.769
+  },
+  {
+   "t": 25.38,
+   "side": "R",
+   "who": "controller",
+   "m": 0.769
+  },
+  {
+   "t": 25.392,
+   "side": "L",
+   "who": "controller",
+   "m": 0.853
+  },
+  {
+   "t": 25.392,
+   "side": "R",
+   "who": "controller",
+   "m": 0.853
+  },
+  {
+   "t": 25.403,
+   "side": "L",
+   "who": "controller",
+   "m": 1.131
+  },
+  {
+   "t": 25.403,
+   "side": "R",
+   "who": "controller",
+   "m": 1.131
+  },
+  {
+   "t": 25.414,
+   "side": "L",
+   "who": "controller",
+   "m": 1.011
+  },
+  {
+   "t": 25.414,
+   "side": "R",
+   "who": "controller",
+   "m": 1.011
+  },
+  {
+   "t": 25.426,
+   "side": "L",
+   "who": "controller",
+   "m": 1.03
+  },
+  {
+   "t": 25.426,
+   "side": "R",
+   "who": "controller",
+   "m": 1.03
+  },
+  {
+   "t": 25.437,
+   "side": "L",
+   "who": "controller",
+   "m": 1.198
+  },
+  {
+   "t": 25.437,
+   "side": "R",
+   "who": "controller",
+   "m": 1.198
+  },
+  {
+   "t": 25.449,
+   "side": "L",
+   "who": "controller",
+   "m": 1.063
+  },
+  {
+   "t": 25.449,
+   "side": "R",
+   "who": "controller",
+   "m": 1.063
+  },
+  {
+   "t": 25.55,
+   "side": "L",
+   "who": "controller",
+   "m": 1.128
+  },
+  {
+   "t": 25.55,
+   "side": "R",
+   "who": "controller",
+   "m": 1.128
+  },
+  {
+   "t": 25.604,
+   "side": "L",
+   "who": "controller",
+   "m": 1.15
+  },
+  {
+   "t": 25.604,
+   "side": "R",
+   "who": "controller",
+   "m": 1.15
+  },
+  {
+   "t": 25.615,
+   "side": "L",
+   "who": "controller",
+   "m": 1.392
+  },
+  {
+   "t": 25.615,
+   "side": "R",
+   "who": "controller",
+   "m": 1.392
+  },
+  {
+   "t": 25.628,
+   "side": "L",
+   "who": "controller",
+   "m": 1.289
+  },
+  {
+   "t": 25.628,
+   "side": "R",
+   "who": "controller",
+   "m": 1.289
+  },
+  {
+   "t": 25.635,
+   "side": "L",
+   "who": "controller",
+   "m": 1.437
+  },
+  {
+   "t": 25.635,
+   "side": "R",
+   "who": "controller",
+   "m": 1.437
+  },
+  {
+   "t": 25.649,
+   "side": "L",
+   "who": "controller",
+   "m": 0.754
+  },
+  {
+   "t": 25.649,
+   "side": "R",
+   "who": "controller",
+   "m": 0.754
+  },
+  {
+   "t": 25.66,
+   "side": "L",
+   "who": "controller",
+   "m": 1.457
+  },
+  {
+   "t": 25.66,
+   "side": "R",
+   "who": "controller",
+   "m": 1.457
+  },
+  {
+   "t": 25.669,
+   "side": "L",
+   "who": "controller",
+   "m": 1.102
+  },
+  {
+   "t": 25.669,
+   "side": "R",
+   "who": "controller",
+   "m": 1.102
+  },
+  {
+   "t": 25.681,
+   "side": "L",
+   "who": "controller",
+   "m": 0.877
+  },
+  {
+   "t": 25.681,
+   "side": "R",
+   "who": "controller",
+   "m": 0.876
+  },
+  {
+   "t": 25.691,
+   "side": "L",
+   "who": "controller",
+   "m": 1.197
+  },
+  {
+   "t": 25.691,
+   "side": "R",
+   "who": "controller",
+   "m": 1.197
+  },
+  {
+   "t": 25.703,
+   "side": "L",
+   "who": "controller",
+   "m": 0.92
+  },
+  {
+   "t": 25.703,
+   "side": "R",
+   "who": "controller",
+   "m": 0.92
+  },
+  {
+   "t": 25.714,
+   "side": "L",
+   "who": "controller",
+   "m": 0.993
+  },
+  {
+   "t": 25.714,
+   "side": "R",
+   "who": "controller",
+   "m": 0.993
+  },
+  {
+   "t": 25.725,
+   "side": "L",
+   "who": "controller",
+   "m": 1.121
+  },
+  {
+   "t": 25.725,
+   "side": "R",
+   "who": "controller",
+   "m": 1.121
+  },
+  {
+   "t": 25.737,
+   "side": "L",
+   "who": "controller",
+   "m": 0.972
+  },
+  {
+   "t": 25.737,
+   "side": "R",
+   "who": "controller",
+   "m": 0.972
+  },
+  {
+   "t": 25.749,
+   "side": "L",
+   "who": "controller",
+   "m": 1.15
+  },
+  {
+   "t": 25.749,
+   "side": "R",
+   "who": "controller",
+   "m": 1.15
+  },
+  {
+   "t": 25.759,
+   "side": "L",
+   "who": "controller",
+   "m": 1.077
+  },
+  {
+   "t": 25.759,
+   "side": "R",
+   "who": "controller",
+   "m": 1.077
+  },
+  {
+   "t": 25.77,
+   "side": "L",
+   "who": "controller",
+   "m": 0.802
+  },
+  {
+   "t": 25.77,
+   "side": "R",
+   "who": "controller",
+   "m": 0.802
+  },
+  {
+   "t": 25.782,
+   "side": "L",
+   "who": "controller",
+   "m": 0.962
+  },
+  {
+   "t": 25.782,
+   "side": "R",
+   "who": "controller",
+   "m": 0.962
+  },
+  {
+   "t": 25.792,
+   "side": "L",
+   "who": "controller",
+   "m": 1.079
+  },
+  {
+   "t": 25.792,
+   "side": "R",
+   "who": "controller",
+   "m": 1.079
+  },
+  {
+   "t": 25.803,
+   "side": "L",
+   "who": "controller",
+   "m": 0.899
+  },
+  {
+   "t": 25.803,
+   "side": "R",
+   "who": "controller",
+   "m": 0.899
+  },
+  {
+   "t": 25.815,
+   "side": "L",
+   "who": "controller",
+   "m": 1.065
+  },
+  {
+   "t": 25.815,
+   "side": "R",
+   "who": "controller",
+   "m": 1.065
+  },
+  {
+   "t": 26.036,
+   "side": "L",
+   "who": "controller",
+   "m": 1.285
+  },
+  {
+   "t": 26.036,
+   "side": "R",
+   "who": "controller",
+   "m": 1.285
+  },
+  {
+   "t": 26.048,
+   "side": "L",
+   "who": "controller",
+   "m": 0.959
+  },
+  {
+   "t": 26.048,
+   "side": "R",
+   "who": "controller",
+   "m": 0.959
+  },
+  {
+   "t": 26.06,
+   "side": "L",
+   "who": "controller",
+   "m": 1.256
+  },
+  {
+   "t": 26.06,
+   "side": "R",
+   "who": "controller",
+   "m": 1.256
+  },
+  {
+   "t": 26.07,
+   "side": "L",
+   "who": "controller",
+   "m": 1.189
+  },
+  {
+   "t": 26.07,
+   "side": "R",
+   "who": "controller",
+   "m": 1.189
+  },
+  {
+   "t": 26.081,
+   "side": "L",
+   "who": "controller",
+   "m": 0.942
+  },
+  {
+   "t": 26.081,
+   "side": "R",
+   "who": "controller",
+   "m": 0.942
+  },
+  {
+   "t": 26.092,
+   "side": "L",
+   "who": "controller",
+   "m": 0.957
+  },
+  {
+   "t": 26.092,
+   "side": "R",
+   "who": "controller",
+   "m": 0.957
+  },
+  {
+   "t": 26.103,
+   "side": "L",
+   "who": "controller",
+   "m": 0.862
+  },
+  {
+   "t": 26.103,
+   "side": "R",
+   "who": "controller",
+   "m": 0.862
+  },
+  {
+   "t": 26.115,
+   "side": "L",
+   "who": "controller",
+   "m": 1.039
+  },
+  {
+   "t": 26.115,
+   "side": "R",
+   "who": "controller",
+   "m": 1.039
+  },
+  {
+   "t": 26.127,
+   "side": "L",
+   "who": "controller",
+   "m": 1.056
+  },
+  {
+   "t": 26.127,
+   "side": "R",
+   "who": "controller",
+   "m": 1.056
+  },
+  {
+   "t": 26.137,
+   "side": "L",
+   "who": "controller",
+   "m": 1.127
+  },
+  {
+   "t": 26.137,
+   "side": "R",
+   "who": "controller",
+   "m": 1.127
+  },
+  {
+   "t": 26.148,
+   "side": "L",
+   "who": "controller",
+   "m": 0.257
+  },
+  {
+   "t": 26.148,
+   "side": "R",
+   "who": "controller",
+   "m": 0.257
+  },
+  {
+   "t": 26.225,
+   "side": "L",
+   "who": "controller",
+   "m": 0.068
+  },
+  {
+   "t": 26.225,
+   "side": "R",
+   "who": "controller",
+   "m": 0.068
+  },
+  {
+   "t": 26.393,
+   "side": "L",
+   "who": "controller",
+   "m": 0.062
+  },
+  {
+   "t": 26.393,
+   "side": "R",
+   "who": "controller",
+   "m": 0.062
+  },
+  {
+   "t": 26.416,
+   "side": "L",
+   "who": "controller",
+   "m": 0.062
+  },
+  {
+   "t": 26.416,
+   "side": "R",
+   "who": "controller",
+   "m": 0.062
+  },
+  {
+   "t": 28.26,
+   "side": "L",
+   "who": "controller",
+   "m": 0.068
+  },
+  {
+   "t": 28.26,
+   "side": "R",
+   "who": "controller",
+   "m": 0.068
+  },
+  {
+   "t": 28.292,
+   "side": "L",
+   "who": "controller",
+   "m": 0.089
+  },
+  {
+   "t": 28.292,
+   "side": "R",
+   "who": "controller",
+   "m": 0.089
+  },
+  {
+   "t": 28.303,
+   "side": "L",
+   "who": "controller",
+   "m": 0.061
+  },
+  {
+   "t": 28.303,
+   "side": "R",
+   "who": "controller",
+   "m": 0.061
+  },
+  {
+   "t": 28.315,
+   "side": "L",
+   "who": "controller",
+   "m": 0.085
+  },
+  {
+   "t": 28.315,
+   "side": "R",
+   "who": "controller",
+   "m": 0.085
+  },
+  {
+   "t": 28.325,
+   "side": "L",
+   "who": "controller",
+   "m": 0.121
+  },
+  {
+   "t": 28.325,
+   "side": "R",
+   "who": "controller",
+   "m": 0.121
+  },
+  {
+   "t": 28.338,
+   "side": "L",
+   "who": "controller",
+   "m": 0.1
+  },
+  {
+   "t": 28.338,
+   "side": "R",
+   "who": "controller",
+   "m": 0.1
+  },
+  {
+   "t": 28.347,
+   "side": "L",
+   "who": "controller",
+   "m": 0.132
+  },
+  {
+   "t": 28.347,
+   "side": "R",
+   "who": "controller",
+   "m": 0.132
+  },
+  {
+   "t": 28.36,
+   "side": "L",
+   "who": "controller",
+   "m": 0.122
+  },
+  {
+   "t": 28.36,
+   "side": "R",
+   "who": "controller",
+   "m": 0.122
+  },
+  {
+   "t": 28.37,
+   "side": "L",
+   "who": "controller",
+   "m": 0.165
+  },
+  {
+   "t": 28.37,
+   "side": "R",
+   "who": "controller",
+   "m": 0.165
+  },
+  {
+   "t": 28.382,
+   "side": "L",
+   "who": "controller",
+   "m": 0.128
+  },
+  {
+   "t": 28.382,
+   "side": "R",
+   "who": "controller",
+   "m": 0.128
+  },
+  {
+   "t": 28.394,
+   "side": "L",
+   "who": "controller",
+   "m": 0.149
+  },
+  {
+   "t": 28.394,
+   "side": "R",
+   "who": "controller",
+   "m": 0.149
+  },
+  {
+   "t": 28.402,
+   "side": "L",
+   "who": "controller",
+   "m": 0.163
+  },
+  {
+   "t": 28.402,
+   "side": "R",
+   "who": "controller",
+   "m": 0.163
+  },
+  {
+   "t": 28.415,
+   "side": "L",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 28.415,
+   "side": "R",
+   "who": "controller",
+   "m": 0.112
+  },
+  {
+   "t": 28.425,
+   "side": "L",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 28.425,
+   "side": "R",
+   "who": "controller",
+   "m": 0.16
+  },
+  {
+   "t": 28.438,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 28.438,
+   "side": "R",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 28.447,
+   "side": "L",
+   "who": "controller",
+   "m": 0.136
+  },
+  {
+   "t": 28.447,
+   "side": "R",
+   "who": "controller",
+   "m": 0.136
+  },
+  {
+   "t": 31.115,
+   "side": "L",
+   "who": "controller",
+   "m": 1.147
+  },
+  {
+   "t": 31.115,
+   "side": "R",
+   "who": "controller",
+   "m": 1.147
+  },
+  {
+   "t": 31.124,
+   "side": "L",
+   "who": "controller",
+   "m": 0.956
+  },
+  {
+   "t": 31.124,
+   "side": "R",
+   "who": "controller",
+   "m": 0.956
+  },
+  {
+   "t": 31.138,
+   "side": "L",
+   "who": "controller",
+   "m": 0.873
+  },
+  {
+   "t": 31.138,
+   "side": "R",
+   "who": "controller",
+   "m": 0.873
+  },
+  {
+   "t": 31.148,
+   "side": "L",
+   "who": "controller",
+   "m": 1.311
+  },
+  {
+   "t": 31.148,
+   "side": "R",
+   "who": "controller",
+   "m": 1.311
+  },
+  {
+   "t": 31.159,
+   "side": "L",
+   "who": "controller",
+   "m": 0.861
+  },
+  {
+   "t": 31.159,
+   "side": "R",
+   "who": "controller",
+   "m": 0.861
+  },
+  {
+   "t": 31.17,
+   "side": "L",
+   "who": "controller",
+   "m": 1.129
+  },
+  {
+   "t": 31.17,
+   "side": "R",
+   "who": "controller",
+   "m": 1.129
+  },
+  {
+   "t": 31.36,
+   "side": "L",
+   "who": "controller",
+   "m": 1.216
+  },
+  {
+   "t": 31.36,
+   "side": "R",
+   "who": "controller",
+   "m": 1.216
+  },
+  {
+   "t": 31.374,
+   "side": "L",
+   "who": "controller",
+   "m": 1.034
+  },
+  {
+   "t": 31.374,
+   "side": "R",
+   "who": "controller",
+   "m": 1.034
+  },
+  {
+   "t": 31.384,
+   "side": "L",
+   "who": "controller",
+   "m": 1.355
+  },
+  {
+   "t": 31.384,
+   "side": "R",
+   "who": "controller",
+   "m": 1.355
+  },
+  {
+   "t": 31.392,
+   "side": "L",
+   "who": "controller",
+   "m": 1.009
+  },
+  {
+   "t": 31.392,
+   "side": "R",
+   "who": "controller",
+   "m": 1.009
+  },
+  {
+   "t": 31.404,
+   "side": "L",
+   "who": "controller",
+   "m": 0.929
+  },
+  {
+   "t": 31.404,
+   "side": "R",
+   "who": "controller",
+   "m": 0.929
+  },
+  {
+   "t": 31.416,
+   "side": "L",
+   "who": "controller",
+   "m": 1.244
+  },
+  {
+   "t": 31.416,
+   "side": "R",
+   "who": "controller",
+   "m": 1.244
+  },
+  {
+   "t": 31.426,
+   "side": "L",
+   "who": "controller",
+   "m": 1.107
+  },
+  {
+   "t": 31.426,
+   "side": "R",
+   "who": "controller",
+   "m": 1.107
+  },
+  {
+   "t": 31.438,
+   "side": "L",
+   "who": "controller",
+   "m": 1.125
+  },
+  {
+   "t": 31.438,
+   "side": "R",
+   "who": "controller",
+   "m": 1.125
+  },
+  {
+   "t": 31.449,
+   "side": "L",
+   "who": "controller",
+   "m": 1.115
+  },
+  {
+   "t": 31.449,
+   "side": "R",
+   "who": "controller",
+   "m": 1.115
+  },
+  {
+   "t": 31.46,
+   "side": "L",
+   "who": "controller",
+   "m": 1.075
+  },
+  {
+   "t": 31.46,
+   "side": "R",
+   "who": "controller",
+   "m": 1.075
+  },
+  {
+   "t": 31.476,
+   "side": "L",
+   "who": "controller",
+   "m": 1.141
+  },
+  {
+   "t": 31.476,
+   "side": "R",
+   "who": "controller",
+   "m": 1.141
+  },
+  {
+   "t": 31.483,
+   "side": "L",
+   "who": "controller",
+   "m": 1.353
+  },
+  {
+   "t": 31.483,
+   "side": "R",
+   "who": "controller",
+   "m": 1.353
+  },
+  {
+   "t": 31.656,
+   "side": "L",
+   "who": "controller",
+   "m": 1.088
+  },
+  {
+   "t": 31.656,
+   "side": "R",
+   "who": "controller",
+   "m": 1.088
+  },
+  {
+   "t": 31.668,
+   "side": "L",
+   "who": "controller",
+   "m": 1.287
+  },
+  {
+   "t": 31.668,
+   "side": "R",
+   "who": "controller",
+   "m": 1.287
+  },
+  {
+   "t": 31.681,
+   "side": "L",
+   "who": "controller",
+   "m": 1.428
+  },
+  {
+   "t": 31.681,
+   "side": "R",
+   "who": "controller",
+   "m": 1.428
+  },
+  {
+   "t": 31.692,
+   "side": "L",
+   "who": "controller",
+   "m": 1.285
+  },
+  {
+   "t": 31.692,
+   "side": "R",
+   "who": "controller",
+   "m": 1.286
+  },
+  {
+   "t": 31.703,
+   "side": "L",
+   "who": "controller",
+   "m": 1.169
+  },
+  {
+   "t": 31.703,
+   "side": "R",
+   "who": "controller",
+   "m": 1.169
+  },
+  {
+   "t": 31.714,
+   "side": "L",
+   "who": "controller",
+   "m": 1.326
+  },
+  {
+   "t": 31.714,
+   "side": "R",
+   "who": "controller",
+   "m": 1.325
+  },
+  {
+   "t": 31.724,
+   "side": "L",
+   "who": "controller",
+   "m": 1.04
+  },
+  {
+   "t": 31.724,
+   "side": "R",
+   "who": "controller",
+   "m": 1.04
+  },
+  {
+   "t": 31.735,
+   "side": "L",
+   "who": "controller",
+   "m": 1.136
+  },
+  {
+   "t": 31.735,
+   "side": "R",
+   "who": "controller",
+   "m": 1.136
+  },
+  {
+   "t": 31.751,
+   "side": "L",
+   "who": "controller",
+   "m": 1.173
+  },
+  {
+   "t": 31.751,
+   "side": "R",
+   "who": "controller",
+   "m": 1.173
+  },
+  {
+   "t": 31.761,
+   "side": "L",
+   "who": "controller",
+   "m": 1.592
+  },
+  {
+   "t": 31.761,
+   "side": "R",
+   "who": "controller",
+   "m": 1.592
+  },
+  {
+   "t": 31.779,
+   "side": "L",
+   "who": "controller",
+   "m": 0.999
+  },
+  {
+   "t": 31.779,
+   "side": "R",
+   "who": "controller",
+   "m": 0.999
+  },
+  {
+   "t": 31.791,
+   "side": "L",
+   "who": "controller",
+   "m": 1.563
+  },
+  {
+   "t": 31.791,
+   "side": "R",
+   "who": "controller",
+   "m": 1.563
+  },
+  {
+   "t": 31.802,
+   "side": "L",
+   "who": "controller",
+   "m": 1.244
+  },
+  {
+   "t": 31.802,
+   "side": "R",
+   "who": "controller",
+   "m": 1.244
+  },
+  {
+   "t": 31.816,
+   "side": "L",
+   "who": "controller",
+   "m": 1.087
+  },
+  {
+   "t": 31.816,
+   "side": "R",
+   "who": "controller",
+   "m": 1.087
+  },
+  {
+   "t": 31.828,
+   "side": "L",
+   "who": "controller",
+   "m": 1.231
+  },
+  {
+   "t": 31.828,
+   "side": "R",
+   "who": "controller",
+   "m": 1.231
+  },
+  {
+   "t": 31.837,
+   "side": "L",
+   "who": "controller",
+   "m": 1.231
+  },
+  {
+   "t": 31.837,
+   "side": "R",
+   "who": "controller",
+   "m": 1.231
+  },
+  {
+   "t": 31.991,
+   "side": "L",
+   "who": "controller",
+   "m": 0.232
+  },
+  {
+   "t": 31.991,
+   "side": "R",
+   "who": "controller",
+   "m": 0.232
+  },
+  {
+   "t": 32.005,
+   "side": "L",
+   "who": "controller",
+   "m": 0.235
+  },
+  {
+   "t": 32.005,
+   "side": "R",
+   "who": "controller",
+   "m": 0.235
+  },
+  {
+   "t": 32.014,
+   "side": "L",
+   "who": "controller",
+   "m": 0.247
+  },
+  {
+   "t": 32.014,
+   "side": "R",
+   "who": "controller",
+   "m": 0.247
+  },
+  {
+   "t": 32.026,
+   "side": "L",
+   "who": "controller",
+   "m": 0.172
+  },
+  {
+   "t": 32.026,
+   "side": "R",
+   "who": "controller",
+   "m": 0.172
+  },
+  {
+   "t": 32.039,
+   "side": "L",
+   "who": "controller",
+   "m": 0.2
+  },
+  {
+   "t": 32.039,
+   "side": "R",
+   "who": "controller",
+   "m": 0.2
+  },
+  {
+   "t": 32.051,
+   "side": "L",
+   "who": "controller",
+   "m": 0.216
+  },
+  {
+   "t": 32.051,
+   "side": "R",
+   "who": "controller",
+   "m": 0.216
+  },
+  {
+   "t": 32.06,
+   "side": "L",
+   "who": "controller",
+   "m": 0.197
+  },
+  {
+   "t": 32.06,
+   "side": "R",
+   "who": "controller",
+   "m": 0.197
+  },
+  {
+   "t": 32.074,
+   "side": "L",
+   "who": "controller",
+   "m": 0.127
+  },
+  {
+   "t": 32.074,
+   "side": "R",
+   "who": "controller",
+   "m": 0.127
+  },
+  {
+   "t": 32.084,
+   "side": "L",
+   "who": "controller",
+   "m": 0.187
+  },
+  {
+   "t": 32.084,
+   "side": "R",
+   "who": "controller",
+   "m": 0.187
+  },
+  {
+   "t": 32.097,
+   "side": "L",
+   "who": "controller",
+   "m": 0.15
+  },
+  {
+   "t": 32.097,
+   "side": "R",
+   "who": "controller",
+   "m": 0.15
+  },
+  {
+   "t": 32.107,
+   "side": "L",
+   "who": "controller",
+   "m": 0.144
+  },
+  {
+   "t": 32.107,
+   "side": "R",
+   "who": "controller",
+   "m": 0.144
+  },
+  {
+   "t": 32.118,
+   "side": "L",
+   "who": "controller",
+   "m": 0.135
+  },
+  {
+   "t": 32.118,
+   "side": "R",
+   "who": "controller",
+   "m": 0.135
+  },
+  {
+   "t": 32.129,
+   "side": "L",
+   "who": "controller",
+   "m": 0.141
+  },
+  {
+   "t": 32.129,
+   "side": "R",
+   "who": "controller",
+   "m": 0.141
+  },
+  {
+   "t": 32.14,
+   "side": "L",
+   "who": "controller",
+   "m": 0.127
+  },
+  {
+   "t": 32.14,
+   "side": "R",
+   "who": "controller",
+   "m": 0.127
+  },
+  {
+   "t": 32.152,
+   "side": "L",
+   "who": "controller",
+   "m": 0.104
+  },
+  {
+   "t": 32.152,
+   "side": "R",
+   "who": "controller",
+   "m": 0.104
+  },
+  {
+   "t": 32.163,
+   "side": "L",
+   "who": "controller",
+   "m": 0.13
+  },
+  {
+   "t": 32.163,
+   "side": "R",
+   "who": "controller",
+   "m": 0.13
+  },
+  {
+   "t": 32.389,
+   "side": "L",
+   "who": "controller",
+   "m": 0.138
+  },
+  {
+   "t": 32.389,
+   "side": "R",
+   "who": "controller",
+   "m": 0.138
+  },
+  {
+   "t": 32.403,
+   "side": "L",
+   "who": "controller",
+   "m": 0.179
+  },
+  {
+   "t": 32.403,
+   "side": "R",
+   "who": "controller",
+   "m": 0.18
+  },
+  {
+   "t": 32.413,
+   "side": "L",
+   "who": "controller",
+   "m": 0.178
+  },
+  {
+   "t": 32.413,
+   "side": "R",
+   "who": "controller",
+   "m": 0.178
+  },
+  {
+   "t": 32.425,
+   "side": "L",
+   "who": "controller",
+   "m": 0.13
+  },
+  {
+   "t": 32.425,
+   "side": "R",
+   "who": "controller",
+   "m": 0.13
+  },
+  {
+   "t": 32.437,
+   "side": "L",
+   "who": "controller",
+   "m": 0.152
+  },
+  {
+   "t": 32.437,
+   "side": "R",
+   "who": "controller",
+   "m": 0.152
+  },
+  {
+   "t": 32.449,
+   "side": "L",
+   "who": "controller",
+   "m": 0.166
+  },
+  {
+   "t": 32.449,
+   "side": "R",
+   "who": "controller",
+   "m": 0.166
+  },
+  {
+   "t": 32.458,
+   "side": "L",
+   "who": "controller",
+   "m": 0.144
+  },
+  {
+   "t": 32.458,
+   "side": "R",
+   "who": "controller",
+   "m": 0.144
+  },
+  {
+   "t": 32.47,
+   "side": "L",
+   "who": "controller",
+   "m": 0.093
+  },
+  {
+   "t": 32.47,
+   "side": "R",
+   "who": "controller",
+   "m": 0.093
+  },
+  {
+   "t": 32.48,
+   "side": "L",
+   "who": "controller",
+   "m": 0.154
+  },
+  {
+   "t": 32.48,
+   "side": "R",
+   "who": "controller",
+   "m": 0.154
+  },
+  {
+   "t": 32.491,
+   "side": "L",
+   "who": "controller",
+   "m": 0.109
+  },
+  {
+   "t": 32.491,
+   "side": "R",
+   "who": "controller",
+   "m": 0.109
+  },
+  {
+   "t": 32.502,
+   "side": "L",
+   "who": "controller",
+   "m": 0.121
+  },
+  {
+   "t": 32.502,
+   "side": "R",
+   "who": "controller",
+   "m": 0.121
+  },
+  {
+   "t": 32.513,
+   "side": "L",
+   "who": "controller",
+   "m": 0.118
+  },
+  {
+   "t": 32.513,
+   "side": "R",
+   "who": "controller",
+   "m": 0.118
+  },
+  {
+   "t": 32.524,
+   "side": "L",
+   "who": "controller",
+   "m": 0.103
+  },
+  {
+   "t": 32.524,
+   "side": "R",
+   "who": "controller",
+   "m": 0.103
+  },
+  {
+   "t": 32.536,
+   "side": "L",
+   "who": "controller",
+   "m": 0.119
+  },
+  {
+   "t": 32.536,
+   "side": "R",
+   "who": "controller",
+   "m": 0.119
+  },
+  {
+   "t": 32.55,
+   "side": "L",
+   "who": "controller",
+   "m": 0.117
+  },
+  {
+   "t": 32.55,
+   "side": "R",
+   "who": "controller",
+   "m": 0.117
+  },
+  {
+   "t": 32.559,
+   "side": "L",
+   "who": "controller",
+   "m": 0.13
+  },
+  {
+   "t": 32.559,
+   "side": "R",
+   "who": "controller",
+   "m": 0.13
+  },
+  {
+   "t": 32.571,
+   "side": "L",
+   "who": "controller",
+   "m": 0.077
+  },
+  {
+   "t": 32.571,
+   "side": "R",
+   "who": "controller",
+   "m": 0.077
+  },
+  {
+   "t": 32.583,
+   "side": "L",
+   "who": "controller",
+   "m": 0.106
+  },
+  {
+   "t": 32.583,
+   "side": "R",
+   "who": "controller",
+   "m": 0.107
+  },
+  {
+   "t": 32.592,
+   "side": "L",
+   "who": "controller",
+   "m": 0.098
+  },
+  {
+   "t": 32.592,
+   "side": "R",
+   "who": "controller",
+   "m": 0.098
+  },
+  {
+   "t": 32.606,
+   "side": "L",
+   "who": "controller",
+   "m": 0.069
+  },
+  {
+   "t": 32.606,
+   "side": "R",
+   "who": "controller",
+   "m": 0.069
+  },
+  {
+   "t": 32.618,
+   "side": "L",
+   "who": "controller",
+   "m": 0.109
+  },
+  {
+   "t": 32.618,
+   "side": "R",
+   "who": "controller",
+   "m": 0.109
+  },
+  {
+   "t": 32.63,
+   "side": "L",
+   "who": "controller",
+   "m": 0.086
+  },
+  {
+   "t": 32.63,
+   "side": "R",
+   "who": "controller",
+   "m": 0.086
+  },
+  {
+   "t": 32.639,
+   "side": "L",
+   "who": "controller",
+   "m": 0.086
+  },
+  {
+   "t": 32.639,
+   "side": "R",
+   "who": "controller",
+   "m": 0.086
+  },
+  {
+   "t": 32.662,
+   "side": "L",
+   "who": "controller",
+   "m": 0.077
+  },
+  {
+   "t": 32.662,
+   "side": "R",
+   "who": "controller",
+   "m": 0.077
+  },
+  {
+   "t": 32.672,
+   "side": "L",
+   "who": "controller",
+   "m": 0.075
+  },
+  {
+   "t": 32.672,
+   "side": "R",
+   "who": "controller",
+   "m": 0.075
+  },
+  {
+   "t": 32.696,
+   "side": "L",
+   "who": "controller",
+   "m": 0.068
+  },
+  {
+   "t": 32.696,
+   "side": "R",
+   "who": "controller",
+   "m": 0.068
+  },
+  {
+   "t": 32.709,
+   "side": "L",
+   "who": "controller",
+   "m": 0.074
+  },
+  {
+   "t": 32.709,
+   "side": "R",
+   "who": "controller",
+   "m": 0.074
+  },
+  {
+   "t": 32.72,
+   "side": "L",
+   "who": "controller",
+   "m": 0.062
+  },
+  {
+   "t": 32.72,
+   "side": "R",
+   "who": "controller",
+   "m": 0.062
+  },
+  {
+   "t": 32.814,
+   "side": "L",
+   "who": "controller",
+   "m": 0.069
+  },
+  {
+   "t": 32.814,
+   "side": "R",
+   "who": "controller",
+   "m": 0.069
+  },
+  {
+   "t": 32.846,
+   "side": "L",
+   "who": "controller",
+   "m": 0.064
+  },
+  {
+   "t": 32.846,
+   "side": "R",
+   "who": "controller",
+   "m": 0.064
+  },
+  {
+   "t": 32.856,
+   "side": "L",
+   "who": "controller",
+   "m": 0.086
+  },
+  {
+   "t": 32.856,
+   "side": "R",
+   "who": "controller",
+   "m": 0.086
+  },
+  {
+   "t": 32.871,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 32.871,
+   "side": "R",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 32.884,
+   "side": "L",
+   "who": "controller",
+   "m": 0.114
+  },
+  {
+   "t": 32.884,
+   "side": "R",
+   "who": "controller",
+   "m": 0.114
+  },
+  {
+   "t": 32.893,
+   "side": "L",
+   "who": "controller",
+   "m": 0.108
+  },
+  {
+   "t": 32.893,
+   "side": "R",
+   "who": "controller",
+   "m": 0.108
+  },
+  {
+   "t": 32.904,
+   "side": "L",
+   "who": "controller",
+   "m": 0.087
+  },
+  {
+   "t": 32.904,
+   "side": "R",
+   "who": "controller",
+   "m": 0.087
+  },
+  {
+   "t": 32.915,
+   "side": "L",
+   "who": "controller",
+   "m": 0.091
+  },
+  {
+   "t": 32.915,
+   "side": "R",
+   "who": "controller",
+   "m": 0.091
+  },
+  {
+   "t": 32.929,
+   "side": "L",
+   "who": "controller",
+   "m": 0.088
+  },
+  {
+   "t": 32.929,
+   "side": "R",
+   "who": "controller",
+   "m": 0.088
+  },
+  {
+   "t": 32.939,
+   "side": "L",
+   "who": "controller",
+   "m": 0.109
+  },
+  {
+   "t": 32.939,
+   "side": "R",
+   "who": "controller",
+   "m": 0.109
+  },
+  {
+   "t": 32.949,
+   "side": "L",
+   "who": "controller",
+   "m": 0.071
+  },
+  {
+   "t": 32.949,
+   "side": "R",
+   "who": "controller",
+   "m": 0.071
+  },
+  {
+   "t": 32.959,
+   "side": "L",
+   "who": "controller",
+   "m": 0.065
+  },
+  {
+   "t": 32.959,
+   "side": "R",
+   "who": "controller",
+   "m": 0.064
+  },
+  {
+   "t": 32.972,
+   "side": "L",
+   "who": "controller",
+   "m": 0.062
+  },
+  {
+   "t": 32.972,
+   "side": "R",
+   "who": "controller",
+   "m": 0.062
+  },
+  {
+   "t": 34.692,
+   "side": "L",
+   "who": "controller",
+   "m": 1.973
+  },
+  {
+   "t": 34.692,
+   "side": "R",
+   "who": "controller",
+   "m": 1.953
+  },
+  {
+   "t": 34.711,
+   "side": "L",
+   "who": "controller",
+   "m": 2.849
+  },
+  {
+   "t": 34.711,
+   "side": "R",
+   "who": "controller",
+   "m": 2.832
+  },
+  {
+   "t": 34.731,
+   "side": "L",
+   "who": "controller",
+   "m": 1.307
+  },
+  {
+   "t": 34.731,
+   "side": "R",
+   "who": "controller",
+   "m": 1.309
+  },
+  {
+   "t": 34.749,
+   "side": "L",
+   "who": "controller",
+   "m": 1.241
+  },
+  {
+   "t": 34.749,
+   "side": "R",
+   "who": "controller",
+   "m": 1.253
+  },
+  {
+   "t": 34.766,
+   "side": "L",
+   "who": "controller",
+   "m": 1.112
+  },
+  {
+   "t": 34.766,
+   "side": "R",
+   "who": "controller",
+   "m": 1.132
+  },
+  {
+   "t": 34.785,
+   "side": "L",
+   "who": "controller",
+   "m": 1.133
+  },
+  {
+   "t": 34.785,
+   "side": "R",
+   "who": "controller",
+   "m": 1.165
+  },
+  {
+   "t": 35.211,
+   "side": "L",
+   "who": "controller",
+   "m": 0.78
+  },
+  {
+   "t": 35.211,
+   "side": "R",
+   "who": "controller",
+   "m": 0.803
+  },
+  {
+   "t": 35.223,
+   "side": "L",
+   "who": "controller",
+   "m": 0.748
+  },
+  {
+   "t": 35.223,
+   "side": "R",
+   "who": "controller",
+   "m": 0.771
+  },
+  {
+   "t": 35.234,
+   "side": "L",
+   "who": "controller",
+   "m": 0.873
+  },
+  {
+   "t": 35.234,
+   "side": "R",
+   "who": "controller",
+   "m": 0.899
+  },
+  {
+   "t": 35.245,
+   "side": "L",
+   "who": "controller",
+   "m": 0.736
+  },
+  {
+   "t": 35.245,
+   "side": "R",
+   "who": "controller",
+   "m": 0.754
+  },
+  {
+   "t": 35.257,
+   "side": "L",
+   "who": "controller",
+   "m": 0.755
+  },
+  {
+   "t": 35.257,
+   "side": "R",
+   "who": "controller",
+   "m": 0.779
+  },
+  {
+   "t": 35.269,
+   "side": "L",
+   "who": "controller",
+   "m": 0.774
+  },
+  {
+   "t": 35.269,
+   "side": "R",
+   "who": "controller",
+   "m": 0.794
+  },
+  {
+   "t": 35.281,
+   "side": "L",
+   "who": "controller",
+   "m": 0.811
+  },
+  {
+   "t": 35.281,
+   "side": "R",
+   "who": "controller",
+   "m": 0.832
+  },
+  {
+   "t": 35.292,
+   "side": "L",
+   "who": "controller",
+   "m": 0.846
+  },
+  {
+   "t": 35.292,
+   "side": "R",
+   "who": "controller",
+   "m": 0.867
+  },
+  {
+   "t": 35.306,
+   "side": "L",
+   "who": "controller",
+   "m": 0.78
+  },
+  {
+   "t": 35.306,
+   "side": "R",
+   "who": "controller",
+   "m": 0.799
+  },
+  {
+   "t": 35.314,
+   "side": "L",
+   "who": "controller",
+   "m": 0.835
+  },
+  {
+   "t": 35.314,
+   "side": "R",
+   "who": "controller",
+   "m": 0.853
+  },
+  {
+   "t": 35.326,
+   "side": "L",
+   "who": "controller",
+   "m": 0.667
+  },
+  {
+   "t": 35.326,
+   "side": "R",
+   "who": "controller",
+   "m": 0.681
+  },
+  {
+   "t": 35.334,
+   "side": "L",
+   "who": "controller",
+   "m": 0.813
+  },
+  {
+   "t": 35.334,
+   "side": "R",
+   "who": "controller",
+   "m": 0.827
+  },
+  {
+   "t": 35.354,
+   "side": "L",
+   "who": "controller",
+   "m": 1.16
+  },
+  {
+   "t": 35.354,
+   "side": "R",
+   "who": "controller",
+   "m": 1.169
+  },
+  {
+   "t": 35.364,
+   "side": "L",
+   "who": "controller",
+   "m": 0.733
+  },
+  {
+   "t": 35.364,
+   "side": "R",
+   "who": "controller",
+   "m": 0.737
+  },
+  {
+   "t": 35.374,
+   "side": "L",
+   "who": "controller",
+   "m": 0.724
+  },
+  {
+   "t": 35.374,
+   "side": "R",
+   "who": "controller",
+   "m": 0.723
+  },
+  {
+   "t": 35.383,
+   "side": "L",
+   "who": "controller",
+   "m": 0.712
+  },
+  {
+   "t": 35.383,
+   "side": "R",
+   "who": "controller",
+   "m": 0.71
+  },
+  {
+   "t": 35.393,
+   "side": "L",
+   "who": "controller",
+   "m": 0.608
+  },
+  {
+   "t": 35.393,
+   "side": "R",
+   "who": "controller",
+   "m": 0.603
+  },
+  {
+   "t": 35.402,
+   "side": "L",
+   "who": "controller",
+   "m": 0.752
+  },
+  {
+   "t": 35.402,
+   "side": "R",
+   "who": "controller",
+   "m": 0.742
+  },
+  {
+   "t": 35.414,
+   "side": "L",
+   "who": "controller",
+   "m": 0.635
+  },
+  {
+   "t": 35.414,
+   "side": "R",
+   "who": "controller",
+   "m": 0.625
+  },
+  {
+   "t": 35.425,
+   "side": "L",
+   "who": "controller",
+   "m": 0.777
+  },
+  {
+   "t": 35.425,
+   "side": "R",
+   "who": "controller",
+   "m": 0.763
+  },
+  {
+   "t": 35.436,
+   "side": "L",
+   "who": "controller",
+   "m": 0.858
+  },
+  {
+   "t": 35.436,
+   "side": "R",
+   "who": "controller",
+   "m": 0.836
+  },
+  {
+   "t": 35.444,
+   "side": "L",
+   "who": "controller",
+   "m": 0.746
+  },
+  {
+   "t": 35.444,
+   "side": "R",
+   "who": "controller",
+   "m": 0.724
+  },
+  {
+   "t": 35.468,
+   "side": "L",
+   "who": "controller",
+   "m": 1.276
+  },
+  {
+   "t": 35.468,
+   "side": "R",
+   "who": "controller",
+   "m": 1.254
+  },
+  {
+   "t": 35.478,
+   "side": "L",
+   "who": "controller",
+   "m": 0.946
+  },
+  {
+   "t": 35.478,
+   "side": "R",
+   "who": "controller",
+   "m": 0.909
+  },
+  {
+   "t": 35.489,
+   "side": "L",
+   "who": "controller",
+   "m": 0.761
+  },
+  {
+   "t": 35.489,
+   "side": "R",
+   "who": "controller",
+   "m": 0.73
+  },
+  {
+   "t": 35.5,
+   "side": "L",
+   "who": "controller",
+   "m": 0.827
+  },
+  {
+   "t": 35.5,
+   "side": "R",
+   "who": "controller",
+   "m": 0.791
+  },
+  {
+   "t": 35.512,
+   "side": "L",
+   "who": "controller",
+   "m": 2.401
+  },
+  {
+   "t": 35.512,
+   "side": "R",
+   "who": "controller",
+   "m": 2.028
+  },
+  {
+   "t": 35.525,
+   "side": "L",
+   "who": "controller",
+   "m": 0.804
+  },
+  {
+   "t": 35.525,
+   "side": "R",
+   "who": "controller",
+   "m": 0.806
+  },
+  {
+   "t": 35.534,
+   "side": "L",
+   "who": "controller",
+   "m": 0.819
+  },
+  {
+   "t": 35.534,
+   "side": "R",
+   "who": "controller",
+   "m": 0.827
+  },
+  {
+   "t": 35.544,
+   "side": "L",
+   "who": "controller",
+   "m": 0.65
+  },
+  {
+   "t": 35.544,
+   "side": "R",
+   "who": "controller",
+   "m": 0.653
+  },
+  {
+   "t": 35.557,
+   "side": "L",
+   "who": "controller",
+   "m": 0.608
+  },
+  {
+   "t": 35.557,
+   "side": "R",
+   "who": "controller",
+   "m": 0.609
+  },
+  {
+   "t": 35.567,
+   "side": "L",
+   "who": "controller",
+   "m": 0.859
+  },
+  {
+   "t": 35.567,
+   "side": "R",
+   "who": "controller",
+   "m": 0.869
+  },
+  {
+   "t": 35.576,
+   "side": "L",
+   "who": "controller",
+   "m": 0.688
+  },
+  {
+   "t": 35.576,
+   "side": "R",
+   "who": "controller",
+   "m": 0.692
+  },
+  {
+   "t": 35.589,
+   "side": "L",
+   "who": "controller",
+   "m": 0.59
+  },
+  {
+   "t": 35.589,
+   "side": "R",
+   "who": "controller",
+   "m": 0.597
+  },
+  {
+   "t": 35.6,
+   "side": "L",
+   "who": "controller",
+   "m": 0.848
+  },
+  {
+   "t": 35.6,
+   "side": "R",
+   "who": "controller",
+   "m": 0.867
+  },
+  {
+   "t": 35.611,
+   "side": "L",
+   "who": "controller",
+   "m": 0.734
+  },
+  {
+   "t": 35.611,
+   "side": "R",
+   "who": "controller",
+   "m": 0.755
+  },
+  {
+   "t": 35.623,
+   "side": "L",
+   "who": "controller",
+   "m": 0.732
+  },
+  {
+   "t": 35.623,
+   "side": "R",
+   "who": "controller",
+   "m": 0.758
+  },
+  {
+   "t": 35.634,
+   "side": "L",
+   "who": "controller",
+   "m": 0.845
+  },
+  {
+   "t": 35.634,
+   "side": "R",
+   "who": "controller",
+   "m": 0.883
+  },
+  {
+   "t": 35.647,
+   "side": "L",
+   "who": "controller",
+   "m": 0.763
+  },
+  {
+   "t": 35.647,
+   "side": "R",
+   "who": "controller",
+   "m": 0.826
+  },
+  {
+   "t": 35.658,
+   "side": "L",
+   "who": "controller",
+   "m": 0.904
+  },
+  {
+   "t": 35.658,
+   "side": "R",
+   "who": "controller",
+   "m": 1.004
+  },
+  {
+   "t": 35.668,
+   "side": "L",
+   "who": "controller",
+   "m": 0.787
+  },
+  {
+   "t": 35.668,
+   "side": "R",
+   "who": "controller",
+   "m": 0.863
+  },
+  {
+   "t": 35.678,
+   "side": "L",
+   "who": "controller",
+   "m": 0.696
+  },
+  {
+   "t": 35.678,
+   "side": "R",
+   "who": "controller",
+   "m": 0.773
+  },
+  {
+   "t": 35.689,
+   "side": "L",
+   "who": "controller",
+   "m": 0.762
+  },
+  {
+   "t": 35.689,
+   "side": "R",
+   "who": "controller",
+   "m": 0.858
+  },
+  {
+   "t": 35.699,
+   "side": "L",
+   "who": "controller",
+   "m": 0.739
+  },
+  {
+   "t": 35.699,
+   "side": "R",
+   "who": "controller",
+   "m": 0.824
+  },
+  {
+   "t": 35.711,
+   "side": "L",
+   "who": "controller",
+   "m": 0.701
+  },
+  {
+   "t": 35.711,
+   "side": "R",
+   "who": "controller",
+   "m": 0.794
+  },
+  {
+   "t": 35.721,
+   "side": "L",
+   "who": "controller",
+   "m": 0.855
+  },
+  {
+   "t": 35.721,
+   "side": "R",
+   "who": "controller",
+   "m": 0.985
+  },
+  {
+   "t": 35.734,
+   "side": "L",
+   "who": "controller",
+   "m": 0.705
+  },
+  {
+   "t": 35.734,
+   "side": "R",
+   "who": "controller",
+   "m": 0.801
+  },
+  {
+   "t": 35.743,
+   "side": "L",
+   "who": "controller",
+   "m": 0.884
+  },
+  {
+   "t": 35.743,
+   "side": "R",
+   "who": "controller",
+   "m": 1.023
+  },
+  {
+   "t": 35.756,
+   "side": "L",
+   "who": "controller",
+   "m": 0.618
+  },
+  {
+   "t": 35.756,
+   "side": "R",
+   "who": "controller",
+   "m": 0.722
+  },
+  {
+   "t": 35.766,
+   "side": "L",
+   "who": "controller",
+   "m": 0.887
+  },
+  {
+   "t": 35.766,
+   "side": "R",
+   "who": "controller",
+   "m": 1.025
+  },
+  {
+   "t": 35.778,
+   "side": "L",
+   "who": "controller",
+   "m": 0.698
+  },
+  {
+   "t": 35.778,
+   "side": "R",
+   "who": "controller",
+   "m": 0.81
+  },
+  {
+   "t": 35.788,
+   "side": "L",
+   "who": "controller",
+   "m": 0.802
+  },
+  {
+   "t": 35.788,
+   "side": "R",
+   "who": "controller",
+   "m": 0.936
+  },
+  {
+   "t": 35.799,
+   "side": "L",
+   "who": "controller",
+   "m": 0.681
+  },
+  {
+   "t": 35.799,
+   "side": "R",
+   "who": "controller",
+   "m": 0.781
+  },
+  {
+   "t": 35.811,
+   "side": "L",
+   "who": "controller",
+   "m": 0.771
+  },
+  {
+   "t": 35.811,
+   "side": "R",
+   "who": "controller",
+   "m": 0.893
+  },
+  {
+   "t": 35.822,
+   "side": "L",
+   "who": "controller",
+   "m": 0.767
+  },
+  {
+   "t": 35.822,
+   "side": "R",
+   "who": "controller",
+   "m": 0.888
+  },
+  {
+   "t": 35.835,
+   "side": "L",
+   "who": "controller",
+   "m": 0.763
+  },
+  {
+   "t": 35.835,
+   "side": "R",
+   "who": "controller",
+   "m": 0.882
+  },
+  {
+   "t": 35.845,
+   "side": "L",
+   "who": "controller",
+   "m": 0.856
+  },
+  {
+   "t": 35.845,
+   "side": "R",
+   "who": "controller",
+   "m": 0.992
+  },
+  {
+   "t": 35.855,
+   "side": "L",
+   "who": "controller",
+   "m": 0.631
+  },
+  {
+   "t": 35.855,
+   "side": "R",
+   "who": "controller",
+   "m": 0.729
+  },
+  {
+   "t": 35.867,
+   "side": "L",
+   "who": "controller",
+   "m": 0.727
+  },
+  {
+   "t": 35.867,
+   "side": "R",
+   "who": "controller",
+   "m": 0.838
+  },
+  {
+   "t": 35.878,
+   "side": "L",
+   "who": "controller",
+   "m": 0.725
+  },
+  {
+   "t": 35.878,
+   "side": "R",
+   "who": "controller",
+   "m": 0.836
+  },
+  {
+   "t": 35.888,
+   "side": "L",
+   "who": "controller",
+   "m": 0.788
+  },
+  {
+   "t": 35.888,
+   "side": "R",
+   "who": "controller",
+   "m": 0.908
+  },
+  {
+   "t": 35.9,
+   "side": "L",
+   "who": "controller",
+   "m": 0.661
+  },
+  {
+   "t": 35.9,
+   "side": "R",
+   "who": "controller",
+   "m": 0.757
+  },
+  {
+   "t": 35.91,
+   "side": "L",
+   "who": "controller",
+   "m": 0.762
+  },
+  {
+   "t": 35.91,
+   "side": "R",
+   "who": "controller",
+   "m": 0.871
+  },
+  {
+   "t": 35.922,
+   "side": "L",
+   "who": "controller",
+   "m": 0.635
+  },
+  {
+   "t": 35.922,
+   "side": "R",
+   "who": "controller",
+   "m": 0.724
+  },
+  {
+   "t": 35.934,
+   "side": "L",
+   "who": "controller",
+   "m": 0.845
+  },
+  {
+   "t": 35.934,
+   "side": "R",
+   "who": "controller",
+   "m": 0.953
+  },
+  {
+   "t": 35.944,
+   "side": "L",
+   "who": "controller",
+   "m": 0.77
+  },
+  {
+   "t": 35.944,
+   "side": "R",
+   "who": "controller",
+   "m": 0.859
+  },
+  {
+   "t": 35.956,
+   "side": "L",
+   "who": "controller",
+   "m": 0.658
+  },
+  {
+   "t": 35.956,
+   "side": "R",
+   "who": "controller",
+   "m": 0.731
+  },
+  {
+   "t": 35.972,
+   "side": "L",
+   "who": "controller",
+   "m": 0.739
+  },
+  {
+   "t": 35.972,
+   "side": "R",
+   "who": "controller",
+   "m": 0.816
+  },
+  {
+   "t": 35.98,
+   "side": "L",
+   "who": "controller",
+   "m": 0.977
+  },
+  {
+   "t": 35.98,
+   "side": "R",
+   "who": "controller",
+   "m": 1.071
+  },
+  {
+   "t": 35.993,
+   "side": "L",
+   "who": "controller",
+   "m": 0.568
+  },
+  {
+   "t": 35.993,
+   "side": "R",
+   "who": "controller",
+   "m": 0.621
+  },
+  {
+   "t": 36.002,
+   "side": "L",
+   "who": "controller",
+   "m": 0.86
+  },
+  {
+   "t": 36.002,
+   "side": "R",
+   "who": "controller",
+   "m": 0.935
+  },
+  {
+   "t": 36.012,
+   "side": "L",
+   "who": "controller",
+   "m": 0.579
+  },
+  {
+   "t": 36.012,
+   "side": "R",
+   "who": "controller",
+   "m": 0.628
+  },
+  {
+   "t": 36.024,
+   "side": "L",
+   "who": "controller",
+   "m": 0.703
+  },
+  {
+   "t": 36.024,
+   "side": "R",
+   "who": "controller",
+   "m": 0.758
+  },
+  {
+   "t": 36.035,
+   "side": "L",
+   "who": "controller",
+   "m": 0.776
+  },
+  {
+   "t": 36.035,
+   "side": "R",
+   "who": "controller",
+   "m": 0.836
+  },
+  {
+   "t": 36.052,
+   "side": "L",
+   "who": "controller",
+   "m": 0.746
+  },
+  {
+   "t": 36.052,
+   "side": "R",
+   "who": "controller",
+   "m": 0.801
+  },
+  {
+   "t": 36.062,
+   "side": "L",
+   "who": "controller",
+   "m": 0.946
+  },
+  {
+   "t": 36.062,
+   "side": "R",
+   "who": "controller",
+   "m": 1.011
+  },
+  {
+   "t": 36.075,
+   "side": "L",
+   "who": "controller",
+   "m": 0.795
+  },
+  {
+   "t": 36.075,
+   "side": "R",
+   "who": "controller",
+   "m": 0.848
+  },
+  {
+   "t": 36.089,
+   "side": "L",
+   "who": "controller",
+   "m": 0.867
+  },
+  {
+   "t": 36.089,
+   "side": "R",
+   "who": "controller",
+   "m": 0.922
+  },
+  {
+   "t": 36.1,
+   "side": "L",
+   "who": "controller",
+   "m": 0.893
+  },
+  {
+   "t": 36.1,
+   "side": "R",
+   "who": "controller",
+   "m": 0.946
+  },
+  {
+   "t": 36.113,
+   "side": "L",
+   "who": "controller",
+   "m": 0.755
+  },
+  {
+   "t": 36.113,
+   "side": "R",
+   "who": "controller",
+   "m": 0.8
+  },
+  {
+   "t": 36.13,
+   "side": "L",
+   "who": "controller",
+   "m": 0.794
+  },
+  {
+   "t": 36.13,
+   "side": "R",
+   "who": "controller",
+   "m": 0.839
+  },
+  {
+   "t": 36.143,
+   "side": "L",
+   "who": "controller",
+   "m": 1.06
+  },
+  {
+   "t": 36.143,
+   "side": "R",
+   "who": "controller",
+   "m": 1.122
+  },
+  {
+   "t": 36.16,
+   "side": "L",
+   "who": "controller",
+   "m": 0.922
+  },
+  {
+   "t": 36.16,
+   "side": "R",
+   "who": "controller",
+   "m": 0.972
+  },
+  {
+   "t": 36.171,
+   "side": "L",
+   "who": "controller",
+   "m": 1.104
+  },
+  {
+   "t": 36.171,
+   "side": "R",
+   "who": "controller",
+   "m": 1.165
+  },
+  {
+   "t": 36.185,
+   "side": "L",
+   "who": "controller",
+   "m": 0.779
+  },
+  {
+   "t": 36.185,
+   "side": "R",
+   "who": "controller",
+   "m": 0.818
+  },
+  {
+   "t": 36.197,
+   "side": "L",
+   "who": "controller",
+   "m": 0.851
+  },
+  {
+   "t": 36.197,
+   "side": "R",
+   "who": "controller",
+   "m": 0.893
+  },
+  {
+   "t": 36.21,
+   "side": "L",
+   "who": "controller",
+   "m": 0.807
+  },
+  {
+   "t": 36.21,
+   "side": "R",
+   "who": "controller",
+   "m": 0.846
+  },
+  {
+   "t": 36.226,
+   "side": "L",
+   "who": "controller",
+   "m": 0.908
+  },
+  {
+   "t": 36.226,
+   "side": "R",
+   "who": "controller",
+   "m": 0.95
+  },
+  {
+   "t": 36.24,
+   "side": "L",
+   "who": "controller",
+   "m": 1.03
+  },
+  {
+   "t": 36.24,
+   "side": "R",
+   "who": "controller",
+   "m": 1.075
+  },
+  {
+   "t": 36.254,
+   "side": "L",
+   "who": "controller",
+   "m": 0.926
+  },
+  {
+   "t": 36.254,
+   "side": "R",
+   "who": "controller",
+   "m": 0.965
+  },
+  {
+   "t": 36.266,
+   "side": "L",
+   "who": "controller",
+   "m": 0.947
+  },
+  {
+   "t": 36.266,
+   "side": "R",
+   "who": "controller",
+   "m": 0.987
+  },
+  {
+   "t": 36.281,
+   "side": "L",
+   "who": "controller",
+   "m": 0.834
+  },
+  {
+   "t": 36.281,
+   "side": "R",
+   "who": "controller",
+   "m": 0.865
+  },
+  {
+   "t": 36.297,
+   "side": "L",
+   "who": "controller",
+   "m": 0.985
+  },
+  {
+   "t": 36.297,
+   "side": "R",
+   "who": "controller",
+   "m": 1.021
+  },
+  {
+   "t": 36.312,
+   "side": "L",
+   "who": "controller",
+   "m": 1.053
+  },
+  {
+   "t": 36.312,
+   "side": "R",
+   "who": "controller",
+   "m": 1.09
+  },
+  {
+   "t": 36.326,
+   "side": "L",
+   "who": "controller",
+   "m": 1.017
+  },
+  {
+   "t": 36.326,
+   "side": "R",
+   "who": "controller",
+   "m": 1.049
+  },
+  {
+   "t": 36.341,
+   "side": "L",
+   "who": "controller",
+   "m": 0.921
+  },
+  {
+   "t": 36.341,
+   "side": "R",
+   "who": "controller",
+   "m": 0.951
+  },
+  {
+   "t": 36.359,
+   "side": "L",
+   "who": "controller",
+   "m": 0.959
+  },
+  {
+   "t": 36.359,
+   "side": "R",
+   "who": "controller",
+   "m": 0.989
+  },
+  {
+   "t": 36.379,
+   "side": "L",
+   "who": "controller",
+   "m": 1.229
+  },
+  {
+   "t": 36.379,
+   "side": "R",
+   "who": "controller",
+   "m": 1.265
+  },
+  {
+   "t": 36.394,
+   "side": "L",
+   "who": "controller",
+   "m": 1.217
+  },
+  {
+   "t": 36.394,
+   "side": "R",
+   "who": "controller",
+   "m": 1.252
+  },
+  {
+   "t": 36.416,
+   "side": "L",
+   "who": "controller",
+   "m": 1.121
+  },
+  {
+   "t": 36.416,
+   "side": "R",
+   "who": "controller",
+   "m": 1.151
+  },
+  {
+   "t": 36.432,
+   "side": "L",
+   "who": "controller",
+   "m": 1.417
+  },
+  {
+   "t": 36.432,
+   "side": "R",
+   "who": "controller",
+   "m": 1.453
+  },
+  {
+   "t": 36.45,
+   "side": "L",
+   "who": "controller",
+   "m": 1.127
+  },
+  {
+   "t": 36.45,
+   "side": "R",
+   "who": "controller",
+   "m": 1.153
+  },
+  {
+   "t": 36.469,
+   "side": "L",
+   "who": "controller",
+   "m": 1.177
+  },
+  {
+   "t": 36.469,
+   "side": "R",
+   "who": "controller",
+   "m": 1.204
+  },
+  {
+   "t": 36.483,
+   "side": "L",
+   "who": "controller",
+   "m": 1.189
+  },
+  {
+   "t": 36.483,
+   "side": "R",
+   "who": "controller",
+   "m": 1.215
+  },
+  {
+   "t": 36.503,
+   "side": "L",
+   "who": "controller",
+   "m": 1.014
+  },
+  {
+   "t": 36.503,
+   "side": "R",
+   "who": "controller",
+   "m": 1.033
+  },
+  {
+   "t": 36.523,
+   "side": "L",
+   "who": "controller",
+   "m": 1.243
+  },
+  {
+   "t": 36.523,
+   "side": "R",
+   "who": "controller",
+   "m": 1.268
+  },
+  {
+   "t": 36.54,
+   "side": "L",
+   "who": "controller",
+   "m": 1.371
+  },
+  {
+   "t": 36.54,
+   "side": "R",
+   "who": "controller",
+   "m": 1.396
+  },
+  {
+   "t": 36.558,
+   "side": "L",
+   "who": "controller",
+   "m": 1.186
+  },
+  {
+   "t": 36.558,
+   "side": "R",
+   "who": "controller",
+   "m": 1.206
+  },
+  {
+   "t": 36.579,
+   "side": "L",
+   "who": "controller",
+   "m": 1.227
+  },
+  {
+   "t": 36.579,
+   "side": "R",
+   "who": "controller",
+   "m": 1.246
+  },
+  {
+   "t": 36.594,
+   "side": "L",
+   "who": "controller",
+   "m": 1.27
+  },
+  {
+   "t": 36.594,
+   "side": "R",
+   "who": "controller",
+   "m": 1.289
+  },
+  {
+   "t": 36.612,
+   "side": "L",
+   "who": "controller",
+   "m": 1.139
+  },
+  {
+   "t": 36.612,
+   "side": "R",
+   "who": "controller",
+   "m": 1.155
+  },
+  {
+   "t": 36.633,
+   "side": "L",
+   "who": "controller",
+   "m": 1.161
+  },
+  {
+   "t": 36.633,
+   "side": "R",
+   "who": "controller",
+   "m": 1.175
+  },
+  {
+   "t": 36.651,
+   "side": "L",
+   "who": "controller",
+   "m": 1.422
+  },
+  {
+   "t": 36.651,
+   "side": "R",
+   "who": "controller",
+   "m": 1.441
+  },
+  {
+   "t": 36.665,
+   "side": "L",
+   "who": "controller",
+   "m": 1.222
+  },
+  {
+   "t": 36.665,
+   "side": "R",
+   "who": "controller",
+   "m": 1.238
+  },
+  {
+   "t": 36.685,
+   "side": "L",
+   "who": "controller",
+   "m": 0.962
+  },
+  {
+   "t": 36.685,
+   "side": "R",
+   "who": "controller",
+   "m": 0.974
+  },
+  {
+   "t": 36.702,
+   "side": "L",
+   "who": "controller",
+   "m": 1.342
+  },
+  {
+   "t": 36.702,
+   "side": "R",
+   "who": "controller",
+   "m": 1.363
+  },
+  {
+   "t": 36.722,
+   "side": "L",
+   "who": "controller",
+   "m": 1.116
+  },
+  {
+   "t": 36.722,
+   "side": "R",
+   "who": "controller",
+   "m": 1.135
+  },
+  {
+   "t": 36.738,
+   "side": "L",
+   "who": "controller",
+   "m": 1.35
+  },
+  {
+   "t": 36.738,
+   "side": "R",
+   "who": "controller",
+   "m": 1.379
+  },
+  {
+   "t": 36.754,
+   "side": "L",
+   "who": "controller",
+   "m": 1.09
+  },
+  {
+   "t": 36.754,
+   "side": "R",
+   "who": "controller",
+   "m": 1.117
+  },
+  {
+   "t": 36.852,
+   "side": "L",
+   "who": "controller",
+   "m": 1.16
+  },
+  {
+   "t": 36.852,
+   "side": "R",
+   "who": "controller",
+   "m": 1.233
+  },
+  {
+   "t": 37.469,
+   "side": "L",
+   "who": "controller",
+   "m": 0.076
+  },
+  {
+   "t": 37.469,
+   "side": "R",
+   "who": "controller",
+   "m": 0.076
+  },
+  {
+   "t": 37.482,
+   "side": "L",
+   "who": "controller",
+   "m": 0.088
+  },
+  {
+   "t": 37.482,
+   "side": "R",
+   "who": "controller",
+   "m": 0.087
+  },
+  {
+   "t": 37.495,
+   "side": "L",
+   "who": "controller",
+   "m": 0.103
+  },
+  {
+   "t": 37.495,
+   "side": "R",
+   "who": "controller",
+   "m": 0.103
+  },
+  {
+   "t": 37.508,
+   "side": "L",
+   "who": "controller",
+   "m": 0.138
+  },
+  {
+   "t": 37.508,
+   "side": "R",
+   "who": "controller",
+   "m": 0.138
+  },
+  {
+   "t": 37.521,
+   "side": "L",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 37.521,
+   "side": "R",
+   "who": "controller",
+   "m": 0.113
+  },
+  {
+   "t": 37.536,
+   "side": "L",
+   "who": "controller",
+   "m": 0.118
+  },
+  {
+   "t": 37.536,
+   "side": "R",
+   "who": "controller",
+   "m": 0.118
+  },
+  {
+   "t": 37.552,
+   "side": "L",
+   "who": "controller",
+   "m": 0.149
+  },
+  {
+   "t": 37.552,
+   "side": "R",
+   "who": "controller",
+   "m": 0.149
+  },
+  {
+   "t": 37.564,
+   "side": "L",
+   "who": "controller",
+   "m": 0.108
+  },
+  {
+   "t": 37.564,
+   "side": "R",
+   "who": "controller",
+   "m": 0.108
+  },
+  {
+   "t": 37.573,
+   "side": "L",
+   "who": "controller",
+   "m": 0.13
+  },
+  {
+   "t": 37.573,
+   "side": "R",
+   "who": "controller",
+   "m": 0.13
+  },
+  {
+   "t": 37.586,
+   "side": "L",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 37.586,
+   "side": "R",
+   "who": "controller",
+   "m": 0.078
+  },
+  {
+   "t": 37.599,
+   "side": "L",
+   "who": "controller",
+   "m": 0.1
+  },
+  {
+   "t": 37.599,
+   "side": "R",
+   "who": "controller",
+   "m": 0.1
+  },
+  {
+   "t": 37.61,
+   "side": "L",
+   "who": "controller",
+   "m": 0.13
+  },
+  {
+   "t": 37.61,
+   "side": "R",
+   "who": "controller",
+   "m": 0.13
+  },
+  {
+   "t": 37.623,
+   "side": "L",
+   "who": "controller",
+   "m": 0.066
+  },
+  {
+   "t": 37.623,
+   "side": "R",
+   "who": "controller",
+   "m": 0.066
+  },
+  {
+   "t": 37.637,
+   "side": "L",
+   "who": "controller",
+   "m": 0.076
+  },
+  {
+   "t": 37.637,
+   "side": "R",
+   "who": "controller",
+   "m": 0.076
+  },
+  {
+   "t": 37.651,
+   "side": "L",
+   "who": "controller",
+   "m": 0.072
+  },
+  {
+   "t": 37.651,
+   "side": "R",
+   "who": "controller",
+   "m": 0.072
+  },
+  {
+   "t": 37.663,
+   "side": "L",
+   "who": "controller",
+   "m": 0.07
+  },
+  {
+   "t": 37.663,
+   "side": "R",
+   "who": "controller",
+   "m": 0.07
+  },
+  {
+   "t": 37.676,
+   "side": "L",
+   "who": "controller",
+   "m": 0.063
+  },
+  {
+   "t": 37.676,
+   "side": "R",
+   "who": "controller",
+   "m": 0.063
+  },
+  {
+   "t": 37.736,
+   "side": "L",
+   "who": "controller",
+   "m": 0.061
+  },
+  {
+   "t": 37.736,
+   "side": "R",
+   "who": "controller",
+   "m": 0.061
+  },
+  {
+   "t": 38.032,
+   "side": "L",
+   "who": "controller",
+   "m": 0.06
+  },
+  {
+   "t": 38.032,
+   "side": "R",
+   "who": "controller",
+   "m": 0.06
+  },
+  {
+   "t": 38.042,
+   "side": "L",
+   "who": "controller",
+   "m": 0.066
+  },
+  {
+   "t": 38.042,
+   "side": "R",
+   "who": "controller",
+   "m": 0.066
+  },
+  {
+   "t": 38.066,
+   "side": "L",
+   "who": "controller",
+   "m": 0.065
+  },
+  {
+   "t": 38.066,
+   "side": "R",
+   "who": "controller",
+   "m": 0.065
+  },
+  {
+   "t": 38.091,
+   "side": "L",
+   "who": "controller",
+   "m": 0.108
+  },
+  {
+   "t": 38.091,
+   "side": "R",
+   "who": "controller",
+   "m": 0.108
+  },
+  {
+   "t": 38.105,
+   "side": "L",
+   "who": "controller",
+   "m": 0.081
+  },
+  {
+   "t": 38.105,
+   "side": "R",
+   "who": "controller",
+   "m": 0.08
+  },
+  {
+   "t": 38.125,
+   "side": "L",
+   "who": "controller",
+   "m": 0.118
+  },
+  {
+   "t": 38.125,
+   "side": "R",
+   "who": "controller",
+   "m": 0.119
+  },
+  {
+   "t": 38.136,
+   "side": "L",
+   "who": "controller",
+   "m": 0.166
+  },
+  {
+   "t": 38.136,
+   "side": "R",
+   "who": "controller",
+   "m": 0.166
+  },
+  {
+   "t": 38.148,
+   "side": "L",
+   "who": "controller",
+   "m": 0.09
+  },
+  {
+   "t": 38.148,
+   "side": "R",
+   "who": "controller",
+   "m": 0.09
+  },
+  {
+   "t": 38.164,
+   "side": "L",
+   "who": "controller",
+   "m": 0.096
+  },
+  {
+   "t": 38.164,
+   "side": "R",
+   "who": "controller",
+   "m": 0.096
+  },
+  {
+   "t": 38.174,
+   "side": "L",
+   "who": "controller",
+   "m": 0.119
+  },
+  {
+   "t": 38.174,
+   "side": "R",
+   "who": "controller",
+   "m": 0.119
+  },
+  {
+   "t": 38.188,
+   "side": "L",
+   "who": "controller",
+   "m": 0.069
+  },
+  {
+   "t": 38.188,
+   "side": "R",
+   "who": "controller",
+   "m": 0.069
+  },
+  {
+   "t": 38.201,
+   "side": "L",
+   "who": "controller",
+   "m": 0.097
+  },
+  {
+   "t": 38.201,
+   "side": "R",
+   "who": "controller",
+   "m": 0.097
+  },
+  {
+   "t": 38.214,
+   "side": "L",
+   "who": "controller",
+   "m": 0.068
+  },
+  {
+   "t": 38.214,
+   "side": "R",
+   "who": "controller",
+   "m": 0.068
+  },
+  {
+   "t": 38.227,
+   "side": "L",
+   "who": "controller",
+   "m": 0.069
+  },
+  {
+   "t": 38.227,
+   "side": "R",
+   "who": "controller",
+   "m": 0.069
+  },
+  {
+   "t": 38.238,
+   "side": "L",
+   "who": "controller",
+   "m": 0.066
+  },
+  {
+   "t": 38.238,
+   "side": "R",
+   "who": "controller",
+   "m": 0.066
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's hand jumped 2 times while the controller was calm; a controller jumped 652 times (tracking glitches).",
+ "file": "the-darkness-vr_20261128-172553.ghl"
+}
