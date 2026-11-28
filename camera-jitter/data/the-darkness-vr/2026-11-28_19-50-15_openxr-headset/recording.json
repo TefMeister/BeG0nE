@@ -1,0 +1,101 @@
+{
+ "wall_ms": 1795887725105,
+ "clock": "log clock",
+ "game": "the-darkness-vr",
+ "videos": [
+  {
+   "file": "begone_second_2026-11-28_19-42-26.mp4",
+   "window": "OpenXR headset view (OBS Mirror)",
+   "offset_s": -21.567,
+   "cuts": [
+    {
+     "stretch": "jitter_248-249s",
+     "from_s": 248,
+     "to_s": 249,
+     "frames": 90,
+     "held": 12,
+     "jumped": 11,
+     "folder": "the-darkness-vr/begone-frames/2026-11-28_19-50-15_openxr-headset/jitter_248-249s_headset",
+     "note": null
+    },
+    {
+     "stretch": "jitter_253-255s",
+     "from_s": 253,
+     "to_s": 255,
+     "frames": 150,
+     "held": 31,
+     "jumped": 29,
+     "folder": "the-darkness-vr/begone-frames/2026-11-28_19-50-15_openxr-headset/jitter_253-255s_headset",
+     "note": null
+    },
+    {
+     "stretch": "jitter_256-257s",
+     "from_s": 256,
+     "to_s": 257,
+     "frames": 90,
+     "held": 26,
+     "jumped": 12,
+     "folder": "the-darkness-vr/begone-frames/2026-11-28_19-50-15_openxr-headset/jitter_256-257s_headset",
+     "note": null
+    },
+    {
+     "stretch": "smooth_22-23s",
+     "from_s": 22,
+     "to_s": 23,
+     "frames": 90,
+     "held": 25,
+     "jumped": 18,
+     "folder": "the-darkness-vr/begone-frames/2026-11-28_19-50-15_openxr-headset/smooth_22-23s_headset",
+     "note": null
+    }
+   ]
+  },
+  {
+   "file": "begone_2026-11-28_19-42-26.mp4",
+   "window": "game window",
+   "offset_s": -21.567,
+   "cuts": [
+    {
+     "stretch": "jitter_248-249s",
+     "from_s": 248,
+     "to_s": 249,
+     "frames": 90,
+     "held": 13,
+     "jumped": 14,
+     "folder": "the-darkness-vr/begone-frames/2026-11-28_19-50-15_openxr-headset/jitter_248-249s_game",
+     "note": null
+    },
+    {
+     "stretch": "jitter_253-255s",
+     "from_s": 253,
+     "to_s": 255,
+     "frames": 150,
+     "held": 16,
+     "jumped": 10,
+     "folder": "the-darkness-vr/begone-frames/2026-11-28_19-50-15_openxr-headset/jitter_253-255s_game",
+     "note": null
+    },
+    {
+     "stretch": "jitter_256-257s",
+     "from_s": 256,
+     "to_s": 257,
+     "frames": 90,
+     "held": 23,
+     "jumped": 10,
+     "folder": "the-darkness-vr/begone-frames/2026-11-28_19-50-15_openxr-headset/jitter_256-257s_game",
+     "note": null
+    },
+    {
+     "stretch": "smooth_22-23s",
+     "from_s": 22,
+     "to_s": 23,
+     "frames": 90,
+     "held": 29,
+     "jumped": 18,
+     "folder": "the-darkness-vr/begone-frames/2026-11-28_19-50-15_openxr-headset/smooth_22-23s_game",
+     "note": null
+    }
+   ]
+  }
+ ]
+}
