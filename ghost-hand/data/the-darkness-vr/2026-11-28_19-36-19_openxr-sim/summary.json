@@ -1,0 +1,560 @@
+{
+ "game": "the-darkness-vr",
+ "runtime": "openxr-sim",
+ "frames": 2784,
+ "seconds": 70.93,
+ "frames_per_s": 39.2,
+ "hands": {
+  "L": {
+   "frames": 2140,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 15.1285,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 2140,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 18.2934,
+   "lag_frames": 2,
+   "lag_ms": 51.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.245,
+   "side": "L",
+   "who": "game",
+   "m": 5.054
+  },
+  {
+   "t": 0.245,
+   "side": "R",
+   "who": "game",
+   "m": 6.131
+  },
+  {
+   "t": 20.87,
+   "side": "L",
+   "who": "controller",
+   "m": 0.174
+  },
+  {
+   "t": 20.87,
+   "side": "R",
+   "who": "controller",
+   "m": 0.176
+  },
+  {
+   "t": 20.896,
+   "side": "L",
+   "who": "controller",
+   "m": 0.182
+  },
+  {
+   "t": 20.896,
+   "side": "R",
+   "who": "controller",
+   "m": 0.184
+  },
+  {
+   "t": 20.92,
+   "side": "L",
+   "who": "controller",
+   "m": 0.198
+  },
+  {
+   "t": 20.92,
+   "side": "R",
+   "who": "controller",
+   "m": 0.201
+  },
+  {
+   "t": 20.946,
+   "side": "L",
+   "who": "controller",
+   "m": 0.155
+  },
+  {
+   "t": 20.946,
+   "side": "R",
+   "who": "controller",
+   "m": 0.157
+  },
+  {
+   "t": 20.968,
+   "side": "L",
+   "who": "controller",
+   "m": 0.215
+  },
+  {
+   "t": 20.968,
+   "side": "R",
+   "who": "controller",
+   "m": 0.217
+  },
+  {
+   "t": 20.993,
+   "side": "L",
+   "who": "controller",
+   "m": 0.169
+  },
+  {
+   "t": 20.993,
+   "side": "R",
+   "who": "controller",
+   "m": 0.17
+  },
+  {
+   "t": 21.019,
+   "side": "L",
+   "who": "controller",
+   "m": 0.206
+  },
+  {
+   "t": 21.019,
+   "side": "R",
+   "who": "controller",
+   "m": 0.207
+  },
+  {
+   "t": 21.049,
+   "side": "L",
+   "who": "controller",
+   "m": 0.191
+  },
+  {
+   "t": 21.049,
+   "side": "R",
+   "who": "controller",
+   "m": 0.191
+  },
+  {
+   "t": 21.065,
+   "side": "L",
+   "who": "controller",
+   "m": 0.25
+  },
+  {
+   "t": 21.065,
+   "side": "R",
+   "who": "controller",
+   "m": 0.25
+  },
+  {
+   "t": 21.139,
+   "side": "L",
+   "who": "controller",
+   "m": 0.19
+  },
+  {
+   "t": 21.139,
+   "side": "R",
+   "who": "controller",
+   "m": 0.189
+  },
+  {
+   "t": 21.162,
+   "side": "L",
+   "who": "controller",
+   "m": 0.224
+  },
+  {
+   "t": 21.162,
+   "side": "R",
+   "who": "controller",
+   "m": 0.223
+  },
+  {
+   "t": 21.187,
+   "side": "L",
+   "who": "controller",
+   "m": 0.201
+  },
+  {
+   "t": 21.187,
+   "side": "R",
+   "who": "controller",
+   "m": 0.199
+  },
+  {
+   "t": 21.262,
+   "side": "L",
+   "who": "controller",
+   "m": 0.227
+  },
+  {
+   "t": 21.262,
+   "side": "R",
+   "who": "controller",
+   "m": 0.225
+  },
+  {
+   "t": 21.363,
+   "side": "L",
+   "who": "controller",
+   "m": 0.236
+  },
+  {
+   "t": 21.363,
+   "side": "R",
+   "who": "controller",
+   "m": 0.232
+  },
+  {
+   "t": 21.39,
+   "side": "L",
+   "who": "controller",
+   "m": 0.193
+  },
+  {
+   "t": 21.39,
+   "side": "R",
+   "who": "controller",
+   "m": 0.189
+  },
+  {
+   "t": 21.417,
+   "side": "L",
+   "who": "controller",
+   "m": 0.246
+  },
+  {
+   "t": 21.417,
+   "side": "R",
+   "who": "controller",
+   "m": 0.24
+  },
+  {
+   "t": 21.439,
+   "side": "L",
+   "who": "controller",
+   "m": 0.234
+  },
+  {
+   "t": 21.439,
+   "side": "R",
+   "who": "controller",
+   "m": 0.228
+  },
+  {
+   "t": 21.463,
+   "side": "L",
+   "who": "controller",
+   "m": 0.207
+  },
+  {
+   "t": 21.463,
+   "side": "R",
+   "who": "controller",
+   "m": 0.201
+  },
+  {
+   "t": 21.496,
+   "side": "L",
+   "who": "controller",
+   "m": 0.212
+  },
+  {
+   "t": 21.496,
+   "side": "R",
+   "who": "controller",
+   "m": 0.206
+  },
+  {
+   "t": 21.525,
+   "side": "L",
+   "who": "controller",
+   "m": 0.285
+  },
+  {
+   "t": 21.525,
+   "side": "R",
+   "who": "controller",
+   "m": 0.276
+  },
+  {
+   "t": 21.542,
+   "side": "L",
+   "who": "controller",
+   "m": 0.278
+  },
+  {
+   "t": 21.542,
+   "side": "R",
+   "who": "controller",
+   "m": 0.268
+  },
+  {
+   "t": 21.567,
+   "side": "L",
+   "who": "controller",
+   "m": 0.163
+  },
+  {
+   "t": 21.567,
+   "side": "R",
+   "who": "controller",
+   "m": 0.157
+  },
+  {
+   "t": 21.594,
+   "side": "L",
+   "who": "controller",
+   "m": 0.215
+  },
+  {
+   "t": 21.594,
+   "side": "R",
+   "who": "controller",
+   "m": 0.207
+  },
+  {
+   "t": 21.624,
+   "side": "L",
+   "who": "controller",
+   "m": 0.247
+  },
+  {
+   "t": 21.624,
+   "side": "R",
+   "who": "controller",
+   "m": 0.238
+  },
+  {
+   "t": 21.647,
+   "side": "L",
+   "who": "controller",
+   "m": 0.283
+  },
+  {
+   "t": 21.647,
+   "side": "R",
+   "who": "controller",
+   "m": 0.272
+  },
+  {
+   "t": 21.67,
+   "side": "L",
+   "who": "controller",
+   "m": 0.214
+  },
+  {
+   "t": 21.67,
+   "side": "R",
+   "who": "controller",
+   "m": 0.205
+  },
+  {
+   "t": 21.694,
+   "side": "L",
+   "who": "controller",
+   "m": 0.22
+  },
+  {
+   "t": 21.694,
+   "side": "R",
+   "who": "controller",
+   "m": 0.211
+  },
+  {
+   "t": 21.722,
+   "side": "L",
+   "who": "controller",
+   "m": 0.214
+  },
+  {
+   "t": 21.722,
+   "side": "R",
+   "who": "controller",
+   "m": 0.205
+  },
+  {
+   "t": 21.744,
+   "side": "L",
+   "who": "controller",
+   "m": 0.263
+  },
+  {
+   "t": 21.744,
+   "side": "R",
+   "who": "controller",
+   "m": 0.251
+  },
+  {
+   "t": 21.775,
+   "side": "L",
+   "who": "controller",
+   "m": 0.208
+  },
+  {
+   "t": 21.775,
+   "side": "R",
+   "who": "controller",
+   "m": 0.198
+  },
+  {
+   "t": 21.797,
+   "side": "L",
+   "who": "controller",
+   "m": 0.273
+  },
+  {
+   "t": 21.797,
+   "side": "R",
+   "who": "controller",
+   "m": 0.26
+  },
+  {
+   "t": 21.823,
+   "side": "L",
+   "who": "controller",
+   "m": 0.221
+  },
+  {
+   "t": 21.823,
+   "side": "R",
+   "who": "controller",
+   "m": 0.211
+  },
+  {
+   "t": 21.853,
+   "side": "L",
+   "who": "controller",
+   "m": 0.229
+  },
+  {
+   "t": 21.853,
+   "side": "R",
+   "who": "controller",
+   "m": 0.217
+  },
+  {
+   "t": 21.879,
+   "side": "L",
+   "who": "controller",
+   "m": 0.287
+  },
+  {
+   "t": 21.879,
+   "side": "R",
+   "who": "controller",
+   "m": 0.273
+  },
+  {
+   "t": 21.91,
+   "side": "L",
+   "who": "controller",
+   "m": 0.224
+  },
+  {
+   "t": 21.91,
+   "side": "R",
+   "who": "controller",
+   "m": 0.213
+  },
+  {
+   "t": 21.933,
+   "side": "L",
+   "who": "controller",
+   "m": 0.321
+  },
+  {
+   "t": 21.933,
+   "side": "R",
+   "who": "controller",
+   "m": 0.305
+  },
+  {
+   "t": 21.958,
+   "side": "L",
+   "who": "controller",
+   "m": 0.214
+  },
+  {
+   "t": 21.958,
+   "side": "R",
+   "who": "controller",
+   "m": 0.204
+  },
+  {
+   "t": 21.987,
+   "side": "L",
+   "who": "controller",
+   "m": 0.233
+  },
+  {
+   "t": 21.987,
+   "side": "R",
+   "who": "controller",
+   "m": 0.222
+  },
+  {
+   "t": 22.008,
+   "side": "L",
+   "who": "controller",
+   "m": 0.275
+  },
+  {
+   "t": 22.008,
+   "side": "R",
+   "who": "controller",
+   "m": 0.261
+  },
+  {
+   "t": 22.113,
+   "side": "L",
+   "who": "controller",
+   "m": 0.236
+  },
+  {
+   "t": 22.113,
+   "side": "R",
+   "who": "controller",
+   "m": 0.23
+  },
+  {
+   "t": 22.241,
+   "side": "L",
+   "who": "controller",
+   "m": 0.232
+  },
+  {
+   "t": 22.241,
+   "side": "R",
+   "who": "controller",
+   "m": 0.222
+  },
+  {
+   "t": 22.267,
+   "side": "L",
+   "who": "controller",
+   "m": 0.249
+  },
+  {
+   "t": 22.267,
+   "side": "R",
+   "who": "controller",
+   "m": 0.238
+  },
+  {
+   "t": 22.414,
+   "side": "L",
+   "who": "controller",
+   "m": 0.065
+  },
+  {
+   "t": 22.414,
+   "side": "R",
+   "who": "controller",
+   "m": 0.065
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's right hand trails the controller by 2 frames (51.0 ms); the game's hand jumped 2 times while the controller was calm; a controller jumped 86 times (tracking glitches).",
+ "file": "the-darkness-vr_20261128-193508.ghl"
+}
