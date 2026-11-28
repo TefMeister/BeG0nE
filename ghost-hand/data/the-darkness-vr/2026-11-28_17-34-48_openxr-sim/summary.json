@@ -1,0 +1,56 @@
+{
+ "game": "the-darkness-vr",
+ "runtime": "openxr-sim",
+ "frames": 3711,
+ "seconds": 41.29,
+ "frames_per_s": 89.9,
+ "hands": {
+  "L": {
+   "frames": 2253,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 10.1208,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 2253,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 11.5683,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.101,
+   "side": "L",
+   "who": "game",
+   "m": 6.384
+  },
+  {
+   "t": 0.101,
+   "side": "R",
+   "who": "game",
+   "m": 7.296
+  },
+  {
+   "t": 26.883,
+   "side": "L",
+   "who": "controller",
+   "m": 12.045
+  },
+  {
+   "t": 26.883,
+   "side": "R",
+   "who": "controller",
+   "m": 12.045
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's hand jumped 2 times while the controller was calm; a controller jumped 2 times (tracking glitches).",
+ "file": "the-darkness-vr_20261128-173407.ghl"
+}
