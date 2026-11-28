@@ -154,3 +154,4 @@ run,game,runtime,date,time,seconds,pictures_per_s,pose_reads_per_s,camera_writes
 2026-11-28_22-18-20_openxr,hard-reset-vr,openxr,2026-11-28,22-18-20,156.81,89.9,89.9,1827.1,0,0,no-movement,"The head hardly turned, so this log cannot show jitter. Turn the head slowly and smoothly for a few seconds."
 2026-11-28_22-23-08_openxr,hard-reset-vr,openxr,2026-11-28,22-23-08,157.78,89.9,89.9,1732.5,0,0,no-movement,"The head hardly turned, so this log cannot show jitter. Turn the head slowly and smoothly for a few seconds."
 2026-11-28_22-25-49_openxr,hard-reset-vr,openxr,2026-11-28,22-25-49,132.54,90.0,90.0,2044.6,0,0,no-movement,"The head hardly turned, so this log cannot show jitter. Turn the head slowly and smoothly for a few seconds."
+2026-11-28_22-28-51_openxr,hard-reset-vr,openxr,2026-11-28,22-28-51,163.94,90.0,90.0,1748.5,0,0,no-movement,"The head hardly turned, so this log cannot show jitter. Turn the head slowly and smoothly for a few seconds."
