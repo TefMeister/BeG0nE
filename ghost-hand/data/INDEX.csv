@@ -916,3 +916,4 @@ run,game,runtime,date,time,seconds,attempts,finished,jumps,tracking_lost,quality
 2026-11-28_18-12-43_openxr-sim,the-darkness-vr,openxr-sim,2026-11-28,18-12-43,211.29,0,0,248,0,good,the game's hand jumped 2 times while the controller was calm; a controller jumped 246 times (tracking glitches).
 2026-11-28_18-46-11_openxr-sim,the-darkness-vr,openxr-sim,2026-11-28,18-46-11,264.79,0,0,4,0,good,the game's hand jumped 2 times while the controller was calm; a controller jumped 2 times (tracking glitches).
 2026-11-28_18-49-08_openxr-sim,the-darkness-vr,openxr-sim,2026-11-28,18-49-08,64.65,0,0,6,0,good,the game's hand jumped 2 times while the controller was calm; a controller jumped 4 times (tracking glitches).
+2026-11-28_18-53-23_openxr-sim,the-darkness-vr,openxr-sim,2026-11-28,18-53-23,68.56,0,0,337,0,good,the game's hand jumped 2 times while the controller was calm; a controller jumped 335 times (tracking glitches).
