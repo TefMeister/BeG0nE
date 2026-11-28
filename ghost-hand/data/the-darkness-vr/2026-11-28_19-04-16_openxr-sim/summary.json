@@ -1,0 +1,344 @@
+{
+ "game": "the-darkness-vr",
+ "runtime": "openxr-sim",
+ "frames": 4010,
+ "seconds": 81.89,
+ "frames_per_s": 49.0,
+ "hands": {
+  "L": {
+   "frames": 3319,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 15.1246,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 3319,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 18.2896,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.235,
+   "side": "L",
+   "who": "game",
+   "m": 8.1
+  },
+  {
+   "t": 0.235,
+   "side": "R",
+   "who": "game",
+   "m": 10.327
+  },
+  {
+   "t": 32.895,
+   "side": "L",
+   "who": "controller",
+   "m": 9.122
+  },
+  {
+   "t": 32.895,
+   "side": "R",
+   "who": "controller",
+   "m": 9.124
+  },
+  {
+   "t": 34.833,
+   "side": "L",
+   "who": "controller",
+   "m": 0.168
+  },
+  {
+   "t": 34.833,
+   "side": "R",
+   "who": "controller",
+   "m": 0.168
+  },
+  {
+   "t": 47.914,
+   "side": "L",
+   "who": "controller",
+   "m": 0.258
+  },
+  {
+   "t": 47.914,
+   "side": "R",
+   "who": "controller",
+   "m": 0.258
+  },
+  {
+   "t": 59.187,
+   "side": "L",
+   "who": "controller",
+   "m": 0.105
+  },
+  {
+   "t": 59.187,
+   "side": "R",
+   "who": "controller",
+   "m": 0.105
+  },
+  {
+   "t": 79.615,
+   "side": "L",
+   "who": "controller",
+   "m": 0.175
+  },
+  {
+   "t": 79.615,
+   "side": "R",
+   "who": "controller",
+   "m": 0.175
+  },
+  {
+   "t": 80.816,
+   "side": "L",
+   "who": "controller",
+   "m": 23.271
+  },
+  {
+   "t": 80.816,
+   "side": "R",
+   "who": "controller",
+   "m": 23.27
+  },
+  {
+   "t": 80.835,
+   "side": "L",
+   "who": "controller",
+   "m": 0.553
+  },
+  {
+   "t": 80.835,
+   "side": "R",
+   "who": "controller",
+   "m": 0.553
+  },
+  {
+   "t": 80.852,
+   "side": "L",
+   "who": "controller",
+   "m": 0.5
+  },
+  {
+   "t": 80.852,
+   "side": "R",
+   "who": "controller",
+   "m": 0.5
+  },
+  {
+   "t": 80.864,
+   "side": "L",
+   "who": "controller",
+   "m": 24.948
+  },
+  {
+   "t": 80.864,
+   "side": "R",
+   "who": "controller",
+   "m": 24.948
+  },
+  {
+   "t": 80.908,
+   "side": "L",
+   "who": "controller",
+   "m": 0.061
+  },
+  {
+   "t": 80.908,
+   "side": "R",
+   "who": "controller",
+   "m": 0.061
+  },
+  {
+   "t": 81.573,
+   "side": "L",
+   "who": "controller",
+   "m": 0.123
+  },
+  {
+   "t": 81.573,
+   "side": "R",
+   "who": "controller",
+   "m": 0.124
+  },
+  {
+   "t": 81.591,
+   "side": "L",
+   "who": "controller",
+   "m": 0.118
+  },
+  {
+   "t": 81.591,
+   "side": "R",
+   "who": "controller",
+   "m": 0.118
+  },
+  {
+   "t": 81.607,
+   "side": "L",
+   "who": "controller",
+   "m": 0.107
+  },
+  {
+   "t": 81.607,
+   "side": "R",
+   "who": "controller",
+   "m": 0.107
+  },
+  {
+   "t": 81.624,
+   "side": "L",
+   "who": "controller",
+   "m": 0.096
+  },
+  {
+   "t": 81.624,
+   "side": "R",
+   "who": "controller",
+   "m": 0.096
+  },
+  {
+   "t": 81.64,
+   "side": "L",
+   "who": "controller",
+   "m": 0.098
+  },
+  {
+   "t": 81.64,
+   "side": "R",
+   "who": "controller",
+   "m": 0.098
+  },
+  {
+   "t": 81.655,
+   "side": "L",
+   "who": "controller",
+   "m": 0.094
+  },
+  {
+   "t": 81.655,
+   "side": "R",
+   "who": "controller",
+   "m": 0.094
+  },
+  {
+   "t": 81.674,
+   "side": "L",
+   "who": "controller",
+   "m": 0.091
+  },
+  {
+   "t": 81.674,
+   "side": "R",
+   "who": "controller",
+   "m": 0.091
+  },
+  {
+   "t": 81.694,
+   "side": "L",
+   "who": "controller",
+   "m": 0.102
+  },
+  {
+   "t": 81.694,
+   "side": "R",
+   "who": "controller",
+   "m": 0.102
+  },
+  {
+   "t": 81.709,
+   "side": "L",
+   "who": "controller",
+   "m": 0.128
+  },
+  {
+   "t": 81.709,
+   "side": "R",
+   "who": "controller",
+   "m": 0.128
+  },
+  {
+   "t": 81.729,
+   "side": "L",
+   "who": "controller",
+   "m": 0.095
+  },
+  {
+   "t": 81.729,
+   "side": "R",
+   "who": "controller",
+   "m": 0.095
+  },
+  {
+   "t": 81.745,
+   "side": "L",
+   "who": "controller",
+   "m": 0.109
+  },
+  {
+   "t": 81.745,
+   "side": "R",
+   "who": "controller",
+   "m": 0.109
+  },
+  {
+   "t": 81.761,
+   "side": "L",
+   "who": "controller",
+   "m": 0.108
+  },
+  {
+   "t": 81.761,
+   "side": "R",
+   "who": "controller",
+   "m": 0.108
+  },
+  {
+   "t": 81.78,
+   "side": "L",
+   "who": "controller",
+   "m": 0.088
+  },
+  {
+   "t": 81.78,
+   "side": "R",
+   "who": "controller",
+   "m": 0.088
+  },
+  {
+   "t": 81.794,
+   "side": "L",
+   "who": "controller",
+   "m": 0.095
+  },
+  {
+   "t": 81.794,
+   "side": "R",
+   "who": "controller",
+   "m": 0.095
+  },
+  {
+   "t": 81.813,
+   "side": "L",
+   "who": "controller",
+   "m": 0.072
+  },
+  {
+   "t": 81.813,
+   "side": "R",
+   "who": "controller",
+   "m": 0.072
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's hand jumped 2 times while the controller was calm; a controller jumped 50 times (tracking glitches).",
+ "file": "the-darkness-vr_20261128-190254.ghl"
+}
