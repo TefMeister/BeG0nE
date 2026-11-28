@@ -1,0 +1,500 @@
+{
+ "game": "the-darkness-vr",
+ "runtime": "openxr-sim",
+ "frames": 2776,
+ "seconds": 45.36,
+ "frames_per_s": 61.2,
+ "hands": {
+  "L": {
+   "frames": 1401,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 15.128,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  },
+  "R": {
+   "frames": 1401,
+   "usual_m": 0.0,
+   "wander_p95_m": 0.0,
+   "wander_max_m": 18.2925,
+   "lag_frames": 0,
+   "lag_ms": 0.0
+  }
+ },
+ "jumps": [
+  {
+   "t": 0.228,
+   "side": "L",
+   "who": "game",
+   "m": 8.121
+  },
+  {
+   "t": 0.228,
+   "side": "R",
+   "who": "game",
+   "m": 10.345
+  },
+  {
+   "t": 0.239,
+   "side": "L",
+   "who": "controller",
+   "m": 0.161
+  },
+  {
+   "t": 0.239,
+   "side": "R",
+   "who": "controller",
+   "m": 0.161
+  },
+  {
+   "t": 20.276,
+   "side": "L",
+   "who": "controller",
+   "m": 5.854
+  },
+  {
+   "t": 20.276,
+   "side": "R",
+   "who": "controller",
+   "m": 5.845
+  },
+  {
+   "t": 20.297,
+   "side": "L",
+   "who": "controller",
+   "m": 34.214
+  },
+  {
+   "t": 20.297,
+   "side": "R",
+   "who": "controller",
+   "m": 35.785
+  },
+  {
+   "t": 20.603,
+   "side": "L",
+   "who": "controller",
+   "m": 18.229
+  },
+  {
+   "t": 20.603,
+   "side": "R",
+   "who": "controller",
+   "m": 11.537
+  },
+  {
+   "t": 20.727,
+   "side": "L",
+   "who": "controller",
+   "m": 34.831
+  },
+  {
+   "t": 20.727,
+   "side": "R",
+   "who": "controller",
+   "m": 29.514
+  },
+  {
+   "t": 20.93,
+   "side": "L",
+   "who": "controller",
+   "m": 29.208
+  },
+  {
+   "t": 20.93,
+   "side": "R",
+   "who": "controller",
+   "m": 25.434
+  },
+  {
+   "t": 21.685,
+   "side": "L",
+   "who": "controller",
+   "m": 35.907
+  },
+  {
+   "t": 21.685,
+   "side": "R",
+   "who": "controller",
+   "m": 36.413
+  },
+  {
+   "t": 21.705,
+   "side": "L",
+   "who": "controller",
+   "m": 42.426
+  },
+  {
+   "t": 21.705,
+   "side": "R",
+   "who": "controller",
+   "m": 42.694
+  },
+  {
+   "t": 22.126,
+   "side": "L",
+   "who": "controller",
+   "m": 27.302
+  },
+  {
+   "t": 22.126,
+   "side": "R",
+   "who": "controller",
+   "m": 24.234
+  },
+  {
+   "t": 23.429,
+   "side": "L",
+   "who": "controller",
+   "m": 22.133
+  },
+  {
+   "t": 23.429,
+   "side": "R",
+   "who": "controller",
+   "m": 17.303
+  },
+  {
+   "t": 23.62,
+   "side": "L",
+   "who": "controller",
+   "m": 24.854
+  },
+  {
+   "t": 23.62,
+   "side": "R",
+   "who": "controller",
+   "m": 29.757
+  },
+  {
+   "t": 23.82,
+   "side": "L",
+   "who": "controller",
+   "m": 23.356
+  },
+  {
+   "t": 23.82,
+   "side": "R",
+   "who": "controller",
+   "m": 28.351
+  },
+  {
+   "t": 24.549,
+   "side": "L",
+   "who": "controller",
+   "m": 25.826
+  },
+  {
+   "t": 24.549,
+   "side": "R",
+   "who": "controller",
+   "m": 28.803
+  },
+  {
+   "t": 25.95,
+   "side": "L",
+   "who": "controller",
+   "m": 12.164
+  },
+  {
+   "t": 25.95,
+   "side": "R",
+   "who": "controller",
+   "m": 11.387
+  },
+  {
+   "t": 27.93,
+   "side": "L",
+   "who": "controller",
+   "m": 18.873
+  },
+  {
+   "t": 27.93,
+   "side": "R",
+   "who": "controller",
+   "m": 21.228
+  },
+  {
+   "t": 27.943,
+   "side": "L",
+   "who": "controller",
+   "m": 31.48
+  },
+  {
+   "t": 27.943,
+   "side": "R",
+   "who": "controller",
+   "m": 31.638
+  },
+  {
+   "t": 28.781,
+   "side": "L",
+   "who": "controller",
+   "m": 26.22
+  },
+  {
+   "t": 28.781,
+   "side": "R",
+   "who": "controller",
+   "m": 19.854
+  },
+  {
+   "t": 29.376,
+   "side": "L",
+   "who": "controller",
+   "m": 28.448
+  },
+  {
+   "t": 29.376,
+   "side": "R",
+   "who": "controller",
+   "m": 22.71
+  },
+  {
+   "t": 30.034,
+   "side": "L",
+   "who": "controller",
+   "m": 12.222
+  },
+  {
+   "t": 30.034,
+   "side": "R",
+   "who": "controller",
+   "m": 11.12
+  },
+  {
+   "t": 30.403,
+   "side": "L",
+   "who": "controller",
+   "m": 39.492
+  },
+  {
+   "t": 30.403,
+   "side": "R",
+   "who": "controller",
+   "m": 43.681
+  },
+  {
+   "t": 33.417,
+   "side": "L",
+   "who": "controller",
+   "m": 14.783
+  },
+  {
+   "t": 33.417,
+   "side": "R",
+   "who": "controller",
+   "m": 13.32
+  },
+  {
+   "t": 33.43,
+   "side": "L",
+   "who": "controller",
+   "m": 37.679
+  },
+  {
+   "t": 33.43,
+   "side": "R",
+   "who": "controller",
+   "m": 44.448
+  },
+  {
+   "t": 33.519,
+   "side": "L",
+   "who": "controller",
+   "m": 34.452
+  },
+  {
+   "t": 33.519,
+   "side": "R",
+   "who": "controller",
+   "m": 37.257
+  },
+  {
+   "t": 33.533,
+   "side": "L",
+   "who": "controller",
+   "m": 33.041
+  },
+  {
+   "t": 33.533,
+   "side": "R",
+   "who": "controller",
+   "m": 40.35
+  },
+  {
+   "t": 33.657,
+   "side": "L",
+   "who": "controller",
+   "m": 31.297
+  },
+  {
+   "t": 33.657,
+   "side": "R",
+   "who": "controller",
+   "m": 35.184
+  },
+  {
+   "t": 34.422,
+   "side": "L",
+   "who": "controller",
+   "m": 9.33
+  },
+  {
+   "t": 34.422,
+   "side": "R",
+   "who": "controller",
+   "m": 9.673
+  },
+  {
+   "t": 36.557,
+   "side": "L",
+   "who": "controller",
+   "m": 33.823
+  },
+  {
+   "t": 36.557,
+   "side": "R",
+   "who": "controller",
+   "m": 40.868
+  },
+  {
+   "t": 36.574,
+   "side": "L",
+   "who": "controller",
+   "m": 15.985
+  },
+  {
+   "t": 36.574,
+   "side": "R",
+   "who": "controller",
+   "m": 23.418
+  },
+  {
+   "t": 36.592,
+   "side": "L",
+   "who": "controller",
+   "m": 36.625
+  },
+  {
+   "t": 36.592,
+   "side": "R",
+   "who": "controller",
+   "m": 35.139
+  },
+  {
+   "t": 36.716,
+   "side": "L",
+   "who": "controller",
+   "m": 23.255
+  },
+  {
+   "t": 36.716,
+   "side": "R",
+   "who": "controller",
+   "m": 22.592
+  },
+  {
+   "t": 37.226,
+   "side": "L",
+   "who": "controller",
+   "m": 6.721
+  },
+  {
+   "t": 37.226,
+   "side": "R",
+   "who": "controller",
+   "m": 6.601
+  },
+  {
+   "t": 38.146,
+   "side": "L",
+   "who": "controller",
+   "m": 33.6
+  },
+  {
+   "t": 38.146,
+   "side": "R",
+   "who": "controller",
+   "m": 25.948
+  },
+  {
+   "t": 39.487,
+   "side": "L",
+   "who": "controller",
+   "m": 34.25
+  },
+  {
+   "t": 39.487,
+   "side": "R",
+   "who": "controller",
+   "m": 42.688
+  },
+  {
+   "t": 39.501,
+   "side": "L",
+   "who": "controller",
+   "m": 36.54
+  },
+  {
+   "t": 39.501,
+   "side": "R",
+   "who": "controller",
+   "m": 32.011
+  },
+  {
+   "t": 39.514,
+   "side": "L",
+   "who": "controller",
+   "m": 32.262
+  },
+  {
+   "t": 39.514,
+   "side": "R",
+   "who": "controller",
+   "m": 27.251
+  },
+  {
+   "t": 44.161,
+   "side": "L",
+   "who": "controller",
+   "m": 3.394
+  },
+  {
+   "t": 44.161,
+   "side": "R",
+   "who": "controller",
+   "m": 1.133
+  },
+  {
+   "t": 44.429,
+   "side": "L",
+   "who": "controller",
+   "m": 14.614
+  },
+  {
+   "t": 44.429,
+   "side": "R",
+   "who": "controller",
+   "m": 16.114
+  },
+  {
+   "t": 45.262,
+   "side": "L",
+   "who": "controller",
+   "m": 0.06
+  },
+  {
+   "t": 45.262,
+   "side": "R",
+   "who": "controller",
+   "m": 0.06
+  }
+ ],
+ "tracking": [],
+ "attempts": [],
+ "quality": "good",
+ "verdict": "the game's hand jumped 2 times while the controller was calm; a controller jumped 76 times (tracking glitches).",
+ "file": "the-darkness-vr_20261128-185508.ghl"
+}
