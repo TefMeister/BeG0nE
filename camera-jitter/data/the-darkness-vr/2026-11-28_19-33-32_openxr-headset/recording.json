@@ -1,0 +1,41 @@
+{
+ "wall_ms": 1795886825194,
+ "clock": "log clock",
+ "game": "the-darkness-vr",
+ "videos": [
+  {
+   "file": "begone_second_2026-11-28_19-27-16.mp4",
+   "window": "OpenXR headset view (OBS Mirror)",
+   "offset_s": -10.485,
+   "cuts": [
+    {
+     "stretch": "smooth_11-12s",
+     "from_s": 11,
+     "to_s": 12,
+     "frames": 90,
+     "held": 23,
+     "jumped": 13,
+     "folder": "the-darkness-vr/begone-frames/2026-11-28_19-33-32_openxr-headset/smooth_11-12s_headset",
+     "note": null
+    }
+   ]
+  },
+  {
+   "file": "begone_2026-11-28_19-27-15.mp4",
+   "window": "game window",
+   "offset_s": -10.485,
+   "cuts": [
+    {
+     "stretch": "smooth_11-12s",
+     "from_s": 11,
+     "to_s": 12,
+     "frames": 90,
+     "held": 20,
+     "jumped": 19,
+     "folder": "the-darkness-vr/begone-frames/2026-11-28_19-33-32_openxr-headset/smooth_11-12s_game",
+     "note": null
+    }
+   ]
+  }
+ ]
+}
